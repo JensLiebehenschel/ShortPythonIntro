@@ -61,10 +61,17 @@ Python Einführung - benötigte Konstrukte und
   - Rekursion
 
 
-Beispiele (mit Lösungen (erst versteckt?))
-- Alle interaktiv im Interpreter
+Beispiele
+Rahmenbedingungen
+- mit Lösungen (erst versteckt, dann aufklappen)
+- Alle interaktiv im Interpreter, falls einfach möglich, im Dokument wäre schön
+- Es ist auch möglich, eine Umgebung für die Beispiele zu verlinken wie https://www.programiz.com/python-programming/online-compiler/
+  - Dazu müssen Rechte geklärt werden
+
+Und jetzt die Beispiele
 - Hello World
 - Python als Taschenrechner (mit beliebiger Genauigkeit)
+- print(a-((a//b)*b+a%b))
 - ...
 
 
