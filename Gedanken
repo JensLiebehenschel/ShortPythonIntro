@@ -1,0 +1,71 @@
+Ziel
+Python Kurz-Einführung, so dass die Programme im Skript und die ausgehändigten Programme komplett verstanden werden können.
+Intensives Durcharbeiten in 1-2 Stunden möglich?
+Klassen (erst mal) weglassen, auch wenn für Bäume benötigt
+
+Form
+Jupyter-Book (https://jupyterbook.org/en/stable/intro.html)
+Beispiel: https://gramschs.github.io/book_matlab/intro.html
+Gibt es einen Weg ohne Software-Installation?
+Alles im Interpreter im interaktiven Modus?
+OER - Rahmenbedingungen, was ist zu beachten? Prof. Gramsch ansprechen
+- https://www.hessenhub.de/oer-material/checkliste-oer/
+Sprache: Englisch? (weniger Motivation, es durchzuarbeiten?) besser Deutsch?
+
+
+Inhalte
+
+Wenige Zeilen Motivation für Python
+- Ausführbarer Pseudocode (Siehe Kapitel 4.2 im Skript)
+- Viele Bibliotheken
+- Sprache für schnelles Prototyping, KI
+
+Wie nutzen wir dass
+- Not very pythonic
+- Listen und operationen verbergen fast alles für AlgDat Relevante (z.B. sort)
+
+Offen: Große Probleme bei Beginn mit Python mit
+- range
+- Listen
+Doch eher am Anfang behandeln - vermutlich nicht
+
+
+Python Einführung - benötigte Konstrukte und 
+- Ausgabe (Eingabe vermutlich nicht benötigt)
+- Datentypen (dynamic typing)
+  - Zahlen
+- Grundrechenarten (auch //, % und **)
+- Wenige math. Funktionen: sqrt, log (und import statement)
+- (random) - ist nicht "Basic"
+- Variablen
+- Zuweisung
+  - a = b
+  - a,b = b,a (mehrfach, hier swap)
+- Vergleichsoperatoren
+- Logische Verknüpfungen and, or, not
+- Verzweigungen: if
+- Schleifen: while
+- range
+- Schleifen:
+  - for (range)
+- Datentypen: 
+  - Strings
+  - Listen
+    - Definieren, initialisieren
+    - len
+    - slicing ([a:b], [a:], [:b])
+	- append
+- Schleifen:
+  - for (element in Liste)
+- Funktionen und return
+  - Rekursion
+
+
+Beispiele (mit Lösungen (erst versteckt?))
+- Alle interaktiv im Interpreter
+- Hello World
+- Python als Taschenrechner (mit beliebiger Genauigkeit)
+- ...
+
+
+
