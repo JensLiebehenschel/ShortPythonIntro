@@ -32,6 +32,7 @@ Wie nutzen wir Python?
 
 
 Python Einführung - benötigte Konstrukte zum Verständnis der AlgDat-Programme 
+- Kommentare im Code - eventuell auch implizit mit print()?
 - Ausgabe (Eingabe vermutlich nicht benötigt)
 - Datentypen ("dynamic typing" erwähnen)
   - Zahlen
