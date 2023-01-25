@@ -1,0 +1,22 @@
+########## Kommentare ##########
+
+Kommentare in Python sind relativ simpel. Es gibt nur einen Weg Kommentare zu erstellen.
+Wenn außerhalb eines Strings ein Rautezeichen(#) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet
+
+x = 5 # Gib x den Wert 5
+	   ^^^^^^^^^^^^^^^^^
+Code   Kommentar
+
+Es gibt eigentlich keinen Weg, einen Kommentar über mehrere Zeilen hinweg zu machen
+wie in C/C++/Java mit
+/*
+	Das ist kommentar
+	Das hier auch
+	Das hier ebenfalls
+*/
+
+Somit muss man in Python jede Zeile einzeln auskommentieren.
+
+#	Das ist ein kommentar
+#	Das hier auch
+#	Das hier ebenfalls

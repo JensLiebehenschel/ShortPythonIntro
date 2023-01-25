@@ -32,9 +32,9 @@ Python ist nämlich die Brücke zwischen den Vorteilen von Pseudocode und den Vo
 
 Im Vergleich zu Sprachen wie C, handelt es sich bei Python um eine dynamisch-typisierte Programmiersprache.
 Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
-Speichert man unter einer Variable den Wert "5" ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
-Dividiert man den Wert nun durch "2", so interpretiert Python diese Variable mit dem Ergebnis "2.5" nun als eine Gleitkommazahl (float, double). 
-Eine C-Variable welche zu beginn mit "int x = 5;" deklariert & initialisiert wurde, würde nun "x == 2" angeben, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
+Speichert man unter einer Variable den Wert 5 ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
+Dividiert man den Wert nun durch 2, so interpretiert Python diese Variable mit dem Ergebnis 2.5 nun als eine Gleitkommazahl (float/double). 
+Eine C-Variable welche zu beginn mit << int x = 5; >> deklariert & initialisiert wurde, würde nun << x == 2.5 >> FALSE angeben, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
 Um sowas muss man sich in Python keine Gedanken machen.
 
 Somit kann man in Python sehr einfach, sehr komplexe Strukturen erstellen. 
@@ -43,6 +43,7 @@ Nun könnte das letzte der geschachtelten Arrays eine Zeichenkette oder Zahlen e
 In C müsste man einige Zeit überlegen wie man das machen würde.
 In Python fügt man es einfach in ein Array ein und gut ist es. 
 Python wird schon herausfinden um was es sich hier handelt.
+
 
 ##### Python use cases? #####
 Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt werden, wird Python manchmal als "Ausführbarer Pseudocode" bezeichnet.

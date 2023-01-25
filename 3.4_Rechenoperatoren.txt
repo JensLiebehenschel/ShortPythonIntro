@@ -1,0 +1,34 @@
+########## Rechenoperationen ##########
+
+In Python hat man natürlich die klassischen Grundrechenarten wie +, -, * und /
+
+5+5
+--> 10
+
+3*5
+--> 15
+
+Es gibt auch die noch relativ übliche Modulo Operation mit dem Prozentzeichen(%).
+Kurze Auffrischung: 
+Das Ergebnis von a % b (a modulo b bzw. a mod b) ist der Rest, der bei der Division a/b übrig bleibt.
+
+8 % 3
+--> 2
+
+
+Des Weiteren gibt es die Integer Division mit dem Operator //
+Diese Operation berechnet den normalen Quotienten c = a/b, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
+
+Man kann a // b aber auch umschreiben zu 
+floor(a/b)
+Also dem abgerundeten Ergebnis von a geteilt durch b.
+floor() ist eine bereits eingebaute Python Funktion
+
+
+Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
+Dafür werden zwei aufeinanderfolgende Sterne benutzt(**)
+
+Somit berechnet man mit 2 ** 5 den Wert 2^5 (2 hoch 5)
+
+3 ** 3
+--> 27
