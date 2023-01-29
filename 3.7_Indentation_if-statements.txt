@@ -1,0 +1,145 @@
+########## Indentation und if-Statements ##########
+
+Eine weitere Besonderheit, welche Python stark von anderen Programmiersprachen unterscheidet, sind die {geschweiften Klammern}
+
+Oder besser gesagt, ihr Fehlen.
+
+In den meisten Programmiersprachen werden geschweifte Klammern benutzt um Codeblöcke zu trennen.
+
+Option 1:
+
+if (Bedingung) {
+	<Dieser Codeblock wird nur ausgeführt, wenn die Bedingung wahr ist>
+}
+<Dieser Code wird unabhängig von der Bedingung ausgeführt>
+
+hierbei ist es auch genauso möglich, den Code wie folgt umzuschreiben
+
+Option 2:
+
+if (Bedingung) {
+<Dieser Codeblock wird nur ausgeführt, wenn die Bedingung wahr ist>
+}
+<Dieser Code wird unabhängig von der Bedingung ausgeführt>
+
+oder
+
+Option 3:
+
+if (Bedingung) {<Dieser Codeblock wird nur ausgeführt, wenn die Bedingung wahr ist>}
+<Dieser Code wird unabhängig von der Bedingung ausgeführt>
+
+Frage: Welche der drei Optionen ist am übersichtlichsten?
+Antwort:
+Option 1 ist von den drei Optionen, die übersichtlichste, daman den Codeblock der if-Bedingung von dem weiteren Code leicht unterscheiden kann ohne auf geschweifte Klammern achten zu müssen.
+
+C Style Guides sagen Option 1: https://cs50.readthedocs.io/style/c/#indentation
+
+
+Fast so als könne man die geschweiften Klammern auch weglassen?
+Python sagt: Ja.
+Geschweifte Klammern in Python werden nicht verwendet um Codeblöcke zu trennen.
+In Python werden geschweifte Klammern ausschließlich benutzt um sogenannte Dictionaries zu nutzen.
+
+Was ein Dictionary ist, wird man im Modul AlgDat später kennenlernen.
+Dort lernt man es als "Hashmap" oder allgemein als "Hashing" kennen
+Das wird hier an der Stelle nicht weiter erklärt.
+
+
+Wie unterscheidet man Codeblöcke in Python nun genau?
+Durch Indentation, zu Deutsch "Einrücken". 
+Also whitespaces und tabs.
+
+
+Also wäre eine Option 1 in Python-artige Syntax wie folgt umgewandelt:
+
+
+if (Bedingung) 
+	<Dieser Codeblock wird nur ausgeführt, wenn die Bedingung wahr ist>
+
+<Dieser Code wird unabhängig von der Bedingung ausgeführt>
+
+
+Nun bräuchte man einen Weg die Bedingung von dem Codeblock selbst zu unterscheiden.
+Eine intuitive Lösung wäre ein Doppelpunkt.
+Dies ist eine sehr natürliche Art (auf Englisch) eine Bedingung auzudrücken.
+
+if (this is so): # then do
+	that
+Proceed here afterwards, no matter if "that" has been done or not
+
+Fast wie ein Merkzettel.
+wenn dies so ist:
+	mache das
+	und das
+	und noch Weiteres
+
+Im Gegensatz zu anderen Programmiersprachen sind Klammern innerhalb von Bedingungen ebenfalls optional.
+
+if (x ist wahr):
+	mach etwas
+
+if x ist wahr:
+	mach etwas
+
+
+Klammern werden nur benötigt, wenn eine Bedinung mehr als eine Zeile lang ist.
+
+# RICHTIG
+if (x ist wahr
+	und y ist wahr):
+		mach etwas
+
+# FALSCH
+if x ist wahr
+	und y ist wahr:
+		mach etwas
+
+
+Hiermit hätten wir auch bereits geklärt wie if-Bedingungen Funktionieren
+
+if BEDINGUNG:
+	DAZUGEHÖRIGER CODEBLOCK
+REST DES PROGRAMMS
+
+
+Man muss mit Indentation konsequent sein und korrekt indentieren. Jedes whitespace bzw. jedes tab zählt.
+Jeder Teil eines Codeblocks muss gleich weit indentiert sein.
+
+# FALSCH
+if x ist wahr:
+	mach das
+	 und mach das
+   und das hier auch 
+
+Ein etwas komplexeres Beispiel erst in C, dann das Python-Äquivalent, welches genistete if-statements zeigt.
+
+if (x ist wahr) {
+	if (y ist wahr) {
+		if (z ist wahr) {
+			<Codeblock>
+		}
+	}
+	else {
+		<Codeblock>
+	}
+}
+else {
+	<Codeblock>
+}
+Rest des Programms...
+
+
+ EVENTUELL HIER NACH PYTHON ÄQUIVALENT FRAGEN?
+ Hierbei ist es auch wichtig, dass "Rest des Programms..."
+ keine Indentation hat. Hätte es eine Indentation von einem tab, so könnte man denken, dass der Rest des Programms noch zum Codeblock des untersten "else:" gehört.
+
+ if x ist wahr:
+ 	if y ist wahr:
+ 		if z ist wahr:
+ 			<Codeblock>
+ 	else:
+ 		<Codeblock>
+ else:
+ 	<Codeblock>
+ Rest des Programms...

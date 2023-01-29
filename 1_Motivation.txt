@@ -44,6 +44,9 @@ In C müsste man einige Zeit überlegen wie man das machen würde.
 In Python fügt man es einfach in ein Array ein und gut ist es. 
 Python wird schon herausfinden um was es sich hier handelt.
 
+Allgemein ist Pythons Absicht, so natürlich wie möglich zu klingen.
+Daher orientiert sich Python stark an gesprochenem Englisch.
+Beispiele, wo dies der Fall ist, werden in späteren Kapiteln erläutert.
 
 ##### Python use cases? #####
 Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt werden, wird Python manchmal als "Ausführbarer Pseudocode" bezeichnet.

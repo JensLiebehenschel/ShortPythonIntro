@@ -20,9 +20,10 @@ Des Weiteren gibt es die Integer Division mit dem Operator //
 Diese Operation berechnet den normalen Quotienten c = a/b, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
 
 Man kann a // b aber auch umschreiben zu 
-floor(a/b)
+math.floor(a/b)
 Also dem abgerundeten Ergebnis von a geteilt durch b.
-floor() ist eine bereits eingebaute Python Funktion
+math.floor() ist eine Funktion der Python Mathe library.
+Was es mit Bibliotheken auf sich hat, wird später erklärt.
 
 
 Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
