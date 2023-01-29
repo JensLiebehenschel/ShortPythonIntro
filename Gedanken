@@ -46,6 +46,7 @@ Python Einführung - benötigte Konstrukte zum Verständnis der AlgDat-Programme
 - Vergleichsoperatoren
 - Logische Verknüpfungen and, or, not
 - Verzweigungen: if
+  (An der Stelle Indentation erklären)
 - Schleifen: while
 - range
 - Schleifen:
