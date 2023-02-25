@@ -1,0 +1,163 @@
+########## Lists ##########
+
+Die am meisten benutzte Datenstruktur ist das Array.
+Python nennt es jedoch nicht ein "Array", sondern eine "List".
+Von der Idee her sind die identisch. Man hat eine Datenstruktur worin man Daten speichern möchte.
+
+Viele andere Programmiersprachen benutzen geschweifte Klammern wie bei Codeblocks, um Arrays zu befüllen.
+
+Ein Beispiel aus C:
+int arr[] = {1, 2, 3, 4, 5};
+
+In Python werden eckige Klammern genutzt um Lists zu symbolisieren.
+arr = [1, 2, 3, 4, 5]
+
+Bei dem vorherigen Python Beispiel, wird nirgendwo gesagt, dass es sich bei dieser List um eine Integer List handelt.
+
+Das liegt wieder am Dynamic Typing.
+Nur handelt es sich hier nicht einmal um Integerarray.
+
+Man könnte nämlich einen anderen Datentypen als einen Integer einfügen.
+
+Beispiel:
+arr = [1, 2, 3, 4, 5, "Hello World!"]
+
+In den meisten anderen Programmiersprachen wäre das so einfach nicht möglich.
+Es liegt auch nicht daran, dass die Ziffern 1 bis 5 zu Strings übersetzt werden.
+Es gibt in der obigen List mehrere verschiedene Datentypen.
+Dies kann mit der Funktion isinstance() überprüft werden, welche wir bereits beim Testen von Dynamic Typing in einem früheren Kapitel kennen gelernt haben.
+
+Nochmal eine kurze Errinerung:
+Die Funktion isinstance(object, datentyp) erhält ein Object als ersten Parameter. Dabei kann es sich um Datentypen wie einen Integer oder eine List oder sonst was handeln.
+Ja, Python behandelt Datentypen wie Objekte.
+Der zweite Parameter ist ein Datentyp, wie etwa "str" für String oder "int" für Integer.
+
+Als Output gibt die Funktion einen Wahrheitswert zurück, ob es sich bei dem Objekt um den angegebenen Datentypen handelt.
+
+Rufen wir jetzt diese Funktionen auf, sehen wir folgendes.
+Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen, um auf einen bestimmten (bei 0 anfangenden) Index einer List zuzugreifen.
+
+isinstance(arr[0], int)
+--> True
+
+isinstance(arr[5], str)
+--> True
+
+Somit handelt es unüberraschender Weise bei 1 um einen Integer und bei
+"Hello World!" um einen String.
+
+
+## Negative Indizes ##
+
+Python verfügt über einen praktischen Shortcut um auf n-t letzte Element in einer List zuzugreifen.
+
+Und zwar mit der Syntax: arr[-n]
+
+Also mit einem negativen Index.
+
+arr[-1] greift auf das letzte Element zu
+arr[-2] greift auf das vorletzte Element zu
+und so weiter.
+
+Dabei sollte man beim Programmieren beachten, dass negative Indizes in Python gültig sind und nicht zwingend zu einem Fehler führen.
+
+
+## Length funktion ##
+
+Um die Länge eines Arrays herauszufinden, benutzt man die len() funktion
+
+arr = [1, 2, 3, 4, 5]
+len(arr)
+--> 5
+
+
+## Append ##
+
+Um einen Wert zu einer bereits existierenden Liste hinzuzufügen, kann die sehr hilfreiche append() funktion genutzt werden.
+
+
+arr = [1, 2, 3, 4, 5]
+print(arr)
+--> [1, 2, 3, 4, 5]
+len(arr)
+--> 5
+
+arr.append(6)
+print(arr)
+--> [1, 2, 3, 4, 5, 6]
+len(arr)
+--> 6
+
+Man kann soviel appenden wie man möchte, da eine List eine dynamische Datenstruktur ist.
+Im Gegensatz zu Arrays in C, muss man nicht wissen wie lang die List höchstens sein darf.
+
+Es ist auch möglich eine leere List zu erstellen, die man anscheließend mit append befüllt.
+
+Eine leere Liste wird wie folgt initialisiert:
+arr = []
+
+
+## Slicing ##
+
+Das Konzept von Slicing wird genutzt, um eine Sublist einer Liste zu nehmen.
+Also eine Teilmenge einer bereits existierenden Liste. Beim Slicing geht es lediglich um die Position der Elemente.
+
+Um eine Untermenge abhängig von einer Bedinung zu nehmen, wie etwa
+"alle Werte aus x, welche größer als 5 sind", benutzt man sogenannte List Comprehension.
+Für diese Einführung ist dies jedoch viel zu fortgeschritten.
+Interessierte können selbst danach recherchieren.
+
+
+Zurück zum Slicing. Hierbei geht es beispielsweise darum, eine Sublist bestehend aus allen Elementen ab Index a oder allen Elementen bis ausschließlich Index b oder einer Kombination davon, zu erstellen.
+
+Hierfür wird folgende Syntax benutzt
+arr[a:b]
+Man gibt links vom Doppelpunkt an, ab welchem Index gestarten werden soll und rechts vom Doppelpunkt an, ab welchem Index aufgehört werden soll.
+Will man eine der beiden Seiten unverändert lassen, so kann man jene Seite vom Doppelpunkt leer lassen.
+
+
+Hierbeit gibt es die drei Optionen:
+	Case A:
+	Liste bis exklusive Index b.
+	Man gibt also den ersten Index an, welcher bereits NICHT zur Sublist gehören soll.
+	arr[:b]
+
+	arr = [1, 2, 3, 4, 5]
+	index  0  1  2  3  4
+	arr[:3]
+	--> [1, 2, 3]
+
+	Das wäre identisch zu arr[0:3]. 
+	Da man hier die Linke Seite des Doppelpunktes frei lässt, weiß Python, dass man die Sublist beim Anfang der originalen Liste starten lassen möchte.
+	Es wäre ebenfalls identisch zu arr[:-2], da man mit dem Index -2, auf das vorletzte Element zugreift, welches das Element an Index 3 ist.
+
+
+	Case B:
+	List ab inklusive Index a.
+	arr[a:]
+
+	arr = [1, 2, 3, 4, 5]
+	index  0  1  2  3  4
+	arr[2:]
+	--> [3, 4, 5]
+
+	arr[2:] entspricht arr[2:len(arr)], 
+	da die Länge einer List der erste Index ist, welcher nicht mehr Teil der Liste ist.
+	Wenn der höchste Index 4 wäre, würde man also sagen:
+	bis exklusive Index 5.
+
+
+	Case C:
+	Liste ab inklusive Index a und bis exklusive Index b
+	arr[a:b]
+	arr = [1, 2, 3, 4, 5]
+	index  0  1  2  3  4
+	arr[1:3]
+	--> [2, 3]
+	Ab Index 2 bis exklusive Index 3
+
+Um eine List mit der dazugehörigen Sublist zu überschreiben, kann den Zuweisungsoperator nutzen.
+
+arr = arr[:-1] entfernt das letzte Element
+arr = arr[1:] entfernt das erste Element
+arr = arr[2:-2] entfernt die ersten zwei und die letzten zwei Elemente

@@ -1,0 +1,120 @@
+########## Loops ##########
+
+Gängige Schleifen gibt es in Python ebenfalls mit den aus anderen Programmiersprachen bekannten Keywords "for" und "while"
+
+Hier unterscheidet Python sich von den C-ähnlichen Programmiersprachen.
+Nicht von Idee her, aber von Syntax.
+
+
+## For loop ##
+
+Etwa soll in C mit einer for-loop ein Codeblock so oft ausgeführt werden, wie es verschiedene Werte für die Zählervariable gibt. 
+Im AlgDat modul werden üblicherweise einbuchstabige Namen für die Zählervariablen gewählt.
+Das wären größtenteils i und j.
+
+Python geht bei Schleifen wie folgt vor:
+Als Input in die schleife erhält man keine Formel und Bedinung, mit welcher diese Zählervariablen berechnet werden sollen, sondern übergibt man ein 
+"iterable" object.
+Also ein Array-artiges Object, wo man auf Basis von Indizes unterscheidet.
+
+In C würde man eine for-loop startend bei 0 mit Schrittweite 1 also so erstellen:
+for (int i = 0; i < wert_für_i_welcher_nicht_mehr_dazugehören_soll; i++) {
+	<Codeblock>
+}
+
+Mit der Formel könnte man die einzelnen Werte für i berechnen.
+Man fängt bei 0 an und inkrementiert um 1, bis der Wert erreicht wird, wo die Bedingung nicht mehr den Wahrheitswert "wahr" zurückgibt.
+
+
+In Python würde man hingegeben die Werte 0 bis zum Grenzwert in Form einer List übergeben.
+
+Folgendes Beispiel in C:
+Also wäre for (int i = 0; i < 5; i++) {
+	<Codeblock>
+}
+
+
+, würde man in Python folgendermaßen erstellen:
+
+for i in [0, 1, 2, 3, 4]:
+	<Codeblock>
+
+Das Keyword "in" sagt hier, dass der jeweils aktuelle Wert der List
+[0, 1, 2, 3, 4] als i anzusprechen sei.
+
+Das Keyword kann nebenbei ebenfalls sehr einfach genutzt werden um festzustellen ob ein Wert in einer Liste enthalten ist.
+
+6 in x
+--> True, falls 6 in der List namens x enthalten ist.
+--> False, falls 6 nicht in x enthalten ist.
+
+
+Man will natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte range() funktion.
+Diese erhält unter anderem zwei Zahlen als Parameter.
+Der erste ist die Zahl von wo aus gestartet werden soll.
+Die zweite Zahl ist die Zahl, welche nicht mehr dazugehören soll.
+Standardmäßig beträgt die Schrittweite 1.
+
+range(0, n) gibt also eine iterable Datenstruktur mit den Zahlen 0 bis n-1 zurück.
+Technisch gesehen ist es was anderes als eine List von 0 bis n-1.
+Man kann es aber mit list(range(0, n)) zu eben einer List von 0 bis n-1 casten.
+Für die for-loop ist dieser Cast jedoch nicht nötig.
+
+
+Eine praktischere Variante des oberen Python codes wäre also
+
+for i in range(0, 5):
+	<Codeblock>
+
+
+
+Jetzt kommt man zu dem sehr angenehmen Teil von Python wenn es darum geht über eine List zu iterieren.
+
+Beim iterieren will man meistens logisch gesehen für jeden Eintrag in einer List, den Codeblock mit diesem Objekt ausführen.
+
+
+#############################################################
+Weiterschreiben
+#############################################################
+
+
+
+
+
+
+## While loop ##
+
+Hier wird ein Codeblock so oft ausgeführt, bis die Bedinung nicht mehr gilt.
+
+while bedingung:
+	<Codeblock>
+
+Bspw.:
+
+while n >0:
+	n -= 1
+
+Man beachte, dass es in C zwei Arten von while loops gibt.
+
+while(bedingung) {
+	<Codeblock>
+}
+
+und
+
+do {
+	<Codeblock>
+} 
+while(bedingung)
+
+Bei letzterem wird die Bedingung erst nach Ausführen des Codeblocks überprüft.
+
+Will man dieses Verhalten in Python imitieren, wo muss man mit einer Infinite loop und conditional breaks arbeiten.
+
+
+while True: # Infinite loop
+	if not bedingung:
+		break
+	<Codeblock>
+
+do-while Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch work-arounds gibt.
