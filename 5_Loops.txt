@@ -72,14 +72,22 @@ Jetzt kommt man zu dem sehr angenehmen Teil von Python wenn es darum geht über 
 
 Beim iterieren will man meistens logisch gesehen für jeden Eintrag in einer List, den Codeblock mit diesem Objekt ausführen.
 
+Anstatt dabei jetzt mit Indexen zu arbeiten, kann man auch direkt durch die List iterieren, so wie man es intuitiv machen würde.
 
-#############################################################
-Weiterschreiben
-#############################################################
+Aussehen würde es so:
 
+for person in personen:
+	<mach etwas mit person>
 
+Man kann es sich so vorstellen, als ob person ein shortcut wäre für personen[i], wo i der jeweils aktuelle Index des Objekts ist.
 
+Wenn man aber explizit mit indizes arbeiten möchte, hält Python einen davon natürlich nicht ab es wie gewohnt mit Indizes zu arbeiten.
+Das würde dann so aussehen:
 
+for i in range(0, len(personen)):
+	<mach etwas mit personen[i]>
+
+Da in range(0, len(personen)), die Werte von 0 bis len(personen)-1 vertreten sind, werden alle Indizes der List abgedeckt.
 
 
 ## While loop ##
