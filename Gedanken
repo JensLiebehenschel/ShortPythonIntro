@@ -62,6 +62,7 @@ Python Einführung - benötigte Konstrukte zum Verständnis der AlgDat-Programme
   - for (element in Liste)
 - Funktionen und return
   - Rekursion
+  - Noch unklar wo erwähnt werden soll, dass es Python an sich keine Main Funktion gibt
 
 Offen: Gibt es große Probleme bei Beginn mit Python mit
 - range
