@@ -112,6 +112,17 @@ if x ist wahr:
 	 und mach das
    und das hier auch 
 
+Für den else-block wird das keyword else benutzt.
+Will man ein else-if machen, kann man das eingebaut Python keyword "elif" nutzen.
+Das Funktioniert folgendermaßen:
+
+if x == 1:
+	print("x ist 1")
+elif x == 2:
+	print("x ist 2")
+else:
+	print("x ist weder 1 noch 2")
+
 Ein etwas komplexeres Beispiel erst in C, dann das Python-Äquivalent, welches genistete if-statements zeigt.
 
 if (x ist wahr) {
