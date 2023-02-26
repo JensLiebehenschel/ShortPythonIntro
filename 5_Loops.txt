@@ -66,8 +66,6 @@ Eine praktischere Variante des oberen Python codes wäre also
 for i in range(0, 5):
 	<Codeblock>
 
-
-
 Jetzt kommt man zu dem sehr angenehmen Teil von Python wenn es darum geht über eine List zu iterieren.
 
 Beim iterieren will man meistens logisch gesehen für jeden Eintrag in einer List, den Codeblock mit diesem Objekt ausführen.
