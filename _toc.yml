@@ -1,9 +1,0 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
-format: jb-book
-root: ziel
-chapters:
-- file: 1_Motivation
-- file: 2_Wie_nutzen_wir_Python
-- file: 3_1_Python_Kommentare
