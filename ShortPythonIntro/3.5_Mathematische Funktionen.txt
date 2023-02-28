@@ -1,0 +1,50 @@
+########## Mathematische Operationen ##########
+
+Python hat eine enorme Auswahl an Bibliotheken.
+Seien es nun Bibliotheken um Grafiken zu erstellen oder Bibliotheken für Machine Learning.
+
+Von Interesse für dieses Modul, sind jedoch mathematische Bibliotheken.
+
+Mit diesen Bibliotheken können wir etwa Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.
+
+Um diese hilfsreichen Funktionen nutzen zu können, muss man diese Bibliotheken erst importieren.
+
+Funktioniert von der Logik genauso wie das importieren von Bilbiotheken in C.
+
+Also gibt es kein Keyword gefolgt vom Bibliothekenname, daaraufhin kann man diese Bibliothek dann nutzen.
+
+in C:
+#include <Bibliotheksname.h>
+
+in Python:
+import Bibliotheksname
+
+Konkret um auf die Funktionen für die Quadratwurzel und die Logarithmen, muss man die Bibliothek "math" importieren.
+
+Also braucht man die Zeile
+
+"import math"
+
+bevor man diese Funktionen nutzen kann.
+
+
+## Funktionen selbst ##
+
+Nun haben wir die math Bibliothek geladen.
+
+Um auf diese zuzugreifen, müssen wir vor den Funktionen einen Präfix von "Bibliotheksname." hinzufügen, damit wir ausdrücken, dass wir die Funktion dieser Bibliothek meinen.
+
+Konkret wäre der Präfix hier also "math."
+
+Die Quadratwurzel von 25 könnte man also wie folgt berechnen:
+
+result = math.sqrt(25)
+
+
+Um den 10-er Logarithmus von x zu berechnen, kann man die Funktion math.log10(x) nutzen
+
+result = math.log10(100)
+--> 2
+
+
+Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf HIER nachgelesen werden (https://docs.python.org/3/library/math.html)

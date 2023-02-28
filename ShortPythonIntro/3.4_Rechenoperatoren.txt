@@ -1,0 +1,47 @@
+########## Rechenoperationen ##########
+
+In Python hat man natürlich die klassischen Grundrechenarten wie +, -, * und /
+
+5+5
+--> 10
+
+3*5
+--> 15
+
+Ein gängiger Shortcut um einen Wert um 1 zu inkrementieren wäre die "++" syntax.
+Somit ist i++ das Gleiche wie i = i + 1.
+In Python ist dies nicht möglich.
+
+Das ist in Python nicht so tragisch, da man sowieso viel seltener einen Wert um 1 inkrementiert im Vergleich zu anderen Sprachen.
+Das wird sich auch später bei den Loops zeigen.
+
+Als Alternative soll i += 1 genutzt werden, welches ebenfalls äquivalent zu i = i + 1 ist.
+
+Die Idee ist analog für den x-- Operator, welcher ebenfalls durch x -= 1 zu ersetzen ist.
+
+
+Es gibt auch die noch relativ übliche Modulo Operation mit dem Prozentzeichen(%).
+Kurze Auffrischung: 
+Das Ergebnis von a % b (a modulo b bzw. a mod b) ist der Rest, der bei der Division a/b übrig bleibt.
+
+8 % 3
+--> 2
+
+
+Des Weiteren gibt es die Integer Division mit dem Operator //
+Diese Operation berechnet den normalen Quotienten c = a/b, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
+
+Man kann a // b aber auch umschreiben zu 
+math.floor(a/b)
+Also dem abgerundeten Ergebnis von a geteilt durch b.
+math.floor() ist eine Funktion der Python Mathe library.
+Was es mit Bibliotheken auf sich hat, wird später erklärt.
+
+
+Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
+Dafür werden zwei aufeinanderfolgende Sterne benutzt(**)
+
+Somit berechnet man mit 2 ** 5 den Wert 2^5 (2 hoch 5)
+
+3 ** 3
+--> 27
