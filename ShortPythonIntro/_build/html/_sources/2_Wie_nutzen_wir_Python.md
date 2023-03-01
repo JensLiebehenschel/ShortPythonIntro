@@ -1,5 +1,7 @@
 # Wie nutzen wir Python?
 
+## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
+
 ## Not very "pythonic"
 
 Als Beschreibung der Python-Codes in diesem Modul werden Sie eventuell die Bezeichnung "Not very pythonic" hören.
@@ -10,7 +12,11 @@ In Python gibt es in der Standardbibliothek die Funktion "sort()"
 Diese Methode sortiert automatisch eine gegebene Liste.
 Sie sollen nun aber lernen wie man mit verschiedenen Algorithmen eben diese Sortierung selbst machen kann.
 
-Sie könnten theoretisch in jedem Python-Code dieser Veranstaltung, den gesamten Sortieralgorithmus durch die Zeile "ArrayNameHier.sort()" ersetzen und das Gleiche erzielen.
+Sie könnten theoretisch in jedem Python-Code dieser Veranstaltung, den gesamten Sortieralgorithmus durch die Zeile 
+```Python
+ArrayNameHier.sort()
+```
+ersetzen und das Gleiche erzielen.
 Ist wie gesagt, jedoch nicht Sinn der Sache.
 Ziel ist es also eine Funktion wie sort() selbst schreiben zu können.
 Zumindest vom Resultat her.
@@ -25,4 +31,3 @@ Dort ist es ebenfalls am effizientesten, die Funktion max() zu benutzen, anstatt
 
 Hier geht es jedoch nicht darum zu lernen, ein Python-Entwickler zu werden, sondern um das Verständnis der Algorithmen.
 Deshalb "Not very pythonic"!
-

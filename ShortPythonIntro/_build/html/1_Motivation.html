@@ -306,6 +306,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+   <strong>
+    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wieso-python">
    Wieso Python?
   </a>
@@ -345,6 +352,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+   <strong>
+    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wieso-python">
    Wieso Python?
   </a>
@@ -376,6 +390,9 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="motivation">
 <h1>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h1>
+<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
+</section>
 <section id="wieso-python">
 <h2>Wieso Python?<a class="headerlink" href="#wieso-python" title="Permalink to this headline">#</a></h2>
 <p>Dies soll eine Einführung in die Programmiersprache Python sein.
@@ -407,7 +424,16 @@ Python ist nämlich die Brücke zwischen den Vorteilen von Pseudocode und den Vo
 Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
 Speichert man unter einer Variable den Wert 5 ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
 Dividiert man den Wert nun durch 2, so interpretiert Python diese Variable mit dem Ergebnis 2.5 nun als eine Gleitkommazahl (float/double).
-Eine C-Variable welche zu beginn mit &lt;&lt; int x = 5; &gt;&gt; deklariert &amp; initialisiert wurde, würde nun &lt;&lt; x == 2.5 &gt;&gt; FALSE angeben, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
+Eine C-Variable welche zu beginn mit</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>deklariert &amp; initialisiert wurde, würde nun</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="mi">2</span><span class="o">==</span><span class="mf">2.5</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// --&gt; 0 (False)</span>
+</pre></div>
+</div>
+<p>angeben, dass 5 geteilt durch 2 nicht 2.5 ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
 Um sowas muss man sich in Python keine Gedanken machen.</p>
 <p>Somit kann man in Python sehr einfach, sehr komplexe Strukturen erstellen.
 Wie wäre es mit einem Array, welches innerhalb von einem Index ein Array mit 5 weiteren geschachtelten Arrays enthält. Also ein Array in einem Array, in einem Array, …
@@ -422,7 +448,7 @@ Beispiele, wo dies der Fall ist, werden in späteren Kapiteln erläutert.</p>
 <section id="python-use-cases">
 <h2>Python use cases?<a class="headerlink" href="#python-use-cases" title="Permalink to this headline">#</a></h2>
 <p>Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt werden, wird Python manchmal als “Ausführbarer Pseudocode” bezeichnet.
-Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar und funktionial.
+Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar und funktionell.
 Die klaren Einsparnisse liegen jedoch definitiv bei der Schnelligkeit von Python.
 Für Anwendungen, welche auf dem Computer eines Kunden laufen sollen, eignet es sich also in der Regel nicht.
 In AlgDat geht es ja um Konzepte und nicht darum ein effizientes Softwareprodukt bei einem Kunden zu liefern.</p>

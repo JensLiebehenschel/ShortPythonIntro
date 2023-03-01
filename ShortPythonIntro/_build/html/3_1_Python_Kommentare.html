@@ -334,6 +334,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+   <strong>
+    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution">
    Solution
   </a>
@@ -358,6 +365,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+   <strong>
+    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#solution">
    Solution
   </a>
@@ -374,33 +388,29 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="kommentare-in-python">
 <h1>Kommentare in Python<a class="headerlink" href="#kommentare-in-python" title="Permalink to this headline">#</a></h1>
+<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
 <p>Kommentare in Python sind relativ simpel. Es gibt nur einen Weg Kommentare zu erstellen.
 Wenn außerhalb eines Strings ein Rautezeichen(#) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Gib x den Wert 5</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Gib x den Wert 5</span>
 <span class="c1">#	   ^^^^^^^^^^^^^^^^^</span>
 <span class="c1">#Code  Kommentar</span>
 </pre></div>
 </div>
-</div>
-</div>
-<p>Es gibt eigentlich keinen Weg, einen Kommentar über mehrere Zeilen hinweg zu machen
-wie in C/C++/Java mit
-/*
-Das ist kommentar
-Das hier auch
-Das hier ebenfalls
-*/</p>
-<p>Somit muss man in Python jede Zeile einzeln auskommentieren.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#	Das ist ein kommentar</span>
-<span class="c1">#	Das hier auch</span>
-<span class="c1">#	Das hier ebenfalls</span>
+<p>Es gibt eigentlich keinen Weg, einen Kommentar über mehrere Zeilen hinweg zu erstellen
+wie in u.a. C/C++/Java mit</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/*\</span>
+<span class="cm">    Das ist kommentar</span>
+<span class="cm">    Das hier auch</span>
+<span class="cm">    Das hier ebenfalls</span>
+<span class="cm">*/</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+<p>Somit müsste man in Python jede Zeile einzeln auskommentieren.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1">#   Das ist ein kommentar</span>
+<span class="c1">#   Das hier auch</span>
+<span class="c1">#   Das hier ebenfalls</span>
+</pre></div>
 </div>
 <p>Um das Leben einfacher zu machen, ist es jedoch trotzdessen möglich etwas ähnliches zu erzielen indem man den auszukommentierenden Inhalt als einen String ohne Zuweisung speichert. Somit fällt der betroffene Code weg.
 Das Funktioniert indem man jeweils am Anfang und Ende des auszukommentierenden Bereichs sogenannte “triple quotes” einfügt. Damit bezeichnet man drei aufeinanderfolgende Anführungszeichen.</p>
@@ -411,11 +421,11 @@ Sie dürfen nur zwei triple quotes (“””) nutzen</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_output</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
 
-
 <span class="n">my_output</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">my_output</span> <span class="o">+=</span> <span class="n">i</span>
 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    
+    <span class="n">my_output</span> <span class="o">+=</span> <span class="n">i</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">my_output</span><span class="p">)</span>
 </pre></div>
@@ -427,20 +437,28 @@ Sie dürfen nur zwei triple quotes (“””) nutzen</p>
 </div>
 </div>
 </div>
+</section>
 <section id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_output</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
-
-<span class="c1"># Dieser Code geht über mehrere Zeilen und soll &quot;auskommentiert&quot; werden</span>
-
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_output</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">my_output = 0</span>
-<span class="sd">for i in range(1, 100+1):</span>
-<span class="sd">    sum += i</span>
-<span class="sd">&quot;&quot;&quot;</span>
 
+<span class="sd">for i in range(1, 100+1):</span>
+<span class="sd">    </span>
+<span class="sd">    my_output += i</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_output</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>

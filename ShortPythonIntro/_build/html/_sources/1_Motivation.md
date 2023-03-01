@@ -1,5 +1,7 @@
 # Motivation
 
+## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
+
 ## Wieso Python?
 
 Dies soll eine Einführung in die Programmiersprache Python sein.
@@ -37,7 +39,16 @@ Im Vergleich zu Sprachen wie C, handelt es sich bei Python um eine dynamisch-typ
 Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
 Speichert man unter einer Variable den Wert 5 ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
 Dividiert man den Wert nun durch 2, so interpretiert Python diese Variable mit dem Ergebnis 2.5 nun als eine Gleitkommazahl (float/double). 
-Eine C-Variable welche zu beginn mit << int x = 5; >> deklariert & initialisiert wurde, würde nun << x == 2.5 >> FALSE angeben, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
+Eine C-Variable welche zu beginn mit 
+```C
+int x = 5;
+```
+deklariert & initialisiert wurde, würde nun 
+```C
+printf("%d", x/2==2.5);
+// --> 0 (False)
+```
+angeben, dass 5 geteilt durch 2 nicht 2.5 ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
 Um sowas muss man sich in Python keine Gedanken machen.
 
 Somit kann man in Python sehr einfach, sehr komplexe Strukturen erstellen. 
@@ -53,7 +64,7 @@ Beispiele, wo dies der Fall ist, werden in späteren Kapiteln erläutert.
 
 ## Python use cases?
 Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt werden, wird Python manchmal als "Ausführbarer Pseudocode" bezeichnet.
-Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar und funktionial.
+Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar und funktionell.
 Die klaren Einsparnisse liegen jedoch definitiv bei der Schnelligkeit von Python.
 Für Anwendungen, welche auf dem Computer eines Kunden laufen sollen, eignet es sich also in der Regel nicht.
 In AlgDat geht es ja um Konzepte und nicht darum ein effizientes Softwareprodukt bei einem Kunden zu liefern.
