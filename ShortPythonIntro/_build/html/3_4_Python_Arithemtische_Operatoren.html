@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ziel &#8212; AlgDat Python Intro Proof of Concept</title>
+    <title>Arithmetische Operationen &#8212; AlgDat Python Intro</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Motivation" href="1_Motivation.html" />
+    <link rel="next" title="Bibliotheken und Mathematische Funktionen" href="3_5_Mathematische_Funktionen.html" />
+    <link rel="prev" title="Output und Input" href="3_3_Python_Output_Input.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -95,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">AlgDat Python Intro Proof of Concept</h1>
+      <h1 class="site-logo" id="site-title">AlgDat Python Intro</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -105,13 +106,13 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
                     Ziel
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Motivation.html">
    Motivation
@@ -122,10 +123,47 @@ const thebe_selector_output = ".output, .cell_output"
    Wie nutzen wir Python?
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3_1_Python_Kommentare.html">
-   Kommentare in Python
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Chapter_Python_Basics.html">
+   Python Basics
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_1_Python_Kommentare.html">
+     Erstellen von Kommentaren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Datentypen.html">
+     Datentypen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_3_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Arithmetische Operationen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_5_Mathematische_Funktionen.html">
+     Bibliotheken und Mathematische Funktionen
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_6_Zuweisungen.html">
+     Zuweisungen
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -217,7 +255,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2Fziel.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2F3_4_Python_Arithemtische_Operatoren.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -245,7 +283,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/ziel.md"
+        <a href="_sources/3_4_Python_Arithemtische_Operatoren.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +358,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ziel</h1>
+                <h1>Arithmetische Operationen</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -347,22 +385,89 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="ziel">
-<h1>Ziel<a class="headerlink" href="#ziel" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="arithmetische-operationen">
+<h1>Arithmetische Operationen<a class="headerlink" href="#arithmetische-operationen" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-<p>Im Laufe des Moduls Algorithmen und Datenstrukturen (AlgDat), werden die Studierenden in dem Skript mit Python source code konfrontiert.
-Das Lernen von Python ist keines Wegs relevant für die Klausur, da neben Python codes auch Pseudocode vorliegt.
-Nichtsdestotrotz, wäre es für die Studierenden hilfreich etwas über Python zu lernen.
-Zumindest um den Codes aus dem Skript folgen zu können.</p>
-<p>Argumente für das Lernen von Python können Sie auf der nächsten Seite nachlesen.
-Hier ist das Inhaltsverzeichnis um direkt in ein bestimmtes Kapitel zu springen.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_Motivation.html">Motivation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_Wie_nutzen_wir_Python.html">Wie nutzen wir Python?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_1_Python_Kommentare.html">Kommentare in Python</a></li>
-</ul>
+<p>In Python hat man natürlich die klassischen Grundrechenarten wie +, -, * und /</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">+</span><span class="mi">5</span>
+<span class="c1"># 10</span>
+
+<span class="mi">3</span><span class="o">*</span><span class="mi">5</span>
+<span class="c1"># 15</span>
+</pre></div>
+</div>
+<p>Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu inkrementieren, wäre der “++” Operator.</p>
+<p>Somit ist</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>das Gleiche wie</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Python ist dies <strong>nicht</strong> möglich.</p>
+<p>Das ist in Python nicht so tragisch, da man sowieso viel seltener einen Wert um 1 inkrementiert im Vergleich zu anderen Programmiersprachen.
+Das wird sich auch später bei den Schleifen zeigen.</p>
+<p>Als Alternative in Python soll</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+<p>genutzt werden, welches ebenfalls äquivalent zu</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>ist.
+Die Idee ist analog für den x– Ausdruck, welcher ebenfalls durch x -= 1 zu ersetzen ist.</p>
+<p>Allgemein werden die Operatoren +=, -=, *= und /= so genutzt:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="n">RECHENOPERATION</span><span class="o">=</span> <span class="n">n</span>
+
+<span class="c1"># ist äquivalent zu</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="n">RECHENOPERATION</span> <span class="n">n</span>
+
+<span class="c1"># Beispiel:</span>
+<span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span> 
+
+<span class="c1"># ist äquivalent zu</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">5</span> 
+</pre></div>
+</div>
+<p>Es gibt auch die noch relativ übliche Modulo Operation mit dem Prozentzeichen(%).
+Kurze Auffrischung:
+Das Ergebnis von a % b (a modulo b bzw. a mod b) ist der Rest, der bei der Division a/b übrig bleibt.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">8</span> <span class="o">%</span> <span class="mi">3</span>
+<span class="c1"># 2</span>
+</pre></div>
+</div>
+<p>Des Weiteren gibt es die Integer Division mit dem Operator //
+Diese Operation berechnet den normalen Quotienten c = a/b, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
+Der Rest wird sozusagen ignoriert.</p>
+<p>Man kann</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span> 
+</pre></div>
+</div>
+<p>aber auch umschreiben zu</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Beispiel:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="c1"># 2</span>
+
+<span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># 2</span>
+</pre></div>
+</div>
+<p>math.floor() ist eine Funktion der Python Math library, welche einen Input bekommt und diesen auf den nächsten Integer Wert abrundet.
+Wie man Bibliotheken nutzt, wird später erklärt.</p>
+<p>Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
+Dafür werden zwei aufeinanderfolgende Sterne benutzt(**)</p>
+<p>Somit berechnet man mit 2 ** 5 den Wert 2^5 (2 hoch 5)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">**</span> <span class="mi">3</span>
+<span class="c1"># 27</span>
+</pre></div>
 </div>
 </section>
 </section>
@@ -394,10 +499,17 @@ Hier ist das Inhaltsverzeichnis um direkt in ein bestimmtes Kapitel zu springen.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="1_Motivation.html" title="next page">
+    <a class='left-prev' id="prev-link" href="3_3_Python_Output_Input.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Output und Input</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="3_5_Mathematische_Funktionen.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Motivation</p>
+        <p class="prev-next-title">Bibliotheken und Mathematische Funktionen</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -410,7 +522,7 @@ Hier ist das Inhaltsverzeichnis um direkt in ein bestimmtes Kapitel zu springen.
   
     By Edward Späth<br/>
   
-      &copy; Copyright 2022.<br/>
+      &copy; Copyright 2023.<br/>
 </p>
         </footer>
     </div>

@@ -2,8 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: index
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: 1_Motivation
+- file: 2_Wie_nutzen_wir_Python
+- file: Chapter_Python_Basics  
+  sections:
+    - file: 3_1_Python_Kommentare
+    - file: 3_2_Python_Datentypen
+    - file: 3_3_Python_Output_Input

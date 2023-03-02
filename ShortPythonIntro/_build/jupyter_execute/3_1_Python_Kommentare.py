@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Kommentare in Python
+# # Erstellen von Kommentaren
 
 # ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
 
@@ -10,7 +10,7 @@
 
 # ```Python
 # x = 5 # Gib x den Wert 5
-# #	   ^^^^^^^^^^^^^^^^^
+# #      ^^^^^^^^^^^^^^^^^
 # #Code  Kommentar
 # ```
 
@@ -39,23 +39,9 @@
 # Sorgen sie **OHNE** Code zu entfernen oder zu verschieben dafür, dass der Output "Hello World!" geprinted wird.
 # Sie dürfen nur zwei triple quotes (""") nutzen
 
+# ## Lösung
+
 # In[1]:
-
-
-my_output = "Hello World!"
-
-my_output = 0
-
-for i in range(1, 100+1):
-    
-    my_output += i
-
-print(my_output)
-
-
-# ## Solution
-
-# In[2]:
 
 
 my_output = "Hello World!"
