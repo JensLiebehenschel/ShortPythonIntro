@@ -6,7 +6,7 @@
 # ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
 
 # Kommentare in Python sind relativ simpel. Es gibt nur einen Weg Kommentare zu erstellen.
-# Wenn außerhalb eines Strings ein Rautezeichen(#) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet
+# Wenn außerhalb eines Strings ein Rautezeichen(<code>#</code>) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet
 
 # ```Python
 # x = 5 # Gib x den Wert 5
@@ -37,11 +37,25 @@
 
 # Jetzt sind Sie an der Reihe!
 # Sorgen sie **OHNE** Code zu entfernen oder zu verschieben dafür, dass der Output "Hello World!" geprinted wird.
-# Sie dürfen nur zwei triple quotes (""") nutzen
+# Sie dürfen nur zwei triple quotes (<code>"""</code>) nutzen
+
+# In[1]:
+
+
+my_output = "Hello World!"
+
+my_output = 0
+
+for i in range(1, 100+1):
+    
+    my_output += i
+
+print(my_output)
+
 
 # ## Lösung
 
-# In[1]:
+# In[2]:
 
 
 my_output = "Hello World!"

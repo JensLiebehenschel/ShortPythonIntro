@@ -4,7 +4,7 @@
 
 ## Der Zuweisungsoperator
 
-Wie auch in anderen Programmiersprachen ist "=" der normale Zuweisungsoperator. Dessen Funktion sollte bekannt sein.
+Wie auch in anderen Programmiersprachen ist <code>&equals;</code> der normale Zuweisungsoperator. Dessen Funktion sollte bekannt sein.
 
 In Python hat dieser jedoch zusätzliche Funktionalität.
 Normalerweise hat der Zuweisungsoperator einen Operanden auf der linken Seite und einen Operanden auf der rechten Seite.

@@ -5,14 +5,14 @@
 ## Ausgabe
 Wie auch in anderen Programmiersprachen, ist die Ein- und Ausgabe in einem Terminalfenster essenziell. Zumindest für die meisten Programme im Kontext des Studiums.
 
-Um in Python etwas in ein Terminalfenster ausgeben zu können, wird die Funktion print() benutzt.
+Um in Python etwas in ein Terminalfenster ausgeben zu können, wird die Funktion <code>print()</code> benutzt.
 ```Python
 # Einen Namen ausgeben
 name = "Max Mustermann"
 print(name)
 # --> Max Mustermann
 ```
-Die print() Funktion kann auch mehrere Parameter entgegennehmen.
+Die <code>print()</code> Funktion kann auch mehrere Parameter entgegennehmen.
 In diesem Fall werden die gegebenen Parameter mit einem Leerzeichen dazwischen konkatiniert.
 ```Python
 # Ein etwas komplexeres print() statement
@@ -26,7 +26,7 @@ print(name1, "ist mit", name2, "befreundet.")
 Wie man in Python vom Standardinput aus einem Terminal einlesen kann, wird in dieser Einführung nicht behandelt.
 Stattdessen wäre es erstmal am einfachsten, bestimmte Werte zu hardcoden.
 
-Wenn man nun die Funktion foo(x) testen möchte, so kann man davor einfach x einen Wert zuweisen und dann die Funktion aufrufen.
+Wenn man nun die Funktion <code>foo(x)</code> testen möchte, so kann man davor einfach x einen Wert zuweisen und dann die Funktion aufrufen.
 ```Python
 x = 5
 foo(x)

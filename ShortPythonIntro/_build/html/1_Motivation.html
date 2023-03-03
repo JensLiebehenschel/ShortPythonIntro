@@ -163,6 +163,16 @@ const thebe_selector_output = ".output, .cell_output"
      Zuweisungen
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_7_Indentation_If_Statements.html">
+     Indentierung und if statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_8_Logische%20Ausdruecke.html">
+     Logische Ausdrücke
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -447,7 +457,7 @@ Daher führt man das Konzept von “Pseudocode” ein, um Programmiersprachen-ne
 Der noch größere Vorteil ist, dass man sich nicht mit den Einzelheiten einer bestimmten Programmiersprache beschäftigen muss.</p>
 <p>Die Lesenden haben wahrscheinlich bereits einen Kurs in der Programmiersprache C besucht.
 Hierbei gibt es das Konzept von Pointern.
-Es gibt jedoch Programmiersprachen wie etwa Java (3. Semester), welche keine Pointer in ihrer Sprache haben.
+Es gibt jedoch Programmiersprachen wie etwa Java (3. Semester) oder auch Python, welche keine Pointer in ihrer Sprache haben.
 Wäre es nun also sinnvoll, dass sich ein Java-Entwickler mit Pointern auseinandersetzten muss um zu verstehen wie der Sortieralgorithmus in einem gegeben C-Quellcode funktioniert?</p>
 <p>Die Antwort ist wahrscheinlich ein “Nein”.</p>
 <p>Anderes Beispiel: Ist es für einen Algorithmus in der Regel relevant ob man Integer-Werte oder Gleitkommazahlen sortieren möchte?
@@ -459,8 +469,8 @@ Für ihren C-code, absolut. Für das Verständnis der Lösungsschritte, eher von
 Python ist nämlich die Brücke zwischen den Vorteilen von Pseudocode und den Vorteilen von bereits gegebenem Quellcode.</p>
 <p>Im Vergleich zu Sprachen wie C, handelt es sich bei Python um eine dynamisch-typisierte Programmiersprache.
 Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
-Speichert man unter einer Variable den Wert 5 ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
-Dividiert man den Wert nun durch 2, so interpretiert Python diese Variable mit dem Ergebnis 2.5 nun als eine Gleitkommazahl (float/double).
+Speichert man unter einer Variable den Wert <code>5</code> ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
+Dividiert man den Wert nun durch <code>2</code>, so interpretiert Python diese Variable mit dem Ergebnis <code>2.5</code> nun als eine Gleitkommazahl (float/double).
 Eine C-Variable welche zu beginn mit</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
 </pre></div>
@@ -470,7 +480,7 @@ Eine C-Variable welche zu beginn mit</p>
 <span class="c1">// --&gt; 0 (False)</span>
 </pre></div>
 </div>
-<p>angeben, dass 5 geteilt durch 2 nicht 2.5 ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
+<p>angeben, dass <code>5</code> geteilt durch <code>2</code> nicht <code>2.5</code> ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
 Um sowas muss man sich in Python keine Gedanken machen.</p>
 <p>Somit kann man in Python sehr einfach, sehr komplexe Strukturen erstellen.
 Wie wäre es mit einem Array, welches innerhalb von einem Index ein Array mit 5 weiteren geschachtelten Arrays enthält. Also ein Array in einem Array, in einem Array, …

@@ -163,6 +163,16 @@ const thebe_selector_output = ".output, .cell_output"
      Zuweisungen
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_7_Indentation_If_Statements.html">
+     Indentierung und if statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_8_Logische%20Ausdruecke.html">
+     Logische Ausdrücke
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -389,7 +399,7 @@ title="Print to PDF"
 <h1>Arithmetische Operationen<a class="headerlink" href="#arithmetische-operationen" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-<p>In Python hat man natürlich die klassischen Grundrechenarten wie +, -, * und /</p>
+<p>In Python hat man natürlich die klassischen Grundrechenarten wie <code>+, -, *</code> und <code>/</code></p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">+</span><span class="mi">5</span>
 <span class="c1"># 10</span>
 
@@ -397,7 +407,7 @@ title="Print to PDF"
 <span class="c1"># 15</span>
 </pre></div>
 </div>
-<p>Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu inkrementieren, wäre der “++” Operator.</p>
+<p>Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu inkrementieren, wäre der <code>++</code> Operator.</p>
 <p>Somit ist</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
 </pre></div>
@@ -418,9 +428,9 @@ Das wird sich auch später bei den Schleifen zeigen.</p>
 </pre></div>
 </div>
 <p>ist.
-Die Idee ist analog für den x– Ausdruck, welcher ebenfalls durch x -= 1 zu ersetzen ist.</p>
-<p>Allgemein werden die Operatoren +=, -=, *= und /= so genutzt:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="n">RECHENOPERATION</span><span class="o">=</span> <span class="n">n</span>
+Die Idee ist analog für den <code>x–</code> Ausdruck, welcher ebenfalls durch <code>x -= 1</code> zu ersetzen ist.</p>
+<p>Allgemein werden die Operatoren <code>+=, -=, *= und /=</code> so genutzt:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="n">RECHENOPERATION</span> <span class="o">=</span> <span class="n">n</span>
 
 <span class="c1"># ist äquivalent zu</span>
 
@@ -436,13 +446,13 @@ Die Idee ist analog für den x– Ausdruck, welcher ebenfalls durch x -= 1 zu er
 </div>
 <p>Es gibt auch die noch relativ übliche Modulo Operation mit dem Prozentzeichen(%).
 Kurze Auffrischung:
-Das Ergebnis von a % b (a modulo b bzw. a mod b) ist der Rest, der bei der Division a/b übrig bleibt.</p>
+Das Ergebnis von <code>a % b</code> (a modulo b bzw. a mod b) ist der Rest, der bei der Division <code>a/b</code> übrig bleibt.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">8</span> <span class="o">%</span> <span class="mi">3</span>
 <span class="c1"># 2</span>
 </pre></div>
 </div>
-<p>Des Weiteren gibt es die Integer Division mit dem Operator //
-Diese Operation berechnet den normalen Quotienten c = a/b, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
+<p>Des Weiteren gibt es die Integer Division mit dem Operator <code>//</code>
+Diese Operation berechnet den normalen Quotienten <code>c = a/b</code>, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
 Der Rest wird sozusagen ignoriert.</p>
 <p>Man kann</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span> 
@@ -460,11 +470,11 @@ Der Rest wird sozusagen ignoriert.</p>
 <span class="c1"># 2</span>
 </pre></div>
 </div>
-<p>math.floor() ist eine Funktion der Python Math library, welche einen Input bekommt und diesen auf den nächsten Integer Wert abrundet.
+<p><code>math.floor()</code> ist eine Funktion der Python math library, welche einen Input bekommt und diesen auf den nächsten Integer Wert abrundet.
 Wie man Bibliotheken nutzt, wird später erklärt.</p>
 <p>Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
-Dafür werden zwei aufeinanderfolgende Sterne benutzt(**)</p>
-<p>Somit berechnet man mit 2 ** 5 den Wert 2^5 (2 hoch 5)</p>
+Dafür werden zwei aufeinanderfolgende Sterne benutzt(<code>**</code>)</p>
+<p>Somit berechnet man mit <code>2 ** 5</code> den Wert 2^5 (2 hoch 5)</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="o">**</span> <span class="mi">3</span>
 <span class="c1"># 27</span>
 </pre></div>

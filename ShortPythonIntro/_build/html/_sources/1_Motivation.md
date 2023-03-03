@@ -22,7 +22,7 @@ Der noch größere Vorteil ist, dass man sich nicht mit den Einzelheiten einer b
 
 Die Lesenden haben wahrscheinlich bereits einen Kurs in der Programmiersprache C besucht.
 Hierbei gibt es das Konzept von Pointern.
-Es gibt jedoch Programmiersprachen wie etwa Java (3. Semester), welche keine Pointer in ihrer Sprache haben.
+Es gibt jedoch Programmiersprachen wie etwa Java (3. Semester) oder auch Python, welche keine Pointer in ihrer Sprache haben.
 Wäre es nun also sinnvoll, dass sich ein Java-Entwickler mit Pointern auseinandersetzten muss um zu verstehen wie der Sortieralgorithmus in einem gegeben C-Quellcode funktioniert?
 
 Die Antwort ist wahrscheinlich ein "Nein".
@@ -37,8 +37,8 @@ Python ist nämlich die Brücke zwischen den Vorteilen von Pseudocode und den Vo
 
 Im Vergleich zu Sprachen wie C, handelt es sich bei Python um eine dynamisch-typisierte Programmiersprache.
 Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
-Speichert man unter einer Variable den Wert 5 ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
-Dividiert man den Wert nun durch 2, so interpretiert Python diese Variable mit dem Ergebnis 2.5 nun als eine Gleitkommazahl (float/double). 
+Speichert man unter einer Variable den Wert <code>5</code> ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
+Dividiert man den Wert nun durch <code>2</code>, so interpretiert Python diese Variable mit dem Ergebnis <code>2.5</code> nun als eine Gleitkommazahl (float/double). 
 Eine C-Variable welche zu beginn mit 
 ```C
 int x = 5;
@@ -48,7 +48,7 @@ deklariert & initialisiert wurde, würde nun
 printf("%d", x/2==2.5);
 // --> 0 (False)
 ```
-angeben, dass 5 geteilt durch 2 nicht 2.5 ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
+angeben, dass <code>5</code> geteilt durch <code>2</code> nicht <code>2.5</code> ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
 Um sowas muss man sich in Python keine Gedanken machen.
 
 Somit kann man in Python sehr einfach, sehr komplexe Strukturen erstellen. 

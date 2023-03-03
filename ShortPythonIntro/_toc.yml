@@ -14,3 +14,5 @@ chapters:
     - file: 3_4_Python_Arithemtische_Operatoren
     - file: 3_5_Mathematische_Funktionen
     - file: 3_6_Zuweisungen
+    - file: 3_7_Indentation_If_Statements
+    - file: 3_8_Logische Ausdruecke

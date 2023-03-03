@@ -163,6 +163,16 @@ const thebe_selector_output = ".output, .cell_output"
      Zuweisungen
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_7_Indentation_If_Statements.html">
+     Indentierung und if statements
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_8_Logische%20Ausdruecke.html">
+     Logische Ausdrücke
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -429,7 +439,7 @@ title="Print to PDF"
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
 <p>Kommentare in Python sind relativ simpel. Es gibt nur einen Weg Kommentare zu erstellen.
-Wenn außerhalb eines Strings ein Rautezeichen(#) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet</p>
+Wenn außerhalb eines Strings ein Rautezeichen(<code>#</code>) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Gib x den Wert 5</span>
 <span class="c1">#      ^^^^^^^^^^^^^^^^^</span>
 <span class="c1">#Code  Kommentar</span>
@@ -454,7 +464,27 @@ wie in u.a. C/C++/Java mit</p>
 Das Funktioniert indem man jeweils am Anfang und Ende des auszukommentierenden Bereichs sogenannte “triple quotes” einfügt. Damit bezeichnet man drei aufeinanderfolgende Anführungszeichen.</p>
 <p>Jetzt sind Sie an der Reihe!
 Sorgen sie <strong>OHNE</strong> Code zu entfernen oder zu verschieben dafür, dass der Output “Hello World!” geprinted wird.
-Sie dürfen nur zwei triple quotes (“””) nutzen</p>
+Sie dürfen nur zwei triple quotes (<code>”””</code>) nutzen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_output</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+
+<span class="n">my_output</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    
+    <span class="n">my_output</span> <span class="o">+=</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5050
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="losung">
 <h2>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h2>

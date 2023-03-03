@@ -19,12 +19,12 @@ in C:
 #include <Bibliotheksname.h>
 ```
 
-in Python wird das Keyword "import" genutzt:
+in Python wird das Keyword <code>import</code> genutzt:
 ```Python
 import Bibliotheksname
 ```
 
-Konkret um auf die Funktionen für die Quadratwurzel und die Logarithmen, muss man die Bibliothek "math" importieren.
+Konkret um auf die Funktionen für die Quadratwurzel und die Logarithmen, muss man die Bibliothek <code>math</code> importieren.
 
 Also braucht man die Zeile
 ```Python
@@ -37,9 +37,9 @@ bevor man diese Funktionen nutzen kann.
 
 Nun haben wir die math Bibliothek importiert.
 
-Um auf diese zuzugreifen, müssen wir vor den Funktionen einen Präfix von "Bibliotheksname." hinzufügen, damit wir ausdrücken, dass wir die Funktion dieser Bibliothek meinen.
+Um auf diese zuzugreifen, müssen wir vor den Funktionen einen Präfix von <code>Bibliotheksname.</code> hinzufügen, damit wir ausdrücken, dass wir die Funktion dieser Bibliothek meinen.
 
-Konkret wäre der Präfix hier also "math."
+Konkret wäre der Präfix hier also <code>math.</code>
 
 Die Quadratwurzel von 25 könnte man also wie folgt berechnen:
 ```Python
@@ -47,7 +47,7 @@ result = math.sqrt(25)
 # 5
 ```
 
-Um den 10-er Logarithmus von x zu berechnen, kann man die Funktion math.log10(x) nutzen
+Um den 10-er Logarithmus von x zu berechnen, kann man die Funktion <code>math.log10(x)</code> nutzen
 ```Python
 result = math.log10(100)
 # 2
