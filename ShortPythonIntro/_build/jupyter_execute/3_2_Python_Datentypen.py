@@ -13,24 +13,22 @@
 # Hier nochmal die Erklärung.
 # Beim Dynamic Typing, kümmert sich einfach gesagt, der Python Interpreter um Datentypen und der Programmierer muss diese nicht konkret angeben.
 # 
-# Dies macht es sehr einfach mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
+# Dies macht es sehr einfach mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob etwa eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
 # Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben will, so kann man Typecasting machen und somit den Typen explizit angeben. Dieser kann sich dann aber trotzdem noch ändern, wenn man der Variable einen neuen Wert zuweist.
 
 # ```Python
+# # Bei der Funktion type(x) handelt es es sich um eine Funktion, 
+# # welche angibt von welchem Datentypen das Objekt x ist 
+# 
 # x = 5
-# x = str(x)
+# type(x)
+# # --> <class 'int'>
+# # --> x ist intern ein Integer
 # 
-# # Bei isinstance(x, datentyp) handelt es es sich um eine Funktion, 
-# # welche überprüft ob das Objekt x vom angegebenen Datentypen ist 
-# # und gibt im Fall einer Übereinstimmung "True" zurück. Ansonsten "False".
-# 
-# # Überprüfen ob x ein String ist
-# isinstance(x, str)
-# # Gibt True zurück. Die Variable x ist ein String
-# 
-# # Überprüfen ob x ein Integer ist
-# isinstance(x, int)
-# #--> Gibt False zurück. Die Variable x ist kein Integer
+# x = str(x)  # Typecasting von der Variable x zum Datentyp String
+# type(x)
+# # --> <class 'str'>
+# # --> x ist nun intern ein String
 # ```
 
 # ## Hinweis zu Semikola

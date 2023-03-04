@@ -7,12 +7,12 @@
 
 # Nun geht es um logische Ausdrücke.
 # 
-# In Python gibt es Datentyp Boolean.
+# In Python gibt es den Datentyp Boolean.
 # Dieser kann zwei Werte haben: Wahr und Falsch
 # 
 # auf Englisch True und False.
 # 
-# True und False sind hierbei keine Strings, sondern keywords.
+# <code>True</code> und <code>False</code> sind hierbei keine Strings, sondern keywords.
 # Man muss mit der Groß- und Kleinschreibung aufpassen, denn es ist nur korrekt, wenn der Anfangsbuchstabe groß ist und der Rest klein.
 # ```Python
 # Korrekt:
@@ -38,7 +38,8 @@
 # y = 5
 # 
 # wahrheitsert = x == y
-# # wahrheitswert ist True
+# print(wahrheitswert)
+# # True
 # ```
 # Vergleiche von konkreten Werten sind mit <code>&gt;,&lt;,&gt;&equals;,&lt;&equals;</code> ebenfalls möglich.
 # 
@@ -47,7 +48,7 @@
 # int x = 5;
 # int y = 5;
 # 
-# !(x == y)
+# printf("%d", !(x == y));
 # // 0 bzw. False
 # ```
 # In Python gibt es dafür das keyword <code>not</code>.
@@ -56,7 +57,7 @@
 # x = 5
 # y = 5
 # 
-# not (x == y)
+# print(not (x == y))
 # # False
 # ```
 # 
@@ -69,7 +70,7 @@
 # int y = 5;
 # int z = 3;
 # 
-# (x == y) && (x == z || !(y < z))
+# printf("%d", (x == y) && (x == z || !(y < z)))
 # // 1 bzw. True
 # ```
 # Python:
@@ -78,6 +79,6 @@
 # y = 5
 # z = 3
 # 
-# (x == y) and (x == z or not y < z)
+# print((x == y) and (x == z or not (y < z)))
 # # True
 # ```

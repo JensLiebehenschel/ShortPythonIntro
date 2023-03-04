@@ -5,10 +5,12 @@
 In Python hat man natürlich die klassischen Grundrechenarten wie <code>+, -, *</code> und <code>/</code>
 
 ```Python
-5+5
+x = 5+5
+print(x)
 # 10
 
-3*5
+x = 3*5
+print(x)
 # 15
 ```
 
@@ -40,7 +42,7 @@ Die Idee ist analog für den <code>x&#045;&#045;</code> Ausdruck, welcher ebenfa
 
 Allgemein werden die Operatoren <code>+=, &#045;=, \*= und /=</code> so genutzt:
 ```Python
-x RECHENOPERATION = n
+x RECHENOPERATION= n
 
 # ist äquivalent zu
 
@@ -58,7 +60,8 @@ Es gibt auch die noch relativ übliche Modulo Operation mit dem Prozentzeichen(%
 Kurze Auffrischung: 
 Das Ergebnis von <code>a % b</code> (a modulo b bzw. a mod b) ist der Rest, der bei der Division <code>a/b</code> übrig bleibt.
 ```Python
-8 % 3
+x = 8 % 3
+print(x)
 # 2
 ```
 
@@ -76,10 +79,13 @@ math.floor(a/b)
 ```
 Beispiel:
 ```Python
-5 // 2
+x = 5 // 2
+print(x)
 # 2
 
-math.floor(5/2)
+import math
+x = math.floor(5/2)
+print(x)
 # 2
 ```
 
@@ -90,8 +96,9 @@ Wie man Bibliotheken nutzt, wird später erklärt.
 Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
 Dafür werden zwei aufeinanderfolgende Sterne benutzt(<code>\*\*</code>)
 
-Somit berechnet man mit <code>2 \*\* 5</code> den Wert 2^5 (2 hoch 5)
+Somit berechnet man mit <code>2 \*\* 5</code> den Wert 2<sup>5</sup> (2 hoch 5)
 ```Python
-3 ** 3
+x = 3 ** 3
+print(x)
 # 27
 ```

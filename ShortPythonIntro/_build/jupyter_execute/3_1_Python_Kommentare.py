@@ -17,7 +17,7 @@
 # Es gibt eigentlich keinen Weg, einen Kommentar über mehrere Zeilen hinweg zu erstellen
 # wie in u.a. C/C++/Java mit
 # ```C
-# /*\
+# /*
 #     Das ist kommentar
 #     Das hier auch
 #     Das hier ebenfalls

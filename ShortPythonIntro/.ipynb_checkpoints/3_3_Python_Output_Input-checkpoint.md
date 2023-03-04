@@ -10,7 +10,7 @@ Um in Python etwas in ein Terminalfenster ausgeben zu können, wird die Funktion
 # Einen Namen ausgeben
 name = "Max Mustermann"
 print(name)
-# --> Max Mustermann
+# Max Mustermann
 ```
 Die <code>print()</code> Funktion kann auch mehrere Parameter entgegennehmen.
 In diesem Fall werden die gegebenen Parameter mit einem Leerzeichen dazwischen konkatiniert.
@@ -19,7 +19,7 @@ In diesem Fall werden die gegebenen Parameter mit einem Leerzeichen dazwischen k
 name1 = "Max Mustermann"
 name2 = "John Doe"
 print(name1, "ist mit", name2, "befreundet.")
-# --> Max Mustermann ist mit John Doe befreundet.
+# Max Mustermann ist mit John Doe befreundet.
 ```
 
 ## Eingabe

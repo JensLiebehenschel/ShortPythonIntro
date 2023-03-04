@@ -118,7 +118,7 @@
 # 	 und mach das
 #    und das hier auch 
 # ```
-# Für den else-block wird das keyword else benutzt.
+# Für den else-block wird das keyword <code>else</code> benutzt.
 # Will man ein <code>else-if</code> machen, kann man das eingebaut Python keyword <code>elif</code> nutzen.
 # Das Funktioniert folgendermaßen:
 # ```Python

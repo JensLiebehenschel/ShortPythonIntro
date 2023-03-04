@@ -169,11 +169,31 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_8_Logische%20Ausdruecke.html">
+    <a class="reference internal" href="3_8_Logische_Ausdruecke.html">
      Logische Ausdrücke
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4_Lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_Loops.html">
+   Schleifen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_Funktionen.html">
+   Funktionen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_Klassen.html">
+   Klassen
+  </a>
  </li>
 </ul>
 
@@ -466,22 +486,20 @@ Der Unterschied in Python ist, dass sich der Programmierer in der Regel nicht um
 Der Grund dafür liegt in Pythons “Dynamic Typing”
 Hier nochmal die Erklärung.
 Beim Dynamic Typing, kümmert sich einfach gesagt, der Python Interpreter um Datentypen und der Programmierer muss diese nicht konkret angeben.</p>
-<p>Dies macht es sehr einfach mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
+<p>Dies macht es sehr einfach mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob etwa eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
 Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben will, so kann man Typecasting machen und somit den Typen explizit angeben. Dieser kann sich dann aber trotzdem noch ändern, wenn man der Variable einen neuen Wert zuweist.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bei der Funktion type(x) handelt es es sich um eine Funktion, </span>
+<span class="c1"># welche angibt von welchem Datentypen das Objekt x ist </span>
 
-<span class="c1"># Bei isinstance(x, datentyp) handelt es es sich um eine Funktion, </span>
-<span class="c1"># welche überprüft ob das Objekt x vom angegebenen Datentypen ist </span>
-<span class="c1"># und gibt im Fall einer Übereinstimmung &quot;True&quot; zurück. Ansonsten &quot;False&quot;.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1"># --&gt; &lt;class &#39;int&#39;&gt;</span>
+<span class="c1"># --&gt; x ist intern ein Integer</span>
 
-<span class="c1"># Überprüfen ob x ein String ist</span>
-<span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
-<span class="c1"># Gibt True zurück. Die Variable x ist ein String</span>
-
-<span class="c1"># Überprüfen ob x ein Integer ist</span>
-<span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>
-<span class="c1">#--&gt; Gibt False zurück. Die Variable x ist kein Integer</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Typecasting von der Variable x zum Datentyp String</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1"># --&gt; &lt;class &#39;str&#39;&gt;</span>
+<span class="c1"># --&gt; x ist nun intern ein String</span>
 </pre></div>
 </div>
 </section>

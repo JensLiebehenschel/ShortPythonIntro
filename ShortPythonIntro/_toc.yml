@@ -15,4 +15,8 @@ chapters:
     - file: 3_5_Mathematische_Funktionen
     - file: 3_6_Zuweisungen
     - file: 3_7_Indentation_If_Statements
-    - file: 3_8_Logische Ausdruecke
+    - file: 3_8_Logische_Ausdruecke
+- file: 4_Lists
+- file: 5_Loops
+- file: 6_Funktionen
+- file: 7_Klassen

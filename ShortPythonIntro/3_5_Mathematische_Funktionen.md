@@ -43,13 +43,15 @@ Konkret wäre der Präfix hier also <code>math.</code>
 
 Die Quadratwurzel von 25 könnte man also wie folgt berechnen:
 ```Python
-result = math.sqrt(25)
+x = math.sqrt(25)
+print(x)
 # 5
 ```
 
 Um den 10-er Logarithmus von x zu berechnen, kann man die Funktion <code>math.log10(x)</code> nutzen
 ```Python
-result = math.log10(100)
+x = math.log10(100)
+print(x)
 # 2
 ```
 

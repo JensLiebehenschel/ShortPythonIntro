@@ -39,7 +39,7 @@ Im Vergleich zu Sprachen wie C, handelt es sich bei Python um eine dynamisch-typ
 Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
 Speichert man unter einer Variable den Wert <code>5</code> ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
 Dividiert man den Wert nun durch <code>2</code>, so interpretiert Python diese Variable mit dem Ergebnis <code>2.5</code> nun als eine Gleitkommazahl (float/double). 
-Eine C-Variable welche zu beginn mit 
+Eine Variable in C, welche zu beginn mit 
 ```C
 int x = 5;
 ```
@@ -77,7 +77,7 @@ Python ist somit ideal für das Bauen eines Prototyps.
 Python ist allgemein eine sehr beliebte Programmiersprache. 
 Je nach Statistik, kann man sagen, dass Python häufig zu den Top 3 der beliebtesten Programmiersprachen der Welt gehört.
 
-Des weiteren ist Python die go-to Programmiersprache für künstliche Intelligenz und zu einem großen Teil auch für Data Science.
+Des Weiteren ist Python die go-to Programmiersprache für künstliche Intelligenz und zu einem großen Teil auch für Data Science.
 Webseiten können mit Hilfe des "Django" Frameworks ebenfalls in Python programmiert werden.
 Die investierte Zeit, sollte sich also lohnen.
 
