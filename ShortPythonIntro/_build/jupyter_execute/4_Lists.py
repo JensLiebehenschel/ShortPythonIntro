@@ -4,7 +4,9 @@
 # # Lists
 # 
 # ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
-# 
+
+# ## Lists allgemein
+
 # Die am meisten benutzte Datenstruktur ist das Array.
 # Python nennt es jedoch nicht ein "Array", sondern eine "List".
 # Von der Idee her sind sie identisch. Man hat eine Datenstruktur worin man Daten speichern möchte.
@@ -13,22 +15,22 @@
 # 
 # Ein Beispiel aus C:
 # ```C
-# int arr[] = {1, 2, 3, 4, 5};
+# int ArrayNameHier[] = {1, 2, 3, 4, 5};
 # ```
 # In Python werden eckige Klammern genutzt um Lists zu symbolisieren.
 # ```Python
-# arr = [1, 2, 3, 4, 5]
+# ListNameHier = [1, 2, 3, 4, 5]
 # ```
 # Bei dem vorherigen Python Beispiel, wird nirgendwo gesagt, dass es sich bei dieser List um eine Integer List handelt.
 # 
 # Das liegt wieder am Dynamic Typing.
-# Nur handelt es sich hier nicht einmal um ein Integerarray.
+# Nur handelt es sich hier nicht einmal intern um eine Integer List.
 # 
 # Man könnte nämlich einen anderen Datentypen als einen Integer einfügen.
 # 
 # Beispiel:
 # ```Python
-# arr = [1, 2, 3, 4, 5, "Hello World!"]
+# my_list = [1, 2, 3, 4, 5, "Hello World!"]
 # ```
 # In den meisten anderen Programmiersprachen wäre das so einfach nicht möglich.
 # Es liegt auch nicht daran, dass die Ziffern 1 bis 5 zu Strings übersetzt werden.
@@ -44,11 +46,11 @@
 # Rufen wir jetzt diese Funktionen auf, sehen wir folgendes.
 # Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen, um auf einen bestimmten (bei 0 anfangenden) Index einer List zuzugreifen.
 # ```Python
-# print(type(arr[0]))
+# print(type(my_list[0]))
 # # <class 'int'>
 # # --> Objekt am Index 0 ist ein Integer
 # 
-# print(type(arr[5]))
+# print(type(my_list[5]))
 # # <class 'str'>
 # # --> Objekt am Index 5 ist ein String
 # ```
@@ -58,13 +60,13 @@
 # 
 # ## Negative Indizes ##
 # 
-# Python verfügt über einen praktischen Shortcut um auf n-t letzte Element in einer List zuzugreifen.
+# Python verfügt über einen praktischen Shortcut um auf k-t letzte Element in einer List (hier namens "nums") zuzugreifen.
 # 
-# Und zwar mit der Syntax: <code>arr[-n]</code>
+# Und zwar mit der Syntax: <code>nums[-k]</code>
 # 
 # Also mit einem negativen Index.
 # 
-# <code>arr[-1]</code> greift auf das letzte Element zu, <code>arr[-2]</code> greift auf das vorletzte Element zu und so weiter.
+# <code>nums[-1]</code> greift auf das letzte Element zu, <code>nums[-2]</code> greift auf das vorletzte Element zu und so weiter.
 # 
 # Dabei sollte man beim Programmieren beachten, dass negative Indizes in Python gültig sind und nicht zwingend zu einem Fehler führen.
 # 
@@ -73,8 +75,8 @@
 # 
 # Um die Länge eines Arrays herauszufinden, benutzt man die <code>len()</code> funktion
 # ```Python
-# arr = [1, 2, 3, 4, 5]
-# print(len(arr))
+# nums = [1, 2, 3, 4, 5]
+# print(len(nums))
 # # 5
 # ```
 # 
@@ -83,16 +85,16 @@
 # Um einen Wert zu einer bereits existierenden Liste hinzuzufügen, kann die sehr hilfreiche <code>append()</code> funktion genutzt werden.
 # 
 # ```Python
-# arr = [1, 2, 3, 4, 5]
-# print(arr)
+# nums = [1, 2, 3, 4, 5]
+# print(nums)
 # # [1, 2, 3, 4, 5]
-# print(len(arr))
+# print(len(nums))
 # # 5
 # 
-# arr.append(6)
-# print(arr)
+# nums.append(6)
+# print(nums)
 # # [1, 2, 3, 4, 5, 6]
-# print(len(arr))
+# print(len(nums))
 # # 6
 # ```
 # Man kann soviel appenden wie man möchte, da eine List eine dynamische Datenstruktur ist.
@@ -102,7 +104,7 @@
 # 
 # Eine leere Liste wird wie folgt initialisiert:
 # ```Python
-# arr = []
+# nums = []
 # ```
 # 
 # ## Slicing ##
@@ -111,7 +113,7 @@
 # Also eine Teilmenge einer bereits existierenden Liste. Beim Slicing geht es lediglich um die Position der Elemente.
 # 
 # Um eine Untermenge abhängig von einer Bedinung zu nehmen, wie etwa
-# "alle Werte aus x, welche größer als 5 sind", benutzt man sogenannte List Comprehension.
+# "alle Werte aus nums, welche größer als 5 sind", benutzt man sogenannte List Comprehension.
 # Für diese Einführung ist dies jedoch viel zu fortgeschritten.
 # Interessierte können selbst danach recherchieren.
 # 
@@ -120,7 +122,7 @@
 # 
 # Hierfür wird folgende Syntax benutzt
 # ```Python
-# arr[a:b]
+# nums[a:b]
 # ```
 # Man gibt links vom Doppelpunkt an, ab welchem Index gestarten werden soll und rechts vom Doppelpunkt an, ab welchem Index aufgehört werden soll.
 # Will man eine der beiden Seiten unverändert lassen, so kann man jene Seite vom Doppelpunkt leer lassen.
@@ -131,28 +133,28 @@
 # Case A:
 # Liste bis exklusive Index <code>b</code>.
 # Man gibt hier also mit <code>b</code> den ersten Index an, welcher bereits NICHT zur Sublist gehören soll:\
-# <code>arr[:b]</code>
+# <code>nums[:b]</code>
 # ```Python
-# arr = [1, 2, 3, 4, 5]
+# nums = [1, 2, 3, 4, 5]
 # #index 0  1  2  3  4
-# print(arr[:3])
+# print(nums[:3])
 # # [1, 2, 3]
 # ```
-# Das obere Beispiel wäre identisch zu <code>arr[0:3]</code>. 
+# Das obere Beispiel wäre identisch zu <code>nums[0:3]</code>. 
 # Da man hier die Linke Seite des Doppelpunktes frei lässt, weiß Python, dass man die Sublist beim Anfang der originalen Liste starten lassen möchte.
-# Es wäre ebenfalls identisch zu <code>arr[:-2]</code>, da man mit dem Index <code>-2</code>, auf das vorletzte Element zugreift, welches das Element an Index <code>3</code> ist.
+# Es wäre ebenfalls identisch zu <code>nums[:-2]</code>, da man mit dem Index <code>-2</code>, auf das vorletzte Element zugreift, welches das Element an Index <code>3</code> ist.
 # 
 # 
 # Case B:
 # Liste ab inklusive Index <code>a</code>:\
-# <code>arr[a:]</code>
+# <code>nums[a:]</code>
 # ```Python
-# arr = [1, 2, 3, 4, 5]
+# nums = [1, 2, 3, 4, 5]
 # #index 0  1  2  3  4
-# print(arr[2:])
+# print(nums[2:])
 # # [3, 4, 5]
 # ```
-# <code>arr[2:]</code> entspricht <code>arr[2:len(arr)]</code>, 
+# <code>nums[2:]</code> entspricht <code>nums[2:len(nums)]</code>, 
 # da die Länge einer List der erste Index ist, welcher nicht mehr Teil der Liste ist.
 # Wenn der höchste Index <code>4</code> wäre, würde man also sagen:
 # bis exklusive Index <code>5</code>.
@@ -160,11 +162,11 @@
 # 
 # Case C:
 # Liste ab inklusive Index <code>a</code> und bis exklusive Index <code>b</code>:\
-# <code>arr[a:b]</code>
+# <code>nums[a:b]</code>
 # ```Python
-# arr = [1, 2, 3, 4, 5]
+# nums = [1, 2, 3, 4, 5]
 # #index 0  1  2  3  4
-# print(arr[1:3])
+# print(nums[1:3])
 # # [2, 3]
 # ```
 # Ab Index <code>2</code> bis exklusive Index <code>3</code>
@@ -172,7 +174,7 @@
 # Um die originale List mit einer Sublist zu überschreiben, kann den Zuweisungsoperator nutzen.
 # 
 # ```Python
-# arr1 = arr[:-1]   # entfernt das letzte Element
-# arr2 = arr[1:]    # entfernt das erste Element
-# arr3 = arr[2:-2]  # entfernt die ersten zwei und die letzten zwei Elemente
+# nums = nums[:-1]   # entfernt das letzte Element
+# nums = nums[1:]    # entfernt das erste Element
+# nums = nums[2:-2]  # entfernt die ersten zwei und die letzten zwei Elemente
 # ```

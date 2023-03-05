@@ -134,18 +134,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
      Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
     </a>
    </li>
    <li class="toctree-l2">
@@ -392,6 +392,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#losung">
    Lösung
   </a>
@@ -435,6 +440,11 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#losung">
    Lösung
   </a>
@@ -463,7 +473,7 @@ Normalerweise hat der Zuweisungsoperator einen Operanden auf der linken Seite un
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 </pre></div>
 </div>
-<p>In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine mehrfach-Zuweisung zu durchzuführen.
+<p>In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine mehrfachuuweisung durchzuführen.
 Die Operanden müssen durch Kommata getrennt sein.</p>
 <p>Beispiel:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a soll den Wert 5 haben und b soll den Wert 10 haben</span>
@@ -471,7 +481,7 @@ Die Operanden müssen durch Kommata getrennt sein.</p>
 </pre></div>
 </div>
 <p>allgemeiner geschrieben:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span> <span class="o">=</span> <span class="n">wert_für_variable1</span><span class="p">,</span> <span class="n">wert_für_variable2</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span><span class="p">,</span> <span class="o">...</span> <span class="o">=</span> <span class="n">wert_für_variable1</span><span class="p">,</span> <span class="n">wert_für_variable2</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
 <p>Wenn beide Seiten nicht gleich lang sind, funktioniert es nicht.<br />
@@ -488,6 +498,10 @@ Ungültig:</p>
 </pre></div>
 </div>
 <p>ebenfalls ungültig.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgabe">
+<h1>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h1>
 <p>Operanden der rechten Seite können ja sowohl konkrete Werte aber auch Variablen sein.</p>
 <p>Was wäre nun bei:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
@@ -500,7 +514,6 @@ Ungültig:</p>
 <span class="c1"># unerlaubte Operation?</span>
 </pre></div>
 </div>
-</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="losung">
 <h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>

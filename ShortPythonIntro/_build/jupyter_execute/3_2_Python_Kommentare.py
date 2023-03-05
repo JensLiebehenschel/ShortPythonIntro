@@ -35,6 +35,8 @@
 # Um das Leben einfacher zu machen, ist es jedoch trotzdessen möglich etwas ähnliches zu erzielen indem man den auszukommentierenden Inhalt als einen String ohne Zuweisung speichert. Somit fällt der betroffene Code weg.
 # Das Funktioniert indem man jeweils am Anfang und Ende des auszukommentierenden Bereichs sogenannte "triple quotes" einfügt. Damit bezeichnet man drei aufeinanderfolgende Anführungszeichen.
 
+# # Aufgabe
+
 # Jetzt sind Sie an der Reihe!
 # Sorgen sie **OHNE** Code zu entfernen oder zu verschieben dafür, dass der Output "Hello World!" geprinted wird.
 # Sie dürfen nur zwei triple quotes (<code>"""</code>) nutzen
@@ -53,7 +55,7 @@ for i in range(1, 100+1):
 print(my_output)
 
 
-# ## Lösung
+# # Lösung
 
 # In[2]:
 

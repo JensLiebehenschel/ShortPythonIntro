@@ -129,6 +129,9 @@
 # else:
 # 	print("x ist weder 1 noch 2")
 # ```
+
+# # Aufgabe
+
 # Ein etwas komplexeres Beispiel erst in C:
 # ```C
 # if (x ist wahr) {
@@ -147,16 +150,17 @@
 # <Rest des Programms...>
 # ```
 # Jetzt Sind Sie an der Reihe. Versuchen Sie das obige Beispiel von C in Python umzuschreiben.
-# Benutzen Sie <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</code>. Analog für y und z.
+# Sie können <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</code> nutzen. Analog für y und z.
+# 
 # Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python code handelt.
 
 # In[1]:
 
 
-# Hier können Sie ihren Versuch schreiben
+# Hier können Sie ihren Versuch schreiben...
 
 
-# ## Lösung
+# # Lösung
 
 #  ```{toggle}
 # Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms...&gt;</code> nicht Indentiert ist. Hätte es eine Indentierung von einem tab, so könnte man denken, dass der Rest des Programms noch zu &lt;Codeblock_3&gt; gehört.

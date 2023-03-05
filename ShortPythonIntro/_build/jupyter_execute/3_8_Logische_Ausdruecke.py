@@ -5,6 +5,8 @@
 
 # ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
 
+# ## Der Boolean Datentyp
+
 # Nun geht es um logische Ausdrücke.
 # 
 # In Python gibt es den Datentyp Boolean.
@@ -28,10 +30,9 @@
 # y = fAlSe
 # ```
 # Benutzt man einen Editor mit Python Syntax Highlighting oder gar Autocompletion, wird man anhand der Hervorhebung wie beim Beispiel oben, erkennen, ob man es richtig geschrieben hat oder nicht. Zumindest bis man sich daran sowieso gewöhnt hat.
-# 
-# 
-# Soviel zu Booleans.
-# Nun zu Vergleichen.
+
+# ## Logische Ausdrücke
+
 # Der Vergleichsoperator, welcher auf Gleichteit prüft ist wie fast überall auch ein <code>&equals;&equals;</code>.
 # ```Python
 # x = 5

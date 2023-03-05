@@ -23,7 +23,7 @@
 # def ich_printe_falschherum(input_string):
 #     result = ""
 #     for i in range(1, len(input_string)+1):
-#         result += input_string[-i] # Der + operator bei Strings steht für konkatinierung
+#         result += input_string[-i] # Der "+"-operator bei Strings konkatiniert
 #     print(result)
 # 
 # ich_printe_falschherum("Hello World!")
@@ -64,6 +64,9 @@
 # print(es_kommen_mehr_konsonanten_vor)
 # # True
 # ```
+# 
+# Da kann man wieder auf die Mehrfachzuweisung schließen.
+# Da die Funktion drei Werte zurückgibt und man drei Variablen auf der linken Seite hat, haben beide Seiten des Zuweisungsoperators gleich viele Operanden. Also ist dies eine gültige Zuweisung.
 # 
 # ## Rekursion
 # 

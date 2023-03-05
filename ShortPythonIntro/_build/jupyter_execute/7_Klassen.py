@@ -5,7 +5,7 @@
 
 # ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
 
-# ## Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich trotzdessen damit auseinandersetzen wollen.
+# **Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich trotzdessen damit auseinandersetzen wollen.**
 
 # Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.
 # 
@@ -14,7 +14,7 @@
 # da es nahezu notwendig ist, wenn man Binärbäume programmieren möchte.
 # 
 # Zum definieren einer Klasse wird das keyword <code>class</code> gefolgt vom Klassennamen genutzt.
-# Daraufhin kann man wenn man möchte noch leere runde Klammern setzten und die Zeile mit einem Doppelpunkt beenden.
+# Daraufhin kann man wenn man möchte noch leere runde Klammern setzten und man beendet die Zeile mit einem Doppelpunkt.
 # ```Python
 # class meineKlasse:
 #     <Klassendefinition>
@@ -29,7 +29,9 @@
 # 
 # Nach dem Doppelpunkt kommt ein Indentierungsblock und dort wird die Funktionalität der Klasse definiert.
 # Hier unterscheidet man zwischen Klassenattributen und Instanzattributen.
-# 
+
+# ## Attribute
+
 # Kurzgesagt: Klassenattribute sind für alle Objekte einer Klasse gleich und können unabhängig von einem Objekt abgerufen werden.
 # 
 # Im Rahmen von AlgDat wird das nicht gebraucht. Ich will es hier nur an der Stelle erwähnt haben.
@@ -55,17 +57,18 @@
 # 
 # Einer Variable mit dem Wert <code>None</code> kann im Nachhinein alles zugewiesen werden. 
 # Seien es Integer, Strings oder gar Instanzen einer Klasse. Dynamic Typing macht es möglich.
-# 
-# 
-# Methoden werden im den Indentierungsblock der Klasse mit dem Keyword <code>def</code> erstellt.
+
+# ## Methoden und Konstruktor
+
+# Methoden werden in dem Indentierungsblock der Klasse mit dem Keyword <code>def</code> erstellt.
 # Wie der Konstruktor auszusehen hat, ist in Python genau definiert.
-# <!--&#95; ist der HTML code für eien underscore-->
-# Im Gegensatz zu anderen Programmiersprachen, wo der Konstruktor den Namen der Klasse hat, muss der Konstruktor in Python den Namen <code>&#95;&#95;init&#95;&#95;</code> haben. Ist einfach so definiert. Der Konstruktor kann natürlich Parameter erhalten.
+# <!--&#95; ist der HTML code für einen underscore-->
+# Im Gegensatz zu anderen Programmiersprachen, wo der Konstruktor den Namen der Klasse hat, muss der Konstruktor in Python den Namen <code>&#95;&#95;init&#95;&#95;</code> haben. Ist einfach so definiert. Wenn man ein Objekt dieser Klasse erstellt, wird der Konstruktor automatisch aufgerufen. Der Konstruktor kann natürlich auch Parameter erhalten.
 # 
 # Für den Konstruktor als auch für andere Methoden gilt, dass selbst bei Methoden ohne Parameter, ein Parameter hinzuzufügen ist.
 # Der erste Parameter, der an eine Methode übergeben wird, ist die Instanz der Klasse. Das passiert automatisch und man kann es nicht verhindern.
 # 
-# Laut konvention bezeichnet man diesen Parameter als <code>self</code>. Man kann es wenn man wirklich möchte aber auch anders nennen.
+# Laut konvention bezeichnet man diesen Parameter als <code>self</code>. Man kann ihn wenn man wirklich möchte aber auch anders nennen.
 # Um Attribute einer Instanz zu erzeugen, muss die Instanz mit <code>self</code> oder wie auch immer man es nennen möchte, angesprochen werden.
 # Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperator genutzt.
 # 
@@ -77,7 +80,7 @@
 # 		self.b = b_input
 # 		self.c = None 		# None ist das Python Äquivalent zu NULL
 # 
-# meine_instanz = meineKlasse(1,2)
+# meine_instanz = meineKlasse(1,2) # Konstruktor Aufruf mit Parametern
 # print(meine_instanz.a)
 # # 1
 # print(meine_instanz.b)
@@ -120,4 +123,4 @@
 # # --> d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor
 # ```
 # 
-# Nicht vergessen, dass bei jedem Attribut einer Klasse innerhalb einer Methode der Präfix <code>self.</code> geschrieben werden soll.
+# Nicht vergessen, dass bei jedem Attribut einer Instanz innerhalb einer Methode der Präfix <code>self.</code> geschrieben werden soll.

@@ -134,18 +134,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
      Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
     </a>
    </li>
    <li class="toctree-l2">
@@ -409,6 +409,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists-allgemein">
+   Lists allgemein
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#negative-indizes">
    Negative Indizes
   </a>
@@ -455,6 +460,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists-allgemein">
+   Lists allgemein
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#negative-indizes">
    Negative Indizes
   </a>
@@ -488,24 +498,27 @@ title="Print to PDF"
 <h1>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="lists-allgemein">
+<h2>Lists allgemein<a class="headerlink" href="#lists-allgemein" title="Permalink to this headline">#</a></h2>
 <p>Die am meisten benutzte Datenstruktur ist das Array.
 Python nennt es jedoch nicht ein “Array”, sondern eine “List”.
 Von der Idee her sind sie identisch. Man hat eine Datenstruktur worin man Daten speichern möchte.</p>
 <p>Viele andere Programmiersprachen benutzen geschweifte Klammern wie bei Codeblocks, um Arrays zu befüllen.</p>
 <p>Ein Beispiel aus C:</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">ArrayNameHier</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 <p>In Python werden eckige Klammern genutzt um Lists zu symbolisieren.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">ListNameHier</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Bei dem vorherigen Python Beispiel, wird nirgendwo gesagt, dass es sich bei dieser List um eine Integer List handelt.</p>
 <p>Das liegt wieder am Dynamic Typing.
-Nur handelt es sich hier nicht einmal um ein Integerarray.</p>
+Nur handelt es sich hier nicht einmal intern um eine Integer List.</p>
 <p>Man könnte nämlich einen anderen Datentypen als einen Integer einfügen.</p>
 <p>Beispiel:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Hello World!&quot;</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Hello World!&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>In den meisten anderen Programmiersprachen wäre das so einfach nicht möglich.
@@ -518,11 +531,11 @@ Ja, Python behandelt Datentypen wie Objekte.</p>
 <p>Als Output gibt die Funktion zurück, um welche Klasse es sich bei diesem Objekt handelt.</p>
 <p>Rufen wir jetzt diese Funktionen auf, sehen wir folgendes.
 Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen, um auf einen bestimmten (bei 0 anfangenden) Index einer List zuzugreifen.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
 <span class="c1"># --&gt; Objekt am Index 0 ist ein Integer</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">5</span><span class="p">]))</span>
 <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
 <span class="c1"># --&gt; Objekt am Index 5 ist ein String</span>
 </pre></div>
@@ -532,17 +545,17 @@ Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen
 </section>
 <section id="negative-indizes">
 <h2>Negative Indizes<a class="headerlink" href="#negative-indizes" title="Permalink to this headline">#</a></h2>
-<p>Python verfügt über einen praktischen Shortcut um auf n-t letzte Element in einer List zuzugreifen.</p>
-<p>Und zwar mit der Syntax: <code>arr[-n]</code></p>
+<p>Python verfügt über einen praktischen Shortcut um auf k-t letzte Element in einer List (hier namens “nums”) zuzugreifen.</p>
+<p>Und zwar mit der Syntax: <code>nums[-k]</code></p>
 <p>Also mit einem negativen Index.</p>
-<p><code>arr[-1]</code> greift auf das letzte Element zu, <code>arr[-2]</code> greift auf das vorletzte Element zu und so weiter.</p>
+<p><code>nums[-1]</code> greift auf das letzte Element zu, <code>nums[-2]</code> greift auf das vorletzte Element zu und so weiter.</p>
 <p>Dabei sollte man beim Programmieren beachten, dass negative Indizes in Python gültig sind und nicht zwingend zu einem Fehler führen.</p>
 </section>
 <section id="length-funktion">
 <h2>Length funktion<a class="headerlink" href="#length-funktion" title="Permalink to this headline">#</a></h2>
 <p>Um die Länge eines Arrays herauszufinden, benutzt man die <code>len()</code> funktion</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">))</span>
 <span class="c1"># 5</span>
 </pre></div>
 </div>
@@ -550,16 +563,16 @@ Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen
 <section id="append">
 <h2>Append<a class="headerlink" href="#append" title="Permalink to this headline">#</a></h2>
 <p>Um einen Wert zu einer bereits existierenden Liste hinzuzufügen, kann die sehr hilfreiche <code>append()</code> funktion genutzt werden.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
 <span class="c1"># [1, 2, 3, 4, 5]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">))</span>
 <span class="c1"># 5</span>
 
-<span class="n">arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
 <span class="c1"># [1, 2, 3, 4, 5, 6]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">))</span>
 <span class="c1"># 6</span>
 </pre></div>
 </div>
@@ -567,7 +580,7 @@ Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen
 Im Gegensatz zu Arrays in C, muss man nicht wissen wie lang die List höchstens sein darf.</p>
 <p>Es ist auch möglich eine leere List zu erstellen, die man anscheließend mit append befüllt.</p>
 <p>Eine leere Liste wird wie folgt initialisiert:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </section>
@@ -576,12 +589,12 @@ Im Gegensatz zu Arrays in C, muss man nicht wissen wie lang die List höchstens 
 <p>Das Konzept von Slicing wird genutzt, um eine Sublist einer Liste zu nehmen.
 Also eine Teilmenge einer bereits existierenden Liste. Beim Slicing geht es lediglich um die Position der Elemente.</p>
 <p>Um eine Untermenge abhängig von einer Bedinung zu nehmen, wie etwa
-“alle Werte aus x, welche größer als 5 sind”, benutzt man sogenannte List Comprehension.
+“alle Werte aus nums, welche größer als 5 sind”, benutzt man sogenannte List Comprehension.
 Für diese Einführung ist dies jedoch viel zu fortgeschritten.
 Interessierte können selbst danach recherchieren.</p>
 <p>Zurück zum Slicing. Hierbei geht es beispielsweise darum, eine Sublist bestehend aus allen Elementen ab Index a oder allen Elementen bis ausschließlich Index b oder einer Kombination davon, zu erstellen.</p>
 <p>Hierfür wird folgende Syntax benutzt</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Man gibt links vom Doppelpunkt an, ab welchem Index gestarten werden soll und rechts vom Doppelpunkt an, ab welchem Index aufgehört werden soll.
@@ -590,43 +603,43 @@ Will man eine der beiden Seiten unverändert lassen, so kann man jene Seite vom 
 <p>Case A:
 Liste bis exklusive Index <code>b</code>.
 Man gibt hier also mit <code>b</code> den ersten Index an, welcher bereits NICHT zur Sublist gehören soll:<br />
-<code>arr[:b]</code></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<code>nums[:b]</code></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="c1">#index 0  1  2  3  4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
 <span class="c1"># [1, 2, 3]</span>
 </pre></div>
 </div>
-<p>Das obere Beispiel wäre identisch zu <code>arr[0:3]</code>.
+<p>Das obere Beispiel wäre identisch zu <code>nums[0:3]</code>.
 Da man hier die Linke Seite des Doppelpunktes frei lässt, weiß Python, dass man die Sublist beim Anfang der originalen Liste starten lassen möchte.
-Es wäre ebenfalls identisch zu <code>arr[:-2]</code>, da man mit dem Index <code>-2</code>, auf das vorletzte Element zugreift, welches das Element an Index <code>3</code> ist.</p>
+Es wäre ebenfalls identisch zu <code>nums[:-2]</code>, da man mit dem Index <code>-2</code>, auf das vorletzte Element zugreift, welches das Element an Index <code>3</code> ist.</p>
 <p>Case B:
 Liste ab inklusive Index <code>a</code>:<br />
-<code>arr[a:]</code></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<code>nums[a:]</code></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="c1">#index 0  1  2  3  4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
 <span class="c1"># [3, 4, 5]</span>
 </pre></div>
 </div>
-<p><code>arr[2:]</code> entspricht <code>arr[2:len(arr)]</code>,
+<p><code>nums[2:]</code> entspricht <code>nums[2:len(nums)]</code>,
 da die Länge einer List der erste Index ist, welcher nicht mehr Teil der Liste ist.
 Wenn der höchste Index <code>4</code> wäre, würde man also sagen:
 bis exklusive Index <code>5</code>.</p>
 <p>Case C:
 Liste ab inklusive Index <code>a</code> und bis exklusive Index <code>b</code>:<br />
-<code>arr[a:b]</code></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<code>nums[a:b]</code></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="c1">#index 0  1  2  3  4</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
 <span class="c1"># [2, 3]</span>
 </pre></div>
 </div>
 <p>Ab Index <code>2</code> bis exklusive Index <code>3</code></p>
 <p>Um die originale List mit einer Sublist zu überschreiben, kann den Zuweisungsoperator nutzen.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">arr1</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># entfernt das letzte Element</span>
-<span class="n">arr2</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>    <span class="c1"># entfernt das erste Element</span>
-<span class="n">arr3</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># entfernt die ersten zwei und die letzten zwei Elemente</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># entfernt das letzte Element</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>    <span class="c1"># entfernt das erste Element</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># entfernt die ersten zwei und die letzten zwei Elemente</span>
 </pre></div>
 </div>
 </section>

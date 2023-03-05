@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Datentypen &#8212; AlgDat Python Intro</title>
+    <title>Bibliotheken und Mathematische Funktionen &#8212; AlgDat Python Intro</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Output und Input" href="3_3_Python_Output_Input.html" />
-    <link rel="prev" title="Erstellen von Kommentaren" href="3_1_Python_Kommentare.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Motivation.html">
    Motivation
@@ -123,29 +121,29 @@ const thebe_selector_output = ".output, .cell_output"
    Wie nutzen wir Python?
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="Chapter_Python_Basics.html">
    Python Basics
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Datentypen
-    </a>
-   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
+     Datentypen
     </a>
    </li>
    <li class="toctree-l2">
@@ -246,35 +244,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/main?urlpath=tree/ShortPythonIntro/3_2_Python_Datentypen.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -314,7 +283,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2F3_2_Python_Datentypen.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2FDELETE_3_5_Mathematische_Funktionen.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -342,7 +311,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/3_2_Python_Datentypen.ipynb"
+        <a href="_sources/DELETE_3_5_Mathematische_Funktionen.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -353,7 +322,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -401,26 +370,33 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bibliotheken und Mathematische Funktionen
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
+     Importieren einer Bibliothek
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
+     Funktionen der math Bibliothek
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dynamic-typing">
-   Dynamic Typing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-semikola">
-   Hinweis zu Semikola
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-strings">
-   Hinweis zu Strings
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgaben">
+   Aufgaben
   </a>
  </li>
 </ul>
@@ -432,7 +408,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Datentypen</h1>
+                <h1>Bibliotheken und Mathematische Funktionen</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -442,26 +418,33 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bibliotheken und Mathematische Funktionen
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
+     Importieren einer Bibliothek
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
+     Funktionen der math Bibliothek
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dynamic-typing">
-   Dynamic Typing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-semikola">
-   Hinweis zu Semikola
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-strings">
-   Hinweis zu Strings
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgaben">
+   Aufgaben
   </a>
  </li>
 </ul>
@@ -474,60 +457,58 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="datentypen">
-<h1>Datentypen<a class="headerlink" href="#datentypen" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="bibliotheken-und-mathematische-funktionen">
+<h1>Bibliotheken und Mathematische Funktionen<a class="headerlink" href="#bibliotheken-und-mathematische-funktionen" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="dynamic-typing">
-<h2>Dynamic Typing<a class="headerlink" href="#dynamic-typing" title="Permalink to this headline">#</a></h2>
-<p>Python hat alle gängigen Datentypen die man aus anderen Programmiersprachen kennt. Seien es Integer, Gleitkommazahlen oder Strings.
-Der Unterschied in Python ist, dass sich der Programmierer in der Regel nicht um Datentypen kümmern muss.
-Der Grund dafür liegt in Pythons “Dynamic Typing”
-Hier nochmal die Erklärung.
-Beim Dynamic Typing, kümmert sich einfach gesagt, der Python Interpreter um Datentypen und der Programmierer muss diese nicht konkret angeben.</p>
-<p>Dies macht es sehr einfach mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob etwa eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
-Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben will, so kann man Typecasting machen und somit den Typen explizit angeben. Dieser kann sich dann aber trotzdem noch ändern, wenn man der Variable einen neuen Wert zuweist.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bei der Funktion type(x) handelt es es sich um eine Funktion, </span>
-<span class="c1"># welche angibt von welchem Datentypen das Objekt x ist </span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># --&gt; &lt;class &#39;int&#39;&gt;</span>
-<span class="c1"># --&gt; x ist intern ein Integer</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Typecasting von der Variable x zum Datentyp String</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># --&gt; &lt;class &#39;str&#39;&gt;</span>
-<span class="c1"># --&gt; x ist nun intern ein String</span>
+<section id="importieren-einer-bibliothek">
+<h2>Importieren einer Bibliothek<a class="headerlink" href="#importieren-einer-bibliothek" title="Permalink to this headline">#</a></h2>
+<p>Python hat eine enorme Auswahl an Bibliotheken.
+Seien es nun Bibliotheken um Grafiken zu erstellen oder Bibliotheken für Machine Learning.</p>
+<p>Von Interesse für dieses Modul, sind jedoch mathematische Bibliotheken.
+Mit diesen Bibliotheken können wir etwa Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.</p>
+<p>Um diese hilfreichen Funktionen nutzen zu können, muss man diese Bibliotheken erst importieren.
+Funktioniert von der Logik genauso wie das importieren von Bilbiotheken in C.
+Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese Bibliothek dann nutzen.</p>
+<p>in C:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Bibliotheksname.h&gt;</span><span class="cp"></span>
 </pre></div>
 </div>
+<p>in Python wird das Keyword <code>import</code> genutzt:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Bibliotheksname</span>
+</pre></div>
+</div>
+<p>Konkret um auf die Funktionen für die Quadratwurzel und die Logarithmen, muss man die Bibliothek <code>math</code> importieren.</p>
+<p>Also braucht man die Zeile</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+<p>bevor man diese Funktionen nutzen kann.</p>
 </section>
-<section id="hinweis-zu-semikola">
-<h2>Hinweis zu Semikola<a class="headerlink" href="#hinweis-zu-semikola" title="Permalink to this headline">#</a></h2>
-<p>Wie vom aufmerksamen Leser bereits bemerkt, hat keines dieser Statements ein Semikolon am Ende. Dies ist kein Fehler.
-Semikolons werden am Ende einer Zeile nicht benötigt.
-Der einzige Nutzen von Semikolons ist das ausführen von mehreren Statements in der selben Zeile.<br />
-Beispiel:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<section id="funktionen-der-math-bibliothek">
+<h2>Funktionen der math Bibliothek<a class="headerlink" href="#funktionen-der-math-bibliothek" title="Permalink to this headline">#</a></h2>
+<p>Nun haben wir die math Bibliothek importiert.</p>
+<p>Um auf diese zuzugreifen, müssen wir vor den Funktionen einen Präfix von <code>Bibliotheksname.</code> hinzufügen, damit wir ausdrücken, dass wir die Funktion dieser Bibliothek meinen.</p>
+<p>Konkret wäre der Präfix hier also <code>math.</code></p>
+<p>Die Quadratwurzel von 25 könnte man also wie folgt berechnen:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1"># 5</span>
 </pre></div>
 </div>
+<p>Um den 10-er Logarithmus von x zu berechnen, kann man die Funktion <code>math.log10(x)</code> nutzen</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1"># 2</span>
+</pre></div>
+</div>
+<p>Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf bei der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.</p>
 </section>
-<section id="hinweis-zu-strings">
-<h2>Hinweis zu Strings<a class="headerlink" href="#hinweis-zu-strings" title="Permalink to this headline">#</a></h2>
-<p>In Python können Strings entweder mit normalen Anführungszeichen oder mit einfachen Anführungszeichen angegeben werden.
-Man kann auch innerhalb eines Programms beides benutzen, jedoch kann man nicht beides innerhalb von einem String benutzen.</p>
-<p>Gültig:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Text&quot;</span>
-<span class="s1">&#39;Text&#39;</span>
-</pre></div>
-</div>
-<p>Ungültig:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Text&#39;</span>
-<span class="s1">&#39;Text&quot;</span>
-</pre></div>
-</div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgaben">
+<h1>Aufgaben<a class="headerlink" href="#aufgaben" title="Permalink to this headline">#</a></h1>
+<p>\frac{n!}{k!(n-k)!}</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -557,20 +538,6 @@ Man kann auch innerhalb eines Programms beides benutzen, jedoch kann man nicht b
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="3_1_Python_Kommentare.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Erstellen von Kommentaren</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="3_3_Python_Output_Input.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Output und Input</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>

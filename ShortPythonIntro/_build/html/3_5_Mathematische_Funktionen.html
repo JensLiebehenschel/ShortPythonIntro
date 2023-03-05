@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Zuweisungen" href="3_6_Zuweisungen.html" />
@@ -134,18 +136,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
      Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
     </a>
    </li>
    <li class="toctree-l2">
@@ -246,6 +248,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/main?urlpath=tree/ShortPythonIntro/3_5_Mathematische_Funktionen.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -313,7 +344,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/3_5_Mathematische_Funktionen.md"
+        <a href="_sources/3_5_Mathematische_Funktionen.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -324,7 +355,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -372,21 +403,38 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bibliotheken und Mathematische Funktionen
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
+     Importieren einer Bibliothek
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
+     Funktionen der math Bibliothek
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
-   Importieren einer Bibliothek
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
-   Funktionen der math Bibliothek
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -408,21 +456,38 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Bibliotheken und Mathematische Funktionen
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
+     Importieren einer Bibliothek
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
+     Funktionen der math Bibliothek
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
-   Importieren einer Bibliothek
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
-   Funktionen der math Bibliothek
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -445,7 +510,7 @@ title="Print to PDF"
 <p>Python hat eine enorme Auswahl an Bibliotheken.
 Seien es nun Bibliotheken um Grafiken zu erstellen oder Bibliotheken für Machine Learning.</p>
 <p>Von Interesse für dieses Modul, sind jedoch mathematische Bibliotheken.
-Mit diesen Bibliotheken können wir etwa Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.</p>
+Mit diesen Bibliotheken kann man etwa Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.</p>
 <p>Um diese hilfreichen Funktionen nutzen zu können, muss man diese Bibliotheken erst importieren.
 Funktioniert von der Logik genauso wie das importieren von Bilbiotheken in C.
 Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese Bibliothek dann nutzen.</p>
@@ -481,8 +546,71 @@ Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese
 <span class="c1"># 2</span>
 </pre></div>
 </div>
-<p>Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf bei der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.</p>
+<p>Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf in der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.</p>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgabe">
+<h1>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h1>
+<p>Hier ist die Gleichung für die Dichtefunktion der <a href="https://de.wikipedia.org/wiki/Normalverteilung" target="_blank">Normalverteilung</a>. Die Normalverteilung ist auch als “gaußsche Glockenkurve” bekannt.
+Es geht hier nicht darum, diese Formel zu verstehen. Den ersten Kontakt mit dieser Formel werden Sie im 3. Semester in Statistik haben und dort benutzt man Programme, welche Werte für diesen Ausdruck berechnen.
+Ich habe diese Formel ausgesucht, da man hier testen kann ob man mathematische Operatoren und Funktionen verstanden hat.
+Es geht nur darum, diese Formel in Code umzuschreiben und das Ergebnis zu berechnen für die konkreten Werte <span class="math notranslate nohighlight">\( \mu =3 ,\: \sigma = 5 \:und\: x=4\)</span>.</p>
+<p><font size="14"><span class="math notranslate nohighlight">\(f(x\: | \:\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\)</span></font></p>
+<p>Um Ihnen das Leben leichter zu machen, habe ich im Folgenden, die Formel umgeschrieben indem ich u.a alle griechischen Buchstaben (bis auf <code>pi</code>) einen anderen Namen gegeben habe.
+Als Variablennamen sollen Sie nun die Ausdrücke der unten stehenden Gleichung verwenden.</p>
+<p><font size="14"><span class="math notranslate nohighlight">\(result = \frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}\)</span></font></p>
+<p>Den Wert für <span class="math notranslate nohighlight">\(\pi\)</span> können Sie mit <code>math.pi</code> aufrufen.
+Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung. Falls Sie die Lösung über mehrere Zeilen hinweg schreiben wollen, so machen Sie bitte eine Klammer um die gesamte Rechnung, da es sonst nicht funktioniert.</p>
+<p>Also zum Beispiel:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+         <span class="o">+</span> <span class="n">d</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Viel Erfolg!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
+<span class="c1"># Bräuchten Sie vielleicht eine Bibliothek?</span>
+
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;Waiting for your Calculation...&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Waiting for your Calculation...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="losung">
+<h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="c1"># 0.07820853879509118</span>
+
+<span class="c1"># Dies ist nur eine Musterlösung. </span>
+<span class="c1"># Sie können die Formel natürlich auch anders aufschreiben. </span>
+<span class="c1"># Solange das Ergebnis stimmt, ist ihre Lösung sehr wahrscheinlich ebenfalls korrekt.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.07820853879509118
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

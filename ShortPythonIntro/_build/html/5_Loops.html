@@ -134,18 +134,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
      Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
     </a>
    </li>
    <li class="toctree-l2">
@@ -475,21 +475,21 @@ Nicht von Idee her, aber von Syntax.</p>
 <section id="for-schleife">
 <h2>For-Schleife<a class="headerlink" href="#for-schleife" title="Permalink to this headline">#</a></h2>
 <p>Etwa soll in C mit einer for-loop ein Codeblock so oft ausgeführt werden, wie es verschiedene Werte für die Zählervariable gibt.
-Im AlgDat modul werden üblicherweise einbuchstabige Namen für die Zählervariablen gewählt.
+Im Modul AlgDat werden üblicherweise einbuchstabige Namen für die Zählervariablen gewählt.
 Das wären größtenteils <code>i</code> und <code>j</code>.</p>
 <p>Python geht bei Schleifen wie folgt vor:
-Als Input in die schleife erhält man keine Formel und Bedinung, mit welcher diese Zählervariablen berechnet werden sollen, sondern übergibt man ein
+Als Input in die Schleife erhält man keine Formel und Bedinung, mit welcher diese Zählervariablen berechnet werden sollen, sondern übergibt man ein
 “iterable” object.
 Also ein Array-artiges Object, wo man auf Basis von Indizes unterscheidet.</p>
-<p>In C würde man eine <code>For-Schleife</code> startend bei <code>0</code> mit Schrittweite <code>1</code> also so erstellen:</p>
+<p>In C würde man eine <code>For-Schleife</code> startend bei <code>0</code> mit Schrittweite <code>1</code> so erstellen:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">wert_für_i_welcher_nicht_mehr_dazugehören_soll</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Mit der Formel könnte man die einzelnen Werte für <code>i</code> berechnen.
-Man fängt bei <code>0</code> an und inkrementiert um <code>1</code>, bis der Wert erreicht wird, wo die Bedingung in der Mitte nicht mehr den Wahrheitswert <code>wahr</code> zurückgibt.</p>
-<p>In Python würde man hingegeben die Werte <code>0</code> bis zum Grenzwert in Form einer List übergeben.</p>
+Man fängt bei <code>i = 0</code> an und inkrementiert um <code>1</code>, bis der Wert erreicht wird, wo die Bedingung in der Mitte nicht mehr den Wahrheitswert <code>wahr</code> zurückgibt.</p>
+<p>In Python würde man hingegeben naiv die Werte <code>0</code> bis zum Grenzwert in Form einer List übergeben.</p>
 <p>Folgendes Beispiel in C:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
@@ -511,8 +511,8 @@ Man fängt bei <code>0</code> an und inkrementiert um <code>1</code>, bis der We
 </div>
 <p>Man will natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte <code>range()</code> funktion.
 Diese erhält unter anderem zwei Zahlen als Parameter.
-Der erste ist die Zahl von wo aus gestartet werden soll.
-Die zweite Zahl ist die Zahl, welche nicht mehr dazugehören soll.
+Die erste ist die Zahl von wo aus gestartet werden soll.
+Die zweite ist die Zahl, welche nicht mehr dazugehören soll.
 Standardmäßig beträgt die Schrittweite <code>1</code>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
@@ -541,7 +541,7 @@ Das würde dann so aussehen:</p>
 	<span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">personen</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Da in <code>range(0, len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der List abgedeckt.</p>
+<p>Da in <code>range(0, len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der List <code>personen</code> abgedeckt.</p>
 </section>
 <section id="while-schleife">
 <h2>While-Schleife<a class="headerlink" href="#while-schleife" title="Permalink to this headline">#</a></h2>
@@ -550,12 +550,12 @@ Das würde dann so aussehen:</p>
 	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Bspw.:</p>
+<p>Beispiel:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 	<span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>Man beachte, dass es in C zwei Arten von while loops gibt.
+<p>Man beachte, dass es in C zwei Arten von While-Schleifen gibt.
 Die normale While-Schleife`</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="n">bedingung</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
@@ -572,13 +572,14 @@ Die normale While-Schleife`</p>
 <p>Bei letzterem wird die Bedingung erst nach Ausführen des Codeblocks überprüft.
 Diese Option gibt es nicht in Python.
 Will man dieses Verhalten in Python imitieren, so muss man mit einer Infinite loop und bedingten <code>breaks</code> als Workaround arbeiten.</p>
+<p><code>break</code> beendet manuell die aktuelle Schleife. Bei einer Infinite loop ist <code>break</code> die einzige Option, die Schleife zu beenden.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># Infinite loop</span>
 	<span class="k">if</span> <span class="ow">not</span> <span class="n">bedingung</span><span class="p">:</span>
 		<span class="k">break</span>
 	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch Workarounds gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition</p>
+<p>Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch einen Workaround gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition.</p>
 </section>
 </section>
 

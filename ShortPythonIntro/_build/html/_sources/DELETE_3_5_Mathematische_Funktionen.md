@@ -56,3 +56,7 @@ print(x)
 ```
 
 Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf bei der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.
+
+# Aufgaben
+
+\frac{n!}{k!(n-k)!}

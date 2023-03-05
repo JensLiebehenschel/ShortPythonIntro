@@ -14,25 +14,25 @@
 # ## For-Schleife
 # 
 # Etwa soll in C mit einer for-loop ein Codeblock so oft ausgeführt werden, wie es verschiedene Werte für die Zählervariable gibt. 
-# Im AlgDat modul werden üblicherweise einbuchstabige Namen für die Zählervariablen gewählt.
+# Im Modul AlgDat werden üblicherweise einbuchstabige Namen für die Zählervariablen gewählt.
 # Das wären größtenteils <code>i</code> und <code>j</code>.
 # 
 # Python geht bei Schleifen wie folgt vor:
-# Als Input in die schleife erhält man keine Formel und Bedinung, mit welcher diese Zählervariablen berechnet werden sollen, sondern übergibt man ein 
+# Als Input in die Schleife erhält man keine Formel und Bedinung, mit welcher diese Zählervariablen berechnet werden sollen, sondern übergibt man ein 
 # "iterable" object.
 # Also ein Array-artiges Object, wo man auf Basis von Indizes unterscheidet.
 # 
-# In C würde man eine <code>For-Schleife</code> startend bei <code>0</code> mit Schrittweite <code>1</code> also so erstellen:
+# In C würde man eine <code>For-Schleife</code> startend bei <code>0</code> mit Schrittweite <code>1</code> so erstellen:
 # ```C
 # for (int i = 0; i < wert_für_i_welcher_nicht_mehr_dazugehören_soll; i++) {
 # 	<Codeblock>
 # }
 # ```
 # Mit der Formel könnte man die einzelnen Werte für <code>i</code> berechnen.
-# Man fängt bei <code>0</code> an und inkrementiert um <code>1</code>, bis der Wert erreicht wird, wo die Bedingung in der Mitte nicht mehr den Wahrheitswert <code>wahr</code> zurückgibt.
+# Man fängt bei <code>i = 0</code> an und inkrementiert um <code>1</code>, bis der Wert erreicht wird, wo die Bedingung in der Mitte nicht mehr den Wahrheitswert <code>wahr</code> zurückgibt.
 # 
 # 
-# In Python würde man hingegeben die Werte <code>0</code> bis zum Grenzwert in Form einer List übergeben.
+# In Python würde man hingegeben naiv die Werte <code>0</code> bis zum Grenzwert in Form einer List übergeben.
 # 
 # Folgendes Beispiel in C:
 # ```C
@@ -58,8 +58,8 @@
 # 
 # Man will natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte <code>range()</code> funktion.
 # Diese erhält unter anderem zwei Zahlen als Parameter.
-# Der erste ist die Zahl von wo aus gestartet werden soll.
-# Die zweite Zahl ist die Zahl, welche nicht mehr dazugehören soll.
+# Die erste ist die Zahl von wo aus gestartet werden soll.
+# Die zweite ist die Zahl, welche nicht mehr dazugehören soll.
 # Standardmäßig beträgt die Schrittweite <code>1</code>.
 # ```Python
 # range(0, n)
@@ -91,7 +91,7 @@
 # for i in range(0, len(personen)):
 # 	<mach etwas mit personen[i]>
 # ```
-# Da in <code>range(0, len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der List abgedeckt.
+# Da in <code>range(0, len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der List <code>personen</code> abgedeckt.
 # 
 # 
 # ## While-Schleife
@@ -101,12 +101,12 @@
 # while bedingung:
 # 	<Codeblock>
 # ```
-# Bspw.:
+# Beispiel:
 # ```Python
 # while n > 0:
 # 	n -= 1
 # ```
-# Man beachte, dass es in C zwei Arten von while loops gibt.
+# Man beachte, dass es in C zwei Arten von While-Schleifen gibt.
 # Die normale While-Schleife`
 # ```C
 # while(bedingung) {
@@ -125,10 +125,12 @@
 # Diese Option gibt es nicht in Python.
 # Will man dieses Verhalten in Python imitieren, so muss man mit einer Infinite loop und bedingten <code>breaks</code> als Workaround arbeiten.
 # 
+# <code>break</code> beendet manuell die aktuelle Schleife. Bei einer Infinite loop ist <code>break</code> die einzige Option, die Schleife zu beenden.
+# 
 # ```Python
 # while True: # Infinite loop
 # 	if not bedingung:
 # 		break
 # 	<Codeblock>
 # ```
-# Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch Workarounds gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition
+# Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch einen Workaround gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition.

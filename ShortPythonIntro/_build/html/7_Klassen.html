@@ -133,18 +133,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
      Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
     </a>
    </li>
    <li class="toctree-l2">
@@ -408,8 +408,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#klassen-sind-in-dem-modul-algdat-nur-bei-baumen-von-relevanz-und-da-wird-eher-weniger-auf-den-python-code-eingegangen-entscheiden-sie-fur-sich-selbst-ob-sie-sich-trotzdessen-damit-auseinandersetzen-wollen">
-   Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich trotzdessen damit auseinandersetzen wollen.
+  <a class="reference internal nav-link" href="#attribute">
+   Attribute
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methoden-und-konstruktor">
+   Methoden und Konstruktor
   </a>
  </li>
 </ul>
@@ -439,8 +444,13 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#klassen-sind-in-dem-modul-algdat-nur-bei-baumen-von-relevanz-und-da-wird-eher-weniger-auf-den-python-code-eingegangen-entscheiden-sie-fur-sich-selbst-ob-sie-sich-trotzdessen-damit-auseinandersetzen-wollen">
-   Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich trotzdessen damit auseinandersetzen wollen.
+  <a class="reference internal nav-link" href="#attribute">
+   Attribute
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methoden-und-konstruktor">
+   Methoden und Konstruktor
   </a>
  </li>
 </ul>
@@ -457,15 +467,13 @@ title="Print to PDF"
 <h1>Klassen<a class="headerlink" href="#klassen" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="klassen-sind-in-dem-modul-algdat-nur-bei-baumen-von-relevanz-und-da-wird-eher-weniger-auf-den-python-code-eingegangen-entscheiden-sie-fur-sich-selbst-ob-sie-sich-trotzdessen-damit-auseinandersetzen-wollen">
-<h2>Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich trotzdessen damit auseinandersetzen wollen.<a class="headerlink" href="#klassen-sind-in-dem-modul-algdat-nur-bei-baumen-von-relevanz-und-da-wird-eher-weniger-auf-den-python-code-eingegangen-entscheiden-sie-fur-sich-selbst-ob-sie-sich-trotzdessen-damit-auseinandersetzen-wollen" title="Permalink to this headline">#</a></h2>
+<p><strong>Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich trotzdessen damit auseinandersetzen wollen.</strong></p>
 <p>Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.</p>
 <p>Auf Vererbung und sonstiges wird hier nicht eingegangen.
 Es geht nur darum, die Syntax von Klassenerstellung und Methoden zu verstehen,
 da es nahezu notwendig ist, wenn man Binärbäume programmieren möchte.</p>
 <p>Zum definieren einer Klasse wird das keyword <code>class</code> gefolgt vom Klassennamen genutzt.
-Daraufhin kann man wenn man möchte noch leere runde Klammern setzten und die Zeile mit einem Doppelpunkt beenden.</p>
+Daraufhin kann man wenn man möchte noch leere runde Klammern setzten und man beendet die Zeile mit einem Doppelpunkt.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">meineKlasse</span><span class="p">:</span>
     <span class="o">&lt;</span><span class="n">Klassendefinition</span><span class="o">&gt;</span>
 </pre></div>
@@ -479,6 +487,9 @@ Daraufhin kann man wenn man möchte noch leere runde Klammern setzten und die Ze
 Die Klammern nach dem Klassennamen können für Vererbung genutzt werden.</p>
 <p>Nach dem Doppelpunkt kommt ein Indentierungsblock und dort wird die Funktionalität der Klasse definiert.
 Hier unterscheidet man zwischen Klassenattributen und Instanzattributen.</p>
+</section>
+<section id="attribute">
+<h2>Attribute<a class="headerlink" href="#attribute" title="Permalink to this headline">#</a></h2>
 <p>Kurzgesagt: Klassenattribute sind für alle Objekte einer Klasse gleich und können unabhängig von einem Objekt abgerufen werden.</p>
 <p>Im Rahmen von AlgDat wird das nicht gebraucht. Ich will es hier nur an der Stelle erwähnt haben.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">meineKlasse</span><span class="p">:</span>
@@ -498,13 +509,16 @@ Diese werden in der Regel im Konstruktor der Klasse deklariert und initialisiert
 In Python wäre dies das Keyword <code>None</code></p>
 <p>Einer Variable mit dem Wert <code>None</code> kann im Nachhinein alles zugewiesen werden.
 Seien es Integer, Strings oder gar Instanzen einer Klasse. Dynamic Typing macht es möglich.</p>
-<p>Methoden werden im den Indentierungsblock der Klasse mit dem Keyword <code>def</code> erstellt.
+</section>
+<section id="methoden-und-konstruktor">
+<h2>Methoden und Konstruktor<a class="headerlink" href="#methoden-und-konstruktor" title="Permalink to this headline">#</a></h2>
+<p>Methoden werden in dem Indentierungsblock der Klasse mit dem Keyword <code>def</code> erstellt.
 Wie der Konstruktor auszusehen hat, ist in Python genau definiert.</p>
-<!--&#95; ist der HTML code für eien underscore-->
-<p>Im Gegensatz zu anderen Programmiersprachen, wo der Konstruktor den Namen der Klasse hat, muss der Konstruktor in Python den Namen <code>__init__</code> haben. Ist einfach so definiert. Der Konstruktor kann natürlich Parameter erhalten.</p>
+<!--&#95; ist der HTML code für einen underscore-->
+<p>Im Gegensatz zu anderen Programmiersprachen, wo der Konstruktor den Namen der Klasse hat, muss der Konstruktor in Python den Namen <code>__init__</code> haben. Ist einfach so definiert. Wenn man ein Objekt dieser Klasse erstellt, wird der Konstruktor automatisch aufgerufen. Der Konstruktor kann natürlich auch Parameter erhalten.</p>
 <p>Für den Konstruktor als auch für andere Methoden gilt, dass selbst bei Methoden ohne Parameter, ein Parameter hinzuzufügen ist.
 Der erste Parameter, der an eine Methode übergeben wird, ist die Instanz der Klasse. Das passiert automatisch und man kann es nicht verhindern.</p>
-<p>Laut konvention bezeichnet man diesen Parameter als <code>self</code>. Man kann es wenn man wirklich möchte aber auch anders nennen.
+<p>Laut konvention bezeichnet man diesen Parameter als <code>self</code>. Man kann ihn wenn man wirklich möchte aber auch anders nennen.
 Um Attribute einer Instanz zu erzeugen, muss die Instanz mit <code>self</code> oder wie auch immer man es nennen möchte, angesprochen werden.
 Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperator genutzt.</p>
 <p>Beispiel einer Klasse mit Konstruktor:</p>
@@ -514,7 +528,7 @@ Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperato
 		<span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b_input</span>
 		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="kc">None</span> 		<span class="c1"># None ist das Python Äquivalent zu NULL</span>
 
-<span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">meineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">meineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Konstruktor Aufruf mit Parametern</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
 <span class="c1"># 1</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
@@ -556,7 +570,7 @@ Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperato
 <span class="c1"># --&gt; d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor</span>
 </pre></div>
 </div>
-<p>Nicht vergessen, dass bei jedem Attribut einer Klasse innerhalb einer Methode der Präfix <code>self.</code> geschrieben werden soll.</p>
+<p>Nicht vergessen, dass bei jedem Attribut einer Instanz innerhalb einer Methode der Präfix <code>self.</code> geschrieben werden soll.</p>
 </section>
 </section>
 

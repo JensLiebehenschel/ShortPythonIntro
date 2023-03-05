@@ -134,18 +134,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Kommentare.html">
+    <a class="reference internal" href="3_1_Python_Output_Input.html">
+     Output und Input
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_2_Python_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Python_Datentypen.html">
      Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Output_Input.html">
-     Output und Input
     </a>
    </li>
    <li class="toctree-l2">
@@ -401,14 +401,26 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Indentierung und if statements
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#losung">
    Lösung
   </a>
@@ -432,14 +444,26 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Indentierung und if statements
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#losung">
    Lösung
   </a>
@@ -565,6 +589,10 @@ Das Funktioniert folgendermaßen:</p>
 	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x ist weder 1 noch 2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgabe">
+<h1>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h1>
 <p>Ein etwas komplexeres Beispiel erst in C:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="n">ist</span><span class="w"> </span><span class="n">wahr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="n">ist</span><span class="w"> </span><span class="n">wahr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -583,18 +611,18 @@ Das Funktioniert folgendermaßen:</p>
 </pre></div>
 </div>
 <p>Jetzt Sind Sie an der Reihe. Versuchen Sie das obige Beispiel von C in Python umzuschreiben.
-Benutzen Sie <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</code>. Analog für y und z.
-Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python code handelt.</p>
+Sie können <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</code> nutzen. Analog für y und z.</p>
+<p>Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python code handelt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="losung">
-<h2>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h2>
+<section class="tex2jax_ignore mathjax_ignore" id="losung">
+<h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>
 <div class="toggle docutils container">
 <p>Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms…&gt;</code> nicht Indentiert ist. Hätte es eine Indentierung von einem tab, so könnte man denken, dass der Rest des Programms noch zu &lt;Codeblock_3&gt; gehört.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="n">ist</span> <span class="n">wahr</span><span class="p">:</span>
@@ -609,7 +637,6 @@ Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird 
 </pre></div>
 </div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">

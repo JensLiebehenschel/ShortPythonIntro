@@ -47,8 +47,10 @@ x RECHENOPERATION= n
 # ist äquivalent zu
 
 x = x RECHENOPERATION n
+```
 
-# Beispiel:
+Beispiel:
+```Python
 x += 5 
 
 # ist äquivalent zu

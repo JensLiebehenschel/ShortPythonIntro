@@ -21,13 +21,13 @@
 # # welche angibt von welchem Datentypen das Objekt x ist 
 # 
 # x = 5
-# type(x)
-# # --> <class 'int'>
+# print(type(x))
+# # <class 'int'>
 # # --> x ist intern ein Integer
 # 
 # x = str(x)  # Typecasting von der Variable x zum Datentyp String
-# type(x)
-# # --> <class 'str'>
+# print(type(x))
+# # <class 'str'>
 # # --> x ist nun intern ein String
 # ```
 

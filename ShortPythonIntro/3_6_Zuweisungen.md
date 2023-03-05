@@ -14,7 +14,7 @@ also der Fall:
 a = b
 ```
 
-In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine mehrfach-Zuweisung zu durchzuführen.
+In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine mehrfachuuweisung durchzuführen.
 Die Operanden müssen durch Kommata getrennt sein.
 
 Beispiel:
@@ -24,7 +24,7 @@ a,b = 5,10
 ```
 allgemeiner geschrieben:
 ```Python
-variable1, variable2 = wert_für_variable1, wert_für_variable2
+variable1, variable2, ... = wert_für_variable1, wert_für_variable2, ...
 ```
 
 Wenn beide Seiten nicht gleich lang sind, funktioniert es nicht.\
@@ -41,6 +41,8 @@ anderherum ist
 a,b = 5,10,15 
 ```
 ebenfalls ungültig.
+
+# Aufgabe
 
 Operanden der rechten Seite können ja sowohl konkrete Werte aber auch Variablen sein.
 
