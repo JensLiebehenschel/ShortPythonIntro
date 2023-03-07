@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Bibliotheken und Mathematische Funktionen &#8212; AlgDat Python Intro</title>
+    <title>Weitere Aufgaben &#8212; AlgDat Python Intro</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Klassen" href="7_Klassen.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -110,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="1_Motivation.html">
    Motivation
@@ -193,6 +194,11 @@ const thebe_selector_output = ".output, .cell_output"
    Klassen
   </a>
  </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Weitere Aufgaben
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -244,6 +250,35 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/main?urlpath=tree/ShortPythonIntro/Aufgaben.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -283,7 +318,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2FDELETE_3_5_Mathematische_Funktionen.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2FAufgaben.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -311,7 +346,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/DELETE_3_5_Mathematische_Funktionen.md"
+        <a href="_sources/Aufgaben.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -322,7 +357,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.md</span>
+<span class="headerbtn__text-container">.ipynb</span>
 </a>
 
       </li>
@@ -372,7 +407,7 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Bibliotheken und Mathematische Funktionen
+   Weitere Aufgaben
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -382,22 +417,24 @@ title="Print to PDF"
      </strong>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
-     Importieren einer Bibliothek
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
-     Funktionen der math Bibliothek
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aufgaben">
-   Aufgaben
+  <a class="reference internal nav-link" href="#fizzbuzz">
+   FizzBuzz
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ihre-antwort">
+     Ihre Antwort
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fizzbuzz-losung">
+     FizzBuzz Lösung
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -408,7 +445,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bibliotheken und Mathematische Funktionen</h1>
+                <h1>Weitere Aufgaben</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -420,7 +457,7 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Bibliotheken und Mathematische Funktionen
+   Weitere Aufgaben
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -430,22 +467,24 @@ title="Print to PDF"
      </strong>
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
-     Importieren einer Bibliothek
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
-     Funktionen der math Bibliothek
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aufgaben">
-   Aufgaben
+  <a class="reference internal nav-link" href="#fizzbuzz">
+   FizzBuzz
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ihre-antwort">
+     Ihre Antwort
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fizzbuzz-losung">
+     FizzBuzz Lösung
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -457,58 +496,190 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="bibliotheken-und-mathematische-funktionen">
-<h1>Bibliotheken und Mathematische Funktionen<a class="headerlink" href="#bibliotheken-und-mathematische-funktionen" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="weitere-aufgaben">
+<h1>Weitere Aufgaben<a class="headerlink" href="#weitere-aufgaben" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="importieren-einer-bibliothek">
-<h2>Importieren einer Bibliothek<a class="headerlink" href="#importieren-einer-bibliothek" title="Permalink to this headline">#</a></h2>
-<p>Python hat eine enorme Auswahl an Bibliotheken.
-Seien es nun Bibliotheken um Grafiken zu erstellen oder Bibliotheken für Machine Learning.</p>
-<p>Von Interesse für dieses Modul, sind jedoch mathematische Bibliotheken.
-Mit diesen Bibliotheken können wir etwa Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.</p>
-<p>Um diese hilfreichen Funktionen nutzen zu können, muss man diese Bibliotheken erst importieren.
-Funktioniert von der Logik genauso wie das importieren von Bilbiotheken in C.
-Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese Bibliothek dann nutzen.</p>
-<p>in C:</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Bibliotheksname.h&gt;</span><span class="cp"></span>
-</pre></div>
-</div>
-<p>in Python wird das Keyword <code>import</code> genutzt:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Bibliotheksname</span>
-</pre></div>
-</div>
-<p>Konkret um auf die Funktionen für die Quadratwurzel und die Logarithmen, muss man die Bibliothek <code>math</code> importieren.</p>
-<p>Also braucht man die Zeile</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-</pre></div>
-</div>
-<p>bevor man diese Funktionen nutzen kann.</p>
 </section>
-<section id="funktionen-der-math-bibliothek">
-<h2>Funktionen der math Bibliothek<a class="headerlink" href="#funktionen-der-math-bibliothek" title="Permalink to this headline">#</a></h2>
-<p>Nun haben wir die math Bibliothek importiert.</p>
-<p>Um auf diese zuzugreifen, müssen wir vor den Funktionen einen Präfix von <code>Bibliotheksname.</code> hinzufügen, damit wir ausdrücken, dass wir die Funktion dieser Bibliothek meinen.</p>
-<p>Konkret wäre der Präfix hier also <code>math.</code></p>
-<p>Die Quadratwurzel von 25 könnte man also wie folgt berechnen:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># 5</span>
+<section class="tex2jax_ignore mathjax_ignore" id="fizzbuzz">
+<h1>FizzBuzz<a class="headerlink" href="#fizzbuzz" title="Permalink to this headline">#</a></h1>
+<p>Eine sehr beliebte Aufgabe für Einsteiger einer Programmiersprache, ist das FizzBuzz Problem.</p>
+<p>Das Problem sieht wie folgt aus:</p>
+<ul class="simple">
+<li><p>Es sollen die Zahlen 1 bis inklusive 100 untereinander ausgegeben werden.</p></li>
+<li><p>Hierbei sollen jedoch Zahlen, welche durch 3 teilbar sind, durch den String <code>”Fizz”</code> ersetzt werden.</p></li>
+<li><p>Zahlen, welche durch 5 teilbar sind, sollen durch den String <code>”Buzz”</code> ersetzt werden.</p></li>
+<li><p>Wenn eine Zahl durch 3 als auch durch 5 teilbar ist, soll die Zahl durch den String <code>”FizzBuzz”</code> ersetzt werden</p></li>
+</ul>
+<p>Der Output soll so aussehen:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span>    <span class="n">Zahl</span>
+
+<span class="mi">1</span>         <span class="mi">1</span>
+<span class="mi">2</span>         <span class="mi">2</span>
+<span class="n">Fizz</span>      <span class="mi">3</span>
+<span class="mi">4</span>         <span class="mi">4</span>
+<span class="n">Buzz</span>      <span class="mi">5</span>
+<span class="n">Fizz</span>      <span class="mi">6</span>
+<span class="mi">7</span>         <span class="mi">7</span>
+<span class="mi">8</span>         <span class="mi">8</span>
+<span class="n">Fizz</span>      <span class="mi">9</span>
+<span class="n">Buzz</span>      <span class="mi">10</span>
+<span class="mi">11</span>        <span class="mi">11</span>
+<span class="n">Fizz</span>      <span class="mi">12</span>
+<span class="mi">13</span>        <span class="mi">13</span>
+<span class="mi">14</span>        <span class="mi">14</span>
+<span class="n">FizzBuzz</span>  <span class="mi">15</span>
+<span class="mi">16</span>        <span class="mi">16</span>
+<span class="o">...</span>       <span class="o">...</span>
+<span class="mi">98</span>        <span class="mi">98</span>
+<span class="n">Fizz</span>      <span class="mi">99</span>
+<span class="n">Buzz</span>      <span class="mi">100</span>
 </pre></div>
 </div>
-<p>Um den 10-er Logarithmus von x zu berechnen, kann man die Funktion <code>math.log10(x)</code> nutzen</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="c1"># 2</span>
+<p>Die Zahlen rechts sind nur zur Veranschaulichung da. Sie müssen diese nicht ausgeben lassen!</p>
+<section id="ihre-antwort">
+<h2>Ihre Antwort<a class="headerlink" href="#ihre-antwort" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie das FizzBuzz Problem lösen</span>
 </pre></div>
 </div>
-<p>Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf bei der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.</p>
+</div>
+</div>
 </section>
+<section id="fizzbuzz-losung">
+<h2>FizzBuzz Lösung<a class="headerlink" href="#fizzbuzz-losung" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Es gibt viele Lösungen für diese bekannte Programmieraufgabe.</span>
+<span class="c1"># Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatinieren.</span>
+<span class="c1"># Alternativ könnte man auch mit Lambdas arbeiten,</span>
+<span class="c1"># das ist hier definitiv aber nicht von Relevanz</span>
+
+<span class="c1"># range(1, 101), da es bei 1 starten soll und bis inklusive 100 gehen soll.</span>
+<span class="c1"># Inklusive 100 --&gt; Exklusive 101 --&gt; range(1, 101)</span>
+
+<span class="c1"># Zahl ist durch n teilbar --&gt; zahl % n == 0.</span>
+<span class="c1"># Sprich: Es gibt keinen Rest bei der Division zahl / n</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FizzBuzz&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fizz&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Buzz&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+Fizz
+22
+23
+Fizz
+Buzz
+26
+Fizz
+28
+29
+FizzBuzz
+31
+32
+Fizz
+34
+Buzz
+Fizz
+37
+38
+Fizz
+Buzz
+41
+Fizz
+43
+44
+FizzBuzz
+46
+47
+Fizz
+49
+Buzz
+Fizz
+52
+53
+Fizz
+Buzz
+56
+Fizz
+58
+59
+FizzBuzz
+61
+62
+Fizz
+64
+Buzz
+Fizz
+67
+68
+Fizz
+Buzz
+71
+Fizz
+73
+74
+FizzBuzz
+76
+77
+Fizz
+79
+Buzz
+Fizz
+82
+83
+Fizz
+Buzz
+86
+Fizz
+88
+89
+FizzBuzz
+91
+92
+Fizz
+94
+Buzz
+Fizz
+97
+98
+Fizz
+Buzz
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="aufgaben">
-<h1>Aufgaben<a class="headerlink" href="#aufgaben" title="Permalink to this headline">#</a></h1>
-<p>\frac{n!}{k!(n-k)!}</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -538,6 +709,13 @@ Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="7_Klassen.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Klassen</p>
+        </div>
+    </a>
 </div>
             </footer>
         </div>

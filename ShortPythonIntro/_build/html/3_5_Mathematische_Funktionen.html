@@ -197,6 +197,11 @@ const thebe_selector_output = ".output, .cell_output"
    Klassen
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Aufgaben.html">
+   Weitere Aufgaben
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -555,10 +560,10 @@ Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese
 Es geht hier nicht darum, diese Formel zu verstehen. Den ersten Kontakt mit dieser Formel werden Sie im 3. Semester in Statistik haben und dort benutzt man Programme, welche Werte für diesen Ausdruck berechnen.
 Ich habe diese Formel ausgesucht, da man hier testen kann ob man mathematische Operatoren und Funktionen verstanden hat.
 Es geht nur darum, diese Formel in Code umzuschreiben und das Ergebnis zu berechnen für die konkreten Werte <span class="math notranslate nohighlight">\( \mu =3 ,\: \sigma = 5 \:und\: x=4\)</span>.</p>
-<p><font size="14"><span class="math notranslate nohighlight">\(f(x\: | \:\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\)</span></font></p>
+<p><font size="14"><span class="math notranslate nohighlight">\(f(x\:|\:\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\)</span></font></p>
 <p>Um Ihnen das Leben leichter zu machen, habe ich im Folgenden, die Formel umgeschrieben indem ich u.a alle griechischen Buchstaben (bis auf <code>pi</code>) einen anderen Namen gegeben habe.
 Als Variablennamen sollen Sie nun die Ausdrücke der unten stehenden Gleichung verwenden.</p>
-<p><font size="14"><span class="math notranslate nohighlight">\(result = \frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}\)</span></font></p>
+<p><font size="14"><span class="math notranslate nohighlight">\(result=\frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}\)</span></font></p>
 <p>Den Wert für <span class="math notranslate nohighlight">\(\pi\)</span> können Sie mit <code>math.pi</code> aufrufen.
 Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung. Falls Sie die Lösung über mehrere Zeilen hinweg schreiben wollen, so machen Sie bitte eine Klammer um die gesamte Rechnung, da es sonst nicht funktioniert.</p>
 <p>Also zum Beispiel:</p>
@@ -570,6 +575,7 @@ Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Si
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
+<span class="c1"># Ersetzen sie hierfür den String mit ihrem Code.</span>
 <span class="c1"># Bräuchten Sie vielleicht eine Bibliothek?</span>
 
 <span class="n">mu</span> <span class="o">=</span> <span class="mi">3</span>
@@ -601,7 +607,7 @@ Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Si
 
 <span class="c1"># Dies ist nur eine Musterlösung. </span>
 <span class="c1"># Sie können die Formel natürlich auch anders aufschreiben. </span>
-<span class="c1"># Solange das Ergebnis stimmt, ist ihre Lösung sehr wahrscheinlich ebenfalls korrekt.</span>
+<span class="c1"># Solange das Ergebnis stimmt, ist Ihre Lösung sehr wahrscheinlich ebenfalls korrekt.</span>
 </pre></div>
 </div>
 </div>

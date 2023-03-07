@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Lists" href="4_Lists.html" />
@@ -193,6 +195,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="7_Klassen.html">
    Klassen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Aufgaben.html">
+   Weitere Aufgaben
   </a>
  </li>
 </ul>
@@ -401,21 +408,50 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#der-boolean-datentyp">
-   Der Boolean Datentyp
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
    Logische Ausdrücke
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#der-boolean-datentyp">
+     Der Boolean Datentyp
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Logische Ausdrücke
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aquivalenter-c-code-als-optionale-hilfe">
+     Äquivalenter C-code als optionale Hilfe
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ihre-antwort">
+     Ihre Antwort
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -437,21 +473,50 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#der-boolean-datentyp">
-   Der Boolean Datentyp
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
    Logische Ausdrücke
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#der-boolean-datentyp">
+     Der Boolean Datentyp
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Logische Ausdrücke
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aquivalenter-c-code-als-optionale-hilfe">
+     Äquivalenter C-code als optionale Hilfe
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ihre-antwort">
+     Ihre Antwort
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -523,24 +588,106 @@ Das oben geschriebene Beispiel in Python wäre also</p>
 </div>
 <p>Die gleiche Vorgehensweise bei “logischem und” als auch beim “logischem oder”.</p>
 <p>Da wird <code>&amp;&amp;</code> durch das keyword <code>and</code>, und <code>||</code> durch das keyword <code>or</code> ersetzt.</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// bzw. True</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// bzw. False</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// bzw. True</span>
 
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">z</span><span class="p">)))</span><span class="w"></span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">z</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 1 bzw. True</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="c1">// 0 bzw. False</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
 <span class="c1">// 1 bzw. True</span>
 </pre></div>
 </div>
 <p>Python:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">y</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">z</span> <span class="o">=</span> <span class="kc">True</span>
 
-<span class="nb">print</span><span class="p">((</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">z</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">z</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">and</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1"># False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">or</span> <span class="n">y</span><span class="p">)</span>
 <span class="c1"># True</span>
 </pre></div>
 </div>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgabe">
+<h1>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h1>
+<p>Gegeben ist ein logischer Ausdruck. Übersetzen Sie diesen Ausdruck in Python code. Damit Sie den Code ausführen und somit auf Syntaxfehler vom Interpreter achten können, nutzen Sie dafür die konkreten Werte <span class="math notranslate nohighlight">\(x=5,\:y=5,\:z=3,\:t=True,\:f=False\)</span>.
+Durch eben diese konkreten Werte entstehen Tautologien. Es sollen <strong>keine</strong> vereinfachungen durchgeführt werden.</p>
+<p><font size="12"><span class="math notranslate nohighlight">\(ausdruck = \)</span></font></p>
+<p><font size="12"><span class="math notranslate nohighlight">\((x=y \land ((x=z \lor \neg(y &lt; z)) \lor\)</span></font></p>
+<p><font size="12"><span class="math notranslate nohighlight">\(\neg((\neg t \lor f) \land (t \land \neg (x &lt; z)))))\)</span></font></p>
+<p>Wenn Sie alternativ nicht den obigen Ausdruck nutzen möchten, können Sie auch den unten stehenden C-code in Python code übersetzen.
+Der C-code unten und der Ausdruck oben sind äquivalent.</p>
+<section id="aquivalenter-c-code-als-optionale-hilfe">
+<h2>Äquivalenter C-code als optionale Hilfe<a class="headerlink" href="#aquivalenter-c-code-als-optionale-hilfe" title="Permalink to this headline">#</a></h2>
+<div class="toggle docutils container">
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Äquivalenter C-code</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">z</span><span class="p">))</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">!</span><span class="p">((</span><span class="o">!</span><span class="n">t</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">z</span><span class="p">))))</span><span class="w"> </span>
+<span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="ihre-antwort">
+<h2>Ihre Antwort<a class="headerlink" href="#ihre-antwort" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
+<span class="c1"># Ersetzen Sie hierfür den String mit Ihrem Code.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">t</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">f</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot;Warten auf Ausdruck...&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warten auf Ausdruck...
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="losung">
+<h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>
+<div class="toggle docutils container">
+<p>Hier ist die Musterlösung. Sie können natürlich auch mehr Klammern nutzen, um nicht auf Bindungsstärke der Operatoren achten zu müssen.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">t</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">f</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="nb">print</span><span class="p">(</span> 
+    <span class="n">x</span> <span class="o">==</span> <span class="n">y</span> <span class="ow">and</span> <span class="p">(</span> <span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">z</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">(</span><span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">))</span> <span class="ow">or</span> <span class="ow">not</span> <span class="p">((</span><span class="ow">not</span> <span class="n">t</span> <span class="ow">or</span> <span class="n">f</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">t</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">))))</span>
+<span class="p">)</span>
+<span class="c1"># True</span>
+</pre></div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

@@ -67,12 +67,12 @@
 # Ich habe diese Formel ausgesucht, da man hier testen kann ob man mathematische Operatoren und Funktionen verstanden hat.
 # Es geht nur darum, diese Formel in Code umzuschreiben und das Ergebnis zu berechnen für die konkreten Werte $ \mu =3 ,\: \sigma = 5 \:und\: x=4$.
 
-# <font size="14">$f(x\: | \:\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$</font>
+# <font size="14">$f(x\:|\:\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$</font>
 
 # Um Ihnen das Leben leichter zu machen, habe ich im Folgenden, die Formel umgeschrieben indem ich u.a alle griechischen Buchstaben (bis auf <code>pi</code>) einen anderen Namen gegeben habe. 
 # Als Variablennamen sollen Sie nun die Ausdrücke der unten stehenden Gleichung verwenden.
 
-# <font size="14">$result = \frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}$</font>
+# <font size="14">$result=\frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}$</font>
 
 # Den Wert für $\pi$ können Sie mit <code>math.pi</code> aufrufen.
 # Den Wert für $e$ können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung. Falls Sie die Lösung über mehrere Zeilen hinweg schreiben wollen, so machen Sie bitte eine Klammer um die gesamte Rechnung, da es sonst nicht funktioniert. 
@@ -90,6 +90,7 @@
 
 
 # Hier können Sie ihren Versuch schreiben...
+# Ersetzen sie hierfür den String mit ihrem Code.
 # Bräuchten Sie vielleicht eine Bibliothek?
 
 mu = 3
@@ -114,5 +115,5 @@ print(result)
 
 # Dies ist nur eine Musterlösung. 
 # Sie können die Formel natürlich auch anders aufschreiben. 
-# Solange das Ergebnis stimmt, ist ihre Lösung sehr wahrscheinlich ebenfalls korrekt.
+# Solange das Ergebnis stimmt, ist Ihre Lösung sehr wahrscheinlich ebenfalls korrekt.
 

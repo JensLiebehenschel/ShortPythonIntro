@@ -21,6 +21,24 @@ name2 = "John Doe"
 print(name1, "ist mit", name2, "befreundet.")
 # Max Mustermann ist mit John Doe befreundet.
 ```
+Am Ende der <code>print()</code> Funktion, wird automatisch ein Zeilenumbruch hinzugefügt.
+Sprich der Input
+```Python
+print(1)
+print(2)
+print(3)
+```
+führt zum Output
+```Python
+1
+2
+3
+```
+anstatt zum Output
+```Python
+123
+```
+
 
 ## Eingabe
 Wie man in Python vom Standardinput aus einem Terminal einlesen kann, wird in dieser Einführung nicht behandelt.
