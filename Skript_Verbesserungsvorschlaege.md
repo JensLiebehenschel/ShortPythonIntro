@@ -2,7 +2,7 @@
 
 ## Skript Seite 19 (PDF Seite 21):
 Der aktuelle Link "http://www.codinghorror.com/blog/2007/02/why-cant-programmers-program.html" ist outdated (unerreichbar).
-Der aktuelle Link ist "https://blog.codinghorror.com/why-cant-programmers-program/".
+Der korrekte Link ist "https://blog.codinghorror.com/why-cant-programmers-program/".
 
 
 ## Skript Seite 182 (PDF Seite 184):
