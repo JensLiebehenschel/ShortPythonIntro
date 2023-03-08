@@ -57,8 +57,54 @@
 # Somit handelt es unüberraschender Weise bei <code>1</code> um einen Integer und bei
 # <code>"Hello World!"</code> um einen String.
 # 
+# ## Listen umkehren
 # 
-# ## Negative Indizes ##
+# Will man etwa die Liste 
+# ```Python
+# nums = [1, 2, 3, 4, 5]
+# ```
+# umkehren, sodass die Liste bei <code>5</code> anfängt und bei <code>1</code> endet, so kann man dafür die Funktion <code>reverse()</code> nutzen. 
+# Hierbei handelt es sich um eine ähnliche Funktion wie <code>sort()</code>, welche statt zu Sortieren, die Liste umkehrt.
+# 
+# ```Python
+# nums = [1, 2, 3, 4, 5]
+# 
+# print(nums)
+# # [1, 2, 3, 4, 5]
+# 
+# nums.reverse()
+# 
+# print(nums)
+# # [5, 4, 3, 2, 1]
+# ```
+# ## Schnelle Listen initialisation
+# 
+# Wenn man eine Liste mit einer bestimmten Anzahl von einem einzigen Wert initialisieren möchte, z.B.: Eine Liste mit 10 nullen, so kann man es entweder <code>append()</code> arbeiten und 10 mal eine null an die Liste anhängen:
+# ```Python
+# nums = []
+# for i in range(0, 10):  # Diese Schleife läuft 10 mal
+#     nums.append(0)
+#     
+# print(nums)
+# # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+# ```
+# 
+# Alternativ gibt es für genau soetwas einen Shortcut in Python. Die Syntax funktioniert so:
+# ```Python
+# LIST_NAME = [WERT] * WIE_OFT_DER_WERT_VORKOMMEN_SOLL
+# ```
+# 
+# für das obige Beispiel also:
+# 
+# ```Python
+# nums = [0] * 10
+# 
+# print(nums)
+# # [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+# ```
+# 
+# 
+# ## Negative Indizes
 # 
 # Python verfügt über einen praktischen Shortcut um auf k-t letzte Element in einer List (hier namens "nums") zuzugreifen.
 # 
@@ -71,7 +117,7 @@
 # Dabei sollte man beim Programmieren beachten, dass negative Indizes in Python gültig sind und nicht zwingend zu einem Fehler führen.
 # 
 # 
-# ## Length funktion ##
+# ## Length funktion
 # 
 # Um die Länge eines Arrays herauszufinden, benutzt man die <code>len()</code> funktion
 # ```Python
@@ -80,7 +126,7 @@
 # # 5
 # ```
 # 
-# ## Append ##
+# ## Append
 # 
 # Um einen Wert zu einer bereits existierenden Liste hinzuzufügen, kann die sehr hilfreiche <code>append()</code> funktion genutzt werden.
 # 
@@ -107,7 +153,7 @@
 # nums = []
 # ```
 # 
-# ## Slicing ##
+# ## Slicing
 # 
 # Das Konzept von Slicing wird genutzt, um eine Sublist einer Liste zu nehmen.
 # Also eine Teilmenge einer bereits existierenden Liste. Beim Slicing geht es lediglich um die Position der Elemente.

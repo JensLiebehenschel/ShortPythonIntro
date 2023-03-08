@@ -55,12 +55,16 @@
 # # True
 # # --> da 3 in x enthalten ist.
 # ```
+# ### Die angenehmste Methode ist die range() Funktion
 # 
 # Man will natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte <code>range()</code> funktion.
 # Diese erhält unter anderem zwei Zahlen als Parameter.
 # Die erste ist die Zahl von wo aus gestartet werden soll.
 # Die zweite ist die Zahl, welche nicht mehr dazugehören soll.
 # Standardmäßig beträgt die Schrittweite <code>1</code>.
+# Man kann jedoch auch als dritten Parameter die Schrittweite angeben. 
+# Die kann sowohl positiv als auch negativ sein, bei negativen Schrittweiten muss man jedoch darauf aufpassen, dass das erste Argument größer ist als das zweite Argument.
+# 
 # ```Python
 # range(0, n)
 # ```
@@ -74,6 +78,25 @@
 # for i in range(0, 5):
 # 	<Codeblock>
 # ```
+# 
+# Will man nun eine absteigende For-Schleife von <code>10</code> bis inklusive <code>3</code> mit Schrittweite <code>1</code>, dann kann man dies so machen:
+# 
+# ```Python
+# for i in range(10, 2, -1):
+#     <Mache etwas mit i>
+# ```
+# Die For-Schleife startet bei <code>10</code> und geht bis exklusive <code>2</code>.
+# Da wird die Schleife bis inklusive <code>3</code> haben wollen, geben wir den Wert an der bereits **nicht** dazugehören soll, also die Zahl <code>2</code>.
+# Die <code>-1</code> als drittes Argument gibt an, dass die Schrittweite <code>-1</code> betragen soll.
+# 
+# Alternativ kann man die range von <code>3</code> bis inklusive <code>10</code> (bis exklusive <code>11</code>) nehmen und diese mit der <code>reversed()</code> Funktion umdrehen:
+# ```Python
+# for i in reversed(range(3, 11)):
+#     <Mache etwas mit i>
+# ```
+# 
+# ### Iterieren durch ein iterierbares Objekt
+# 
 # Jetzt kommt man zu dem sehr angenehmen Teil von Python wenn es darum geht über eine List zu iterieren.
 # Beim iterieren will man meistens logisch gesehen für jeden Eintrag in einer List, den Codeblock mit diesem Objekt ausführen.
 # Anstatt dabei jetzt mit Indexen zu arbeiten, kann man auch direkt durch die List iterieren, so wie man es intuitiv machen würde.

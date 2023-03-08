@@ -31,6 +31,45 @@
 # # --> x ist nun intern ein String
 # ```
 
+# ## Jede Variable muss initialisiert sein
+# 
+# In Programmiersprachen wie C, unterscheidet man zwischen Deklaration und Initialisation einer Variable.
+# 
+# Bei einer Deklaration wird kein Wert zugewiesen, sondern nur Datentyp und Name angegeben:
+# ```C
+# int i;
+# ```
+# Bei einer Initialisation, wird einer bereits deklarierten Variable, ein Wert zugewiesen:
+# ```C
+# i = 5;
+# ```
+# Man kann beides auch gleichzeitig machen mit:
+# ```C
+# int i = 5;
+# ```
+# In Python kann man keine Variable deklarieren ohne sie auch zu intialisieren.
+# Der Fall 
+# ```C
+# int i;
+# ```
+# ist also in Python nicht möglich.
+# Es gibt jedoch Fälle, wo man deklarieren aber nicht sofort initialisieren möchte.
+# Dafür kann ein Nullwert genutzt werden, damit die Variable initialisiert ist. In Python ist dies mit dem Keyword <code>None</code> möglich. 
+# Anschließend kann man der Variable später einen Wert zuweisen, sobald es soweit ist.
+# ```Python
+# value = None
+# print(value)
+# # None
+# 
+# value = 5
+# print(value)
+# # 5
+# 
+# value = "Hello World!"
+# print(value)
+# # Hello World!
+# ```
+
 # ## Hinweis zu Semikola
 # 
 # Wie vom aufmerksamen Leser bereits bemerkt, hat keines dieser Statements ein Semikolon am Ende. Dies ist kein Fehler.

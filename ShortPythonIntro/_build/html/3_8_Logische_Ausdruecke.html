@@ -559,13 +559,36 @@ Man muss mit der Groß- und Kleinschreibung aufpassen, denn es ist nur korrekt, 
 </section>
 <section id="id1">
 <h2>Logische Ausdrücke<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>Der Vergleichsoperator, welcher auf Gleichteit prüft ist wie fast überall auch ein <code>==</code>.</p>
+<p>Der Vergleichsoperator, welcher auf Gleichteit prüft ist wie fast überall auch ein <code>==</code>.
+Auf Ungleichheit prüft der Operator <code>!=</code>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 
-<span class="n">wahrheitsert</span> <span class="o">=</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wahrheitswert</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
 <span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1"># False</span>
+</pre></div>
+</div>
+<p>Um zu prüfen ob eine Variable einen Nullwert hat, kann man entweder die obigen Gleichheitsoperatoren oder das Keyword <code>is</code> nutzen:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">None</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">)</span>
+<span class="c1"># False</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+<span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+<span class="c1"># False</span>
+
+<span class="c1"># Alternativ:</span>
+<span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">x</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+<span class="c1"># False</span>
 </pre></div>
 </div>
 <p>Vergleiche von konkreten Werten sind mit <code>&gt;,&lt;,&gt;=,&lt;=</code> ebenfalls möglich.</p>

@@ -63,7 +63,7 @@
 # Methoden werden in dem Indentierungsblock der Klasse mit dem Keyword <code>def</code> erstellt.
 # Wie der Konstruktor auszusehen hat, ist in Python genau definiert.
 # <!--&#95; ist der HTML code für einen underscore-->
-# Im Gegensatz zu anderen Programmiersprachen, wo der Konstruktor den Namen der Klasse hat, muss der Konstruktor in Python den Namen <code>&#95;&#95;init&#95;&#95;</code> haben. Ist einfach so definiert. Wenn man ein Objekt dieser Klasse erstellt, wird der Konstruktor automatisch aufgerufen. Der Konstruktor kann natürlich auch Parameter erhalten.
+# Im Gegensatz zu anderen Programmiersprachen, wo der Konstruktor den Namen der Klasse hat, muss der Konstruktor in Python den Namen <code>&#95;&#95;init&#95;&#95;</code> haben. Ist einfach so definiert. Wenn man ein Objekt dieser Klasse erstellt, wird der Konstruktor automatisch aufgerufen. Der Konstruktor kann natürlich auch Parameter erhalten. Diese können ebenfalls Defaultwerte enthalten. Es gelten die gleichen Regeln wie für Defaultwerten bei normale Funktionen auch.
 # 
 # Für den Konstruktor als auch für andere Methoden gilt, dass selbst bei Methoden ohne Parameter, ein Parameter hinzuzufügen ist.
 # Der erste Parameter, der an eine Methode übergeben wird, ist die Instanz der Klasse. Das passiert automatisch und man kann es nicht verhindern.

@@ -417,6 +417,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#for-schleife">
    For-Schleife
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#die-angenehmste-methode-ist-die-range-funktion">
+     Die angenehmste Methode ist die range() Funktion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iterieren-durch-ein-iterierbares-objekt">
+     Iterieren durch ein iterierbares Objekt
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#while-schleife">
@@ -453,6 +465,18 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#for-schleife">
    For-Schleife
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#die-angenehmste-methode-ist-die-range-funktion">
+     Die angenehmste Methode ist die range() Funktion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iterieren-durch-ein-iterierbares-objekt">
+     Iterieren durch ein iterierbares Objekt
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#while-schleife">
@@ -514,11 +538,15 @@ Man fängt bei <code>i = 0</code> an und inkrementiert um <code>1</code>, bis de
 <span class="c1"># --&gt; da 3 in x enthalten ist.</span>
 </pre></div>
 </div>
+<section id="die-angenehmste-methode-ist-die-range-funktion">
+<h3>Die angenehmste Methode ist die range() Funktion<a class="headerlink" href="#die-angenehmste-methode-ist-die-range-funktion" title="Permalink to this headline">#</a></h3>
 <p>Man will natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte <code>range()</code> funktion.
 Diese erhält unter anderem zwei Zahlen als Parameter.
 Die erste ist die Zahl von wo aus gestartet werden soll.
 Die zweite ist die Zahl, welche nicht mehr dazugehören soll.
-Standardmäßig beträgt die Schrittweite <code>1</code>.</p>
+Standardmäßig beträgt die Schrittweite <code>1</code>.
+Man kann jedoch auch als dritten Parameter die Schrittweite angeben.
+Die kann sowohl positiv als auch negativ sein, bei negativen Schrittweiten muss man jedoch darauf aufpassen, dass das erste Argument größer ist als das zweite Argument.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -531,6 +559,22 @@ Für die For-Schleife ist dieser Cast jedoch nicht nötig.</p>
 	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 </pre></div>
 </div>
+<p>Will man nun eine absteigende For-Schleife von <code>10</code> bis inklusive <code>3</code> mit Schrittweite <code>1</code>, dann kann man dies so machen:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">Mache</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">i</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Die For-Schleife startet bei <code>10</code> und geht bis exklusive <code>2</code>.
+Da wird die Schleife bis inklusive <code>3</code> haben wollen, geben wir den Wert an der bereits <strong>nicht</strong> dazugehören soll, also die Zahl <code>2</code>.
+Die <code>-1</code> als drittes Argument gibt an, dass die Schrittweite <code>-1</code> betragen soll.</p>
+<p>Alternativ kann man die range von <code>3</code> bis inklusive <code>10</code> (bis exklusive <code>11</code>) nehmen und diese mit der <code>reversed()</code> Funktion umdrehen:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">)):</span>
+    <span class="o">&lt;</span><span class="n">Mache</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">i</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="iterieren-durch-ein-iterierbares-objekt">
+<h3>Iterieren durch ein iterierbares Objekt<a class="headerlink" href="#iterieren-durch-ein-iterierbares-objekt" title="Permalink to this headline">#</a></h3>
 <p>Jetzt kommt man zu dem sehr angenehmen Teil von Python wenn es darum geht über eine List zu iterieren.
 Beim iterieren will man meistens logisch gesehen für jeden Eintrag in einer List, den Codeblock mit diesem Objekt ausführen.
 Anstatt dabei jetzt mit Indexen zu arbeiten, kann man auch direkt durch die List iterieren, so wie man es intuitiv machen würde.</p>
@@ -547,6 +591,7 @@ Das würde dann so aussehen:</p>
 </pre></div>
 </div>
 <p>Da in <code>range(0, len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der List <code>personen</code> abgedeckt.</p>
+</section>
 </section>
 <section id="while-schleife">
 <h2>While-Schleife<a class="headerlink" href="#while-schleife" title="Permalink to this headline">#</a></h2>

@@ -509,6 +509,21 @@ Das ist für diese Einführung jedoch nicht von Bedeutung.</p>
 	<span class="o">&lt;</span><span class="n">Funktionsrumpf</span><span class="o">&gt;</span>
 </pre></div>
 </div>
+<p>Es ist ebenfalls möglich Defaultwerte anzugeben. Dafür weist man den Parametern bereits einen Wert zu. Sobald ein Defaultwert angegeben wurde, müssen alle Werte rechts davon ebenfalls Defaultwerte haben
+Beispiel:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">summe_von_bis_zu_vier_zahlen</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">summe_von_bis_zu_vier_zahlen</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="c1"># 3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">summe_von_bis_zu_vier_zahlen</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1"># 6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">summe_von_bis_zu_vier_zahlen</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="c1"># 10    </span>
+</pre></div>
+</div>
 </section>
 <section id="ruckgabewerte">
 <h2>Rückgabewerte<a class="headerlink" href="#ruckgabewerte" title="Permalink to this headline">#</a></h2>

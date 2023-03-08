@@ -419,6 +419,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jede-variable-muss-initialisiert-sein">
+   Jede Variable muss initialisiert sein
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hinweis-zu-semikola">
    Hinweis zu Semikola
   </a>
@@ -457,6 +462,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dynamic-typing">
    Dynamic Typing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jede-variable-muss-initialisiert-sein">
+   Jede Variable muss initialisiert sein
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -505,6 +515,44 @@ Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben will, so kann man T
 <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
 <span class="c1"># --&gt; x ist nun intern ein String</span>
+</pre></div>
+</div>
+</section>
+<section id="jede-variable-muss-initialisiert-sein">
+<h2>Jede Variable muss initialisiert sein<a class="headerlink" href="#jede-variable-muss-initialisiert-sein" title="Permalink to this headline">#</a></h2>
+<p>In Programmiersprachen wie C, unterscheidet man zwischen Deklaration und Initialisation einer Variable.</p>
+<p>Bei einer Deklaration wird kein Wert zugewiesen, sondern nur Datentyp und Name angegeben:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Bei einer Initialisation, wird einer bereits deklarierten Variable, ein Wert zugewiesen:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Man kann beides auch gleichzeitig machen mit:</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>In Python kann man keine Variable deklarieren ohne sie auch zu intialisieren.
+Der Fall</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>ist also in Python nicht möglich.
+Es gibt jedoch Fälle, wo man deklarieren aber nicht sofort initialisieren möchte.
+Dafür kann ein Nullwert genutzt werden, damit die Variable initialisiert ist. In Python ist dies mit dem Keyword <code>None</code> möglich.
+Anschließend kann man der Variable später einen Wert zuweisen, sobald es soweit ist.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="c1"># None</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="c1"># 5</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="c1"># Hello World!</span>
 </pre></div>
 </div>
 </section>

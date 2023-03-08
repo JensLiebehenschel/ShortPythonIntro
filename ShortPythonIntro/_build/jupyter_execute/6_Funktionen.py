@@ -35,6 +35,22 @@
 # 	<Funktionsrumpf>
 # ```
 # 
+# Es ist ebenfalls möglich Defaultwerte anzugeben. Dafür weist man den Parametern bereits einen Wert zu. Sobald ein Defaultwert angegeben wurde, müssen alle Werte rechts davon ebenfalls Defaultwerte haben
+# Beispiel:
+# ```Python
+# def summe_von_bis_zu_vier_zahlen(a, b, c=0, d=0):
+#     return a + b + c + d
+# 
+# print(summe_von_bis_zu_vier_zahlen(1,2))
+# # 3
+# 
+# print(summe_von_bis_zu_vier_zahlen(1,2,3))
+# # 6
+# 
+# print(summe_von_bis_zu_vier_zahlen(1,2,3,4))
+# # 10    
+# ```
+# 
 # ## Rückgabewerte
 # 
 # Mit dem <code>return</code> keyword kann man angeben, was die Funktion zurückgeben soll.

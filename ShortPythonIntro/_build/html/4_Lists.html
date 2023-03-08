@@ -419,6 +419,16 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listen-umkehren">
+   Listen umkehren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schnelle-listen-initialisation">
+   Schnelle Listen initialisation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#negative-indizes">
    Negative Indizes
   </a>
@@ -467,6 +477,16 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-allgemein">
    Lists allgemein
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#listen-umkehren">
+   Listen umkehren
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#schnelle-listen-initialisation">
+   Schnelle Listen initialisation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -547,6 +567,49 @@ Wir benutzen wie üblicherweise auch, eckige Klammern mit einem Index dazwischen
 </div>
 <p>Somit handelt es unüberraschender Weise bei <code>1</code> um einen Integer und bei
 <code>”Hello World!”</code> um einen String.</p>
+</section>
+<section id="listen-umkehren">
+<h2>Listen umkehren<a class="headerlink" href="#listen-umkehren" title="Permalink to this headline">#</a></h2>
+<p>Will man etwa die Liste</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>umkehren, sodass die Liste bei <code>5</code> anfängt und bei <code>1</code> endet, so kann man dafür die Funktion <code>reverse()</code> nutzen.
+Hierbei handelt es sich um eine ähnliche Funktion wie <code>sort()</code>, welche statt zu Sortieren, die Liste umkehrt.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [1, 2, 3, 4, 5]</span>
+
+<span class="n">nums</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [5, 4, 3, 2, 1]</span>
+</pre></div>
+</div>
+</section>
+<section id="schnelle-listen-initialisation">
+<h2>Schnelle Listen initialisation<a class="headerlink" href="#schnelle-listen-initialisation" title="Permalink to this headline">#</a></h2>
+<p>Wenn man eine Liste mit einer bestimmten Anzahl von einem einzigen Wert initialisieren möchte, z.B.: Eine Liste mit 10 nullen, so kann man es entweder <code>append()</code> arbeiten und 10 mal eine null an die Liste anhängen:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c1"># Diese Schleife läuft 10 mal</span>
+    <span class="n">nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span>
+</pre></div>
+</div>
+<p>Alternativ gibt es für genau soetwas einen Shortcut in Python. Die Syntax funktioniert so:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">LIST_NAME</span> <span class="o">=</span> <span class="p">[</span><span class="n">WERT</span><span class="p">]</span> <span class="o">*</span> <span class="n">WIE_OFT_DER_WERT_VORKOMMEN_SOLL</span>
+</pre></div>
+</div>
+<p>für das obige Beispiel also:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span>
+</pre></div>
+</div>
 </section>
 <section id="negative-indizes">
 <h2>Negative Indizes<a class="headerlink" href="#negative-indizes" title="Permalink to this headline">#</a></h2>

@@ -34,14 +34,39 @@
 # ## Logische Ausdrücke
 
 # Der Vergleichsoperator, welcher auf Gleichteit prüft ist wie fast überall auch ein <code>&equals;&equals;</code>.
+# Auf Ungleichheit prüft der Operator <code>!&equals;</code>.
 # ```Python
 # x = 5
 # y = 5
 # 
-# wahrheitsert = x == y
-# print(wahrheitswert)
+# print(x == y)
 # # True
+# 
+# print(x != y)
+# # False
 # ```
+# Um zu prüfen ob eine Variable einen Nullwert hat, kann man entweder die obigen Gleichheitsoperatoren oder das Keyword <code>is</code> nutzen:
+# ```Python
+# x = None
+# 
+# print(x == None)
+# # True
+# 
+# print(x != None)
+# # False
+# 
+# print(x is None)
+# # True
+# 
+# print(x is not None)
+# # False
+# 
+# # Alternativ:
+# print(not x is None)
+# # False
+# ```
+# 
+# 
 # Vergleiche von konkreten Werten sind mit <code>&gt;,&lt;,&gt;&equals;,&lt;&equals;</code> ebenfalls möglich.
 # 
 # Um einen booleschen Ausdruck zu negieren, benutzt man in C ein Ausrufezeichen:
