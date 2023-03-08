@@ -97,7 +97,7 @@ Themen aus Skript/ Python codes, welche in Python Intro nicht vorkommen - kurzve
 		- Listing 12.1 (Page Rank)
 
 
-### if __name__ == "__main__":
+### if \_\_name\_\_ == "\_\_main\_\_":
 	kommt vor in:
 		- Listing 12.1 (Page Rank)
 
