@@ -141,6 +141,6 @@ Themen aus Skript/ Python codes, welche in Python Intro nicht vorkommen - kurzve
 
 
 ### Shortcut um z.B. eine List bestehend aus 10 nullen zu erstellen
---> nums = [0] * 10
+	--> nums = [0] * 10
 	kommt vor in:
 		- hash.py 
