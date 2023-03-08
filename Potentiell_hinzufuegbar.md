@@ -91,7 +91,7 @@ Themen aus Skript/ Python codes, welche in Python Intro nicht vorkommen - kurzve
 
 
 ### Erstellen von 2D Listen mithilfe von for-Schleifen
-Bsp.: c = [[0 for j in range(n)] for i in range(m)]
+	Bsp.: c = [[0 for j in range(n)] for i in range(m)]
 	kommt vor in:
 		- Listing 8.1 (LCS-LENGTH),
 		- Listing 12.1 (Page Rank)
