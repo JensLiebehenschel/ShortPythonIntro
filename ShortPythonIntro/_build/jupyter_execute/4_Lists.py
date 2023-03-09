@@ -119,7 +119,7 @@
 # 
 # ## Length funktion
 # 
-# Um die Länge eines Arrays herauszufinden, benutzt man die <code>len()</code> funktion
+# Um die Länge einer List herauszufinden, benutzt man die <code>len()</code> Funktion genauso wie man auch die Länge eines Strings herausfinden würde.
 # ```Python
 # nums = [1, 2, 3, 4, 5]
 # print(len(nums))
@@ -151,6 +151,17 @@
 # Eine leere Liste wird wie folgt initialisiert:
 # ```Python
 # nums = []
+# ```
+# 
+# ## Listen konkatenieren
+# 
+# Um zwei Listen zu konkatenieren, kann man den <code>+</code> Operator nutzen. Wie etwa auch bei Strings, steht der <code>+</code> Operator bei Listen ebenfalls für eine Konkatenierung. Man kann diesen Operator so nutzen:
+# ```Python
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# 
+# print(a + b)
+# # [1, 2, 3, 4, 5, 6]
 # ```
 # 
 # ## Slicing
@@ -224,3 +235,81 @@
 # nums = nums[1:]    # entfernt das erste Element
 # nums = nums[2:-2]  # entfernt die ersten zwei und die letzten zwei Elemente
 # ```
+
+# # Aufgabe
+
+# Gegeben seien die Listen <code>a, b, c</code> und <code>d</code>. Ihre Aufgabe ist es nun, dafür zu sorgen, dass bei dem Aufruf <code>print(nums)</code> der angegebene Output erscheinen soll.
+# 
+# Sie dürfen nur Folgendes benutzen: Slicing und Konkatenierung
+
+# Um klarer zu machen, was gemacht werden soll, hier ein willkürliches Beispiel:
+# ```Python
+# # Output soll sein: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# 
+# a = [0, 0, 5, 6, 0]
+# b = [1, 2, 3, 4, 0, 0, 0]
+# c = [0, 0, 7, 8, 9]
+# 
+# 
+# # Eine mögliche Lösung könnte sein:
+# nums = b[:4] + a[2:4] + c[2:]
+# 
+# 
+# print(nums)
+# # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# ```
+
+# In[1]:
+
+
+# Output soll sein: [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
+
+a = [6, 34, 12, 1, 3]
+b = [62, 7, 5, 3, 6, 2]
+c = [1, 2, 3]
+d = [9, 64, 7, 4, 7, 4]
+
+
+nums = ...
+
+
+print(nums)
+# --> Der Output soll sein:
+# [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
+
+
+# # Lösung
+
+# In[2]:
+
+
+a = [6, 34, 12, 1, 3]
+b = [62, 7, 5, 3, 6, 2]
+c = [1, 2, 3]
+d = [9, 64, 7, 4, 7, 4]
+
+
+# Option 1:
+nums = d[1:5] + a[:2] + c + b[4:]
+
+# Option 2 mit negativen Indizes:
+nums = d[1:-1] + a[:-3] + c + b[-2:]
+
+# Eine Kombination von den beiden Optionen ist auch möglich.
+
+print(nums)
+# [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
+
+
+# Es ist ebenfalls möglich jedes benötigte Element einzeln zu konkatenieren.
+# a[1:2] ist äquivalent zu a[1].
+# --> Von 1 bis inklusive 1 --> nur 1
+
+# Da es sich technisch gesehen immernoch um Slicing handelt, 
+# würde es jedoch nicht gegen die Regeln verstoßen. a[1] hingegen schon.
+# Also könnte man oben [64, 7, 4, 7] auch durch 
+# d[1:2] + d[2:3] + d[3:4] + d[4:5]
+# erzielen. 
+# Das ist aber definitiv mühsamer.
+# Noch ein weiterer Grund, wieso Slicing hier einiges an Arbeit sparen kann.
+

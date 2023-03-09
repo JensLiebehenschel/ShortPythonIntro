@@ -96,7 +96,7 @@
 mu = 3
 sigma = 5
 x = 4
-result = "Waiting for your Calculation..."
+result = ...
 print(result)
 
 

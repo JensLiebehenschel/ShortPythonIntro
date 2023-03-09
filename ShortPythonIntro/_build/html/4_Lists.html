@@ -134,23 +134,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Output_Input.html">
+    <a class="reference internal" href="3_1_Output_Input.html">
      Output und Input
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Kommentare.html">
+    <a class="reference internal" href="3_2_Kommentare.html">
      Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Python_Datentypen.html">
+    <a class="reference internal" href="3_3_Datentypen.html">
      Datentypen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_4_Python_Arithemtische_Operatoren.html">
-     Arithmetische Operationen
+    <a class="reference internal" href="3_4_Arithemtische_Operatoren.html">
+     Arithmetische Operatoren
     </a>
    </li>
    <li class="toctree-l2">
@@ -406,46 +406,68 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lists
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists-allgemein">
+     Lists allgemein
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listen-umkehren">
+     Listen umkehren
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schnelle-listen-initialisation">
+     Schnelle Listen initialisation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#negative-indizes">
+     Negative Indizes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#length-funktion">
+     Length funktion
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#append">
+     Append
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listen-konkatenieren">
+     Listen konkatenieren
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slicing">
+     Slicing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists-allgemein">
-   Lists allgemein
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#listen-umkehren">
-   Listen umkehren
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schnelle-listen-initialisation">
-   Schnelle Listen initialisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#negative-indizes">
-   Negative Indizes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#length-funktion">
-   Length funktion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#append">
-   Append
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slicing">
-   Slicing
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -467,46 +489,68 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Lists
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists-allgemein">
+     Lists allgemein
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listen-umkehren">
+     Listen umkehren
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schnelle-listen-initialisation">
+     Schnelle Listen initialisation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#negative-indizes">
+     Negative Indizes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#length-funktion">
+     Length funktion
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#append">
+     Append
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listen-konkatenieren">
+     Listen konkatenieren
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slicing">
+     Slicing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lists-allgemein">
-   Lists allgemein
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#listen-umkehren">
-   Listen umkehren
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schnelle-listen-initialisation">
-   Schnelle Listen initialisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#negative-indizes">
-   Negative Indizes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#length-funktion">
-   Length funktion
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#append">
-   Append
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slicing">
-   Slicing
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -621,7 +665,7 @@ Hierbei handelt es sich um eine ähnliche Funktion wie <code>sort()</code>, welc
 </section>
 <section id="length-funktion">
 <h2>Length funktion<a class="headerlink" href="#length-funktion" title="Permalink to this headline">#</a></h2>
-<p>Um die Länge eines Arrays herauszufinden, benutzt man die <code>len()</code> funktion</p>
+<p>Um die Länge einer List herauszufinden, benutzt man die <code>len()</code> Funktion genauso wie man auch die Länge eines Strings herausfinden würde.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">))</span>
 <span class="c1"># 5</span>
@@ -649,6 +693,17 @@ Im Gegensatz zu Arrays in C, muss man nicht wissen wie lang die List höchstens 
 <p>Es ist auch möglich eine leere List zu erstellen, die man anscheließend mit append befüllt.</p>
 <p>Eine leere Liste wird wie folgt initialisiert:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</section>
+<section id="listen-konkatenieren">
+<h2>Listen konkatenieren<a class="headerlink" href="#listen-konkatenieren" title="Permalink to this headline">#</a></h2>
+<p>Um zwei Listen zu konkatenieren, kann man den <code>+</code> Operator nutzen. Wie etwa auch bei Strings, steht der <code>+</code> Operator bei Listen ebenfalls für eine Konkatenierung. Man kann diesen Operator so nutzen:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+<span class="c1"># [1, 2, 3, 4, 5, 6]</span>
 </pre></div>
 </div>
 </section>
@@ -711,6 +766,95 @@ Liste ab inklusive Index <code>a</code> und bis exklusive Index <code>b</code>:<
 </pre></div>
 </div>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgabe">
+<h1>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h1>
+<p>Gegeben seien die Listen <code>a, b, c</code> und <code>d</code>. Ihre Aufgabe ist es nun, dafür zu sorgen, dass bei dem Aufruf <code>print(nums)</code> der angegebene Output erscheinen soll.</p>
+<p>Sie dürfen nur Folgendes benutzen: Slicing und Konkatenierung</p>
+<p>Um klarer zu machen, was gemacht werden soll, hier ein willkürliches Beispiel:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output soll sein: [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+
+<span class="c1"># Eine mögliche Lösung könnte sein:</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="n">b</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output soll sein: [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">62</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+
+<span class="n">nums</span> <span class="o">=</span> <span class="o">...</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># --&gt; Der Output soll sein:</span>
+<span class="c1"># [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ellipsis
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="losung">
+<h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">62</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">d</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+
+<span class="c1"># Option 1:</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+
+<span class="c1"># Option 2 mit negativen Indizes:</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+
+<span class="c1"># Eine Kombination von den beiden Optionen ist auch möglich.</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="c1"># [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]</span>
+
+
+<span class="c1"># Es ist ebenfalls möglich jedes benötigte Element einzeln zu konkatenieren.</span>
+<span class="c1"># a[1:2] ist äquivalent zu a[1].</span>
+<span class="c1"># --&gt; Von 1 bis inklusive 1 --&gt; nur 1</span>
+
+<span class="c1"># Da es sich technisch gesehen immernoch um Slicing handelt, </span>
+<span class="c1"># würde es jedoch nicht gegen die Regeln verstoßen. a[1] hingegen schon.</span>
+<span class="c1"># Also könnte man oben [64, 7, 4, 7] auch durch </span>
+<span class="c1"># d[1:2] + d[2:3] + d[3:4] + d[4:5]</span>
+<span class="c1"># erzielen. </span>
+<span class="c1"># Das ist aber definitiv mühsamer.</span>
+<span class="c1"># Noch ein weiterer Grund, wieso Slicing hier einiges an Arbeit sparen kann.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

@@ -56,11 +56,6 @@ Themen aus Skript/ Python codes, welche in Python Intro nicht vorkommen - kurzve
 		- kmp.py
 
 
-### Konkatinieren von Listen mit dem "+"-Operator
-	kommt vor in:
-		Listing 5.1 (Merge Sort)
-
-
 
 # Dateien, welche ich für zu komplex für das Python Intro halte (Diese verstehen zu helfen ist ganz sicher nicht die Aufgabe von Python Intro). Die notwendigen Erklärungen für Aspekte, welche sich auf diese Dateien beschränken, werden nicht beachtet.
 
@@ -144,3 +139,8 @@ Themen aus Skript/ Python codes, welche in Python Intro nicht vorkommen - kurzve
 	--> nums = [0] * 10
 	kommt vor in:
 		- hash.py 
+
+
+### Konkatenieren von Listen mit dem "+" Operator
+	kommt vor in:
+		Listing 5.1 (Merge Sort)

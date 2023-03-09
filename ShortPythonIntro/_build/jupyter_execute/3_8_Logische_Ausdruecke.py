@@ -165,7 +165,7 @@ t = True
 f = False
 
 print(
-    "Warten auf Ausdruck..."
+    ...
 )
 
 

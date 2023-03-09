@@ -23,7 +23,7 @@
 # def ich_printe_falschherum(input_string):
 #     result = ""
 #     for i in range(1, len(input_string)+1):
-#         result += input_string[-i] # Der "+"-operator bei Strings konkatiniert
+#         result += input_string[-i] # Der "+"-operator bei Strings konkateniert
 #     print(result)
 # 
 # ich_printe_falschherum("Hello World!")

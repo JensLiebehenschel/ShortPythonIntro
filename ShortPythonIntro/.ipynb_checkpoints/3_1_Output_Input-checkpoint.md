@@ -13,7 +13,7 @@ print(name)
 # Max Mustermann
 ```
 Die <code>print()</code> Funktion kann auch mehrere Parameter entgegennehmen.
-In diesem Fall werden die gegebenen Parameter mit einem Leerzeichen dazwischen konkatiniert.
+In diesem Fall werden die gegebenen Parameter mit einem Leerzeichen dazwischen konkateniert.
 ```Python
 # Ein etwas komplexeres print() statement
 name1 = "Max Mustermann"

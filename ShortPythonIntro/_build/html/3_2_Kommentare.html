@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Datentypen &#8212; AlgDat Python Intro</title>
+    <title>Erstellen von Kommentaren &#8212; AlgDat Python Intro</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Arithmetische Operationen" href="3_4_Python_Arithemtische_Operatoren.html" />
-    <link rel="prev" title="Erstellen von Kommentaren" href="3_2_Python_Kommentare.html" />
+    <link rel="next" title="Datentypen" href="3_3_Datentypen.html" />
+    <link rel="prev" title="Output und Input" href="3_1_Output_Input.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -134,23 +134,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Python_Output_Input.html">
+    <a class="reference internal" href="3_1_Output_Input.html">
      Output und Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Python_Kommentare.html">
-     Erstellen von Kommentaren
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     Erstellen von Kommentaren
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3_3_Datentypen.html">
      Datentypen
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="3_4_Python_Arithemtische_Operatoren.html">
-     Arithmetische Operationen
+    <a class="reference internal" href="3_4_Arithemtische_Operatoren.html">
+     Arithmetische Operatoren
     </a>
    </li>
    <li class="toctree-l2">
@@ -259,7 +259,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/main?urlpath=tree/ShortPythonIntro/3_3_Python_Datentypen.ipynb"
+        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/main?urlpath=tree/ShortPythonIntro/3_2_Kommentare.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -319,7 +319,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2F3_3_Python_Datentypen.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2F3_2_Kommentare.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -347,7 +347,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/3_3_Python_Datentypen.ipynb"
+        <a href="_sources/3_2_Kommentare.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -406,31 +406,28 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Erstellen von Kommentaren
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dynamic-typing">
-   Dynamic Typing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jede-variable-muss-initialisiert-sein">
-   Jede Variable muss initialisiert sein
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-semikola">
-   Hinweis zu Semikola
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-strings">
-   Hinweis zu Strings
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -442,7 +439,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Datentypen</h1>
+                <h1>Erstellen von Kommentaren</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -452,31 +449,28 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Erstellen von Kommentaren
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
+     <strong>
+      DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aufgabe">
+   Aufgabe
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dynamic-typing">
-   Dynamic Typing
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jede-variable-muss-initialisiert-sein">
-   Jede Variable muss initialisiert sein
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-semikola">
-   Hinweis zu Semikola
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hinweis-zu-strings">
-   Hinweis zu Strings
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#losung">
+   Lösung
   </a>
  </li>
 </ul>
@@ -489,98 +483,84 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="datentypen">
-<h1>Datentypen<a class="headerlink" href="#datentypen" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="erstellen-von-kommentaren">
+<h1>Erstellen von Kommentaren<a class="headerlink" href="#erstellen-von-kommentaren" title="Permalink to this headline">#</a></h1>
 <section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
 <h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
+<p>Kommentare in Python sind relativ simpel. Es gibt nur einen Weg Kommentare zu erstellen.
+Wenn außerhalb eines Strings ein Rautezeichen(<code>#</code>) vorkommt, so wird alles was in dieser Zeile rechts vom Rautezeichen steht, als Kommentar gewertet</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># Gib x den Wert 5</span>
+<span class="c1">#      ^^^^^^^^^^^^^^^^^</span>
+<span class="c1">#Code  Kommentar</span>
+</pre></div>
+</div>
+<p>Es gibt eigentlich keinen Weg, einen Kommentar über mehrere Zeilen hinweg zu erstellen
+wie in u.a. C/C++/Java mit</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">    Das ist kommentar</span>
+<span class="cm">    Das hier auch</span>
+<span class="cm">    Das hier ebenfalls</span>
+<span class="cm">*/</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Somit müsste man in Python jede Zeile einzeln auskommentieren.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1">#   Das ist ein kommentar</span>
+<span class="c1">#   Das hier auch</span>
+<span class="c1">#   Das hier ebenfalls</span>
+</pre></div>
+</div>
+<p>Um das Leben einfacher zu machen, ist es jedoch trotzdessen möglich etwas ähnliches zu erzielen indem man den auszukommentierenden Inhalt als einen String ohne Zuweisung speichert. Somit fällt der betroffene Code weg.
+Das Funktioniert indem man jeweils am Anfang und Ende des auszukommentierenden Bereichs sogenannte “triple quotes” einfügt. Damit bezeichnet man drei aufeinanderfolgende Anführungszeichen.</p>
 </section>
-<section id="dynamic-typing">
-<h2>Dynamic Typing<a class="headerlink" href="#dynamic-typing" title="Permalink to this headline">#</a></h2>
-<p>Python hat alle gängigen Datentypen die man aus anderen Programmiersprachen kennt. Seien es Integer, Gleitkommazahlen oder Strings.
-Der Unterschied in Python ist, dass sich der Programmierer in der Regel nicht um Datentypen kümmern muss.
-Der Grund dafür liegt in Pythons “Dynamic Typing”
-Hier nochmal die Erklärung.
-Beim Dynamic Typing, kümmert sich einfach gesagt, der Python Interpreter um Datentypen und der Programmierer muss diese nicht konkret angeben.</p>
-<p>Dies macht es sehr einfach mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob etwa eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
-Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben will, so kann man Typecasting machen und somit den Typen explizit angeben. Dieser kann sich dann aber trotzdem noch ändern, wenn man der Variable einen neuen Wert zuweist.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bei der Funktion type(x) handelt es es sich um eine Funktion, </span>
-<span class="c1"># welche angibt von welchem Datentypen das Objekt x ist </span>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="aufgabe">
+<h1>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h1>
+<p>Jetzt sind Sie an der Reihe!
+Sorgen sie <strong>OHNE</strong> Code zu entfernen oder zu verschieben dafür, dass der Output “Hello World!” geprinted wird.
+Sie dürfen nur zwei triple quotes (<code>”””</code>) nutzen</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_output</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="c1"># &lt;class &#39;int&#39;&gt;</span>
-<span class="c1"># --&gt; x ist intern ein Integer</span>
+<span class="n">my_output</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># Typecasting von der Variable x zum Datentyp String</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="c1"># &lt;class &#39;str&#39;&gt;</span>
-<span class="c1"># --&gt; x ist nun intern ein String</span>
-</pre></div>
-</div>
-</section>
-<section id="jede-variable-muss-initialisiert-sein">
-<h2>Jede Variable muss initialisiert sein<a class="headerlink" href="#jede-variable-muss-initialisiert-sein" title="Permalink to this headline">#</a></h2>
-<p>In Programmiersprachen wie C, unterscheidet man zwischen Deklaration und Initialisation einer Variable.</p>
-<p>Bei einer Deklaration wird kein Wert zugewiesen, sondern nur Datentyp und Name angegeben:</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Bei einer Initialisation, wird einer bereits deklarierten Variable, ein Wert zugewiesen:</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Man kann beides auch gleichzeitig machen mit:</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<p>In Python kann man keine Variable deklarieren ohne sie auch zu intialisieren.
-Der Fall</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<p>ist also in Python nicht möglich.
-Es gibt jedoch Fälle, wo man deklarieren aber nicht sofort initialisieren möchte.
-Dafür kann ein Nullwert genutzt werden, damit die Variable initialisiert ist. In Python ist dies mit dem Keyword <code>None</code> möglich.
-Anschließend kann man der Variable später einen Wert zuweisen, sobald es soweit ist.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="c1"># None</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    
+    <span class="n">my_output</span> <span class="o">+=</span> <span class="n">i</span>
 
-<span class="n">value</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="c1"># 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5050
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="losung">
+<h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_output</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">my_output = 0</span>
 
-<span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
-<span class="c1"># Hello World!</span>
+<span class="sd">for i in range(1, 100+1):</span>
+<span class="sd">    </span>
+<span class="sd">    my_output += i</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_output</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="hinweis-zu-semikola">
-<h2>Hinweis zu Semikola<a class="headerlink" href="#hinweis-zu-semikola" title="Permalink to this headline">#</a></h2>
-<p>Wie vom aufmerksamen Leser bereits bemerkt, hat keines dieser Statements ein Semikolon am Ende. Dies ist kein Fehler.
-Semikolons werden am Ende einer Zeile nicht benötigt.
-Der einzige Nutzen von Semikolons ist das ausführen von mehreren Statements in der selben Zeile.<br />
-Beispiel:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello World!
 </pre></div>
 </div>
-</section>
-<section id="hinweis-zu-strings">
-<h2>Hinweis zu Strings<a class="headerlink" href="#hinweis-zu-strings" title="Permalink to this headline">#</a></h2>
-<p>In Python können Strings entweder mit normalen Anführungszeichen oder mit einfachen Anführungszeichen angegeben werden.
-Man kann auch innerhalb eines Programms beides benutzen, jedoch kann man nicht beides innerhalb von einem String benutzen.</p>
-<p>Gültig:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Text&quot;</span>
-<span class="s1">&#39;Text&#39;</span>
-</pre></div>
 </div>
-<p>Ungültig:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Text&#39;</span>
-<span class="s1">&#39;Text&quot;</span>
-</pre></div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -610,17 +590,17 @@ Man kann auch innerhalb eines Programms beides benutzen, jedoch kann man nicht b
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="3_2_Python_Kommentare.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3_1_Output_Input.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Erstellen von Kommentaren</p>
+            <p class="prev-next-title">Output und Input</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="3_4_Python_Arithemtische_Operatoren.html" title="next page">
+    <a class='right-next' id="next-link" href="3_3_Datentypen.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Arithmetische Operationen</p>
+        <p class="prev-next-title">Datentypen</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

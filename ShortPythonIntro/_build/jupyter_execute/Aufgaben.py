@@ -63,7 +63,7 @@
 
 
 # Es gibt viele Lösungen für diese bekannte Programmieraufgabe.
-# Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatinieren.
+# Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatenieren.
 # Alternativ könnte man auch mit Lambdas arbeiten,
 # das ist hier definitiv aber nicht von Relevanz
 
