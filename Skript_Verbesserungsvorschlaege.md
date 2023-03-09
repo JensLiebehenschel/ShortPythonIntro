@@ -10,10 +10,18 @@ Der korrekte Link ist "https://blog.codinghorror.com/why-cant-programmers-progra
 ```Python
 INF = sys.maxsize  # TODO should do better
 ```
-###	Vorschlag:
+###	Vorschlag 1:
 ```Python
 INF = float('inf')  
 # Hat das gleiche Ergebnis, ist aber leserlicher und ich nehme an verständlicher.
+# Zusätzlich braucht man nicht die sys library zu importieren.
+```
+
+###	Vorschlag 2:
+```Python
+import math
+INF = math.inf  
+# Noch besser. Hierfür müsste man aber die math library importieren
 # Zusätzlich braucht man nicht die sys library zu importieren.
 ```
 
@@ -25,9 +33,17 @@ def adjust(a):
 # add s_0 and s_n+1, 999999999 representing infinity
 return [[0,0]] + a + [[len(a), 999999999]]
 ```
-###	Vorschlag (Ich habe es getestet und das Programm funktioniert weiterhin):
+###	Vorschlag 1 (Ich habe es getestet und das Programm funktioniert weiterhin):
 ```Python
 def adjust(a):
 # add s_0 and s_n+1, float('inf') acts as infinity
 return [[0,0]] + a + [[len(a), float('inf')]]
+```
+
+###	Vorschlag 2:
+```Python
+import math
+def adjust(a):
+# add s_0 and s_n+1, float('inf') acts as infinity
+return [[0,0]] + a + [[len(a), math.inf]]
 ```
