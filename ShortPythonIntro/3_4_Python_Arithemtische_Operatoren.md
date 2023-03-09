@@ -1,4 +1,4 @@
-# Arithmetische Operationen
+# Arithmetische Operatoren
 
 ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
 
@@ -104,3 +104,34 @@ x = 3 ** 3
 print(x)
 # 27
 ```
+
+# Mathematische Operatoren im nicht mathematischen Kontext
+
+Eigentlich arithmetische Operatoren können je nach Kontext auch etwas anderes bedeuten. 
+Wenn es um zwei Zahlen geht, dann handelt es sich um eine Rechnung. Was wäre nun aber die Summe von zwei Strings?
+
+Eine Summe von zwei Strings ergibt nicht wirklich Sinn, deshalb hat etwa der <code>+</code> operator bei Objekten, welche nicht einfache numerische Zahlen sind,
+verschiedene Bedeutungen.
+
+Um bei dem Beispiel von den zwei Strings zu bleiben, lässt sich die Funktionsweise hier beobachten:
+
+```Python
+a = "Hello"
+b = "World!"
+
+print(a + b)
+# HelloWorld!
+```
+
+Es fand also eine Konkatenierung statt. Der zweite String wurde an das Ende des ersten Strings angehängt.
+Um es mit einem Leerzeichen zwischen "Hello" und "World!" schöner aussehen zu lassen, kann man erst ein Leerzeichen an das Ende des ersten Strings konkatenieren, bevor man den zweiten String anhängt:
+
+```Python
+a = "Hello"
+b = "World!"
+
+print(a + " " + b)
+# Hello World!
+```
+
+Es ist nicht ganz willkürlich. Man kann ungefähr sagen, dass außerhalb von Rechnungen, <code>+</code> allgemein für Konkatenierung steht.
