@@ -157,3 +157,96 @@
 # 	<Codeblock>
 # ```
 # Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch einen Workaround gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition.
+
+# # Aufgabe
+
+# Jemand hat ein Programm in C geschrieben und offenbar ist etwas schief gelaufen. Die Indentierung wurde gelöscht. Ihre Aufgabe war es, das Programm in Python umzuschreiben, damit man einen Performancevergleich der beiden Programme durchführen kann. Dass die Indentierung verschwunden ist, macht Ihr Leben sicherlich nicht einfacher.
+
+# ```C
+# int result = 0;
+# for (int i = 0; i < 3; i++) {
+# result = result + i * 3;
+# for (int j = 3; j > 1; j--) {
+# result -= j;    
+# int k = 5;
+# while (k > i) {
+# result += j;
+# k = k / 2;
+# }
+# }
+# }    
+# printf("%d", result);
+# ```
+
+# Jemand hat für Sie schon Vorarbeit geleistet und hat den Großteil des Programms bereits in Python geschrieben. Es fehlen nur noch die Schleifen, wessen Stellen diese Person mit der Markierung <code>&lt;Loop&gt;</code> angegeben hat. Die Indentierung für die hinzuzufügenden Schleifen wurde ebenfalls gelöscht. Die Person hat den Großteil des Programms auskommentiert. Ihre Aufgabe ist es nun, das Auskommentieren rückgängig zu machen und die passende Schleifen an die korrekte Stellen einzufügen. Für das Rückgängig machen des Auskommentierens, sollen Sie die triple-quotes(<code>"""</code>) entfernen. Achten Sie ebenfalls auf korrekte Indentierung. Die Funktionsweise der Schleifen können Sie im obigen C Code nachgucken.
+
+# In[1]:
+
+
+# Ersetzen Sie "<Loop>" durch die jeweils korrekten Schleifen.
+# Achten Sie auf korrekte Indentierung.
+result = 0
+"""
+<Loop>
+result = result + i * 3 
+<Loop>
+result -= j
+k = 5
+<Loop>
+result += j
+k = k // 2
+"""
+print(result)
+
+
+# # Der C-Code mit Indentierung
+
+# ```{toggle}
+# ```C
+# int result = 0;
+# for (int i = 0; i < 3; i++) {
+#     result = result + i * 3;
+#     for (int j = 3; j > 1; j--) {
+#         result -= j;    
+#         int k = 5;
+#         while (k > i) {
+#             result += j;
+#             k = k / 2;
+#         }
+#     }
+# }    
+# printf("%d", result);
+# // 24 
+# ```
+
+# # Lösung
+
+# In[2]:
+
+
+result = 0
+for i in range(0, 3):
+    result = result + i * 3 
+    for j in range(3, 1, -1):
+        result -= j
+        k = 5
+        while k > i:
+            result += j
+            k = k // 2
+print(result)
+# 24
+
+
+# 
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
