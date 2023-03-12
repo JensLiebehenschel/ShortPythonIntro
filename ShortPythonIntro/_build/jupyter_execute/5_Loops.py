@@ -199,9 +199,9 @@ k = k // 2
 print(result)
 
 
-# # Der C-Code mit Indentierung
-
-# ```{toggle}
+# :::{admonition} Korrekt indentierten C-Code anzeigen
+# :class: dropdown
+# 
 # ```C
 # int result = 0;
 # for (int i = 0; i < 3; i++) {
@@ -218,35 +218,24 @@ print(result)
 # printf("%d", result);
 # // 24 
 # ```
-
-# # Lösung
-
-# In[2]:
-
-
-result = 0
-for i in range(0, 3):
-    result = result + i * 3 
-    for j in range(3, 1, -1):
-        result -= j
-        k = 5
-        while k > i:
-            result += j
-            k = k // 2
-print(result)
-# 24
-
-
 # 
+# :::
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
+# :::{admonition} Show solution
+# :class: dropdown
+# 
+# ```Python
+# result = 0
+# for i in range(0, 3):
+#     result = result + i * 3 
+#     for j in range(3, 1, -1):
+#         result -= j
+#         k = 5
+#         while k > i:
+#             result += j
+#             k = k // 2
+# print(result)
+# # 24
+# ```
+# 
+# :::

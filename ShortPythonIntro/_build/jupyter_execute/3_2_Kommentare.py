@@ -55,18 +55,18 @@ for i in range(1, 100+1):
 print(my_output)
 
 
-# # Lösung
-
-# In[2]:
-
-
-my_output = "Hello World!"
-"""
-my_output = 0
-
-for i in range(1, 100+1):
-    
-    my_output += i
-"""
-print(my_output)
-
+# :::{admonition} Show solution
+# :class: dropdown
+# 
+# ```Python
+# my_output = "Hello World!"
+# """
+# my_output = 0
+# 
+# for i in range(1, 100+1):
+#     
+#     my_output += i
+# """
+# print(my_output)
+# # "Hello World!"
+# ```

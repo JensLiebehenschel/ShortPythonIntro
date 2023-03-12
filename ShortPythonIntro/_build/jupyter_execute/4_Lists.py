@@ -262,6 +262,7 @@
 # In[1]:
 
 
+# Hier können Sie ihren Versuch schreiben...
 # Output soll sein: [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
 
 a = [6, 34, 12, 1, 3]
@@ -278,38 +279,36 @@ print(nums)
 # [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
 
 
-# # Lösung
-
-# In[2]:
-
-
-a = [6, 34, 12, 1, 3]
-b = [62, 7, 5, 3, 6, 2]
-c = [1, 2, 3]
-d = [9, 64, 7, 4, 7, 4]
-
-
-# Option 1:
-nums = d[1:5] + a[:2] + c + b[4:]
-
-# Option 2 mit negativen Indizes:
-nums = d[1:-1] + a[:-3] + c + b[-2:]
-
-# Eine Kombination von den beiden Optionen ist auch möglich.
-
-print(nums)
-# [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
-
-
-# Es ist ebenfalls möglich jedes benötigte Element einzeln zu konkatenieren.
-# a[1:2] ist äquivalent zu a[1].
-# --> Von 1 bis inklusive 1 --> nur 1
-
+# :::{admonition} Show solution
+# :class: dropdown
+# 
+# ```Python
+# a = [6, 34, 12, 1, 3]
+# b = [62, 7, 5, 3, 6, 2]
+# c = [1, 2, 3]
+# d = [9, 64, 7, 4, 7, 4]
+# 
+# 
+# # Option 1:
+# nums = d[1:5] + a[:2] + c + b[4:]
+# 
+# # Option 2 mit negativen Indizes:
+# nums = d[1:-1] + a[:-3] + c + b[-2:]
+# 
+# # Eine Kombination von den beiden Optionen ist auch möglich.
+# 
+# print(nums)
+# # [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
+# ```
+# 
+# Es ist ebenfalls möglich jedes benötigte Element einzeln zu konkatenieren. <code>a[1:2]</code> ist äquivalent zu <code>a[1]</code>.
+# (Von <code>1</code> bis inklusive <code>1</code> --> nur <code>1</code>)
+# 
 # Da es sich technisch gesehen immernoch um Slicing handelt, 
-# würde es jedoch nicht gegen die Regeln verstoßen. a[1] hingegen schon.
-# Also könnte man oben [64, 7, 4, 7] auch durch 
-# d[1:2] + d[2:3] + d[3:4] + d[4:5]
-# erzielen. 
+# würde es jedoch nicht gegen die Regeln verstoßen. <code>a[1]</code> hingegen schon.
+# Also könnte man oben <code>[64, 7, 4, 7]</code> auch durch <code>d[1:2] + d[2:3] + d[3:4] + d[4:5]</code> erhalten. 
+# 
 # Das ist aber definitiv mühsamer.
 # Noch ein weiterer Grund, wieso Slicing hier einiges an Arbeit sparen kann.
-
+# 
+# :::

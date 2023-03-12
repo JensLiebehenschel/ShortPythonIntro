@@ -429,11 +429,6 @@ title="Print to PDF"
      Ihre Antwort
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fizzbuzz-losung">
-     FizzBuzz Lösung
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -477,11 +472,6 @@ title="Print to PDF"
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ihre-antwort">
      Ihre Antwort
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fizzbuzz-losung">
-     FizzBuzz Lösung
     </a>
    </li>
   </ul>
@@ -547,22 +537,9 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
-<section id="fizzbuzz-losung">
-<h2>FizzBuzz Lösung<a class="headerlink" href="#fizzbuzz-losung" title="Permalink to this headline">#</a></h2>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Es gibt viele Lösungen für diese bekannte Programmieraufgabe.</span>
-<span class="c1"># Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatenieren.</span>
-<span class="c1"># Alternativ könnte man auch mit Lambdas arbeiten,</span>
-<span class="c1"># das ist hier definitiv aber nicht von Relevanz</span>
-
-<span class="c1"># range(1, 101), da es bei 1 starten soll und bis inklusive 100 gehen soll.</span>
-<span class="c1"># Inklusive 100 --&gt; Exklusive 101 --&gt; range(1, 101)</span>
-
-<span class="c1"># Zahl ist durch n teilbar --&gt; zahl % n == 0.</span>
-<span class="c1"># Sprich: Es gibt keinen Rest bei der Division zahl / n</span>
-<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
+<div class="dropdown admonition">
+<p class="admonition-title">Show FizzBuzz solution</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;FizzBuzz&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -573,111 +550,12 @@ title="Print to PDF"
         <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
-Fizz
-19
-Buzz
-Fizz
-22
-23
-Fizz
-Buzz
-26
-Fizz
-28
-29
-FizzBuzz
-31
-32
-Fizz
-34
-Buzz
-Fizz
-37
-38
-Fizz
-Buzz
-41
-Fizz
-43
-44
-FizzBuzz
-46
-47
-Fizz
-49
-Buzz
-Fizz
-52
-53
-Fizz
-Buzz
-56
-Fizz
-58
-59
-FizzBuzz
-61
-62
-Fizz
-64
-Buzz
-Fizz
-67
-68
-Fizz
-Buzz
-71
-Fizz
-73
-74
-FizzBuzz
-76
-77
-Fizz
-79
-Buzz
-Fizz
-82
-83
-Fizz
-Buzz
-86
-Fizz
-88
-89
-FizzBuzz
-91
-92
-Fizz
-94
-Buzz
-Fizz
-97
-98
-Fizz
-Buzz
-</pre></div>
-</div>
-</div>
+<p>Erklärung der obigen Lösung:</p>
+<p><code>range(1, 101)</code>, da es bei <code>1</code> starten soll und bis inklusive <code>100</code> gehen soll. (Inklusive <code>100</code> –&gt; Exklusive <code>101</code> –&gt; <code>range(1, 101)</code>)</p>
+<p>Zahl ist durch <code>n</code> teilbar –&gt; <code>zahl % n == 0</code>.</p>
+<p>Sprich: Es gibt keinen Rest bei der Division <code>zahl / n</code>.</p>
+<p>Es gibt viele Lösungen für diese bekannte Programmieraufgabe. Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatenieren.
+Alternativ könnte man auch mit Lambdas arbeiten, das ist hier definitiv aber nicht von Relevanz</p>
 </div>
 </section>
 </section>

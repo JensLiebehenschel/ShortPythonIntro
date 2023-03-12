@@ -75,7 +75,7 @@
 # <font size="14">$result=\frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}$</font>
 
 # Den Wert für $\pi$ können Sie mit <code>math.pi</code> aufrufen.
-# Den Wert für $e$ können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung. Falls Sie die Lösung über mehrere Zeilen hinweg schreiben wollen, so machen Sie bitte eine Klammer um die gesamte Rechnung, da es sonst nicht funktioniert. 
+# Den Wert für $e$ können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung.
 # 
 # Also zum Beispiel: 
 # 
@@ -90,30 +90,35 @@
 
 
 # Hier können Sie ihren Versuch schreiben...
-# Ersetzen sie hierfür den String mit ihrem Code.
+# Ersetzen sie hierfür "..." mit ihrem Code.
+# Das Ergebnis der Formel soll geprinted werden.
 # Bräuchten Sie vielleicht eine Bibliothek?
 
 mu = 3
 sigma = 5
 x = 4
-result = ...
-print(result)
+print(
+    ...
+)
 
 
-# # Lösung
-
-# In[2]:
-
-
-import math
-mu = 3
-sigma = 5
-x = 4
-result = (1/(sigma * math.sqrt(2*math.pi))) * math.e ** (-(1/2) * ((x-mu)/sigma) ** 2)
-print(result)
-# 0.07820853879509118
-
+# :::{admonition} Show solution
+# :class: dropdown
+# 
+# ```Python
+# import math
+# mu = 3
+# sigma = 5
+# x = 4
+# print(
+#     (1/(sigma * math.sqrt(2*math.pi))) 
+#     * math.e ** (-(1/2) * ((x-mu)/sigma) ** 2)
+# )
+# # 0.07820853879509118
+# ```
+# 
 # Dies ist nur eine Musterlösung. 
 # Sie können die Formel natürlich auch anders aufschreiben. 
 # Solange das Ergebnis stimmt, ist Ihre Lösung sehr wahrscheinlich ebenfalls korrekt.
-
+# 
+# :::

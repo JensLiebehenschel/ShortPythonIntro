@@ -58,8 +58,9 @@ a,b = b,a
 # unerlaubte Operation?
 ```
 
-# Lösung
-```{toggle}
+:::{admonition} Show solution
+:class: dropdown
+
 Antwort: a ist 10, b ist 5
 
 Es wurde also ein Swap durchgeführt.
@@ -74,3 +75,5 @@ b = temp
 # Gleichzeitiges Tauschen von drei oder mehr Variablen is ebenfalls möglich.
 # Der Tausch von zwei Variablen wird jedoch praktisch gesehen häufiger benötigt.
 ```
+
+:::

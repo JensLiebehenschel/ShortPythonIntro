@@ -437,11 +437,6 @@ title="Print to PDF"
    Aufgabe
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losung">
-   Lösung
-  </a>
- </li>
 </ul>
 
     </nav>
@@ -488,11 +483,6 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe">
    Aufgabe
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#losung">
-   Lösung
   </a>
  </li>
 </ul>
@@ -565,7 +555,7 @@ Es geht nur darum, diese Formel in Code umzuschreiben und das Ergebnis zu berech
 Als Variablennamen sollen Sie nun die Ausdrücke der unten stehenden Gleichung verwenden.</p>
 <p><font size="14"><span class="math notranslate nohighlight">\(result=\frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}\)</span></font></p>
 <p>Den Wert für <span class="math notranslate nohighlight">\(\pi\)</span> können Sie mit <code>math.pi</code> aufrufen.
-Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung. Falls Sie die Lösung über mehrere Zeilen hinweg schreiben wollen, so machen Sie bitte eine Klammer um die gesamte Rechnung, da es sonst nicht funktioniert.</p>
+Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Sie mit <code>math.e</code> aufrufen. Denken Sie an Klammersetzung.</p>
 <p>Also zum Beispiel:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
          <span class="o">+</span> <span class="n">d</span> <span class="o">+</span> <span class="n">e</span><span class="p">)</span>
@@ -575,14 +565,16 @@ Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Si
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
-<span class="c1"># Ersetzen sie hierfür den String mit ihrem Code.</span>
+<span class="c1"># Ersetzen sie hierfür &quot;...&quot; mit ihrem Code.</span>
+<span class="c1"># Das Ergebnis der Formel soll geprinted werden.</span>
 <span class="c1"># Bräuchten Sie vielleicht eine Bibliothek?</span>
 
 <span class="n">mu</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">result</span> <span class="o">=</span> <span class="o">...</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="o">...</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -592,30 +584,22 @@ Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Si
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="losung">
-<h1>Lösung<a class="headerlink" href="#losung" title="Permalink to this headline">#</a></h1>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="dropdown admonition">
+<p class="admonition-title">Show solution</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> 
+    <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">e</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
 <span class="c1"># 0.07820853879509118</span>
-
-<span class="c1"># Dies ist nur eine Musterlösung. </span>
-<span class="c1"># Sie können die Formel natürlich auch anders aufschreiben. </span>
-<span class="c1"># Solange das Ergebnis stimmt, ist Ihre Lösung sehr wahrscheinlich ebenfalls korrekt.</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.07820853879509118
-</pre></div>
-</div>
-</div>
+<p>Dies ist nur eine Musterlösung.
+Sie können die Formel natürlich auch anders aufschreiben.
+Solange das Ergebnis stimmt, ist Ihre Lösung sehr wahrscheinlich ebenfalls korrekt.</p>
 </div>
 </section>
 

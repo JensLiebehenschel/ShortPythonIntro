@@ -57,28 +57,30 @@
 # Hier können Sie das FizzBuzz Problem lösen
 
 
-# ## FizzBuzz Lösung
-
-# In[2]:
-
-
-# Es gibt viele Lösungen für diese bekannte Programmieraufgabe.
-# Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatenieren.
-# Alternativ könnte man auch mit Lambdas arbeiten,
-# das ist hier definitiv aber nicht von Relevanz
-
-# range(1, 101), da es bei 1 starten soll und bis inklusive 100 gehen soll.
-# Inklusive 100 --> Exklusive 101 --> range(1, 101)
-
-# Zahl ist durch n teilbar --> zahl % n == 0.
-# Sprich: Es gibt keinen Rest bei der Division zahl / n
-for number in range(1, 101):
-    if number % 3 == 0 and number % 5 == 0:
-        print("FizzBuzz")
-    elif number % 3 == 0:
-        print("Fizz")
-    elif number % 5 == 0:
-        print("Buzz")
-    else:
-        print(number)
-
+# :::{admonition} Show FizzBuzz solution
+# :class: dropdown
+# 
+# ```Python
+# for number in range(1, 101):
+#     if number % 3 == 0 and number % 5 == 0:
+#         print("FizzBuzz")
+#     elif number % 3 == 0:
+#         print("Fizz")
+#     elif number % 5 == 0:
+#         print("Buzz")
+#     else:
+#         print(number)
+# ```
+# 
+# Erklärung der obigen Lösung: 
+# 
+# <code>range(1, 101)</code>, da es bei <code>1</code> starten soll und bis inklusive <code>100</code> gehen soll. (Inklusive <code>100</code> --> Exklusive <code>101</code> --> <code>range(1, 101)</code>)
+# 
+# Zahl ist durch <code>n</code> teilbar --> <code>zahl % n == 0</code>.
+# 
+# Sprich: Es gibt keinen Rest bei der Division <code>zahl / n</code>.
+# 
+# Es gibt viele Lösungen für diese bekannte Programmieraufgabe. Man könnte etwa mit Strings arbeiten und bei bedarf Fizz und Buzz konkatenieren.
+# Alternativ könnte man auch mit Lambdas arbeiten, das ist hier definitiv aber nicht von Relevanz
+# 
+# :::

@@ -138,11 +138,11 @@
 #     if (y ist wahr) {
 #         if (z ist wahr) {
 #             <Codeblock_1>
-# 		}
-# 	}
+#         }
+#     }
 #     else {
 #         <Codeblock_2>
-# 	}
+#     }
 # }
 # else {
 #     <Codeblock_3>
@@ -160,10 +160,9 @@
 # Hier können Sie ihren Versuch schreiben...
 
 
-# # Lösung
-
-#  ```{toggle}
-# Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms...&gt;</code> nicht Indentiert ist. Hätte es eine Indentierung von einem tab, so könnte man denken, dass der Rest des Programms noch zu &lt;Codeblock_3&gt; gehört.
+# :::{admonition} Show solution
+# :class: dropdown
+# 
 # ```Python
 # if x ist wahr:
 #     if y ist wahr:
@@ -175,3 +174,6 @@
 #  	<Codeblock_3>
 # <Rest des Programms...>
 #  ```
+# Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms...&gt;</code> nicht Indentiert ist. Hätte es eine Indentierung von einem tab, so könnte man denken, dass der Rest des Programms noch zu <code>&lt;Codeblock_3&gt;</code> gehört.
+# 
+# :::

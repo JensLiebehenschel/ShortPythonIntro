@@ -135,9 +135,9 @@
 # Wenn Sie alternativ nicht den obigen Ausdruck nutzen möchten, können Sie auch den unten stehenden C-code in Python code übersetzen. 
 # Der C-code unten und der Ausdruck oben sind äquivalent.
 
-# ## Äquivalenter C-code als optionale Hilfe
-
-# ```{toggle}
+# :::{admonition} Äquivalenter C-Code als optionale Hilfe
+# :class: dropdown
+# 
 # ```C
 # // Äquivalenter C-code
 # int x = 5;
@@ -150,6 +150,8 @@
 #     x==y && ( (x == z || !(y < z)) || !((!t || f) && (t && !(x < z)))) 
 # );
 # ```
+# 
+# :::
 
 # ## Ihre Antwort
 
@@ -169,9 +171,8 @@ print(
 )
 
 
-# # Lösung
-
-# ```{toggle}
+# :::{admonition} Show solution
+# :class: dropdown
 # 
 # Hier ist die Musterlösung. Sie können natürlich auch mehr Klammern nutzen, um nicht auf Bindungsstärke der Operatoren achten zu müssen.
 # 
@@ -187,3 +188,5 @@ print(
 # )
 # # True
 # ```
+# 
+# :::
