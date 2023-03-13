@@ -105,7 +105,7 @@ print(x)
 # 27
 ```
 
-# Mathematische Operatoren im nicht mathematischen Kontext
+## Mathematische Operatoren im nicht mathematischen Kontext
 
 Eigentlich arithmetische Operatoren können je nach Kontext auch etwas anderes bedeuten. 
 Wenn es um zwei Zahlen geht, dann handelt es sich um eine Rechnung. Was wäre nun aber die Summe von zwei Strings?

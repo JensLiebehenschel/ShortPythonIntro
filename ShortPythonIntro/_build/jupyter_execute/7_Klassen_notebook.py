@@ -78,9 +78,9 @@
 # 	def __init__(self, a_input, b_input):
 # 		self.a = a_input
 # 		self.b = b_input
-# 		self.c = None 		# None ist das Python Äquivalent zu NULL
+# 		self.c = None  # None ist das Python Äquivalent zu NULL
 # 
-# meine_instanz = meineKlasse(1,2) # Konstruktor Aufruf mit Parametern
+# meine_instanz = meineKlasse(1,2)  # Konstruktor Aufruf mit Parametern
 # print(meine_instanz.a)
 # # 1
 # print(meine_instanz.b)
@@ -99,8 +99,8 @@
 # 		d = 5 	# Kein "self." davor, also lokale Variable und kein Attribut. Der Wert existiert nur im Konstruktor
 # 
 # 	def berechne_c(self, faktor_von_a):
-# 		self.c = self.a * faktor_von_a + self.b # Formel: c = a * faktor + b
-# 		self.e = 8		# Das attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden.
+# 		self.c = self.a * faktor_von_a + self.b  # Formel: c = a * faktor + b
+# 		self.e = 8  # Das attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden.
 # 
 # 
 # meine_instanz = meineKlasse(1,2)

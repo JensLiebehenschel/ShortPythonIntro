@@ -130,7 +130,7 @@
 # 	print("x ist weder 1 noch 2")
 # ```
 
-# # Aufgabe
+# ## Aufgabe
 
 # Ein etwas komplexeres Beispiel erst in C:
 # ```C
@@ -160,7 +160,7 @@
 # Hier können Sie ihren Versuch schreiben...
 
 
-# :::{admonition} Show solution
+# :::{admonition} Lösung
 # :class: dropdown
 # 
 # ```Python

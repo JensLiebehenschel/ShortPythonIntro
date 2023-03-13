@@ -158,7 +158,7 @@
 # ```
 # Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch einen Workaround gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition.
 
-# # Aufgabe
+# ## Aufgabe
 
 # Jemand hat ein Programm in C geschrieben und offenbar ist etwas schief gelaufen. Die Indentierung wurde gelöscht. Ihre Aufgabe war es, das Programm in Python umzuschreiben, damit man einen Performancevergleich der beiden Programme durchführen kann. Dass die Indentierung verschwunden ist, macht Ihr Leben sicherlich nicht einfacher.
 
@@ -221,7 +221,7 @@ print(result)
 # 
 # :::
 
-# :::{admonition} Show solution
+# :::{admonition} Lösung
 # :class: dropdown
 # 
 # ```Python

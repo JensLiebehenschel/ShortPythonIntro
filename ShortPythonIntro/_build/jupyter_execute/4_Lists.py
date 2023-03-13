@@ -236,7 +236,7 @@
 # nums = nums[2:-2]  # entfernt die ersten zwei und die letzten zwei Elemente
 # ```
 
-# # Aufgabe
+# ## Aufgabe
 
 # Gegeben seien die Listen <code>a, b, c</code> und <code>d</code>. Ihre Aufgabe ist es nun, dafür zu sorgen, dass bei dem Aufruf <code>print(nums)</code> der angegebene Output erscheinen soll.
 # 
@@ -279,7 +279,7 @@ print(nums)
 # [64, 7, 4, 7, 6, 34, 1, 2, 3, 6, 2]
 
 
-# :::{admonition} Show solution
+# :::{admonition} Lösung
 # :class: dropdown
 # 
 # ```Python

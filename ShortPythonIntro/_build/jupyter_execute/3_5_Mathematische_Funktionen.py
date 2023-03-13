@@ -60,7 +60,7 @@
 # 
 # Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf in der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.
 
-# # Aufgabe
+# ## Aufgabe
 # 
 # Hier ist die Gleichung für die Dichtefunktion der <a href="https://de.wikipedia.org/wiki/Normalverteilung" target="_blank">Normalverteilung</a>. Die Normalverteilung ist auch als "gaußsche Glockenkurve" bekannt.
 # Es geht hier nicht darum, diese Formel zu verstehen. Den ersten Kontakt mit dieser Formel werden Sie im 3. Semester in Statistik haben und dort benutzt man Programme, welche Werte für diesen Ausdruck berechnen.
@@ -102,7 +102,7 @@ print(
 )
 
 
-# :::{admonition} Show solution
+# :::{admonition} Lösung
 # :class: dropdown
 # 
 # ```Python

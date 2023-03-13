@@ -4,18 +4,17 @@
 format: jb-book
 root: index
 chapters:
+- file: Interaktivitaet
 - file: 1_Motivation
 - file: 2_Wie_nutzen_wir_Python
-- file: Chapter_Python_Basics  
-  sections:
-    - file: 3_1_Output_Input
-    - file: 3_2_Kommentare
-    - file: 3_3_Datentypen
-    - file: 3_4_Arithemtische_Operatoren
-    - file: 3_5_Mathematische_Funktionen
-    - file: 3_6_Zuweisungen
-    - file: 3_7_Indentation_If_Statements
-    - file: 3_8_Logische_Ausdruecke
+- file: 3_1_Output_Input
+- file: 3_2_Kommentare
+- file: 3_3_Datentypen
+- file: 3_4_Arithemtische_Operatoren
+- file: 3_5_Mathematische_Funktionen
+- file: 3_6_Zuweisungen
+- file: 3_7_Indentation_If_Statements
+- file: 3_8_Logische_Ausdruecke
 - file: 4_Lists
 - file: 5_Loops
 - file: 6_Funktionen

@@ -121,7 +121,7 @@
 # # True
 # ```
 
-# # Aufgabe
+# ## Aufgabe
 
 # Gegeben ist ein logischer Ausdruck. Übersetzen Sie diesen Ausdruck in Python code. Damit Sie den Code ausführen und somit auf Syntaxfehler vom Interpreter achten können, nutzen Sie dafür die konkreten Werte $x=5,\:y=5,\:z=3,\:t=True,\:f=False$.
 # Durch eben diese konkreten Werte entstehen Tautologien. Es sollen **keine** vereinfachungen durchgeführt werden. 
@@ -153,7 +153,7 @@
 # 
 # :::
 
-# ## Ihre Antwort
+# ### Ihre Antwort
 
 # In[1]:
 
@@ -171,7 +171,7 @@ print(
 )
 
 
-# :::{admonition} Show solution
+# :::{admonition} Lösung
 # :class: dropdown
 # 
 # Hier ist die Musterlösung. Sie können natürlich auch mehr Klammern nutzen, um nicht auf Bindungsstärke der Operatoren achten zu müssen.

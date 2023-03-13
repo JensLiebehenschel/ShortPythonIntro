@@ -114,6 +114,11 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="Interaktivitaet.html">
+   Interaktivität dieser Einführung
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="1_Motivation.html">
    Motivation
   </a>
@@ -123,57 +128,45 @@ const thebe_selector_output = ".output, .cell_output"
    Wie nutzen wir Python?
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Chapter_Python_Basics.html">
-   Python Basics
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_1_Output_Input.html">
+   Output und Input
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_1_Output_Input.html">
-     Output und Input
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_2_Kommentare.html">
-     Erstellen von Kommentaren
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_3_Datentypen.html">
-     Datentypen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_4_Arithemtische_Operatoren.html">
-     Arithmetische Operatoren
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_5_Mathematische_Funktionen.html">
-     Bibliotheken und Mathematische Funktionen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_6_Zuweisungen.html">
-     Zuweisungen
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_7_Indentation_If_Statements.html">
-     Indentierung und if statements
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="3_8_Logische_Ausdruecke.html">
-     Logische Ausdrücke
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_2_Kommentare.html">
+   Erstellen von Kommentaren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_3_Datentypen.html">
+   Datentypen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_4_Arithemtische_Operatoren.html">
+   Arithmetische Operatoren
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_5_Mathematische_Funktionen.html">
+   Bibliotheken und Mathematische Funktionen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_6_Zuweisungen.html">
+   Zuweisungen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_7_Indentation_If_Statements.html">
+   Indentierung und if statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_8_Logische_Ausdruecke.html">
+   Logische Ausdrücke
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="4_Lists.html">
@@ -251,35 +244,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/main?urlpath=tree/ShortPythonIntro/7_Klassen.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -347,7 +311,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/7_Klassen.ipynb"
+        <a href="_sources/7_Klassen.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -358,7 +322,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -532,9 +496,9 @@ Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperato
 	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a_input</span><span class="p">,</span> <span class="n">b_input</span><span class="p">):</span>
 		<span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a_input</span>
 		<span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b_input</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="kc">None</span> 		<span class="c1"># None ist das Python Äquivalent zu NULL</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># None ist das Python Äquivalent zu NULL</span>
 
-<span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">meineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># Konstruktor Aufruf mit Parametern</span>
+<span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">meineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Konstruktor Aufruf mit Parametern</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
 <span class="c1"># 1</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
@@ -552,8 +516,8 @@ Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperato
 		<span class="n">d</span> <span class="o">=</span> <span class="mi">5</span> 	<span class="c1"># Kein &quot;self.&quot; davor, also lokale Variable und kein Attribut. Der Wert existiert nur im Konstruktor</span>
 
 	<span class="k">def</span> <span class="nf">berechne_c</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faktor_von_a</span><span class="p">):</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">faktor_von_a</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="c1"># Formel: c = a * faktor + b</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">e</span> <span class="o">=</span> <span class="mi">8</span>		<span class="c1"># Das attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden.</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">faktor_von_a</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>  <span class="c1"># Formel: c = a * faktor + b</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">e</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Das attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden.</span>
 
 
 <span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">meineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -576,7 +540,7 @@ Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperato
 <span class="c1"># --&gt; d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor</span>
 </pre></div>
 </div>
-<p>Nicht vergessen, dass bei jedem Attribut einer Instanz innerhalb einer Methode der Präfix <code>self.</code> geschrieben werden soll.</p>
+<p>Nicht vergessen, dass vor jedem Attribut einer Instanz innerhalb einer Methode der Präfix <code>self.</code> geschrieben werden soll.</p>
 </section>
 </section>
 

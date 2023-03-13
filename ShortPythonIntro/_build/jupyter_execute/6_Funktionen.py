@@ -100,9 +100,9 @@
 # # 8
 # ```
 
-# # Aufgabe
+# ## Aufgabe
 
-# Erstellen Sie eine Funktion, welche einen positiven Integerwert als Argument erhält und <code>True</code> zurückgibt, wenn der Wert eine gerade Zahl ist. Ansonsten soll <code>False</code> zurück gegeben werden. Testens Sie die Funktion für ein paar Zahlen ihrer Wahl. Sie müssen **nicht** sicherstellen, dass wirklich eine positive Ganzzahl eingegeben wurde. Gehen Sie davon aus, dass nichts anderes eingegeben wird.
+# Erstellen Sie eine Funktion, welche einen positiven Integerwert als Argument erhält und <code>True</code> zurückgibt, wenn der Wert eine gerade Zahl ist. Ansonsten soll <code>False</code> zurück gegeben werden. Testens Sie die Funktion für ein paar Zahlen ihrer Wahl. Sie müssen **nicht** sicherstellen, dass wirklich eine positive Ganzzahl eingegeben wurde. Gehen Sie davon aus, dass nichts anderes eingegeben wird. Sie können auch gerne versuchen, mehrere Möglichkeiten zu finden.
 
 # In[1]:
 
@@ -110,7 +110,7 @@
 # Hier können Sie ihren Versuch schreiben...
 
 
-# :::{admonition} Show solution
+# :::{admonition} Lösung
 # :class: dropdown
 # 
 # Die wohl gängigste Lösung mit Modulo:

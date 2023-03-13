@@ -42,7 +42,7 @@ a,b = 5,10,15
 ```
 ebenfalls ungültig.
 
-# Aufgabe
+## Aufgabe
 
 Operanden der rechten Seite können ja sowohl konkrete Werte aber auch Variablen sein.
 
@@ -58,7 +58,7 @@ a,b = b,a
 # unerlaubte Operation?
 ```
 
-:::{admonition} Show solution
+:::{admonition} Lösung
 :class: dropdown
 
 Antwort: a ist 10, b ist 5
