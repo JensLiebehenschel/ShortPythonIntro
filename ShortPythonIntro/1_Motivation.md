@@ -7,6 +7,8 @@
 Dies soll eine Einführung in die Programmiersprache Python sein.
 Python ist eine "General-purpose programming language", welche sich durch einige Eigenschaften für die Veranstaltung "Algorithmen und Datenstrukturen", fortgehend als "AlgDat" bezeichnet, eignet.
 
+# Noch mehr Details? Gerne, dann hier einfach weiterlesen!
+
 ## Wieso genau Python?
 
 In dem Modul AlgDat geht es wie der Name bereits sagt, um Algorithmen.
