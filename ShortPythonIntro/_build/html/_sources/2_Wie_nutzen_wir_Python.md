@@ -21,6 +21,9 @@ Ist wie gesagt, jedoch nicht Sinn der Sache.
 Ziel ist es also eine Funktion wie <code>sort()</code> selbst schreiben zu können.
 Zumindest vom Resultat her.
 
+Sortieren ist nicht der einzige Aspekt, welcher in Python zugänglich bereitgestellt wird.
+So kann man etwa das in AlgDat sehr wichtige Thema "Hashing" in Python als sogenannte "Dictionaries" sehr einfach verwenden.
+
 ## Als Python Entwickler geht man anders vor als es in AlgDat gewollt ist
 
 Da etwa die <code>sort()</code> Funktion der Python Standardbibliothek zusätzlich in C++, also einer schnelleren Programmiersprache als Python selbst, geschrieben ist, kann man in Python nicht wirklich effizienter und schneller sortieren als die Funktion <code>sort()</code> zu benutzen.

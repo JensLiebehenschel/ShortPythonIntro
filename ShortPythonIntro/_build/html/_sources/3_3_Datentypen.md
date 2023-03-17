@@ -70,9 +70,9 @@ print(value)
 
 ## Hinweis zu Semikola
 
-Wie vom aufmerksamen Leser bereits bemerkt, hat keines dieser Statements ein Semikolon am Ende. Dies ist kein Fehler.
+Wie vom aufmerksamen Leser bereits bemerkt, hat keine dieser Anweisungen ein Semikolon am Ende. Dies ist kein Fehler.
 Semikolons werden am Ende einer Zeile nicht benötigt.
-Der einzige Nutzen von Semikolons ist das ausführen von mehreren Statements in der selben Zeile.\
+Der einzige Nutzen von Semikolons ist das ausführen von mehreren Anweisungen in der selben Zeile.\
 Beispiel:
 
 ```Python
