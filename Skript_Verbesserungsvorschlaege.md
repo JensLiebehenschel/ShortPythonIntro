@@ -30,20 +30,20 @@ INF = math.inf
 ###	Aktueller Code:
 ```Python
 def adjust(a):
-# add s_0 and s_n+1, 999999999 representing infinity
-return [[0,0]] + a + [[len(a), 999999999]]
+  # add s_0 and s_n+1, 999999999 representing infinity
+  return [[0,0]] + a + [[len(a), 999999999]]
 ```
 ###	Vorschlag 1 (Ich habe es getestet und das Programm funktioniert weiterhin):
 ```Python
 def adjust(a):
-# add s_0 and s_n+1, float('inf') acts as infinity
-return [[0,0]] + a + [[len(a), float('inf')]]
+  # add s_0 and s_n+1, float('inf') acts as infinity
+  return [[0,0]] + a + [[len(a), float('inf')]]
 ```
 
 ###	Vorschlag 2:
 ```Python
 import math
 def adjust(a):
-# add s_0 and s_n+1, float('inf') acts as infinity
-return [[0,0]] + a + [[len(a), math.inf]]
+  # add s_0 and s_n+1, float('inf') acts as infinity
+  return [[0,0]] + a + [[len(a), math.inf]]
 ```
