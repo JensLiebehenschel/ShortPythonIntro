@@ -25,7 +25,7 @@ INF = math.inf
 # Zusätzlich braucht man nicht die sys library zu importieren.
 ```
 
-## Gleicher Vorschlag wie davor: Skript Seite 202 (PDF Seite 204), auch in "kpriorityqueue.py":
+## Gleicher Vorschlag wie davor: Skript Seite 202 (PDF Seite 204), auch in "activityselection.py":
 
 ###	Aktueller Code:
 ```Python
