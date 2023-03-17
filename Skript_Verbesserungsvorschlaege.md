@@ -44,6 +44,6 @@ def adjust(a):
 ```Python
 import math
 def adjust(a):
-  # add s_0 and s_n+1, float('inf') acts as infinity
+  # add s_0 and s_n+1, math.inf acts as infinity
   return [[0,0]] + a + [[len(a), math.inf]]
 ```
