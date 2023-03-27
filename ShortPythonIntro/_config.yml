@@ -17,7 +17,8 @@ latex:
     targetname: ShortPythonIntro.tex
 
 # Activating Thebe, thus making code cells exectuable
-thebe: true
+launch_buttons:
+  thebe: true
 
 # Information about where the book exists on the web
 repository:

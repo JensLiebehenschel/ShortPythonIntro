@@ -271,6 +271,24 @@ title="Launch on Binder"
 
       </li>
       
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
     </ul>
   </div>
 </div>
@@ -672,8 +690,8 @@ Der C-code unten und der Ausdruck oben sind äquivalent.</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "JensLiebehenschel/ShortPythonIntro",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
