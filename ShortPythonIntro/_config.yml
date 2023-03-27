@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: AlgDat Python Intro
-author: Edward Späth
+author: ""
 logo: logo.png
 copyright: "2023"  # Copyright year to be placed in the footer
 
@@ -14,7 +14,7 @@ execute:
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
-    targetname: book.tex
+    targetname: ShortPythonIntro.tex
 
 # Activating Thebe, thus making code cells exectuable
 thebe: true
@@ -22,7 +22,7 @@ thebe: true
 # Information about where the book exists on the web
 repository:
   url                       : https://github.com/JensLiebehenschel/ShortPythonIntro # Online location of your book
-  path_to_book              : ShortPythonIntro/  # Optional path to your book, relative to the repository root
+  path_to_book              : ""  # Optional path to your book, relative to the repository root
   branch                    : gh-pages  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -30,7 +30,7 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-  extra_footer: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+  extra_footer: Konzept von Jens Liebehenschel, Umsetzung durch Edward Späth <br> <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.
 
 sphinx:
   config:

@@ -58,7 +58,7 @@
 # 
 # Angenommen ich will eine Funktion schreiben, welche einen String aus ausschließlich Kleinbuchstaben als input bekommt und sagen soll wieviele Vokale und wieviele Konsonanten in dem String vorkommen.
 # Zusätzlich soll die Funktion zurückgeben ob es mehr Vokale oder mehr Konsonanten gibt (in Form eines Wahrheitswertes).
-# In anderen Programmiersprachen müsste ich eine Datenstruktur erstellen um sowohl zwei Integer Werte als auch einen Wahrheitswert zurückgeben zu können. In Python gibt man einfach alle drei, durch jeweils ein Komma getrennt, zurück.
+# In anderen Programmiersprachen müsste man eine Datenstruktur erstellen um sowohl zwei Integer Werte als auch einen Wahrheitswert zurückgeben zu können. In Python gibt man einfach alle drei, durch jeweils ein Komma getrennt, zurück.
 # 
 # ```Python
 # def vokale_und_konsonanten(input_string):

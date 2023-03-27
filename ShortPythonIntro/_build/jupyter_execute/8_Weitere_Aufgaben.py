@@ -146,7 +146,7 @@
 # Schließlich gibt man zuück ob es sich ein Palindrom handelt oder nicht.
 # 
 # ```Python
-# def palindrom_check_from_both_sides(string):
+# def palindrom_von_beiden_seiten_pruefen(string):
 #     es_ist_ein_palindrom = True
 #     for index in range(0, len(string) // 2):
 #         if string[index] != string[-(index+1)]:
