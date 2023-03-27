@@ -251,7 +251,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/gh-pages?urlpath=tree/ShortPythonIntro/8_Weitere_Aufgaben.ipynb"
+        <a href="https://mybinder.org/v2/gh/JensLiebehenschel/ShortPythonIntro/gh-pages?urlpath=tree/8_Weitere_Aufgaben.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -592,7 +592,7 @@ Für die Zählervariable wird der Bereich <code>range(0, len(string) // 2)</code
 Allgemein: <code>{index, -(index+1)}</code>. So kommt man auf die Formel.</p>
 <p>Wenn es nun eine Stelle gibt, welche die Voraussetzung für ein Palindrom verletzt, so wird “es_ist_ein_palindrom” auf <code>False</code> gesetzt. Optional um Zeit zu sparen, kann man mit <code>break</code> die For-Schleife beenden, da bereits gezeigt wurde, dass es sich nicht um ein Palindrom handelt. Somit sind weitere Vergleiche nutzlos.</p>
 <p>Schließlich gibt man zuück ob es sich ein Palindrom handelt oder nicht.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">palindrom_check_from_both_sides</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">palindrom_von_beiden_seiten_pruefen</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
     <span class="n">es_ist_ein_palindrom</span> <span class="o">=</span> <span class="kc">True</span>
     <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">!=</span> <span class="n">string</span><span class="p">[</span><span class="o">-</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="p">)]:</span>
@@ -646,10 +646,8 @@ Allgemein: <code>{index, -(index+1)}</code>. So kommt man auf die Formel.</p>
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Edward Späth<br/>
-  
     <div class="extra_footer">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+      Konzept von Jens Liebehenschel, Umsetzung durch Edward Späth <br> <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.
     </div>
 </p>
         </footer>
