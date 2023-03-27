@@ -21,15 +21,16 @@ thebe: true
 
 # Information about where the book exists on the web
 repository:
-  url                       : https://github.com/JensLiebehenschel/ShortPythonIntro # Online location of your book
-  path_to_book              : ""  # Optional path to your book, relative to the repository root
-  branch                    : gh-pages  # Which branch of the repository should be used when creating links (optional)
+  url                       : https://github.com/JensLiebehenschel/ShortPythonIntro  # Online location of your book
+  path_to_book              : ShortPythonIntro  # Optional path to your book, relative to the repository root
+  branch                    : main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
+  # CC-License: CC BY-NC-ND
   extra_footer: Konzept von Jens Liebehenschel, Umsetzung durch Edward Späth <br> <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.
 
 sphinx:
