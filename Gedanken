@@ -1,8 +1,7 @@
-Evtl. TODO:
+Evtl. TODO
+----------
 - Bei der Seite mit den Kommentaren, die Triplequotes in einen Codeblock bewegen, anstatt HTML Code-tags zu verwenden,  
 da mit Code-tags die Triple quotes zu den typischen LaTeX quotes werden und beim kopieren für Python Syntax ungültig sind.
-
-
 
 Ziel
 ----
