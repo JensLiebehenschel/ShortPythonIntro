@@ -130,6 +130,9 @@ pip install ghp-import
 
 ### Den Befehl nutzen
 
+Mit dem Befehl werden die Ergebnisse auf den "gh-pages" Branch gepusht, womit GitHub Pages die aktuellste Version bekommt.
+Der gh-pages Branch wird beim aufrufen dieses Befehls überschrieben. Es sollte also nicht manuell auf dem gh-pages branch gearbeitet werden.
+
 Man muss sehr wahrscheinlich davor Git sagen, welches Repository genutzt werden soll.
 Also setzt man das Working Directory als den Ordner wo README.md, Potentiell_hinzufuegbar.md, usw. enthalten sind. Also den Ordner **über** dem ShortPythonIntro Ordner.
 
@@ -172,6 +175,7 @@ Dort geht man auf "Generate new token" und gibt u.a an wie lange der Token gült
 
 Den generierten Token gibt man nun statt dem Passwort an, wenn man wieder <code>ghp-import</code> ausführt.
 
-
 Wenn alles geklappt hat, sollte die Veränderungen in kürze auch auf der GitHub Pages Seite sichtbar werden.
 Falls nicht, könnte es nützlich sein den Browser Cache für diese Webseite zu leeren und die Seite zu aktualisieren.
+
+Letztendlich sollte man im Idealfall die Änderungen auch so auf GitHub pushen, also sodass die Veränderungen der Markdown Dateien/Jupyter-Notebooks im Repo sind, damit die nächste Person die daran arbeitet, die Version der Source Dateien hat, mit welchen die Webseite gebaut wurde.
