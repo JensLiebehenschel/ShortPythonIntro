@@ -1,5 +1,5 @@
 Dies ist die Anleitung für das Bauen (oder Verändern) eines Jupyter-Books.
-Ich habe ausschließlich unter Linux gearbeitet und weiß dementsprechend nicht wie oder ob es unter Windows funktioniert.
+Ich habe ausschließlich unter Linux gearbeitet und weiß dementsprechend nicht wie oder ob man überhaupt unter z.B. Windows mit Jupyter-Books arbeitet.
 Ich entschuldige mich, falls es zu Problemen führt.
 Es folgen die benötigten Befehle in der Kommandozeile.
 
