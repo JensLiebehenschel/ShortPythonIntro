@@ -1,7 +1,5 @@
 # Output und Input
 
-## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
-
 ## Ausgabe
 Wie auch in anderen Programmiersprachen, ist die Ein- und Ausgabe in einem Terminalfenster essenziell. Zumindest für die meisten Programme im Kontext des Studiums.
 
@@ -22,29 +20,29 @@ print(name1, "ist mit", name2, "befreundet.")
 # Max Mustermann ist mit John Doe befreundet.
 ```
 Am Ende der <code>print()</code> Funktion, wird automatisch ein Zeilenumbruch hinzugefügt.
-Sprich der Input
+Sprich die folgenden Zeilen
 ```Python
 print(1)
 print(2)
 print(3)
 ```
-führt zum Output
+führen zum Ausgabe
 ```Python
 1
 2
 3
 ```
-anstatt zum Output
+statt zu
 ```Python
 123
 ```
 
 
 ## Eingabe
-Wie man in Python vom Standardinput aus einem Terminal einlesen kann, wird in dieser Einführung nicht behandelt.
-Stattdessen wäre es erstmal am einfachsten, bestimmte Werte zu hardcoden.
+Wie man in Python von der Standardeingabe aus einem Terminal einlesen kann, wird in dieser Einführung nicht behandelt.
+Stattdessen ist es angemessen, bestimmte Werte ins Programm zu schreiben.
 
-Wenn man nun die Funktion <code>foo(x)</code> testen möchte, so kann man davor einfach x einen Wert zuweisen und dann die Funktion aufrufen.
+Wenn man nun die Funktion <code>foo(x)</code> testen möchte, kann man davor einfach <code>x</code> einen Wert zuweisen und dann die Funktion aufrufen.
 ```Python
 x = 5
 foo(x)
@@ -53,6 +51,6 @@ foo(x)
 
 foo(5)
 ```
-An Interessierte, verweise ich auf die englischsprachige <a href="https://docs.python.org/3/library/functions.html" target="_blank">Python Referenz</a>, welche über die in Python eingebauten Funktionen informiert.
+An Interessierte, verweisen wir auf die englischsprachige <a href="https://docs.python.org/3/library/functions.html" target="_blank">Python Referenz</a>, welche über die in Python eingebauten Funktionen informiert.
 
 Alternativ können Sie auch in der Suchmaschine ihrer Wahl danach suchen.

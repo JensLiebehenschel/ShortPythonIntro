@@ -371,13 +371,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#der-zuweisungsoperator">
    Der Zuweisungsoperator
   </a>
@@ -407,13 +400,6 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#der-zuweisungsoperator">
    Der Zuweisungsoperator
   </a>
@@ -435,43 +421,35 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="zuweisungen">
 <h1>Zuweisungen<a class="headerlink" href="#zuweisungen" title="Permalink to this headline">#</a></h1>
-<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-</section>
 <section id="der-zuweisungsoperator">
 <h2>Der Zuweisungsoperator<a class="headerlink" href="#der-zuweisungsoperator" title="Permalink to this headline">#</a></h2>
-<p>Wie sie bereits gesehen haben, ist in Python wie auch in anderen Programmiersprachen <code>=</code> der normale Zuweisungsoperator. Dessen Funktion sollte bekannt sein.</p>
+<p>Wie Sie bereits gesehen haben, ist in Python wie auch in anderen Programmiersprachen <code>=</code> der normale Zuweisungsoperator. Dessen Funktion sollte bekannt sein.</p>
 <p>In Python hat dieser jedoch zusätzliche Funktionalität.
-Normalerweise hat der Zuweisungsoperator einen Operanden auf der linken Seite und einen Operanden auf der rechten Seite.</p>
-<p>also der Fall:</p>
+Normalerweise hat der Zuweisungsoperator einen Operanden auf der linken Seite und einen Operanden auf der rechten Seite,
+also:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 </pre></div>
 </div>
-<p>In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine mehrfachuuweisung durchzuführen.
+<p>In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine Mehrfachzuweisung durchzuführen.
 Die Operanden müssen durch Kommata getrennt sein.</p>
 <p>Beispiel:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># a soll den Wert 5 haben und b soll den Wert 10 haben</span>
 <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">10</span>
 </pre></div>
 </div>
-<p>allgemeiner geschrieben:</p>
+<p>Oder allgemeiner geschrieben:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">variable1</span><span class="p">,</span> <span class="n">variable2</span><span class="p">,</span> <span class="o">...</span> <span class="o">=</span> <span class="n">wert_für_variable1</span><span class="p">,</span> <span class="n">wert_für_variable2</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
-<p>Wenn beide Seiten nicht gleich lang sind, funktioniert es nicht.<br />
-Ungültig:</p>
+<p>Wenn beide Seiten nicht gleich lang sind, funktioniert es nicht, wie hier:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span>
 </pre></div>
 </div>
-<p>Wenn man a als auch b, 10 zuweisen möchte, muss man es wie folgt machen:</p>
+<p>Wenn man a und b den Wert 10 zuweisen möchte, kann man das wie folgt machen:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span><span class="mi">10</span>
 </pre></div>
 </div>
-<p>anderherum ist</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span> 
-</pre></div>
-</div>
-<p>ebenfalls ungültig.</p>
 </section>
 <section id="aufgabe">
 <h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h2>
@@ -496,10 +474,13 @@ Ungültig:</p>
 <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>
 
-<span class="c1"># Gleichzeitiges Tauschen von drei oder mehr Variablen is ebenfalls möglich.</span>
+<span class="c1"># Gleichzeitiges Tauschen von drei oder mehr Variablen ist ebenfalls möglich.</span>
 <span class="c1"># Der Tausch von zwei Variablen wird jedoch praktisch gesehen häufiger benötigt.</span>
 </pre></div>
 </div>
+<p>Allgemeiner formuliert:
+Zunächst werden alle Operanden auf der rechten Seite komplett ausgewertet und
+danach den Variablen auf der linken Seite zugewiesen.</p>
 </div>
 </section>
 </section>

@@ -1,14 +1,13 @@
 # Ziel
 
-## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
+Im Modul Algorithmen und Datenstrukturen (AlgDat) in den Bachelor-Studiengängen der Informatik an der Frankfurt University of Applied Sciences wird im Skript statt Pseudocode auch oft die Programmiersprache Python verwendet.
+Python-Code vereint eine gute Lesbarkeit mit der Ausführbarkeit.
 
-Im Laufe des Moduls Algorithmen und Datenstrukturen (AlgDat), werden die Studierenden in dem Skript mit Python source code konfrontiert.
-Das Lernen von Python ist keines Wegs relevant für die Klausur, da neben Python codes auch Pseudocode vorliegt.
-Nichtsdestotrotz, wäre es für die Studierenden hilfreich etwas über Python zu lernen.
-Zumindest um den Codes aus dem Skript folgen zu können.
+Diese Kurz-Einführung in Python deckt fast alle Konstrukte ab, die in den Programmen verwendet werden. Nach dem Durcharbeiten können Sie die Programme aus dem Skript verstehen.
 
-Argumente für das Lernen von Python können Sie auf der nächsten Seite nachlesen.
-Hier ist das Inhaltsverzeichnis um direkt in ein bestimmtes Kapitel zu springen.
+Argumente für das Lernen von Python gibt es viele, Sie können diese auf der nächsten Seite nachlesen.
+
+Hier ist das Inhaltsverzeichnis, um direkt in ein bestimmtes Kapitel zu springen.
 
 ```{tableofcontents}
 ```

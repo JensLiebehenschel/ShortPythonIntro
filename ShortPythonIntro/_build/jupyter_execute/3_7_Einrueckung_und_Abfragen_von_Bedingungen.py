@@ -3,13 +3,9 @@
 
 # # Einrückung und Abfragen von Bedingungen
 
-# ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
-
-# Eine weitere Besonderheit, welche Python stark von anderen Programmiersprachen unterscheidet, sind die {geschweiften Klammern}
+# Eine weitere Besonderheit, welche Python stark von anderen Programmiersprachen unterscheidet, sind die geschweiften Klammern { }, oder besser gesagt ihr **Fehlen**.
 # 
-# Oder besser gesagt, ihr **Fehlen**.
-# 
-# In den meisten Programmiersprachen werden geschweifte Klammern benutzt um Codeblöcke zu trennen.
+# In den meisten Programmiersprachen werden geschweifte Klammern benutzt, um Codeblöcke zu definieren.
 # 
 # Option 1:
 # ```C
@@ -37,17 +33,17 @@
 # Frage:\
 # Welche der drei Optionen ist am übersichtlichsten?\
 # Antwort:\
-# Option 1 ist von den drei Optionen, die übersichtlichste, da man den Codeblock der Abfrage von dem weiteren Code leicht unterscheiden kann ohne auf geschweifte Klammern achten zu müssen.
+# Option 1 ist von den drei Optionen die übersichtlichste, da man den Codeblock der Abfrage von dem weiteren Code leicht unterscheiden kann ohne auf geschweifte Klammern achten zu müssen.
 # 
 # <a href="https://cs50.readthedocs.io/style/c/#indentation" target="_blank">C Style Guides</a> sagen ebenfalls Option 1.
 # 
 # 
-# Fast so als könne man die geschweiften Klammern auch weglassen?
+# Fast so, als könne man die geschweiften Klammern auch weglassen?
 # Python sagt: Ja.
-# Geschweifte Klammern in Python werden nicht verwendet um Codeblöcke zu trennen.
-# In Python werden geschweifte Klammern ausschließlich benutzt um sogenannte Dictionaries zu nutzen.
+# Geschweifte Klammern in Python werden nicht verwendet um Codeblöcke zu definieren.
+# In Python werden geschweifte Klammern ausschließlich benutzt, um sogenannte Dictionaries zu nutzen.
 # Was ein Dictionary ist, wird man im Modul AlgDat später kennenlernen.
-# Dort lernt man es als "Hashmap" oder allgemein als "Hashing" kennen
+# Dort lernt man es als "Hashmap" oder allgemein als "Hashing" kennen.
 # Das wird hier an der Stelle nicht weiter erklärt.
 # 
 # 
@@ -69,18 +65,18 @@
 # Eine intuitive Lösung wäre ein Doppelpunkt.
 # Dies ist eine relativ natürliche Art eine Bedingung auzudrücken.
 # ```
-# if (this is so): # then do
+# if (this is true): # then do
 # 	<that>
 # <Proceed here afterwards, no matter if "that" has been done or not>
 # ```
 # Fast wie ein Merkzettel.
 # ```Python
-# wenn dies so ist:
+# wenn dies wahr ist:
 # 	mache das
 # 	und das
 # 	und noch Weiteres
 # ```
-# Im Gegensatz zu anderen Programmiersprachen sind Klammern innerhalb von Bedingungen ebenfalls optional.
+# Im Gegensatz zu anderen Programmiersprachen sind Klammern um Bedingungen ebenfalls optional.
 # ```Python
 # if (x ist wahr):
 # 	<mach etwas>
@@ -102,7 +98,7 @@
 # 		mach etwas
 # 
 # ```
-# Hiermit hätten wir auch bereits geklärt wie bedingte Abfrage Funktioniert
+# Hiermit hätten wir auch bereits geklärt, wie die Abfrage funktioniert.
 # ```Python
 # if BEDINGUNG:
 # 	<DAZUGEHÖRIGER CODEBLOCK>
@@ -124,9 +120,9 @@
 #     und mach das
 #     und das hier auch
 # ```
-# Für den Codeblock, welcher ausgeführt wird wenn die Bedingung der Abfrage nicht wahr zurückgibt, wird das Keyword <code>else</code> benutzt.
-# Will man ein <code>else-if</code> erstellen, so kann man das eingebaut Python Keyword <code>elif</code> nutzen.
-# Das Funktioniert folgendermaßen:
+# Für den auszuführenden Codeblock im falsch-Fall der Bedingung, wird das Keyword <code>else</code> benutzt.
+# Will man ein <code>else-if</code> erstellen, so kann man das eingebaut Python-Keyword <code>elif</code> nutzen.
+# Das funktioniert folgendermaßen:
 # ```Python
 # if x == 1:
 # 	print("x ist 1")
@@ -155,10 +151,10 @@
 # }
 # <Rest des Programms...>
 # ```
-# Jetzt Sind Sie an der Reihe. Versuchen Sie das obige Beispiel von C in Python umzuschreiben.
+# Jetzt sind Sie an der Reihe. Versuchen Sie, das obige Beispiel von C in Python umzuschreiben.
 # Sie können <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</code> nutzen. Analog für y und z.
 # 
-# Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python code handelt.
+# Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python-Code handelt.
 
 # In[1]:
 
@@ -180,6 +176,6 @@
 #  	<Codeblock_3>
 # <Rest des Programms...>
 #  ```
-# Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms...&gt;</code> nicht eingerückt ist. Hätte es eine Einrückung von einem Tab, so könnte man denken, dass der Rest des Programms noch zu <code>&lt;Codeblock_3&gt;</code> gehört.
+# Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms...&gt;</code> nicht eingerückt ist. Hätte es eine Einrückung von einem Tab, dann gehört der Rest des Programms noch zu <code>&lt;Codeblock_3&gt;</code>.
 # 
 # :::
