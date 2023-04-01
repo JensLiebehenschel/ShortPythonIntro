@@ -45,6 +45,8 @@ an das Ende hinzufügen. Dateiendungen (.md oder .ipynb) werden **weggelassen**.
 
 Sollten im gleichen Ordner wie die \_toc.yml und \_config.yml Dateien sein und sind entweder Markdown-files oder Jupyter-Notebooks (.md oder .ipynb).
 
+Der erste Header mit heading level 1 (eine Raute --> #) wird von Jupyter-Book als Überschrift der Seite interpretiert. Sowohl bei Markdown als auch bei Jupyter-Notebooks
+
 ## Bauen des Jupyter-Books
 
 Der Befehl
