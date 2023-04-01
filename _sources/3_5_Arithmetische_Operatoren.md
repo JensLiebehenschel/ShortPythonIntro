@@ -1,8 +1,6 @@
 # Arithmetische Operatoren
 
-## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
-
-In Python hat man natürlich die klassischen Grundrechenarten wie <code>+, -, *</code> und <code>/</code>
+In Python hat man natürlich die klassischen Grundrechenarten wie <code>+, -, *</code> und <code>/</code>.
 
 ```Python
 x = 5+5
@@ -14,19 +12,18 @@ print(x)
 # 15
 ```
 
-Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu inkrementieren, wäre der <code>++</code> Operator.
+Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu erhöhen, ist der Operator <code>++</code>.
 
-Somit ist 
 ```C
 i++;
 ```
-das Gleiche wie
+ist das Gleiche wie
 ```C 
 i = i + 1;
 ```
 In Python ist dies **nicht** möglich.
 
-Das ist in Python nicht so tragisch, da man sowieso viel seltener einen Wert um 1 inkrementiert im Vergleich zu anderen Programmiersprachen.
+Das ist nicht so tragisch, da man sowieso viel seltener einen Wert um 1 erhöht im Vergleich zu anderen Programmiersprachen.
 Das wird sich auch später bei den Schleifen zeigen.
 
 Als Alternative in Python soll 
@@ -38,7 +35,7 @@ genutzt werden, welches ebenfalls äquivalent zu
 i = i + 1
 ```
 ist.
-Die Idee ist analog für den <code>x&#045;&#045;</code> Ausdruck, welcher ebenfalls durch <code>x -= 1</code> zu ersetzen ist.
+Das funktioniert analog für Minus, also <code>x -= 1</code> zu ersetzen ist.
 
 Allgemein werden die Operatoren <code>+=, &#045;=, \*=</code> und <code>/=</code> so genutzt:
 ```Python
@@ -58,9 +55,9 @@ x += 5
 x = x + 5
 ```
 
-Es gibt auch die noch relativ übliche Modulo Operation mit dem Prozentzeichen(%).
+Es gibt auch die noch relativ übliche Modulo-Operation mit dem Prozentzeichen (<code>%</code>).
 Kurze Auffrischung: 
-Das Ergebnis von <code>a % b</code> (a modulo b bzw. a mod b) ist der Rest, der bei der Division <code>a/b</code> übrig bleibt.
+Das Ergebnis von <code>a % b</code> (a modulo b bzw. a mod b) ist der Divisionsrest bei <code>a/b</code>.
 ```Python
 x = 8 % 3
 print(x)
@@ -69,7 +66,7 @@ print(x)
 
 Des Weiteren gibt es die Integer Division mit dem Operator <code>//</code>
 Diese Operation berechnet den normalen Quotienten <code>c = a/b</code>, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
-Der Rest wird sozusagen ignoriert.
+Der Rest wird sozusagen abgeschnitten.
 
 Man kann 
 ```Python
@@ -95,17 +92,17 @@ print(x)
 Wie man Bibliotheken nutzt, wird später erklärt.
 
 
-Zu guter Letzt, gibt es den Power operator, um werte mit Exponenten auszurechnen.
-Dafür werden zwei aufeinanderfolgende Sterne benutzt(<code>\*\*</code>)
+Zu guter Letzt, gibt es den Power-Operator, um Werte mit Exponenten auszurechnen.
+Dafür werden zwei aufeinanderfolgende Sterne benutzt(<code>\*\*</code>).
 
-Somit berechnet man mit <code>2 \*\* 5</code> den Wert 2<sup>5</sup> (2 hoch 5)
+Zum Beispiel berechnet mit <code>2 \*\* 5</code> den Wert 2<sup>5</sup> (2 hoch 5).
 ```Python
 x = 3 ** 3
 print(x)
 # 27
 ```
 
-Für die letzten drei Operatoren, gibt es ebenfalls die Operatoren <code>//=, \*\*=</code> und <code>%=</code>.
+Für die letzten drei Operatoren gibt es ebenfalls die Operatoren <code>%=</code>, <code>//=</code> und <code>\*\*=</code>.
 ```Python
 x = 5
 x //= 5
@@ -122,7 +119,7 @@ x = x // 5
 Eigentlich arithmetische Operatoren können je nach Kontext auch etwas anderes bedeuten. 
 Wenn es um zwei Zahlen geht, dann handelt es sich um eine Rechnung. Was wäre nun aber die Summe von zwei Strings?
 
-Eine Summe von zwei Strings ergibt nicht wirklich Sinn, deshalb hat etwa der <code>+</code> operator bei Objekten, welche nicht einfache numerische Zahlen sind,
+Eine Summe von zwei Strings ist meist nicht sinnvoll, deshalb hat etwa der Operator <code>+</code> bei Objekten, welche keine Zahlen sind,
 verschiedene Bedeutungen.
 
 Um bei dem Beispiel von den zwei Strings zu bleiben, lässt sich die Funktionsweise hier beobachten:
@@ -146,4 +143,4 @@ print(a + " " + b)
 # Hello World!
 ```
 
-Es ist nicht ganz willkürlich. Man kann ungefähr sagen, dass außerhalb von Rechnungen, <code>+</code> allgemein für Konkatenierung steht.
+Oft bedeutet der Operator <code>+</code> außerhalb von Rechnungen Konkatenierung.

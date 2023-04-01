@@ -418,13 +418,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe">
    Aufgabe
   </a>
@@ -449,13 +442,6 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aufgabe">
    Aufgabe
   </a>
@@ -472,11 +458,8 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="einruckung-und-abfragen-von-bedingungen">
 <h1>Einrückung und Abfragen von Bedingungen<a class="headerlink" href="#einruckung-und-abfragen-von-bedingungen" title="Permalink to this headline">#</a></h1>
-<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-<p>Eine weitere Besonderheit, welche Python stark von anderen Programmiersprachen unterscheidet, sind die {geschweiften Klammern}</p>
-<p>Oder besser gesagt, ihr <strong>Fehlen</strong>.</p>
-<p>In den meisten Programmiersprachen werden geschweifte Klammern benutzt um Codeblöcke zu trennen.</p>
+<p>Eine weitere Besonderheit, welche Python stark von anderen Programmiersprachen unterscheidet, sind die geschweiften Klammern { }, oder besser gesagt ihr <strong>Fehlen</strong>.</p>
+<p>In den meisten Programmiersprachen werden geschweifte Klammern benutzt, um Codeblöcke zu definieren.</p>
 <p>Option 1:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Bedingung</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Dieser</span><span class="w"> </span><span class="n">Codeblock</span><span class="w"> </span><span class="n">wird</span><span class="w"> </span><span class="n">nur</span><span class="w"> </span><span class="n">ausgeführt</span><span class="p">,</span><span class="w"> </span><span class="n">wenn</span><span class="w"> </span><span class="n">die</span><span class="w"> </span><span class="n">Bedingung</span><span class="w"> </span><span class="n">wahr</span><span class="w"> </span><span class="n">ist</span><span class="o">&gt;</span><span class="w"></span>
@@ -501,14 +484,14 @@ title="Print to PDF"
 <p>Frage:<br />
 Welche der drei Optionen ist am übersichtlichsten?<br />
 Antwort:<br />
-Option 1 ist von den drei Optionen, die übersichtlichste, da man den Codeblock der Abfrage von dem weiteren Code leicht unterscheiden kann ohne auf geschweifte Klammern achten zu müssen.</p>
+Option 1 ist von den drei Optionen die übersichtlichste, da man den Codeblock der Abfrage von dem weiteren Code leicht unterscheiden kann ohne auf geschweifte Klammern achten zu müssen.</p>
 <p><a href="https://cs50.readthedocs.io/style/c/#indentation" target="_blank">C Style Guides</a> sagen ebenfalls Option 1.</p>
-<p>Fast so als könne man die geschweiften Klammern auch weglassen?
+<p>Fast so, als könne man die geschweiften Klammern auch weglassen?
 Python sagt: Ja.
-Geschweifte Klammern in Python werden nicht verwendet um Codeblöcke zu trennen.
-In Python werden geschweifte Klammern ausschließlich benutzt um sogenannte Dictionaries zu nutzen.
+Geschweifte Klammern in Python werden nicht verwendet um Codeblöcke zu definieren.
+In Python werden geschweifte Klammern ausschließlich benutzt, um sogenannte Dictionaries zu nutzen.
 Was ein Dictionary ist, wird man im Modul AlgDat später kennenlernen.
-Dort lernt man es als “Hashmap” oder allgemein als “Hashing” kennen
+Dort lernt man es als “Hashmap” oder allgemein als “Hashing” kennen.
 Das wird hier an der Stelle nicht weiter erklärt.</p>
 <p>Wie unterscheidet man Codeblöcke in Python nun genau?
 Durch Einrücken, englisch: “Indentation”.
@@ -523,19 +506,19 @@ Also Leerzeichen und Tabs.</p>
 <p>Nun bräuchte man einen Weg die Bedingung von dem Codeblock selbst zu unterscheiden.
 Eine intuitive Lösung wäre ein Doppelpunkt.
 Dies ist eine relativ natürliche Art eine Bedingung auzudrücken.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">so</span><span class="p">):</span> <span class="c1"># then do</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">true</span><span class="p">):</span> <span class="c1"># then do</span>
 	<span class="o">&lt;</span><span class="n">that</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">Proceed</span> <span class="n">here</span> <span class="n">afterwards</span><span class="p">,</span> <span class="n">no</span> <span class="n">matter</span> <span class="k">if</span> <span class="s2">&quot;that&quot;</span> <span class="n">has</span> <span class="n">been</span> <span class="n">done</span> <span class="ow">or</span> <span class="ow">not</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Fast wie ein Merkzettel.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wenn</span> <span class="n">dies</span> <span class="n">so</span> <span class="n">ist</span><span class="p">:</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">wenn</span> <span class="n">dies</span> <span class="n">wahr</span> <span class="n">ist</span><span class="p">:</span>
 	<span class="n">mache</span> <span class="n">das</span>
 	<span class="n">und</span> <span class="n">das</span>
 	<span class="n">und</span> <span class="n">noch</span> <span class="n">Weiteres</span>
 </pre></div>
 </div>
-<p>Im Gegensatz zu anderen Programmiersprachen sind Klammern innerhalb von Bedingungen ebenfalls optional.</p>
+<p>Im Gegensatz zu anderen Programmiersprachen sind Klammern um Bedingungen ebenfalls optional.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="n">ist</span> <span class="n">wahr</span><span class="p">):</span>
 	<span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span><span class="o">&gt;</span>
 
@@ -555,7 +538,7 @@ Dies ist eine relativ natürliche Art eine Bedingung auzudrücken.</p>
 		<span class="n">mach</span> <span class="n">etwas</span>
 </pre></div>
 </div>
-<p>Hiermit hätten wir auch bereits geklärt wie bedingte Abfrage Funktioniert</p>
+<p>Hiermit hätten wir auch bereits geklärt, wie die Abfrage funktioniert.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">BEDINGUNG</span><span class="p">:</span>
 	<span class="o">&lt;</span><span class="n">DAZUGEHÖRIGER</span> <span class="n">CODEBLOCK</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">REST</span> <span class="n">DES</span> <span class="n">PROGRAMMS</span><span class="o">&gt;</span>
@@ -576,9 +559,9 @@ Jeder Teil eines Codeblocks muss gleich weit eingerückt sein.</p>
     <span class="n">und</span> <span class="n">das</span> <span class="n">hier</span> <span class="n">auch</span>
 </pre></div>
 </div>
-<p>Für den Codeblock, welcher ausgeführt wird wenn die Bedingung der Abfrage nicht wahr zurückgibt, wird das Keyword <code>else</code> benutzt.
-Will man ein <code>else-if</code> erstellen, so kann man das eingebaut Python Keyword <code>elif</code> nutzen.
-Das Funktioniert folgendermaßen:</p>
+<p>Für den auszuführenden Codeblock im falsch-Fall der Bedingung, wird das Keyword <code>else</code> benutzt.
+Will man ein <code>else-if</code> erstellen, so kann man das eingebaut Python-Keyword <code>elif</code> nutzen.
+Das funktioniert folgendermaßen:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x ist 1&quot;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -587,7 +570,6 @@ Das Funktioniert folgendermaßen:</p>
 	<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x ist weder 1 noch 2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
 <section id="aufgabe">
 <h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h2>
 <p>Ein etwas komplexeres Beispiel erst in C:</p>
@@ -607,9 +589,9 @@ Das Funktioniert folgendermaßen:</p>
 <span class="o">&lt;</span><span class="n">Rest</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">Programms</span><span class="p">...</span><span class="o">&gt;</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Jetzt Sind Sie an der Reihe. Versuchen Sie das obige Beispiel von C in Python umzuschreiben.
+<p>Jetzt sind Sie an der Reihe. Versuchen Sie, das obige Beispiel von C in Python umzuschreiben.
 Sie können <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</code> nutzen. Analog für y und z.</p>
-<p>Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python code handelt.</p>
+<p>Sie können den Platz unten zum Schreiben nutzen. Das Ausführen des Codes wird ihnen jedoch nichts bringen, da es sich hier nicht um funktionierenden Python-Code handelt.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
@@ -630,7 +612,7 @@ Sie können <code>if x ist wahr</code> als Ersatz für <code>if (x ist wahr)</co
 <span class="o">&lt;</span><span class="n">Rest</span> <span class="n">des</span> <span class="n">Programms</span><span class="o">...&gt;</span>
 </pre></div>
 </div>
-<p>Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms…&gt;</code> nicht eingerückt ist. Hätte es eine Einrückung von einem Tab, so könnte man denken, dass der Rest des Programms noch zu <code>&lt;Codeblock_3&gt;</code> gehört.</p>
+<p>Hierbei ist es auch wichtig, dass <code>&lt;Rest des Programms…&gt;</code> nicht eingerückt ist. Hätte es eine Einrückung von einem Tab, dann gehört der Rest des Programms noch zu <code>&lt;Codeblock_3&gt;</code>.</p>
 </div>
 </section>
 </section>

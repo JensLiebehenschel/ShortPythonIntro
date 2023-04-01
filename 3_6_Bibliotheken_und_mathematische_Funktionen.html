@@ -420,20 +420,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
    Importieren einer Bibliothek
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
-   Funktionen der math Bibliothek
+   Funktionen der math-Bibliothek
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -461,20 +454,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#importieren-einer-bibliothek">
    Importieren einer Bibliothek
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#funktionen-der-math-bibliothek">
-   Funktionen der math Bibliothek
+   Funktionen der math-Bibliothek
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -494,27 +480,24 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="bibliotheken-und-mathematische-funktionen">
 <h1>Bibliotheken und mathematische Funktionen<a class="headerlink" href="#bibliotheken-und-mathematische-funktionen" title="Permalink to this headline">#</a></h1>
-<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-</section>
 <section id="importieren-einer-bibliothek">
 <h2>Importieren einer Bibliothek<a class="headerlink" href="#importieren-einer-bibliothek" title="Permalink to this headline">#</a></h2>
 <p>Python hat eine enorme Auswahl an Bibliotheken.
-Seien es nun Bibliotheken um Grafiken zu erstellen oder Bibliotheken für Machine Learning.</p>
-<p>Von Interesse für dieses Modul, sind jedoch mathematische Bibliotheken.
-Mit diesen Bibliotheken kann man etwa Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.</p>
+Seien es nun Bibliotheken, um Grafiken zu erstellen oder Bibliotheken für Machine Learning.</p>
+<p>Von Interesse für AlgDat sind jedoch mathematische Bibliotheken.
+Mit diesen Bibliotheken kann man Funktion verwenden, um eine Quadratwurzel zu ziehen oder einen Logarithmus zu berechnen.</p>
 <p>Um diese hilfreichen Funktionen nutzen zu können, muss man diese Bibliotheken erst importieren.
-Funktioniert von der Logik genauso wie das importieren von Bilbiotheken in C.
-Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese Bibliothek dann nutzen.</p>
-<p>in C:</p>
+Funktioniert von der Logik genauso wie das Importieren von Bilbiotheken in C.
+Es gibt ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese Bibliothek dann nutzen.</p>
+<p>In C:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Bibliotheksname.h&gt;</span><span class="cp"></span>
 </pre></div>
 </div>
-<p>in Python wird das Keyword <code>import</code> genutzt:</p>
+<p>In Python wird das Keyword <code>import</code> genutzt:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">Bibliotheksname</span>
 </pre></div>
 </div>
-<p>Konkret um auf die Funktionen für die Quadratwurzel und die Logarithmen, muss man die Bibliothek <code>math</code> importieren.</p>
+<p>Für Berechnungen von Quadratwurzeln oder Logarithmen muss man die Bibliothek <code>math</code> importieren.</p>
 <p>Also braucht man die Zeile</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 </pre></div>
@@ -522,10 +505,9 @@ Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese
 <p>bevor man diese Funktionen nutzen kann.</p>
 </section>
 <section id="funktionen-der-math-bibliothek">
-<h2>Funktionen der math Bibliothek<a class="headerlink" href="#funktionen-der-math-bibliothek" title="Permalink to this headline">#</a></h2>
-<p>Nun haben wir die math Bibliothek importiert.</p>
-<p>Um auf diese zuzugreifen, müssen wir vor den Funktionen einen Präfix von <code>Bibliotheksname.</code> hinzufügen, damit wir ausdrücken, dass wir die Funktion dieser Bibliothek meinen.</p>
-<p>Konkret wäre der Präfix hier also <code>math.</code></p>
+<h2>Funktionen der math-Bibliothek<a class="headerlink" href="#funktionen-der-math-bibliothek" title="Permalink to this headline">#</a></h2>
+<p>Nach dem Import der math-Bibliothek erfolgt der Zugriff auf die Funktionen durch Voranstellen des Präfixes <code>Bibliotheksname.</code>. Damit wird ausgedrückt, dass wir die Funktion dieser Bibliothek meinen.</p>
+<p>Konkret wäre das Präfix hier also <code>math.</code>.</p>
 <p>Die Quadratwurzel von 25 könnte man also wie folgt berechnen:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -538,16 +520,16 @@ Also gibt es ein Keyword gefolgt vom Bibliothekennamen, daraufhin kann man diese
 <span class="c1"># 2</span>
 </pre></div>
 </div>
-<p>Weitere Funktionen wie etwa trigonometrische Funktionen können bei bedarf in der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.</p>
+<p>Weitere Funktionen wie etwa trigonometrische Funktionen können bei Bbedarf in der englischsprachigen <a href="https://docs.python.org/3/library/math.html" target="_blank">Python Referenz</a> nachgelesen werden.</p>
 </section>
 <section id="aufgabe">
 <h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h2>
-<p>Hier ist die Gleichung für die Dichtefunktion der <a href="https://de.wikipedia.org/wiki/Normalverteilung" target="_blank">Normalverteilung</a>. Die Normalverteilung ist auch als “gaußsche Glockenkurve” bekannt.
+<p>Hier ist die Gleichung für die Dichtefunktion der <a href="https://de.wikipedia.org/wiki/Normalverteilung" target="_blank">Normalverteilung</a>. Die Normalverteilung ist auch als “Gaußsche Glockenkurve” bekannt.
 Es geht hier nicht darum, diese Formel zu verstehen. Den ersten Kontakt mit dieser Formel werden Sie im 3. Semester in Statistik haben und dort benutzt man Programme, welche Werte für diesen Ausdruck berechnen.
-Ich habe diese Formel ausgesucht, da man hier testen kann ob man mathematische Operatoren und Funktionen verstanden hat.
-Es geht nur darum, diese Formel in Code umzuschreiben und das Ergebnis zu berechnen für die konkreten Werte <span class="math notranslate nohighlight">\( \mu =3 ,\: \sigma = 5 \:und\: x=4\)</span>.</p>
+Wir haben diese Formel ausgesucht, da man hier testen kann, ob man mathematische Operatoren und Funktionen verstanden hat.
+Es geht nur darum, diese Formel in Code umzuschreiben und das Ergebnis zu berechnen für die konkreten Werte <span class="math notranslate nohighlight">\( \mu =3\)</span>, <span class="math notranslate nohighlight">\(\sigma = 5\)</span> und <span class="math notranslate nohighlight">\(x=4\)</span>.</p>
 <p><font size="14"><span class="math notranslate nohighlight">\(f(x\:|\:\mu,\sigma^2)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\)</span></font></p>
-<p>Um Ihnen das Leben leichter zu machen, habe ich im Folgenden, die Formel umgeschrieben indem ich u.a alle griechischen Buchstaben (bis auf <code>pi</code>) einen anderen Namen gegeben habe.
+<p>Um das einfacher zu machen, ist die Formel im Folgenden umgeschrieben, unter anderem wurden alle griechischen Buchstaben (bis auf <code>pi</code>) umbenannt.
 Als Variablennamen sollen Sie nun die Ausdrücke der unten stehenden Gleichung verwenden.</p>
 <p><font size="14"><span class="math notranslate nohighlight">\(result=\frac{1}{sigma\cdot\sqrt{2\cdot\pi}}\cdot e^{-\frac{1}{2}\cdot(\frac{x-mu}{sigma})^2}\)</span></font></p>
 <p>Den Wert für <span class="math notranslate nohighlight">\(\pi\)</span> können Sie mit <code>math.pi</code> aufrufen.
@@ -560,10 +542,10 @@ Den Wert für <span class="math notranslate nohighlight">\(e\)</span> können Si
 <p>Viel Erfolg!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben ...</span>
 <span class="c1"># Ersetzen sie hierfür &quot;...&quot; mit ihrem Code.</span>
-<span class="c1"># Das Ergebnis der Formel soll geprinted werden.</span>
-<span class="c1"># Bräuchten Sie vielleicht eine Bibliothek?</span>
+<span class="c1"># Das Ergebnis der Formel soll ausgegeben werden.</span>
+<span class="c1"># Brauchen Sie vielleicht eine Bibliothek?</span>
 
 <span class="n">mu</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mi">5</span>
