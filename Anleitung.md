@@ -9,7 +9,7 @@ Alle Pfade, welche für Nutzer individuell sind, werden mit "..." markiert. Ich 
 
 ```
 pip install -U jupyter-book
-```
+```file:///home/edward/job/CommitFolder/Anleitung.md
 
 ## Benötigte Dateien
 
@@ -68,12 +68,22 @@ In diesem Fall als absoluter Pfad beginnend beim Root Directory.
 
 Das Resultat des Bauens, ist der \_build Ordner, welcher sich im ShortPythonIntro Ordner befindet.
 
+Wenn man das Buch ein weiteres mal baut, werden nur die Seiten neue gebaut, wessen source dateien verändert wurden.
+Dies macht das Bauen zwar schneller, jedoch können dadurch Fehler entstehen:
+
+Jede Seite hat ein eigenes Inhaltsverzeichnis am linken Bildschirmrand.
+Wenn eine neue Seite hinzugefügt wurde, wird das Inhaltsverzeichnis bei Seiten wo es keine Veränderung gab, nicht neu gebaut.
+Dementsprechend ist auf diesen Seiten die neue Seite nicht im Inhaltsverzeichnis enthalten.
+
+Daher empfehle ich, vor dem pushen auf GitHub, dass man den \_build Ordner vollständig löscht und das Jupyter-Book nochmal baut. 
+Somit wird die Seite von Anfang an gebaut und solche Fehler im Inhaltsverzeichnis sind behoben.
+
 
 ## Das gebaute Jupyter-Book lokal öffnen
 
 Um die Webseite im Localhost zu öffnen, muss man nur die "index.html" Datei im Ordner ShortPythonIntro/\_build/html im Webbrowser öffnen. So kann man gucken, ob alles so ist wie man es sich wünscht, bevor man die eigentliche GitHub Pages Seite ändert/die Änderungen nach GitHub pusht.
 
-## Die "<!-- Google Analytics -->" Kommentare entfernen
+## Die "&lt;!-- Google Analytics --&gt;" Kommentare entfernen
 
 Bei &lt;!-- Google Analytics --&gt; handelt es sich um einen Kommentar in HTML. Diese Zeilen haben keine Bedeutung. Diese werden lediglich generiert um den generierten Code zu strukturieren und mit diesem Kommentar hinzuweisen, ab wo der Code für Google Analytics beginnt. Google Analytics ist jedoch deaktiviert und deshalb wird kein Code dazu generiert. Der Kommentar wird leider trotzdem generiert. Um alle Kommentare zu entfernen, kann man eine neue Datei mit der Endung ".sh" erstellen und folgendes Shell-Script einfügen:
 
@@ -121,20 +131,8 @@ Damit die Änderungen auf GitHub Pages ankommen, benutzt man das Kommandozeilent
 
 Hier mehr Info: https://jupyterbook.org/en/stable/publish/gh-pages.html
 
-
-### ghp-import installieren
-
-```
-pip install ghp-import
-```
-
-### Den Befehl nutzen
-
-Mit dem Befehl werden die Ergebnisse auf den "gh-pages" Branch gepusht, womit GitHub Pages die aktuellste Version bekommt.
-Der gh-pages Branch wird beim aufrufen dieses Befehls überschrieben. Es sollte also nicht manuell auf dem gh-pages branch gearbeitet werden.
-
-Man muss sehr wahrscheinlich davor Git sagen, welches Repository genutzt werden soll.
-Also setzt man das Working Directory als den Ordner wo README.md, Potentiell_hinzufuegbar.md, usw. enthalten sind. Also den Ordner **über** dem ShortPythonIntro Ordner.
+## Repository auf GitHub pushen
+Man setzt das Working Directory als den Ordner wo README.md, Potentiell_hinzufuegbar.md, usw. enthalten sind. Also den Ordner **über** dem ShortPythonIntro Ordner.
 
 Dann führt man
 
@@ -148,8 +146,41 @@ aus und fügt das Repository in Git hinzu:
 git remote add origin https://github.com/JensLiebehenschel/ShortPythonIntro.git
 
 ```
+Vor einigen Jahren hieß der Defaultbranch in Git "master". Nun wurde er jedoch zu "main" umgenannt.
+Wahrscheinlich benutzt das Git System im Terminal immernoch master als Defaultbranch.
+Das sollte mit diesem Befehl geändert werden können.
+```
+git config --global init.defaultBranch main
+```
+
+nun macht fügt man hinzu, welche Dateien betrachtet werden können und committed die Veränderungen. Beides ist auch in einem Befehl möglich.
+
+```
+git commit -am 'Commitnachricht hier'    
+```
+auf GitHub pushen:
+
+```
+git push origin main    
+```
 
 Den oberen Link erhält man auf der GitHub Seite des Repositories, wenn man auf Code geht und den HTTPS Link kopiert
+
+
+
+### ghp-import installieren
+
+```
+pip install ghp-import
+```
+
+### Den Befehl nutzen
+
+Mit dem Befehl werden die Ergebnisse auf den "gh-pages" Branch gepusht, womit GitHub Pages die aktuellste Version bekommt.
+Der gh-pages Branch wird beim aufrufen dieses Befehls überschrieben. Es sollte also nicht manuell auf dem gh-pages branch gearbeitet werden.
+
+Man muss sehr wahrscheinlich davor Git sagen, welches Repository genutzt werden soll.
+Also muss man zumindest <code>git remote add origin</code> ausführen. (Beschrieben im Kapitel darüber.)
 
 ```
 ghp-import -n -p -f /home/.../ShortPythonIntro/_build/html
@@ -177,5 +208,3 @@ Den generierten Token gibt man nun statt dem Passwort an, wenn man wieder <code>
 
 Wenn alles geklappt hat, sollte die Veränderungen in kürze auch auf der GitHub Pages Seite sichtbar werden.
 Falls nicht, könnte es nützlich sein den Browser Cache für diese Webseite zu leeren und die Seite zu aktualisieren.
-
-Letztendlich sollte man im Idealfall die Änderungen auch so auf GitHub pushen, also sodass die Veränderungen der Markdown Dateien/Jupyter-Notebooks im Repo sind, damit die nächste Person die daran arbeitet, die Version der Source Dateien hat, mit welchen die Webseite gebaut wurde.
