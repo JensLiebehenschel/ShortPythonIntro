@@ -11,3 +11,5 @@ Hier ist das Inhaltsverzeichnis, um direkt in ein bestimmtes Kapitel zu springen
 
 ```{tableofcontents}
 ```
+
+Herzlichen Dank an Edward Späth, der in sehr kurzer Zeit diese schöne Einführung in Python erstellt hat.

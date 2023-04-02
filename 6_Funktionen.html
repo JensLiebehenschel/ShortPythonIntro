@@ -418,13 +418,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#erstellen-einer-funktion">
    Erstellen einer Funktion
   </a>
@@ -464,13 +457,6 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#erstellen-einer-funktion">
    Erstellen einer Funktion
   </a>
@@ -502,18 +488,15 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="funktionen">
 <h1>Funktionen<a class="headerlink" href="#funktionen" title="Permalink to this headline">#</a></h1>
-<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-<p>Erstmal vorweg: Es gibt in Python keine Main Funktion wie in C.
-Der Inhalt der Main Funktion wird im globalen Bereich geschrieben und ausgeführt.
-Wenn man im Arbeitsleben Python schreibt, ist dies unerwünscht und es wird anders gehandhabt.
+<p>Erstmal vorweg: Es gibt in Python keine Main-Funktion wie in C.
+Der Inhalt der Main-Funktion wird im globalen Bereich geschrieben und ausgeführt.
+Wenn man im Arbeitsleben Python-Code schreibt, ist dies unerwünscht und wird anders gehandhabt.
 Das ist für diese Einführung jedoch nicht von Bedeutung.</p>
-</section>
 <section id="erstellen-einer-funktion">
 <h2>Erstellen einer Funktion<a class="headerlink" href="#erstellen-einer-funktion" title="Permalink to this headline">#</a></h2>
-<p>um eine Funktion zu definieren, wird das keyword <code>def</code> benutzt.</p>
-<p>anschließend wird der Funktion ein Name zugewiesen und in runden Klammern gibt man die Parameter der Funktion an.</p>
-<p>Man beendet den Funktionkopf nun mit einem Doppelpunkt, nach welchem man die nächste Zeile indentiert und dann den eigentlichen Inhalt der Funktion angibt.</p>
+<p>Um eine Funktion zu definieren, wird das Keyword <code>def</code> benutzt.</p>
+<p>Anschließend wird der Funktion ein Name zugewiesen und in runden Klammern gibt man die Parameter an.</p>
+<p>Man beendet den Funktionskopf nun mit einem Doppelpunkt, nach welchem man die nächste Zeile einrückt und dann den eigentlichen Inhalt der Funktion angibt.</p>
 <p>Beispiel:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ich_printe_falschherum</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
@@ -530,7 +513,7 @@ Das ist für diese Einführung jedoch nicht von Bedeutung.</p>
 	<span class="o">&lt;</span><span class="n">Funktionsrumpf</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Es ist ebenfalls möglich Defaultwerte anzugeben. Dafür weist man den Parametern bereits einen Wert zu. Sobald ein Defaultwert angegeben wurde, müssen alle Werte rechts davon ebenfalls Defaultwerte haben
+<p>Es ist ebenfalls möglich Defaultwerte für Parameter anzugeben. Dafür weist man den Parametern bereits einen Wert zu. Sobald ein Defaultwert angegeben wurde, müssen alle Werte rechts davon ebenfalls Defaultwerte haben
 Beispiel:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">summe_von_bis_zu_vier_zahlen</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span>
@@ -548,15 +531,15 @@ Beispiel:</p>
 </section>
 <section id="ruckgabewerte">
 <h2>Rückgabewerte<a class="headerlink" href="#ruckgabewerte" title="Permalink to this headline">#</a></h2>
-<p>Mit dem <code>return</code> keyword kann man angeben, was die Funktion zurückgeben soll.
-Die Besonderheit von Python liegt darin, dass man mehrere Werte innerhalb von einem Return zurückgeben kann.</p>
-<p>Angenommen ich will eine Funktion schreiben, welche einen String aus ausschließlich Kleinbuchstaben als input bekommt und sagen soll wieviele Vokale und wieviele Konsonanten in dem String vorkommen.
-Zusätzlich soll die Funktion zurückgeben ob es mehr Vokale oder mehr Konsonanten gibt (in Form eines Wahrheitswertes).
-In anderen Programmiersprachen müsste man eine Datenstruktur erstellen um sowohl zwei Integer Werte als auch einen Wahrheitswert zurückgeben zu können. In Python gibt man einfach alle drei, durch jeweils ein Komma getrennt, zurück.</p>
+<p>Mit dem Keyword <code>return</code> kann man angeben, was die Funktion zurückgeben soll.
+Die Besonderheit von Python liegt darin, dass man mehrere Werte zurückgeben kann.</p>
+<p>Angenommen eine Funktion erhält einen String aus ausschließlich Kleinbuchstaben und soll berechnen, wie viele Vokale und wie viele Konsonanten in dem String vorkommen.
+Zusätzlich soll die Funktion zurückgeben, ob es weniger Vokale als Konsonanten gibt (in Form eines Wahrheitswertes).
+In anderen Programmiersprachen müsste man eine Datenstruktur erstellen, um sowohl zwei Integer Werte als auch einen Wahrheitswert zurückgeben zu können. In Python gibt man einfach alle drei zurück, jeweils durch Komma getrennt.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vokale_und_konsonanten</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
 	<span class="n">anzahl_vokale</span> <span class="o">=</span> <span class="mi">0</span>
 	<span class="n">anzahl_konsonanten</span> <span class="o">=</span> <span class="mi">0</span>
-	<span class="k">for</span> <span class="n">buchstabe</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span> 			<span class="c1"># Man kann durch einen String genauso iterieren wie durch eine List auch</span>
+	<span class="k">for</span> <span class="n">buchstabe</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span> 	<span class="c1"># Man kann über einen String genauso iterieren wie über eine Liste</span>
 		<span class="k">if</span> <span class="n">buchstabe</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">]:</span>
 			<span class="n">anzahl_vokale</span> <span class="o">+=</span> <span class="mi">1</span>
 		<span class="k">else</span><span class="p">:</span>
@@ -579,7 +562,7 @@ Da die Funktion drei Werte zurückgibt und man drei Variablen auf der linken Sei
 <section id="rekursion">
 <h2>Rekursion<a class="headerlink" href="#rekursion" title="Permalink to this headline">#</a></h2>
 <p>Rekursion funktioniert in Python genauso wie in anderen Programmiersprachen auch. Eine Funktion ruft sich selbst auf.
-Für die Rekursion wird das Beispiel von rekursivem Fibonacci gezeigt.</p>
+Als Beispiel die rekursive Berechnung der n-ten Fibonacci-Zahl.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib_rek</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span>
@@ -594,7 +577,7 @@ Für die Rekursion wird das Beispiel von rekursivem Fibonacci gezeigt.</p>
 </section>
 <section id="aufgabe">
 <h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h2>
-<p>Erstellen Sie eine Funktion, welche einen positiven Integerwert als Argument erhält und <code>True</code> zurückgibt, wenn der Wert eine gerade Zahl ist. Ansonsten soll <code>False</code> zurück gegeben werden. Testens Sie die Funktion für ein paar Zahlen ihrer Wahl. Sie müssen <strong>nicht</strong> sicherstellen, dass wirklich eine positive Ganzzahl eingegeben wurde. Gehen Sie davon aus, dass nichts anderes eingegeben wird. Sie können auch gerne versuchen, mehrere Möglichkeiten zu finden.</p>
+<p>Erstellen Sie eine Funktion, welche einen positiven Integerwert als Argument erhält und <code>True</code> zurückgibt, falls der Wert eine gerade Zahl ist. Ansonsten soll <code>False</code> zurück gegeben werden. Testen Sie die Funktion für ein paar Zahlen ihrer Wahl. Sie müssen <strong>nicht</strong> sicherstellen, dass wirklich eine positive Ganzzahl eingegeben wurde. Gehen Sie davon aus, dass nichts anderes eingegeben wird. Sie können auch gerne versuchen, mehrere Lösungen zu finden.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
@@ -618,8 +601,8 @@ Für die Rekursion wird das Beispiel von rekursivem Fibonacci gezeigt.</p>
 </pre></div>
 </div>
 <p>Rekursive Lösung. <code>0</code> ist als gerade Zahl und  <code>1</code> als ungerade Zahl bekannt. Wenn der Wert ungleich <code>0</code> oder <code>1</code> ist,
-wird die Funktion rekursiv für den um zwei veringerten Wert aufgerufen bis der Wert entweder <code>0</code> oder <code>1</code> ist. Subtraktion mit <code>2</code> sorgt dafür,
-dass der Wert entweder immernoch gerade oder immernoch ungerade bei dem nächsten rekursiven Aufruf bleibt.</p>
+wird die Funktion rekursiv für den um zwei veringerten Wert aufgerufen bis der Wert entweder <code>0</code> oder <code>1</code> ist. Die Subtraktion mit <code>2</code> sorgt dafür,
+dass der Wert gerade oder ungerade im nächsten rekursiven Aufruf bleibt.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even_rek</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
@@ -630,7 +613,7 @@ dass der Wert entweder immernoch gerade oder immernoch ungerade bei dem nächste
 </pre></div>
 </div>
 <p>Idee: Ob eine Zahl gerade oder ungerade ist, hängt nur von der letzten Ziffer ab.
-Deswegen konvertieren wir die Zahl in einen String und gucken nur auf die letzte Ziffer.
+Deswegen konvertieren wir die Zahl in einen String und betrachten nur die letzte Ziffer.
 Wir casten die letzte Ziffer zurück in eine Zahl und gucken ob die letzte Ziffer in der Liste der bereits bekannten einziffrigen geraden Zahlen enthalten ist.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even_last_digit</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
