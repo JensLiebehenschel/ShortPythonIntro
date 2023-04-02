@@ -3,20 +3,18 @@
 
 # # Funktionen
 
-# ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
-
-# Erstmal vorweg: Es gibt in Python keine Main Funktion wie in C.
-# Der Inhalt der Main Funktion wird im globalen Bereich geschrieben und ausgeführt.
-# Wenn man im Arbeitsleben Python schreibt, ist dies unerwünscht und es wird anders gehandhabt.
+# Erstmal vorweg: Es gibt in Python keine Main-Funktion wie in C.
+# Der Inhalt der Main-Funktion wird im globalen Bereich geschrieben und ausgeführt.
+# Wenn man im Arbeitsleben Python-Code schreibt, ist dies unerwünscht und wird anders gehandhabt.
 # Das ist für diese Einführung jedoch nicht von Bedeutung.
 # 
 # ## Erstellen einer Funktion
 # 
-# um eine Funktion zu definieren, wird das keyword <code>def</code> benutzt.
+# Um eine Funktion zu definieren, wird das Keyword <code>def</code> benutzt.
 # 
-# anschließend wird der Funktion ein Name zugewiesen und in runden Klammern gibt man die Parameter der Funktion an.
+# Anschließend wird der Funktion ein Name zugewiesen und in runden Klammern gibt man die Parameter an.
 # 
-# Man beendet den Funktionkopf nun mit einem Doppelpunkt, nach welchem man die nächste Zeile indentiert und dann den eigentlichen Inhalt der Funktion angibt.
+# Man beendet den Funktionskopf nun mit einem Doppelpunkt, nach welchem man die nächste Zeile einrückt und dann den eigentlichen Inhalt der Funktion angibt.
 # 
 # Beispiel:
 # ```Python
@@ -35,7 +33,7 @@
 # 	<Funktionsrumpf>
 # ```
 # 
-# Es ist ebenfalls möglich Defaultwerte anzugeben. Dafür weist man den Parametern bereits einen Wert zu. Sobald ein Defaultwert angegeben wurde, müssen alle Werte rechts davon ebenfalls Defaultwerte haben
+# Es ist ebenfalls möglich Defaultwerte für Parameter anzugeben. Dafür weist man den Parametern bereits einen Wert zu. Sobald ein Defaultwert angegeben wurde, müssen alle Werte rechts davon ebenfalls Defaultwerte haben
 # Beispiel:
 # ```Python
 # def summe_von_bis_zu_vier_zahlen(a, b, c=0, d=0):
@@ -53,18 +51,18 @@
 # 
 # ## Rückgabewerte
 # 
-# Mit dem <code>return</code> keyword kann man angeben, was die Funktion zurückgeben soll.
-# Die Besonderheit von Python liegt darin, dass man mehrere Werte innerhalb von einem Return zurückgeben kann.
+# Mit dem Keyword <code>return</code> kann man angeben, was die Funktion zurückgeben soll.
+# Die Besonderheit von Python liegt darin, dass man mehrere Werte zurückgeben kann.
 # 
-# Angenommen ich will eine Funktion schreiben, welche einen String aus ausschließlich Kleinbuchstaben als input bekommt und sagen soll wieviele Vokale und wieviele Konsonanten in dem String vorkommen.
-# Zusätzlich soll die Funktion zurückgeben ob es mehr Vokale oder mehr Konsonanten gibt (in Form eines Wahrheitswertes).
-# In anderen Programmiersprachen müsste man eine Datenstruktur erstellen um sowohl zwei Integer Werte als auch einen Wahrheitswert zurückgeben zu können. In Python gibt man einfach alle drei, durch jeweils ein Komma getrennt, zurück.
+# Angenommen eine Funktion erhält einen String aus ausschließlich Kleinbuchstaben und soll berechnen, wie viele Vokale und wie viele Konsonanten in dem String vorkommen.
+# Zusätzlich soll die Funktion zurückgeben, ob es weniger Vokale als Konsonanten gibt (in Form eines Wahrheitswertes).
+# In anderen Programmiersprachen müsste man eine Datenstruktur erstellen, um sowohl zwei Integer Werte als auch einen Wahrheitswert zurückgeben zu können. In Python gibt man einfach alle drei zurück, jeweils durch Komma getrennt.
 # 
 # ```Python
 # def vokale_und_konsonanten(input_string):
 # 	anzahl_vokale = 0
 # 	anzahl_konsonanten = 0
-# 	for buchstabe in input_string: 			# Man kann durch einen String genauso iterieren wie durch eine List auch
+# 	for buchstabe in input_string: 	# Man kann über einen String genauso iterieren wie über eine Liste
 # 		if buchstabe in ["a", "e", "i", "o", "u"]:
 # 			anzahl_vokale += 1
 # 		else:
@@ -87,7 +85,7 @@
 # ## Rekursion
 # 
 # Rekursion funktioniert in Python genauso wie in anderen Programmiersprachen auch. Eine Funktion ruft sich selbst auf.
-# Für die Rekursion wird das Beispiel von rekursivem Fibonacci gezeigt.
+# Als Beispiel die rekursive Berechnung der n-ten Fibonacci-Zahl.
 # ```Python
 # def fib_rek(n):
 #     if n <= 1:
@@ -102,7 +100,7 @@
 
 # ## Aufgabe
 
-# Erstellen Sie eine Funktion, welche einen positiven Integerwert als Argument erhält und <code>True</code> zurückgibt, wenn der Wert eine gerade Zahl ist. Ansonsten soll <code>False</code> zurück gegeben werden. Testens Sie die Funktion für ein paar Zahlen ihrer Wahl. Sie müssen **nicht** sicherstellen, dass wirklich eine positive Ganzzahl eingegeben wurde. Gehen Sie davon aus, dass nichts anderes eingegeben wird. Sie können auch gerne versuchen, mehrere Möglichkeiten zu finden.
+# Erstellen Sie eine Funktion, welche einen positiven Integerwert als Argument erhält und <code>True</code> zurückgibt, falls der Wert eine gerade Zahl ist. Ansonsten soll <code>False</code> zurück gegeben werden. Testen Sie die Funktion für ein paar Zahlen ihrer Wahl. Sie müssen **nicht** sicherstellen, dass wirklich eine positive Ganzzahl eingegeben wurde. Gehen Sie davon aus, dass nichts anderes eingegeben wird. Sie können auch gerne versuchen, mehrere Lösungen zu finden.
 
 # In[1]:
 
@@ -129,8 +127,8 @@
 # ```
 # 
 # Rekursive Lösung. <code>0</code> ist als gerade Zahl und  <code>1</code> als ungerade Zahl bekannt. Wenn der Wert ungleich <code>0</code> oder <code>1</code> ist, 
-# wird die Funktion rekursiv für den um zwei veringerten Wert aufgerufen bis der Wert entweder <code>0</code> oder <code>1</code> ist. Subtraktion mit <code>2</code> sorgt dafür, 
-# dass der Wert entweder immernoch gerade oder immernoch ungerade bei dem nächsten rekursiven Aufruf bleibt.
+# wird die Funktion rekursiv für den um zwei veringerten Wert aufgerufen bis der Wert entweder <code>0</code> oder <code>1</code> ist. Die Subtraktion mit <code>2</code> sorgt dafür, 
+# dass der Wert gerade oder ungerade im nächsten rekursiven Aufruf bleibt.
 # ```Python
 # def is_even_rek(value):
 #     if value == 0:
@@ -142,7 +140,7 @@
 # ```
 # 
 # Idee: Ob eine Zahl gerade oder ungerade ist, hängt nur von der letzten Ziffer ab.
-# Deswegen konvertieren wir die Zahl in einen String und gucken nur auf die letzte Ziffer.
+# Deswegen konvertieren wir die Zahl in einen String und betrachten nur die letzte Ziffer.
 # Wir casten die letzte Ziffer zurück in eine Zahl und gucken ob die letzte Ziffer in der Liste der bereits bekannten einziffrigen geraden Zahlen enthalten ist.
 # ```Python
 # def is_even_last_digit(value):

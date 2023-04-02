@@ -420,15 +420,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#der-boolean-datentyp">
-   Der Boolean Datentyp
+  <a class="reference internal nav-link" href="#der-datentyp-boolean">
+   Der Datentyp Boolean
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -468,15 +461,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#der-boolean-datentyp">
-   Der Boolean Datentyp
+  <a class="reference internal nav-link" href="#der-datentyp-boolean">
+   Der Datentyp Boolean
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -508,17 +494,13 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="logische-ausdrucke">
 <h1>Logische Ausdrücke<a class="headerlink" href="#logische-ausdrucke" title="Permalink to this headline">#</a></h1>
-<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="der-boolean-datentyp">
-<h2>Der Boolean Datentyp<a class="headerlink" href="#der-boolean-datentyp" title="Permalink to this headline">#</a></h2>
+<section id="der-datentyp-boolean">
+<h2>Der Datentyp Boolean<a class="headerlink" href="#der-datentyp-boolean" title="Permalink to this headline">#</a></h2>
 <p>Nun geht es um logische Ausdrücke.</p>
 <p>In Python gibt es den Datentyp Boolean.
-Dieser kann zwei Werte haben: Wahr und Falsch</p>
-<p>auf Englisch True und False.</p>
-<p><code>True</code> und <code>False</code> sind hierbei keine Strings, sondern keywords.
-Man muss mit der Groß- und Kleinschreibung aufpassen, denn es ist nur korrekt, wenn der Anfangsbuchstabe groß ist und der Rest klein.</p>
+Dieser kann zwei Werte annehmen: Wahr und Falsch, auf Englisch True und False.</p>
+<p><code>True</code> und <code>False</code> sind in Python Keywords.
+Der Anfangsbuchstabe muss groß geschrieben sein und der Rest klein.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Korrekt</span><span class="p">:</span>
 <span class="n">x</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">y</span> <span class="o">=</span> <span class="kc">False</span>
@@ -532,11 +514,11 @@ Man muss mit der Groß- und Kleinschreibung aufpassen, denn es ist nur korrekt, 
 <span class="n">y</span> <span class="o">=</span> <span class="n">fAlSe</span>
 </pre></div>
 </div>
-<p>Benutzt man einen Editor mit Python Syntax Highlighting oder gar Autocompletion, wird man anhand der Hervorhebung wie beim Beispiel oben, erkennen, ob man es richtig geschrieben hat oder nicht. Zumindest bis man sich daran sowieso gewöhnt hat.</p>
+<p>Benutzt man einen Editor mit Python Syntax Highlighting oder gar Autocompletion, wird man anhand der Hervorhebung wie beim Beispiel oben, erkennen, ob man es richtig geschrieben hat oder nicht.</p>
 </section>
 <section id="id1">
 <h2>Logische Ausdrücke<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
-<p>Der Vergleichsoperator, welcher auf Gleichteit prüft ist wie fast überall auch ein <code>==</code>.
+<p>Der Vergleichsoperator, welcher auf Gleichheit prüft, ist wie in fast allen Programmiersprachen auch <code>==</code>.
 Auf Ungleichheit prüft der Operator <code>!=</code>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
@@ -548,7 +530,7 @@ Auf Ungleichheit prüft der Operator <code>!=</code>.</p>
 <span class="c1"># False</span>
 </pre></div>
 </div>
-<p>Um zu prüfen ob eine Variable einen Nullwert hat, kann man entweder die obigen Gleichheitsoperatoren oder das Keyword <code>is</code> nutzen:</p>
+<p>Um zu prüfen, ob eine Variable einen Nullwert hat, kann man entweder die obigen Vergleichsoperatoren oder das Keyword <code>is</code> nutzen:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="kc">None</span><span class="p">)</span>
@@ -586,8 +568,8 @@ Das oben geschriebene Beispiel in Python wäre also</p>
 <span class="c1"># False</span>
 </pre></div>
 </div>
-<p>Die gleiche Vorgehensweise bei “logischem und” als auch beim “logischem oder”.</p>
-<p>Da wird <code>&amp;&amp;</code> durch das keyword <code>and</code>, und <code>||</code> durch das keyword <code>or</code> ersetzt.</p>
+<p>Die gleiche Vorgehensweise gilt beim “logischen Und” und beim “logischen Oder”.</p>
+<p>Die entsprechenden Keywords sind <code>and</code> und <code>or</code>.</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// bzw. True</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// bzw. False</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// bzw. True</span>
@@ -620,16 +602,16 @@ Das oben geschriebene Beispiel in Python wäre also</p>
 </section>
 <section id="aufgabe">
 <h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h2>
-<p>Gegeben ist ein logischer Ausdruck. Übersetzen Sie diesen Ausdruck in Python code. Damit Sie den Code ausführen und somit auf Syntaxfehler vom Interpreter achten können, nutzen Sie dafür die konkreten Werte <span class="math notranslate nohighlight">\(x=5,\:y=5,\:z=3,\:t=True,\:f=False\)</span>.
-Durch eben diese konkreten Werte entstehen Tautologien. Es sollen <strong>keine</strong> vereinfachungen durchgeführt werden.</p>
+<p>Gegeben ist ein logischer Ausdruck. Übersetzen Sie diesen Ausdruck in Python-Code. Damit Sie den Code ausführen können und somit Syntaxfehler vom Interpreter erhalten, nutzen Sie dafür die konkreten Werte <span class="math notranslate nohighlight">\(x=5\)</span>, <span class="math notranslate nohighlight">\(y=5\)</span>, <span class="math notranslate nohighlight">\(z=3\)</span>, <span class="math notranslate nohighlight">\(t=True\)</span> und <span class="math notranslate nohighlight">\(f=False\)</span>.
+Durch eben diese konkreten Werte entstehen Tautologien. Es sollen <strong>keine</strong> Vereinfachungen durchgeführt werden.</p>
 <p><font size="12"><span class="math notranslate nohighlight">\(ausdruck = \)</span></font></p>
 <p><font size="12"><span class="math notranslate nohighlight">\((x=y \land ((x=z \lor \neg(y &lt; z)) \lor\)</span></font></p>
 <p><font size="12"><span class="math notranslate nohighlight">\(\neg((\neg t \lor f) \land (t \land \neg (x &lt; z)))))\)</span></font></p>
-<p>Wenn Sie alternativ nicht den obigen Ausdruck nutzen möchten, können Sie auch den unten stehenden C-code in Python code übersetzen.
-Der C-code unten und der Ausdruck oben sind äquivalent.</p>
+<p>Wenn Sie alternativ nicht den obigen Ausdruck nutzen möchten, können Sie auch den unten stehenden C-Code in Python-Code übersetzen.
+Der C-Code unten und der Ausdruck oben sind äquivalent.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Äquivalenter C-Code als optionale Hilfe</p>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Äquivalenter C-code</span>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Äquivalenter C-Code</span>
 <span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
@@ -647,7 +629,7 @@ Der C-code unten und der Ausdruck oben sind äquivalent.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hier können Sie ihren Versuch schreiben...</span>
-<span class="c1"># Ersetzen Sie hierfür den String mit Ihrem Code.</span>
+<span class="c1"># Ersetzen Sie hierfür die drei Punkte unten durch Ihren Code.</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>

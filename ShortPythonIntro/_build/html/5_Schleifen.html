@@ -418,13 +418,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#for-schleife">
    For-Schleife
   </a>
@@ -471,13 +464,6 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-   <strong>
-    DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#for-schleife">
    For-Schleife
   </a>
@@ -516,31 +502,26 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="schleifen">
 <h1>Schleifen<a class="headerlink" href="#schleifen" title="Permalink to this headline">#</a></h1>
-<section id="diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden">
-<h2><strong>DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.</strong><a class="headerlink" href="#diese-python-einfuhrung-ist-work-in-progress-es-konnen-noch-anderungen-vorgenommen-werden" title="Permalink to this headline">#</a></h2>
-<p>Gängige Schleifen gibt es in Python ebenfalls mit den aus anderen Programmiersprachen bekannten Keywords <code>for</code> und <code>while</code></p>
-<p>Hier unterscheidet Python sich von den C-ähnlichen Programmiersprachen.
-Nicht von Idee her, aber von Syntax.</p>
-</section>
+<p>Gängige Schleifen gibt es in Python ebenfalls mit den aus anderen Programmiersprachen bekannten Keywords <code>for</code> und <code>while</code>.</p>
+<p>Hier unterscheidet Python sich jedoch syntaktisch von den C-ähnlichen Programmiersprachen.</p>
 <section id="for-schleife">
 <h2>For-Schleife<a class="headerlink" href="#for-schleife" title="Permalink to this headline">#</a></h2>
-<p>Etwa soll in C mit einer for-loop ein Codeblock so oft ausgeführt werden, wie es verschiedene Werte für die Zählervariable gibt.
-Im Modul AlgDat werden üblicherweise einbuchstabige Namen für die Zählervariablen gewählt.
-Das wären größtenteils <code>i</code> und <code>j</code>.</p>
-<p>Python geht bei Schleifen wie folgt vor:
-Als Input in die Schleife erhält man keine Formel und Bedinung, mit welcher diese Zählervariablen berechnet werden sollen, sondern übergibt man ein
-“iterable” object.
-Also ein Array-artiges Object, wo man auf Basis von Indizes unterscheidet.</p>
+<p>In C wird ein Codeblock in einer for-Schleife ausgeführt solange eine Bedingung erfüllt ist.
+Im Modul AlgDat werden üblicherweise einbuchstabige Namen für die Zählvariablen gewählt, die meist einfach inkrementiert oder dekrementiert werden. Größtenteils werden <code>i</code> und <code>j</code> verwendet.</p>
+<p>Python geht bei Schleifen anders vor:
+Die Anzahl der Wiederholungen einer Schleife basieren nicht auf Formeln und Bedingungen zu Zählvariablen,
+sondern übergibt man ein “iterable” Objekt.
+Das ist ein Objekt, welches Werte zurück gibt, die beispielsweise als Indizes verwendet werden können.</p>
 <p>In C würde man eine <code>For-Schleife</code> startend bei <code>0</code> mit Schrittweite <code>1</code> so erstellen:</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">wert_für_i_welcher_nicht_mehr_dazugehören_soll</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Mit der Formel könnte man die einzelnen Werte für <code>i</code> berechnen.
-Man fängt bei <code>i = 0</code> an und inkrementiert um <code>1</code>, bis der Wert erreicht wird, wo die Bedingung in der Mitte nicht mehr den Wahrheitswert <code>wahr</code> zurückgibt.</p>
-<p>In Python würde man hingegeben naiv die Werte <code>0</code> bis zum Grenzwert in Form einer List übergeben.</p>
-<p>Folgendes Beispiel in C:</p>
+<p>Die einzelnen Werte für <code>i</code> werden wie folgt berechnet.
+Man fängt bei <code>i = 0</code> an und inkrementiert bis der Wert erreicht ist, bei dem die Bedingung nicht mehrerfüllt ist.</p>
+<p>In Python übergibt man hingegen die Werte <code>0</code> bis zum Grenzwert in Form einer Liste.</p>
+<p>Folgendes Beispiel in C</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
@@ -561,34 +542,41 @@ Man fängt bei <code>i = 0</code> an und inkrementiert um <code>1</code>, bis de
 </div>
 <section id="die-angenehmste-methode-ist-die-range-funktion">
 <h3>Die angenehmste Methode ist die range() Funktion<a class="headerlink" href="#die-angenehmste-methode-ist-die-range-funktion" title="Permalink to this headline">#</a></h3>
-<p>Man will natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte <code>range()</code> funktion.
+<p>Man möchte natürlich nicht jeden Index einzeln schreiben, deshalb gibt es die sogenannte <code>range()</code>-Funktion.
 Diese erhält unter anderem zwei Zahlen als Parameter.
-Die erste ist die Zahl von wo aus gestartet werden soll.
-Die zweite ist die Zahl, welche nicht mehr dazugehören soll.
-Standardmäßig beträgt die Schrittweite <code>1</code>.
+Die erste ist der Startwert.
+Die zweite ist die erste Zahl, welche nicht mehr dazugehört - wie beim Slicing.</p>
+<p>Standardmäßig beträgt die Schrittweite <code>1</code>.
 Man kann jedoch auch als dritten Parameter die Schrittweite angeben.
 Die kann sowohl positiv als auch negativ sein, bei negativen Schrittweiten muss man jedoch darauf aufpassen, dass das erste Argument größer ist als das zweite Argument.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>gibt also eine iterable Datenstruktur mit den Zahlen <code>0</code> bis <code>n-1</code> zurück.
-Technisch gesehen ist es was anderes als eine List von <code>0</code> bis <code>n-1</code>.
+<p>gibt also eine Datenstruktur mit den Zahlen <code>0</code> bis <code>n-1</code> zurück.
+Technisch gesehen ist es was anderes als eine Liste von <code>0</code> bis <code>n-1</code>.
 Man kann es aber mit <code>list(range(0, n))</code> zu eben einer Liste von <code>0</code> bis <code>n-1</code> casten.
 Für die For-Schleife ist dieser Cast jedoch nicht nötig.</p>
-<p>Eine praktischere Variante des oberen Python codes wäre also</p>
+<p>Eine praktischere Variante des oberen Python-Codes wäre also</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="p">,</span> <span class="n">ausgeführt</span> <span class="n">für</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">4</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Sofern der Startwert Null ist, kann dieser auch weggelassen werden.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)):</span>
 	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Will man nun eine absteigende For-Schleife von <code>10</code> bis inklusive <code>3</code> mit Schrittweite <code>1</code>, dann kann man dies so machen:</p>
+<p>Hiermit wird der Codeblock für alle erlaubten Indizes der Liste <code>l</code> einmal ausgeführt, nämlich von <code>0</code> bis <code>len(l)-1</code>.</p>
+<p>Möchte man nun eine absteigende For-Schleife von <code>10</code> bis inklusive <code>3</code> mit Schrittweite <code>1</code>, dann kann man dies so machen:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
     <span class="o">&lt;</span><span class="n">Mache</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">i</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Die For-Schleife startet bei <code>10</code> und geht bis exklusive <code>2</code>.
-Da wird die Schleife bis inklusive <code>3</code> haben wollen, geben wir den Wert an der bereits <strong>nicht</strong> dazugehören soll, also die Zahl <code>2</code>.
+<p>Die For-Schleife startet bei <code>10</code> und geht bis exklusiv <code>2</code>.
+Da wird die Schleife bis inklusiv <code>3</code> haben wollen, geben wir den ersten Wert an, der <strong>nicht</strong> mehr dazu gehören soll, also die Zahl <code>2</code>.
 Die <code>-1</code> als drittes Argument gibt an, dass die Schrittweite <code>-1</code> betragen soll.</p>
-<p>Alternativ kann man die range von <code>3</code> bis inklusive <code>10</code> (bis exklusive <code>11</code>) nehmen und diese mit der <code>reversed()</code> Funktion umdrehen:</p>
+<p>Alternativ kann man die range von <code>3</code> bis inklusiv <code>10</code> (bis exklusiv <code>11</code>) nehmen und diese mit der <code>reversed()</code> Funktion umdrehen:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">)):</span>
     <span class="o">&lt;</span><span class="n">Mache</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">i</span><span class="o">&gt;</span>
 </pre></div>
@@ -596,27 +584,27 @@ Die <code>-1</code> als drittes Argument gibt an, dass die Schrittweite <code>-1
 </section>
 <section id="iterieren-durch-ein-iterierbares-objekt">
 <h3>Iterieren durch ein iterierbares Objekt<a class="headerlink" href="#iterieren-durch-ein-iterierbares-objekt" title="Permalink to this headline">#</a></h3>
-<p>Jetzt kommt man zu dem sehr angenehmen Teil von Python wenn es darum geht über eine List zu iterieren.
-Beim iterieren will man meistens logisch gesehen für jeden Eintrag in einer List, den Codeblock mit diesem Objekt ausführen.
-Anstatt dabei jetzt mit Indexen zu arbeiten, kann man auch direkt durch die List iterieren, so wie man es intuitiv machen würde.</p>
+<p>Jetzt kommt man zu dem sehr angenehmen Teil von Python, wenn es darum geht, über eine Liste zu iterieren.
+Beim Iterieren möchte man meistens den Codeblock für jeden Eintrag in einer Liste ausführen.
+Anstatt dabei jetzt mit Indizes zu arbeiten, kann man auch direkt durch die Liste iterieren, ganz intuitiv.</p>
 <p>Aussehen würde es so:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">personen</span><span class="p">:</span>
-	<span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">person</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">Mache</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">person</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Man kann es sich so vorstellen, als ob <code>person</code> ein shortcut wäre für <code>personen[i]</code>, wo <code>i</code> der jeweils aktuelle Index des Objekts ist.</p>
-<p>Wenn man aber explizit mit indizes arbeiten möchte, hält Python einen davon natürlich nicht ab, wie gewohnt mit Indizes zu arbeiten.
+<p>Man kann es sich so vorstellen, als ob <code>person</code> ein Shortcut wäre für <code>personen[i]</code>, wobei <code>i</code> der jeweils aktuelle Index des Objekts ist.</p>
+<p>Wenn man aber explizit mit Indizes arbeiten möchte, lässt Python dies zu.
 Das würde dann so aussehen:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">personen</span><span class="p">)):</span>
-	<span class="o">&lt;</span><span class="n">mach</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">personen</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">personen</span><span class="p">)):</span>
+    <span class="o">&lt;</span><span class="n">Mache</span> <span class="n">etwas</span> <span class="n">mit</span> <span class="n">personen</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Da in <code>range(0, len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der List <code>personen</code> abgedeckt.</p>
+<p>Da in <code>range(len(personen))</code>, die Werte von <code>0</code> bis <code>len(personen)-1</code> vertreten sind, werden alle Indizes der Liste <code>personen</code> abgedeckt.</p>
 </section>
 </section>
 <section id="while-schleife">
 <h2>While-Schleife<a class="headerlink" href="#while-schleife" title="Permalink to this headline">#</a></h2>
-<p>Hier wird ein Codeblock so oft ausgeführt, bis die Bedinung nicht mehr gilt.</p>
+<p>Hier wird ein Codeblock so oft ausgeführt, bis die Bedingung nicht mehr gilt.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">bedingung</span><span class="p">:</span>
 	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 </pre></div>
@@ -627,13 +615,13 @@ Das würde dann so aussehen:</p>
 </pre></div>
 </div>
 <p>Man beachte, dass es in C zwei Arten von While-Schleifen gibt.
-Die normale While-Schleife`</p>
+Die normale While-Schleife</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="n">bedingung</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>und die Do-while-Schleife</p>
+<p>und die Do-While-Schleife</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="k">do</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">	</span><span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span><span class="w"></span>
 <span class="p">}</span><span class="w"> </span>
@@ -642,19 +630,19 @@ Die normale While-Schleife`</p>
 </div>
 <p>Bei letzterem wird die Bedingung erst nach Ausführen des Codeblocks überprüft.
 Diese Option gibt es nicht in Python.
-Will man dieses Verhalten in Python imitieren, so muss man mit einer Infinite loop und bedingten <code>breaks</code> als Workaround arbeiten.</p>
-<p><code>break</code> beendet manuell die aktuelle Schleife. Bei einer Infinite loop ist <code>break</code> die einzige Option, die Schleife zu beenden.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># Infinite loop</span>
+Möchte man dieses Verhalten in Python imitieren, so kann man zum Beispiel mit einer Endlosschleife und bedingtem <code>break</code> arbeiten.</p>
+<p><code>break</code> beendet manuell die aktuelle Schleife. Bei einer Endlosschleife ist <code>break</code> die einzige Möglichkeit, die Schleife zu beenden.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># Endlosschleife</span>
+	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 	<span class="k">if</span> <span class="ow">not</span> <span class="n">bedingung</span><span class="p">:</span>
 		<span class="k">break</span>
-	<span class="o">&lt;</span><span class="n">Codeblock</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Do-while-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem da es wie gezeigt, auch einen Workaround gibt. Dieser Workaround muss in der AlgDat Veranstaltung meines Wissens nach, ein mal angewandt werden bei dem source code vom Quicksort mit Hoare Partition.</p>
+<p>Do-While-Schleifen werden eher seltener benutzt, deshalb wird man ihr Fehlen in Python eher weniger spüren, vor allem, da es einen Workaround gibt.</p>
 </section>
 <section id="aufgabe">
 <h2>Aufgabe<a class="headerlink" href="#aufgabe" title="Permalink to this headline">#</a></h2>
-<p>Jemand hat ein Programm in C geschrieben und offenbar ist etwas schief gelaufen. Die Einrückung wurde gelöscht. Ihre Aufgabe war es, das Programm in Python umzuschreiben, damit man einen Performancevergleich der beiden Programme durchführen kann. Dass die Einrückung verschwunden ist, macht Ihr Leben sicherlich nicht einfacher.</p>
+<p>Jemand hat ein Programm in C geschrieben und offenbar ist etwas schief gelaufen. Die Einrückung wurde gelöscht. Ihre Aufgabe ist, das Programm in Python umzuschreiben, damit man einen Performancevergleich der beiden Programme durchführen kann. Dass die Einrückung verschwunden ist, macht Ihr Leben sicherlich nicht einfacher.</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
@@ -670,7 +658,7 @@ Will man dieses Verhalten in Python imitieren, so muss man mit einer Infinite lo
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Jemand hat für Sie schon Vorarbeit geleistet und hat den Großteil des Programms bereits in Python geschrieben. Es fehlen nur noch die Schleifen, wessen Stellen diese Person mit der Markierung <code>&lt;Loop&gt;</code> angegeben hat. Die Einrückung für die hinzuzufügenden Schleifen wurde ebenfalls gelöscht. Die Person hat den Großteil des Programms auskommentiert. Ihre Aufgabe ist es nun, das Auskommentieren rückgängig zu machen und die passende Schleifen an die korrekte Stellen einzufügen. Für das Rückgängig machen des Auskommentierens, sollen Sie die triple-quotes(<code>”””</code>) entfernen. Achten Sie ebenfalls auf korrekte Einrückung. Die Funktionsweise der Schleifen können Sie im obigen C Code nachgucken.</p>
+<p>Jemand hat für Sie schon Vorarbeit geleistet und hat den Großteil des Programms bereits in Python geschrieben. Es fehlen nur noch die Schleifen, dort steht <code>&lt;Loop&gt;</code>. Die Einrückung für die hinzuzufügenden Schleifen wurde ebenfalls gelöscht. Die Person hat den Großteil des Programms auskommentiert. Ihre Aufgabe ist es nun, das Auskommentieren rückgängig zu machen und die passenden Schleifen an die korrekten Stellen einzufügen. Für das Rückgängigmachen des Auskommentierens, können Sie die triple-quotes(<code>”””</code>) entfernen. Die gewünschte Funktionsweise der Schleifen ist im obigen C-Code ersichtlich.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ersetzen Sie &quot;&lt;Loop&gt;&quot; durch die jeweils korrekten Schleifen.</span>

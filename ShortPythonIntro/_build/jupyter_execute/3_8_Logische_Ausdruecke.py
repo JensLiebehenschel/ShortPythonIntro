@@ -3,19 +3,15 @@
 
 # # Logische Ausdrücke
 
-# ## **DIESE PYTHON EINFÜHRUNG IST WORK-IN-PROGRESS. ES KÖNNEN NOCH ÄNDERUNGEN VORGENOMMEN WERDEN.**
-
-# ## Der Boolean Datentyp
+# ## Der Datentyp Boolean
 
 # Nun geht es um logische Ausdrücke.
 # 
 # In Python gibt es den Datentyp Boolean.
-# Dieser kann zwei Werte haben: Wahr und Falsch
+# Dieser kann zwei Werte annehmen: Wahr und Falsch, auf Englisch True und False.
 # 
-# auf Englisch True und False.
-# 
-# <code>True</code> und <code>False</code> sind hierbei keine Strings, sondern keywords.
-# Man muss mit der Groß- und Kleinschreibung aufpassen, denn es ist nur korrekt, wenn der Anfangsbuchstabe groß ist und der Rest klein.
+# <code>True</code> und <code>False</code> sind in Python Keywords.
+# Der Anfangsbuchstabe muss groß geschrieben sein und der Rest klein.
 # ```Python
 # Korrekt:
 # x = True
@@ -29,11 +25,11 @@
 # x = tRuE
 # y = fAlSe
 # ```
-# Benutzt man einen Editor mit Python Syntax Highlighting oder gar Autocompletion, wird man anhand der Hervorhebung wie beim Beispiel oben, erkennen, ob man es richtig geschrieben hat oder nicht. Zumindest bis man sich daran sowieso gewöhnt hat.
+# Benutzt man einen Editor mit Python Syntax Highlighting oder gar Autocompletion, wird man anhand der Hervorhebung wie beim Beispiel oben, erkennen, ob man es richtig geschrieben hat oder nicht.
 
 # ## Logische Ausdrücke
 
-# Der Vergleichsoperator, welcher auf Gleichteit prüft ist wie fast überall auch ein <code>&equals;&equals;</code>.
+# Der Vergleichsoperator, welcher auf Gleichheit prüft, ist wie in fast allen Programmiersprachen auch <code>&equals;&equals;</code>.
 # Auf Ungleichheit prüft der Operator <code>!&equals;</code>.
 # ```Python
 # x = 5
@@ -45,7 +41,7 @@
 # print(x != y)
 # # False
 # ```
-# Um zu prüfen ob eine Variable einen Nullwert hat, kann man entweder die obigen Gleichheitsoperatoren oder das Keyword <code>is</code> nutzen:
+# Um zu prüfen, ob eine Variable einen Nullwert hat, kann man entweder die obigen Vergleichsoperatoren oder das Keyword <code>is</code> nutzen:
 # ```Python
 # x = None
 # 
@@ -87,9 +83,9 @@
 # # False
 # ```
 # 
-# Die gleiche Vorgehensweise bei "logischem und" als auch beim "logischem oder".
+# Die gleiche Vorgehensweise gilt beim "logischen Und" und beim "logischen Oder".
 # 
-# Da wird <code>&amp;&amp;</code> durch das keyword <code>and</code>, und <code>||</code> durch das keyword <code>or</code> ersetzt.
+# Die entsprechenden Keywords sind <code>and</code> und <code>or</code>.
 # 
 # ```C
 # int x = 1; // bzw. True
@@ -123,8 +119,8 @@
 
 # ## Aufgabe
 
-# Gegeben ist ein logischer Ausdruck. Übersetzen Sie diesen Ausdruck in Python code. Damit Sie den Code ausführen und somit auf Syntaxfehler vom Interpreter achten können, nutzen Sie dafür die konkreten Werte $x=5,\:y=5,\:z=3,\:t=True,\:f=False$.
-# Durch eben diese konkreten Werte entstehen Tautologien. Es sollen **keine** vereinfachungen durchgeführt werden. 
+# Gegeben ist ein logischer Ausdruck. Übersetzen Sie diesen Ausdruck in Python-Code. Damit Sie den Code ausführen können und somit Syntaxfehler vom Interpreter erhalten, nutzen Sie dafür die konkreten Werte $x=5$, $y=5$, $z=3$, $t=True$ und $f=False$.
+# Durch eben diese konkreten Werte entstehen Tautologien. Es sollen **keine** Vereinfachungen durchgeführt werden.
 
 # <font size="12">$ausdruck = $</font>
 # 
@@ -132,14 +128,14 @@
 # 
 # <font size="12">$\neg((\neg t \lor f) \land (t \land \neg (x < z)))))$</font>
 
-# Wenn Sie alternativ nicht den obigen Ausdruck nutzen möchten, können Sie auch den unten stehenden C-code in Python code übersetzen. 
-# Der C-code unten und der Ausdruck oben sind äquivalent.
+# Wenn Sie alternativ nicht den obigen Ausdruck nutzen möchten, können Sie auch den unten stehenden C-Code in Python-Code übersetzen. 
+# Der C-Code unten und der Ausdruck oben sind äquivalent.
 
 # :::{admonition} Äquivalenter C-Code als optionale Hilfe
 # :class: dropdown
 # 
 # ```C
-# // Äquivalenter C-code
+# // Äquivalenter C-Code
 # int x = 5;
 # int y = 5;
 # int z = 3;
@@ -159,7 +155,7 @@
 
 
 # Hier können Sie ihren Versuch schreiben...
-# Ersetzen Sie hierfür den String mit Ihrem Code.
+# Ersetzen Sie hierfür die drei Punkte unten durch Ihren Code.
 x = 5
 y = 5
 z = 3

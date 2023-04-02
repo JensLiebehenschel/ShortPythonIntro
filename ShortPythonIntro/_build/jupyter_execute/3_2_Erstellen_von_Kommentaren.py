@@ -16,7 +16,7 @@
 # wie in u.a. C/C++/Java mit
 # ```C
 # /*
-#     Das ist kommentar
+#     Das ist Kommentar
 #     Das hier auch
 #     Das hier ebenfalls
 # */
@@ -25,7 +25,7 @@
 # Somit müsste man in Python jede Zeile einzeln auskommentieren.
 
 # ```Python
-# #   Das ist ein kommentar
+# #   Das ist ein Kommentar
 # #   Das hier auch
 # #   Das hier ebenfalls
 # ```
