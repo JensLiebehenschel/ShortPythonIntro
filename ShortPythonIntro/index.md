@@ -13,3 +13,4 @@ Hier ist das Inhaltsverzeichnis, um direkt in ein bestimmtes Kapitel zu springen
 ```
 
 Herzlichen Dank an Edward Späth, der in sehr kurzer Zeit diese schöne Einführung in Python erstellt hat.
+Außerdem danke ich allen Studierenden, die durch Feedback zur Verbesserung dieser Einführung beigetragen haben.
