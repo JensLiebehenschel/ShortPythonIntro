@@ -2,6 +2,7 @@
 
 ## The course shall be available in English as well
 * Implementation of internationalization in a usual / standard way
+  * Based on one "text/code base" for a better maintainability, if possible
 * There shall be two different links for German and English (for external usage)
 * It shall be possible to switch the language on any page
   * If it is too difficult to stay on the page, then it is ok to got to the main page
