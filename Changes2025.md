@@ -27,3 +27,7 @@ These constructs (based on [Potentiell_hinzufuegbar.md](Potentiell_hinzufuegbar.
   * mention that it was initially developped for AlgDat and 
   * that it is also applicable to our project (with link on website to be created)
 * Cleanup [Potentiell_hinzufuegbar.md](Potentiell_hinzufuegbar.md) - adapt to current state when chnages are done
+
+## Warranty and Info
+* Add Warranty notice to Footer
+* Add links to the FRA-UAS website 
