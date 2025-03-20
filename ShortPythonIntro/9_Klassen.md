@@ -1,7 +1,5 @@
 # Klassen
 
-**Bei Klassen handelt es sich eher um ein Fortgeschritteneres Thema. Bei den meisten Algorithmen, wird kein Gebrauch von Klassen gemacht. Wenn Sie aber z.B. Datenstrukturen programmieren wollen, werden Sie es sehr wahrscheinlich mit Klassen machen wollen. Entscheiden Sie für sich selbst, ob Sie sich damit auseinandersetzen wollen.**
-
 Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.
 
 Auf Vererbung und sonstiges wird hier nicht eingegangen.

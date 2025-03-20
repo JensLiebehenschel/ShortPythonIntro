@@ -23,4 +23,9 @@ parts:
     - file: 7_Weitere_Aufgaben
   - caption: Fortgeschritten
     chapters:
-    - file: 8_Klassen
+    - file: 8_Fortgeschrittene_Konzepte
+    - file: 9_Klassen
+    - file: 10_Dictionaries
+    - file: 11_Tupel
+    - file: 12_Mengen
+    - file: 13_Matrizen
