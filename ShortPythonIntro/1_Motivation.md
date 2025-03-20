@@ -3,14 +3,13 @@
 ## Wieso Python?
 
 Dies soll eine Einführung in die Programmiersprache Python sein.
-Python ist eine "General-purpose programming language", welche sich durch einige Eigenschaften für die Veranstaltung "Algorithmen und Datenstrukturen", fortgehend als "AlgDat" bezeichnet, eignet.
+Python ist eine "General-purpose programming language", welche sich durch einige Eigenschaften für das Verstehen von Algorithmen und Datenstrukturen eignet.
 
 # Noch mehr Details? Gerne, dann hier einfach weiterlesen!
 
 ## Wieso genau Python?
 
-In dem Modul AlgDat geht es wie der Name bereits sagt, um Algorithmen und Datenstrukturen.
-Also um Schritte zum Lösen von Problemen und Organisation von Daten.
+Bei Algorithmen und Datenstrukturen geht es um Schritte zum Lösen von Problemen und Organisation von Daten.
 Diese Lösungen sollen allgemein in der Software-Entwicklung genutzt werden können, und zwar
 unabhängig von einer Programmiersprache.
 Daher verwendet man oft "Pseudocode", um Programmiersprachen-neutral Schritte zum Lösen eines Problems oder der Organisation von Daten zu formulieren.
@@ -24,10 +23,10 @@ Die Lesenden haben wahrscheinlich bereits einen Kurs in der Programmiersprache C
 Hierbei gibt es das Konzept von Pointern.
 Es gibt jedoch Programmiersprachen wie etwa Java oder auch Python, welche keine Pointer in ihrer Sprache haben.
 Wäre es nun also sinnvoll, dass sich ein Java-Entwickler mit Pointern auseinandersetzten muss um zu verstehen wie der Sortieralgorithmus in einem gegeben C-Quellcode funktioniert?
-Die Antwort ist sicherlich "Nein".
+Die Antwort ist sicherlich: Nein.
 
 Ein anderes Beispiel: Ist es für einen Algorithmus in der Regel relevant ob man Integer-Werte oder Gleitkommazahlen sortieren möchte?
-Für C-Code absolut. Für das Verständnis der Lösungsschritte eher von geringerer Bedeutung.
+Für C-Code, absolut. Für das Verständnis der Lösungsschritte eher von geringerer Bedeutung.
 
 
 ## Python
@@ -67,7 +66,7 @@ Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt
 Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar.
 Ein Nachteil von Python im Vergleich zu C ist jedoch definitiv die Performance.
 Für manche rechenintensiven Anwendungen ist Python weniger geeignet.
-In AlgDat geht es aber um Effizient von Algorithmen und Datenstrukturen, also Konzepte, und nicht um die Erstellung eines hochperformaten Software-Produkts.
+In dieser Einführung handelt es sich aber um Effizienz von Algorithmen und Datenstrukturen, also Konzepte, und nicht um die Erstellung eines hochperformaten Software-Produkts.
 
 Python ist also wunderbar, um eine Idee eines Algorithmus zu testen und dafür zu sorgen, dass dieser funktioniert. 
 Darauffolgend kann man diesen nun in eine schnellere Programmiersprache wie C umschreiben, womit man sich wiederum doch um die Details Gedanken machen muss.
@@ -81,5 +80,3 @@ Des Weiteren ist Python die Programmiersprache für künstliche Intelligenz und 
 Webseiten können mit Hilfe des "Django" Frameworks ebenfalls in Python programmiert werden.
 
 Die investierte Zeit, Python zu lernen, sollte sich also lohnen.
-
-

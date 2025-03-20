@@ -1,6 +1,6 @@
 # Klassen
 
-**Klassen sind in dem Modul AlgDat nur bei Bäumen von Relevanz. Und da wird eher weniger auf den Python-Code eingegangen. Entscheiden Sie für sich selbst, ob Sie sich dennoch damit auseinandersetzen wollen.**
+**Bei Klassen handelt es sich eher um ein Fortgeschritteneres Thema. Bei den meisten Algorithmen, wird kein Gebrauch von Klassen gemacht. Wenn Sie aber z.B. Datenstrukturen programmieren wollen, werden Sie es sehr wahrscheinlich mit Klassen machen wollen. Entscheiden Sie für sich selbst, ob Sie sich damit auseinandersetzen wollen.**
 
 Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.
 
@@ -29,7 +29,6 @@ Hier unterscheidet man zwischen Klassenattributen und Instanzattributen.
 
 Kurzgesagt: Klassenattribute sind für alle Objekte einer Klasse gleich und können unabhängig von einem Objekt abgerufen werden.
 
-Im Rahmen von AlgDat wird das nicht gebraucht. Es soll hier nur erwähnt sein.
 ```Python
 class meineKlasse:
 	klassen_id = 2 # Klassenattribut

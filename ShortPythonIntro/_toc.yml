@@ -3,20 +3,24 @@
 
 format: jb-book
 root: index
-chapters:
-- file: Interaktivitaet
-- file: 1_Motivation
-- file: 2_Wie_nutzen_wir_Python
-- file: 3_1_Output_und_Input
-- file: 3_2_Erstellen_von_Kommentaren
-- file: 3_3_Datentypen
-- file: 3_4_Zuweisungen
-- file: 3_5_Arithmetische_Operatoren
-- file: 3_6_Bibliotheken_und_mathematische_Funktionen
-- file: 3_7_Einrueckung_und_Abfragen_von_Bedingungen
-- file: 3_8_Logische_Ausdruecke
-- file: 4_Listen
-- file: 5_Schleifen
-- file: 6_Funktionen
-- file: 7_Klassen
-- file: 8_Weitere_Aufgaben
+parts:
+  - caption: Fundamental
+    chapters:
+    - file: Interaktivitaet
+    - file: 1_Motivation
+    - file: 2_Wie_nutzen_wir_Python
+    - file: 3_1_Output_und_Input
+    - file: 3_2_Erstellen_von_Kommentaren
+    - file: 3_3_Datentypen
+    - file: 3_4_Zuweisungen
+    - file: 3_5_Arithmetische_Operatoren
+    - file: 3_6_Bibliotheken_und_mathematische_Funktionen
+    - file: 3_7_Einrueckung_und_Abfragen_von_Bedingungen
+    - file: 3_8_Logische_Ausdruecke
+    - file: 4_Listen
+    - file: 5_Schleifen
+    - file: 6_Funktionen
+    - file: 7_Weitere_Aufgaben
+  - caption: Fortgeschritten
+    chapters:
+    - file: 8_Klassen
