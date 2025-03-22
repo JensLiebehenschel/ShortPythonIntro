@@ -6,26 +6,26 @@ root: index
 parts:
   - caption: Fundamental
     chapters:
-    - file: Interaktivitaet
-    - file: 1_Motivation
-    - file: 2_Wie_nutzen_wir_Python
-    - file: 3_1_Output_und_Input
-    - file: 3_2_Erstellen_von_Kommentaren
-    - file: 3_3_Datentypen
-    - file: 3_4_Zuweisungen
-    - file: 3_5_Arithmetische_Operatoren
-    - file: 3_6_Bibliotheken_und_mathematische_Funktionen
-    - file: 3_7_Einrueckung_und_Abfragen_von_Bedingungen
-    - file: 3_8_Logische_Ausdruecke
-    - file: 4_Listen
-    - file: 5_Schleifen
-    - file: 6_Funktionen
-    - file: 7_Weitere_Aufgaben
-  - caption: Fortgeschritten
+    - file: interactivity
+    - file: motivation
+    - file: how-we-use-python
+    - file: input-and-output
+    - file: comments-in-python
+    - file: data-types
+    - file: assignments-in-python
+    - file: arithmetic-operators
+    - file: libraries-and-mathematical-functions
+    - file: indentation-and-conditional-statements
+    - file: logical-expressions
+    - file: lists
+    - file: loops
+    - file: functions
+    - file: further-exercises
+  - caption: Advanced
     chapters:
-    - file: 8_Fortgeschrittene_Konzepte
-    - file: 9_Klassen
-    - file: 10_Dictionaries
-    - file: 11_Tupel
-    - file: 12_Mengen
-    - file: 13_Matrizen
+    - file: advanced-concepts
+    - file: classes
+    - file: dictionaries
+    - file: tuples
+    - file: sets
+    - file: matrices
