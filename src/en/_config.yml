@@ -1,0 +1,41 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Short Python Intro
+author: ""
+logo: logo.png
+copyright: "2025"  # Copyright year to be placed in the footer
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: ShortPythonIntro.tex
+
+# Activating Thebe, thus making code cells exectuable
+launch_buttons:
+  thebe: true
+
+# Information about where the book exists on the web
+repository:
+  url                       : https://github.com/JensLiebehenschel/ShortPythonIntro  # Online location of your book
+  path_to_book              : ShortPythonIntro  # Optional path to your book, relative to the repository root
+  branch                    : main  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_directory_urls: true
+  # CC-License: CC BY-NC-ND
+  extra_footer: |
+    Konzept von Jens Liebehenschel, Umsetzung durch Edward Späth <br> Es wird keinerlei Haftung übernommen. / No warranty of any kind. <br> <a href="https://www.frankfurt-university.de/de/hochschule/fachbereich-2-informatik-und-ingenieurwissenschaften/kontakt/professorinnen-und-professoren-im-fachbereich-2/jens-liebehenschel/">Prof. Dr. Jens Liebehenschel</a> <br> liebehenschel@fb2.fra-uas.de <br> +49 69 1533-3948 <br> <a href="https://www.frankfurt-university.de">Frankfurt University of Applied Sciences</a> <br> <a href="https://www.frankfurt-university.de/de/hochschule/fachbereich-2-informatik-und-ingenieurwissenschaften/willkommen-am-fb-2/">Fachbereich 2: Informatik und Ingenieurwissenschaften</a> <br> <br> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International Lizenz</a>.
+
+sphinx:
+  config:
+    html_show_copyright: false
