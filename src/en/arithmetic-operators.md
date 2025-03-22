@@ -1,146 +1,137 @@
-# Arithmetische Operatoren
+# Arithmetic operators
 
-In Python hat man natürlich die klassischen Grundrechenarten wie <code>+, -, *</code> und <code>/</code>.
+Python of course offers the basic arithmetic operators such as <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code>.
 
 ```Python
 x = 5+5
 print(x)
-# 10
+# --> 10
 
 x = 3*5
 print(x)
-# 15
+# --> 15
 ```
 
-Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu erhöhen, ist der Operator <code>++</code>.
+A common shortcut in programming languages such as C or Java to increment a value, is the operator <code>++</code>.
 
 ```C
 i++;
 ```
-ist das Gleiche wie
+is the same as
 ```C 
 i = i + 1;
 ```
-In Python ist dies **nicht** möglich.
+In Python this is **not** possible.
 
-Das ist nicht so tragisch, da man sowieso viel seltener einen Wert um 1 erhöht im Vergleich zu anderen Programmiersprachen.
-Das wird sich auch später bei den Schleifen zeigen.
+This not really that tragic, since incrementing a value is not done as often in Python as it is done in other programming languages. This can be seen when discussing loops later.
 
-Als Alternative in Python soll 
+As the alternative, 
 ```Python
 i += 1 
 ```
-genutzt werden, welches ebenfalls äquivalent zu 
+should be used for incrementing a value in Python, which is also equivalent to
 ```Python
 i = i + 1
 ```
-ist.
-Das funktioniert analog für Minus, also <code>x -= 1</code> zu ersetzen ist.
 
-Allgemein werden die Operatoren <code>+=, &#045;=, \*=</code> und <code>/=</code> so genutzt:
+This works the same for subtraction, i.e., writing <code>x -= 1</code> instead of <code>x--</code>
+
+More generally the operators <code>+=, &#045;=, \*=</code> and <code>/=</code> are used like this:
+
 ```Python
-x RECHENOPERATION= n
+x OPERATOR= n
 
-# ist äquivalent zu
+# is equivalent to
 
-x = x RECHENOPERATION n
+x = x OPERATOR n
 ```
 
-Beispiel:
+Example:
 ```Python
 x += 5
 
-# ist äquivalent zu
+# is equivalent to
 
 x = x + 5
 ```
 
-Es gibt auch die noch relativ übliche Modulo-Operation mit dem Prozentzeichen (<code>%</code>).
-Kurze Auffrischung: 
-Das Ergebnis von <code>a % b</code> (a modulo b bzw. a mod b) ist der Divisionsrest bei <code>a/b</code>.
+There is also the relatively common modulo operator using the percentage sign (<code>%</code>).
+Reminder:
+The result of <code>a % b</code> (a modulo b bzw. a mod b) is the division remained of the division <code>a/b</code>.
 ```Python
 x = 8 % 3
 print(x)
-# 2
+# --> 2
 ```
 
-Des Weiteren gibt es die Integer Division mit dem Operator <code>//</code>
-Diese Operation berechnet den normalen Quotienten <code>c = a/b</code>, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
-Der Rest wird sozusagen abgeschnitten.
+Furthermore, there is the operator <code>//</code> for integer division.
+This operation calculates the regular quotient <code>c = a/b</code>, but <code>c</code> will be rounded down to the next-lowest integer, if <code>c</code> is not an integer already. The remained will be omitted.
 
-Man kann 
+One can also rewrite
 ```Python
 a // b 
 ```
-aber auch umschreiben zu 
+to
 ```Python
 math.floor(a/b)
 ```
-Beispiel:
+where the rounding down is done explicitly.
+Example:
 ```Python
 x = 5 // 2
 print(x)
-# 2
+# --> 2
 
 import math
 x = math.floor(5/2)
 print(x)
-# 2
+# --> 2
 ```
 
-<code>math.floor()</code> ist eine Funktion der Python math library, welche einen Input bekommt und diesen auf den nächsten Integer Wert abrundet.
-Wie man Bibliotheken nutzt, wird später erklärt.
+<code>math.floor()</code> is a function of the math library in Python, which takes a value as input and rounds it down the next-lowest integer if it is not an integer already. The usage of library functions will be discussed in a later chapter.
 
+Last but not least, there is the power operator <code>\*\*</code>, which is used to represent exponentiation.
 
-Zu guter Letzt, gibt es den Power-Operator, um Werte mit Exponenten auszurechnen.
-Dafür werden zwei aufeinanderfolgende Sterne benutzt(<code>\*\*</code>).
-
-Zum Beispiel berechnet mit <code>2 \*\* 5</code> den Wert 2<sup>5</sup> (2 hoch 5).
+For example, <code>2 \*\* 5</code> would evaluate to 2<sup>5</sup> (2 to the power of 5).
 ```Python
 x = 3 ** 3
 print(x)
-# 27
+# --> 27
 ```
 
-Für die letzten drei Operatoren gibt es ebenfalls die Operatoren <code>%=</code>, <code>//=</code> und <code>\*\*=</code>.
+For the last three operators, there are also the operators <code>%=</code>, <code>//=</code> and <code>\*\*=</code>.
 ```Python
 x = 5
 x //= 5
 ```
-ist äquivalent zu:
+is equivalent to:
 ```Python
 x = 5
 x = x // 5
 ```
 
+## Mathematical operators in a non-mathematical context
+Depending on the context, arithmetic operators can also have a different meaning.
+The addition operator for two numbers represents an addition, but what about the addition operator for two strings?
 
-## Mathematische Operatoren im nicht mathematischen Kontext
+An arithmetic sum of two strings is most often not desired, therefore the addition operator has a different meaning for objects, which are not numbers.
 
-Eigentlich arithmetische Operatoren können je nach Kontext auch etwas anderes bedeuten. 
-Wenn es um zwei Zahlen geht, dann handelt es sich um eine Rechnung. Was wäre nun aber die Summe von zwei Strings?
-
-Eine Summe von zwei Strings ist meist nicht sinnvoll, deshalb hat etwa der Operator <code>+</code> bei Objekten, welche keine Zahlen sind,
-verschiedene Bedeutungen.
-
-Um bei dem Beispiel von den zwei Strings zu bleiben, lässt sich die Funktionsweise hier beobachten:
-
+For the example with the two strings, the following functionality can be observed:
 ```Python
 a = "Hello"
 b = "World!"
 
 print(a + b)
-# HelloWorld!
+# --> "HelloWorld!"
 ```
 
-Es fand also eine Konkatenierung statt. Der zweite String wurde an das Ende des ersten Strings angehängt.
-Um es mit einem Leerzeichen zwischen "Hello" und "World!" schöner aussehen zu lassen, kann man erst ein Leerzeichen an das Ende des ersten Strings konkatenieren, bevor man den zweiten String anhängt:
-
+A concatenation has taken place. The second string was appended to the first string. To format it slightly better, one can add a whitespace between the two strings with the same method:
 ```Python
 a = "Hello"
 b = "World!"
 
 print(a + " " + b)
-# Hello World!
+# --> "Hello World!"
 ```
 
-Oft bedeutet der Operator <code>+</code> außerhalb von Rechnungen Konkatenierung.
+Outside of numeric calculations, the addition operator often indicates concatenation. But depending on context, it may mean something different. One is advised to read up on the specific functionality for a given context.

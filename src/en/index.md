@@ -1,17 +1,17 @@
-# Ziel
+# Goal
 
-Initial für das Modul "Algorithmen und Datenstrukturen" an der Frankfurt University of Applied Sciences entwickelt,
-soll diese Ressource die Basics von Python näher bringen oder als Crashkurs dienen. Anstelle von Pseudocode wird oft die Programmiersprache verwendet. Python-Code vereint eine gute Lesbarkeit des Pseudocodes mit der Ausführbarkeit einer echten Programmiersprache.
-Python ist auch die Programmiersprache, welche wir in unserem E-Assessment benutzen. Bei Interesse, können Sie [hier](https://jensliebehenschel.github.io/ADLT/) mehr Information dazu finden.
+Initially developed for the course "algorithms and data structures" at the Frankfurt University of Applied Sciences,
+this resource aims to introduce the basics of the Python programming language or serve as a refresher of knowledge.
+Python code is often used as a replacement for pseudocode, since Python combined the readability of psuedocode with the ability of actually being executed like a real programming language.
+Python is also the programming language, which serves as the basis for our e-assessment system. For those interested, more information can be found [here](https://jensliebehenschel.github.io/ADLT/).
 
-Diese Kurz-Einführung in Python deckt fast alle Konstrukte ab, die in klassischen Algorithmen und Datenstrukturen verwendet werden. Nach dem Durcharbeiten, können Sie die meisten Python-Codes für übliche Algorithmen und Datenstrukturen  nachvollziehen.
+This short introduction to Python covers most concepts, which are required to understand the most relevant algorithms and data structures. After completion of this introduction, you will be able to understand the Python code behind the most relevant algorithms and data structures.
 
-Argumente für das Lernen von Python gibt es viele, Sie können diese auf der nächsten Seite nachlesen.
+The are many reasons for picking up Python. Those, you may read on the next page.
 
-Hier ist das Inhaltsverzeichnis, um direkt in ein bestimmtes Kapitel springen zu können.
+Here is a table contents, with which you can jump to a specific chapter directly.
 
 ```{tableofcontents}
 ```
 
-Herzlichen Dank an Edward Späth, der in sehr kurzer Zeit diese schöne Einführung in Python erstellt hat.
-Außerdem danke ich allen Studierenden, die durch Feedback zur Verbesserung dieser Einführung beigetragen haben.
+Thank you very much to Edward Späth, who created this beautiful Python introduction in a very short timespan. Furthermore, I would like to thank all students, who contributed to the improvement of this introduction by providing feedback.

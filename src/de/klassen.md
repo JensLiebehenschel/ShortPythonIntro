@@ -9,12 +9,12 @@ da dies notwendig ist, wenn man Binärbäume programmieren möchte.
 Zum Definieren einer Klasse wird das Keyword <code>class</code> gefolgt vom Klassennamen genutzt.
 Daraufhin kann man noch leere runde Klammern setzten und man beendet die Zeile mit einem Doppelpunkt.
 ```Python
-class meineKlasse:
+class MeineKlasse:
     <Klassendefinition>
 ```
 und
 ```Python
-class meineKlasse():
+class MeineKlasse():
     <Klassendefinition>
 ```
 führen also auf das Gleiche hinaus.
@@ -28,8 +28,11 @@ Hier unterscheidet man zwischen Klassenattributen und Instanzattributen.
 Kurzgesagt: Klassenattribute sind für alle Objekte einer Klasse gleich und können unabhängig von einem Objekt abgerufen werden.
 
 ```Python
-class meineKlasse:
+class MeineKlasse:
 	klassen_id = 2 # Klassenattribut
+
+print(MeineKlasse.klassen_id)
+# --> 2
 ```
 
 Viel Interessanter hier sind Instanzattribute.
@@ -62,28 +65,28 @@ Der erste Parameter, der an eine Methode übergeben wird, ist die Instanz der Kl
 
 Laut Konvention bezeichnet man diesen Parameter als <code>self</code>. Man könnte ihn auch anders nennen.
 Um Attribute einer Instanz zu erzeugen, muss die Instanz mit <code>self</code> oder wie auch immer man es nennen möchte, angesprochen werden.
-Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperator genutzt.
+Um auf Attribute oder Methoden einer Instanz zuzugreifen, wird der Punktoperator genutzt.
 
 Beispiel einer Klasse mit Konstruktor:
 ```Python
-class meineKlasse:
+class MeineKlasse:
 	def __init__(self, a_input, b_input):
 		self.a = a_input
 		self.b = b_input
 		self.c = None  # None ist das Python Äquivalent zu NULL
 
-meine_instanz = meineKlasse(1,2)  # Konstruktor Aufruf mit Parametern
+meine_instanz = MeineKlasse(1,2)  # Konstruktor Aufruf mit Parametern
 print(meine_instanz.a)
-# 1
+# --> 1
 print(meine_instanz.b)
-# 2
+# --> 2
 print(meine_instanz.c)
-# None
+# --> None
 ```
 
 Nun ein Beispiel mit einem Konstruktor, einer Methode und einer lokalen Variable im Konstruktor:
 ```Python
-class meineKlasse:
+class MeineKlasse:
 	def __init__(self, a_input, b_input):
 		self.a = a_input
 		self.b = b_input
@@ -95,24 +98,24 @@ class meineKlasse:
 		self.e = 8  # Das Attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden
 
 
-meine_instanz = meineKlasse(1,2)
+meine_instanz = MeineKlasse(1,2)
 print(meine_instanz.a)
-# 1
+# --> 1
 print(meine_instanz.b)
-# 2
+# --> 2
 print(meine_instanz.c)
-# None
+# --> None
 
 meine_instanz.berechne_c(3)
 print(meine_instanz.c)
-# 5
+# --> 5
 
 print(meine_instanz.e)
-# 8
+# --> 8
 
 print(meine_instanz.d)
-# AttributeError: 'meineKlasse' object has no attribute 'd'
-# --> d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor
+# --> AttributeError: 'MeineKlasse' object has no attribute 'd'
+# d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor
 ```
 
-Nicht vergessen, dass vor jedem Attribut einer Instanz innerhalb einer Methode das Präfix <code>self.</code> geschrieben werden muss, ansonsten ist es ein Parameter oder eine lokale Variable.
+Nicht vergessen, dass vor jedem Attribut einer Instanz innerhalb einer Methode das Präfix <code>self.</code> geschrieben werden muss, ansonsten ist es eine lokale Variable.

@@ -1,75 +1,74 @@
-# Zuweisungen
+# Assignments in Python
 
-## Der Zuweisungsoperator
+## The assignment operator
 
-Wie Sie bereits gesehen haben, ist in Python wie auch in anderen Programmiersprachen <code>&equals;</code> der normale Zuweisungsoperator. Dessen Funktion sollte bekannt sein.
+As we have already seen, Python also uses <code>&equals;</code> as the normal assignment operator, just like most other programming languages. The basic function of said operator need no further introduction.
 
-In Python hat dieser jedoch zusätzliche Funktionalität.
-Normalerweise hat der Zuweisungsoperator einen Operanden auf der linken Seite und einen Operanden auf der rechten Seite,
-also:
+But in Python it has additional functionality.
+Normally the assignment operator has one operand on the left side and one operand on the right side,
+i.e.,
 ```Python
 a = b
 ```
 
-In Python gibt es diese Einschränkung nicht. Es müssen jediglich auf beiden Seiten gleich viele Operanden sein. Somit ist es möglich mit einem Zuweisungsoperator eine Mehrfachzuweisung durchzuführen.
-Die Operanden müssen durch Kommata getrennt sein.
+But Python does not have this restriction. Simply put, there just have to be the same amount of operands on both sides. Therefore, is is possibly to perform multiple assignments in one operation. The operands on each side are separated by commas.
 
-Beispiel:
+Example:
 ```Python
-# a soll den Wert 5 haben und b soll den Wert 10 haben
+# a should get the value 5 and b should get the value 10
 a,b = 5,10
 ```
-Oder allgemeiner geschrieben:
+Or expressed more generally:
 ```Python
-variable1, variable2, ... = wert_für_variable1, wert_für_variable2, ...
+variable1, variable2, ... = value_for_variable1, value_for_variable2, ...
 ```
 
-Wenn beide Seiten nicht gleich lang sind, funktioniert es nicht, wie hier:
+If both sides do not have equal length, it will not work, just like in this example:
 ```Python
 a,b = 10
 a,b = 5,10,15
+# --> ValueError: too many values to unpack (expected 2)
 ```
-Wenn man a und b den Wert 10 zuweisen möchte, kann man das wie folgt machen:
+If one wants to assign the same value to multiple variables, it should be done like this:
 ```Python
 a,b = 10,10
 ```
 
-## Aufgabe
+# Exercise
+Operands on the right side can be literal values or variables.
 
-Operanden der rechten Seite können ja sowohl konkrete Werte aber auch Variablen sein.
-
-Was wäre nun bei:
+What do you think would happen if one were to do this:
 ```Python
 a = 5
 b = 10
 
 a,b = b,a
 
-# a?
-# b?
-# unerlaubte Operation?
+# What value will a have?
+# What value will b have?
+# Is this an illegal operation, 
+# which results in an error?
 ```
 
-:::{admonition} Lösung
+:::{admonition} Solution
 :class: dropdown
 
-Antwort: a ist 10, b ist 5
+Solution: a will be 10, b will be 5
 
-Es wurde also ein Swap durchgeführt.
+A swap of the two variables was performed.
 
-Man kann sich das vorstellen wie einen Shortcut für:
+One can imagine it as a shortcut for:
 
 ```Python
 temp = a
 a = b
 b = temp
 
-# Gleichzeitiges Tauschen von drei oder mehr Variablen ist ebenfalls möglich.
-# Der Tausch von zwei Variablen wird jedoch praktisch gesehen häufiger benötigt.
+# Swapping of three or more variables is also possible.
+# But swapping two variables is the more common use case.
 ```
 
-Allgemeiner formuliert:
-Zunächst werden alle Operanden auf der rechten Seite komplett ausgewertet und 
-danach den Variablen auf der linken Seite zugewiesen.
+More generally:
+First all operands on the right side are evaluated, and only then are they assigned to the left side.
 
 :::

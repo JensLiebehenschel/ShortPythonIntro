@@ -1,15 +1,15 @@
 # Arithmetische Operatoren
 
-In Python hat man natürlich die klassischen Grundrechenarten wie <code>+, -, *</code> und <code>/</code>.
+In Python hat man natürlich die klassischen Grundrechenarten wie <code>+</code>, <code>-</code>, <code>*</code> und <code>/</code>.
 
 ```Python
 x = 5+5
 print(x)
-# 10
+# --> 10
 
 x = 3*5
 print(x)
-# 15
+# --> 15
 ```
 
 Ein gängiger Shortcut in Programmiersprachen wie C oder Java, um einen Wert um 1 zu erhöhen, ist der Operator <code>++</code>.
@@ -61,11 +61,11 @@ Das Ergebnis von <code>a % b</code> (a modulo b bzw. a mod b) ist der Divisionsr
 ```Python
 x = 8 % 3
 print(x)
-# 2
+# --> 2
 ```
 
 Des Weiteren gibt es die Integer Division mit dem Operator <code>//</code>
-Diese Operation berechnet den normalen Quotienten <code>c = a/b</code>, jedoch wird c, falls c nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
+Diese Operation berechnet den normalen Quotienten <code>c = a/b</code>, jedoch wird <code>c</code>, falls <code>c</code> nicht bereits ganzzahlig ist, auf den nächstkleineren Integerwert abgerundet.
 Der Rest wird sozusagen abgeschnitten.
 
 Man kann 
@@ -80,12 +80,12 @@ Beispiel:
 ```Python
 x = 5 // 2
 print(x)
-# 2
+# --> 2
 
 import math
 x = math.floor(5/2)
 print(x)
-# 2
+# --> 2
 ```
 
 <code>math.floor()</code> ist eine Funktion der Python math library, welche einen Input bekommt und diesen auf den nächsten Integer Wert abrundet.
@@ -99,7 +99,7 @@ Zum Beispiel berechnet mit <code>2 \*\* 5</code> den Wert 2<sup>5</sup> (2 hoch 
 ```Python
 x = 3 ** 3
 print(x)
-# 27
+# --> 27
 ```
 
 Für die letzten drei Operatoren gibt es ebenfalls die Operatoren <code>%=</code>, <code>//=</code> und <code>\*\*=</code>.
@@ -129,7 +129,7 @@ a = "Hello"
 b = "World!"
 
 print(a + b)
-# HelloWorld!
+# --> "HelloWorld!"
 ```
 
 Es fand also eine Konkatenierung statt. Der zweite String wurde an das Ende des ersten Strings angehängt.
@@ -140,7 +140,7 @@ a = "Hello"
 b = "World!"
 
 print(a + " " + b)
-# Hello World!
+# --> "Hello World!"
 ```
 
-Oft bedeutet der Operator <code>+</code> außerhalb von Rechnungen Konkatenierung.
+Oft bedeutet der Operator <code>+</code> außerhalb von Rechnungen Konkatenierung. Gegebenenfalls muss man aber nachlesen, was ein jeweiliger Operator in einem gegebenen Kontext macht.

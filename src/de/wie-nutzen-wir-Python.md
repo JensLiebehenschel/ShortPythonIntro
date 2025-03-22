@@ -13,7 +13,7 @@ Somit können wir die <code>sort()</code>-Funktion nicht nutzen.
 
 Theoretisch könnte also jeder Sortieralgorithmus durch die Zeile 
 ```Python
-ArrayNameHier.sort()
+listen_name.sort()
 ```
 ersetzen werden und das Gleiche erzielen.
 Ziel ist vielmehr eine Funktion wie <code>sort()</code> selbst schreiben zu können,

@@ -28,6 +28,7 @@ Wenn beide Seiten nicht gleich lang sind, funktioniert es nicht, wie hier:
 ```Python
 a,b = 10
 a,b = 5,10,15
+# --> ValueError: too many values to unpack (expected 2)
 ```
 Wenn man a und b den Wert 10 zuweisen möchte, kann man das wie folgt machen:
 ```Python
@@ -45,9 +46,10 @@ b = 10
 
 a,b = b,a
 
-# a?
-# b?
-# unerlaubte Operation?
+# Welchen Wert wird a haben?
+# Welchen Wert wird b haben?
+# Ist das eine unerlaubte Operation, 
+# welche zu einem Fehler führt?
 ```
 
 :::{admonition} Lösung

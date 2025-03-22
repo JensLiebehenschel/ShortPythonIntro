@@ -17,13 +17,13 @@ Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben möchte, dann kann 
 
 x = 5
 print(type(x))
-# <class 'int'>
-# --> x ist intern ein Integer
+# --> <class 'int'>
+# x ist intern ein Integer
 
 x = str(x)  # Typecasting von der Variable x zum Datentyp String
 print(type(x))
-# <class 'str'>
-# --> x ist nun intern ein String
+# --> <class 'str'>
+# x ist nun ein String
 ```
 
 ## Jede Variable muss initialisiert sein
@@ -52,17 +52,17 @@ Es gibt jedoch Fälle, in denen man eine Variable deklarieren aber nicht sofort 
 Dafür kann ein Nullwert genutzt werden, damit die Variable initialisiert ist. In Python ist dies mit dem Keyword <code>None</code> möglich. 
 Anschließend kann man der Variable später einen Wert zuweisen, sobald es soweit ist.
 ```Python
-value = None
-print(value)
-# None
+wert = None
+print(wert)
+# --> None
 
-value = 5
-print(value)
-# 5
+wert = 5
+print(wert)
+# --> 5
 
-value = "Hello World!"
-print(value)
-# Hello World!
+wert = "Hello World!"
+print(wert)
+# --> "Hello World!"
 ```
 
 ## Hinweis zu Semikola
@@ -75,7 +75,7 @@ Beispiel:
 
 ```Python
 x = 5; print(x)
-# 5
+# --> 5
 ```
 
 ## Hinweis zu Strings

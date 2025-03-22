@@ -1,95 +1,83 @@
-# Datentypen
+# Data Types
 
-## Dynamic Typing
+## Dynamic typing
 
-Python besitzt alle aus anderen Programmiersprachen bekannten Datentypen. Seien es Integer, Gleitkommazahlen oder Strings.
-Der Unterschied in Python ist, dass man sich in der Regel nicht um Datentypen kümmern muss.
-Der Grund dafür liegt in Pythons "Dynamic Typing".
-Hier nochmal die Erklärung:
-Beim Dynamic Typing kümmert sich - einfach gesagt - der Python Interpreter um Datentypen, eine Angaben ist nicht notwendig.
+Python has most data types of other known programming languages, be it integers, floating points values or strings.
+The difference is, that in Python one does not typically have to concern themselves with the data type.
+The reason for that is Python's concept of "dynamic typing".
+Here is an explanation:
+Simply put, with dynamic typing, the Python interpreter concerns himself with data types. The developer does not have to statically assign data types to variables, functions and so on.
 
-Dies macht es sehr einfach, mit Python zu arbeiten, da man weniger tippen muss und sich nicht überlegen zu braucht, ob etwa eine bestimmte Variable immer ein Integer bleibt, oder ob es nicht doch ein Szenario gibt, in welchem daraus eine Gleitkommazahl werden könnte.
-Wenn man eine Zahl jedoch in einem bestimmten Datentyp haben möchte, dann kann man Typecasting machen und somit den Typen explizit angeben. Dieser kann sich dann aber trotzdem noch ändern, wenn der Variable ein neuer Wert zugewiesen wird.
+This makes it very easy to work with Python, since the author has to write less code and need not concern themselves whether e.g., a single variable will always be of one consistent data type. For example, whether a variable will always stay an integer or if there were an option, where the result may become a floating points number.
+Nevertheless, if one want a variable in a specific data type, then one can perform a type cast and explictly convert a value to a given type. This type can still change after the cast, if a new value is assigned.
 
 ```Python
-# Bei der Funktion type(x) handelt es es sich um eine Funktion, 
-# welche zurückgibt, welchen Datentypen das Objekt x hat. 
+# The function type(x) returns the datatype of the variable x. 
 
 x = 5
 print(type(x))
-# <class 'int'>
-# --> x ist intern ein Integer
+# --> <class 'int'>
+# x is an integer
 
-x = str(x)  # Typecasting von der Variable x zum Datentyp String
+x = str(x)  # Type casting the integer to a string
 print(type(x))
-# <class 'str'>
-# --> x ist nun intern ein String
+# --> <class 'str'>
+# x is now a string
 ```
 
-## Jede Variable muss initialisiert sein
+## Every variable has to be initialized
 
-In Programmiersprachen wie C, unterscheidet man zwischen Deklaration und Initialisierung einer Variable.
+In programming languages such as C, there is a difference between declaration and initialization of a variable.
 
-Bei einer Deklaration wird kein Wert zugewiesen, sondern nur Datentyp und Name angegeben:
+A declaration does not assign a value, it just specifies a data type and name for the variable.
 ```C
 int i;
 ```
-Bei einer Initialisierung wird einer bereits deklarierten Variable ein Wert zugewiesen:
-```C
-i = 5;
-```
-Man kann beides auch gleichzeitig machen mit:
+One can also perform declaration and initialization at the same time:
 ```C
 int i = 5;
 ```
-In Python kann man keine Variable deklarieren ohne sie auch zu intialisieren.
-Ein Fall wie
+In Python it is not possible to declare a variable without also initializing it.
+Some thing like
 ```C
 int i;
 ```
-ist also in Python nicht möglich.
-Es gibt jedoch Fälle, in denen man eine Variable deklarieren aber nicht sofort initialisieren möchte.
-Dafür kann ein Nullwert genutzt werden, damit die Variable initialisiert ist. In Python ist dies mit dem Keyword <code>None</code> möglich. 
-Anschließend kann man der Variable später einen Wert zuweisen, sobald es soweit ist.
+is not possible in Python.
+But there are cases, where one wants to declare a varaible without initializing it directly. For this, the variable can be initialized with a null value. In Python this is done with the keyword <code>None</code>.
+After that, the variable can later be assigned a value of any type, when one wants to.
 ```Python
 value = None
 print(value)
-# None
+# --> None
 
 value = 5
 print(value)
-# 5
+# --> 5
 
 value = "Hello World!"
 print(value)
-# Hello World!
+# --> "Hello World!"
 ```
 
-## Hinweis zu Semikola
+## Note regarding semicolons
 
-Wie von aufmerksamen Lesenden bereits bemerkt, besitzt keine dieser Anweisungen ein Semikolon am Ende. Dies ist kein Fehler.
-Semikolons werden am Ende einer Zeile nicht benötigt.
-Der einzige Nutzen von Semikolons ist das Schreiben von mehreren Anweisungen in der selben Zeile.
-
-Beispiel:
-
+The attentive reader may have noticed, that none of the statements in the Python code end with a semicolon. This is not an error. Semicolons are not needed to end a statment. The only usage of semicolons is to have multiple statements in the same line.
+Example:
 ```Python
 x = 5; print(x)
-# 5
+# --> 5
 ```
 
-## Hinweis zu Strings
+## Note regarding strings
+In Python, strings can have two different delimiters. Either double quotes or single quotes. They can also be mixed withing the same program, but they are not allowed to be mixed in the same string.
 
-In Python können Strings entweder mit einfachen Anführungszeichen oder doppelten Anführungszeichen angegeben werden.
-Man kann auch innerhalb eines Programms beides benutzen, jedoch kann man nicht beides innerhalb von einem String benutzen.
-
-Gültig:
+Valid:
 ```Python
 "Text"
 'Text'
 ```
 
-Ungültig:
+Invalid:
 ```Python
 "Text'
 'Text"

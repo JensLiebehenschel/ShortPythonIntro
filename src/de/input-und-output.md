@@ -1,23 +1,21 @@
-# Output und Input
+# Input und Output
 
 ## Ausgabe
-Wie auch in anderen Programmiersprachen, ist die Ein- und Ausgabe in einem Terminalfenster essenziell. Zumindest für die meisten Programme im Kontext des Studiums.
+Wie auch in anderen Programmiersprachen, ist die Ein- und Ausgabe in einem Terminalfenster essenziell. Zumindest für die meisten einfachen Programme.
 
 Um in Python etwas in ein Terminalfenster ausgeben zu können, wird die Funktion <code>print()</code> benutzt.
 ```Python
-# Einen Namen ausgeben
 name = "Max Mustermann"
 print(name)
-# Max Mustermann
+# --> "Max Mustermann"
 ```
 Die <code>print()</code> Funktion kann auch mehrere Parameter entgegennehmen.
 In diesem Fall werden die gegebenen Parameter mit einem Leerzeichen dazwischen konkateniert.
 ```Python
-# Ein etwas komplexeres print()
 name1 = "Max Mustermann"
 name2 = "John Doe"
 print(name1, "ist mit", name2, "befreundet.")
-# Max Mustermann ist mit John Doe befreundet.
+# --> "Max Mustermann ist mit John Doe befreundet."
 ```
 Am Ende der <code>print()</code> Funktion, wird automatisch ein Zeilenumbruch hinzugefügt.
 Sprich die folgenden Zeilen

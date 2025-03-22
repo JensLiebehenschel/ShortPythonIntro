@@ -1,118 +1,110 @@
-# Klassen
+# Classes
 
-Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.
+Python is an object-oriented programming language, and therefore obviously has the concept of classes.
 
-Auf Vererbung und sonstiges wird hier nicht eingegangen.
-Es geht nur darum, die Syntax von Klassenerstellung und Methoden zu verstehen,
-da dies notwendig ist, wenn man Binärbäume programmieren möchte.
+Inheritance and such will not be discussed here.
+This introduction only tackles the syntax for class definitions and methods, since it is necessary if one wants to program e.g., binary trees.
 
-Zum Definieren einer Klasse wird das Keyword <code>class</code> gefolgt vom Klassennamen genutzt.
-Daraufhin kann man noch leere runde Klammern setzten und man beendet die Zeile mit einem Doppelpunkt.
+To define a class, the keyword <code>class</code> followed by the name of the class. After that one can add empty round brackets and then finish the line with a colon.
 ```Python
-class meineKlasse:
-    <Klassendefinition>
+class MyClass:
+    <Class definition>
 ```
-und
+and
 ```Python
-class meineKlasse():
-    <Klassendefinition>
+class MyClass():
+    <Class definition>
 ```
-führen also auf das Gleiche hinaus.
-Die Klammern nach dem Klassennamen können für Vererbung genutzt werden.
+lead to the same result. The round brackets are used to indicate inheritance.
 
-Nach dem Doppelpunkt folgt ein eingerückter Codeblock. Dort wird die Funktionalität der Klasse definiert.
-Hier unterscheidet man zwischen Klassenattributen und Instanzattributen.
+After the colon, an indented code block follows. There, the actual functionality of the class is defined. A separation is made between class attributes and instance attributes.
 
-## Attribute
+## Attributes
 
-Kurzgesagt: Klassenattribute sind für alle Objekte einer Klasse gleich und können unabhängig von einem Objekt abgerufen werden.
+Class attributes are shared among all objects of a class and can be accessed independently from a concrete instance.
 
 ```Python
-class meineKlasse:
-	klassen_id = 2 # Klassenattribut
+class MyClass:
+	class_id = 2 # Class attribute
+
+print(MyClass.class_id)
+# --> 2
 ```
 
-Viel Interessanter hier sind Instanzattribute.
-Also jene Attribute, welche sich von Instanz zu Instanz bzw. von Objekt zu Objekt unterscheiden.
-Diese werden in der Regel im Konstruktor der Klasse deklariert und initialisiert.
+Way more interesting are instance attributes. I.e., the attributes, which are individual to each instance of a class. Those are generally defined and initialized in the constructor method of the class, but can be defined in any method.
 
-Ein Attribut in Python muss genauso wie eine herkömmliche Variable auch, initialisiert sein.
+Attributes, just like regular variables have to initialized.
 
-Eine Deklaration ohne Initialisierung wie
+A declaration without initialization such as 
 ```C
 int i;
 ```
-ist in Python also nicht möglich.
+is not possible in Python.
 
-Ist im Endeffekt auch nicht schlimm, da man jedem Wert, den man nicht initialisieren möchte, einen Nullwert geben kann.
-In Python mit dem Keyword <code>None</code>.
+This is not that big of a deal, since one can just initialize a variable/attribute with a null value. In Python this is done with the keyword <code>None</code>.
 
-Einer Variable mit dem Wert <code>None</code> kann im Nachhinein alles zugewiesen werden. 
-Seien es Integer, Strings oder gar Instanzen einer Klasse. Dynamic Typing macht dies möglich.
+A variable with the value <code>None</code> can later be assigned values of any type. Be it integers, strings or class instances. Dynamic typing is the reason for that.
 
-## Methoden und Konstruktor
+## Methods and constructor
+Methods, just like functions, are defined with the <code>def</code> keyword in the class block.
+The constructor is just another method, which has to have a predefined method name.
+In contrast to other programming languages, where the constructor usually has the same name as the class, the constructor in Python has to be called <code>&#95;&#95;init&#95;&#95;</code>. When an instance is created, the constructor is automatically executed. Of course, the constructor can also take parameters. These can also have default values. The same rules apply as with regular functions.
 
-Methoden werden in dem eingerückten Block der Klasse mit dem Keyword <code>def</code> erstellt.
-Wie der Konstruktor auszusehen hat, ist in Python genau definiert.
-<!--&#95; ist der HTML code für einen underscore-->
-Im Gegensatz zu anderen Programmiersprachen, bei denen der Konstruktor den Namen der Klasse trägt, muss der Konstruktor in Python den Namen <code>&#95;&#95;init&#95;&#95;</code> haben. Wenn man ein Objekt dieser Klasse erstellt, wird der Konstruktor automatisch aufgerufen. Der Konstruktor kann natürlich auch Parameter erhalten. Diese können ebenfalls Defaultwerte enthalten. Es gelten die gleichen Regeln wie für normale Funktionen.
+One important thing applying to the constructor and all other methods, is that every method has to take one mandatory parameter. The very first parameter to a function is the instance itself. This is done automatically when calling a method.
 
-Für den Konstruktor und andere Methoden gilt, dass selbst bei Methoden ohne Parameter, ein Parameter hinzuzufügen ist.
-Der erste Parameter, der an eine Methode übergeben wird, ist die Instanz der Klasse. Das passiert automatisch und man kann es nicht verhindern.
+According to convention, this first parameter is referred to as <code>self</code>. One can name it differently if one really wants to. <code>self</code> serves the same function as the keyword <code>this</code> in most other object-oriented languages.
+To modify the attributes of the actual instance, the instance has to be addressed with <code>self</code>, or however you decided to name it.
+To access attributes or methods of an instance, the dot operator is used.
 
-Laut Konvention bezeichnet man diesen Parameter als <code>self</code>. Man könnte ihn auch anders nennen.
-Um Attribute einer Instanz zu erzeugen, muss die Instanz mit <code>self</code> oder wie auch immer man es nennen möchte, angesprochen werden.
-Um auf Attribute oder Funktionen einer Klasse zuzugreifen, wird der Punktoperator genutzt.
-
-Beispiel einer Klasse mit Konstruktor:
+Example of a class with a constructor:
 ```Python
-class meineKlasse:
+class MyClass:
 	def __init__(self, a_input, b_input):
 		self.a = a_input
 		self.b = b_input
-		self.c = None  # None ist das Python Äquivalent zu NULL
+		self.c = None  # None is the Python equivalent to null
 
-meine_instanz = meineKlasse(1,2)  # Konstruktor Aufruf mit Parametern
-print(meine_instanz.a)
-# 1
-print(meine_instanz.b)
-# 2
-print(meine_instanz.c)
-# None
+my_instance = MyClass(1,2)  # Constructor call with parameters
+print(my_instance.a)
+# --> 1
+print(my_instance.b)
+# --> 2
+print(my_instance.c)
+# --> None
 ```
 
-Nun ein Beispiel mit einem Konstruktor, einer Methode und einer lokalen Variable im Konstruktor:
+An example with a constructor, a method and a local variable in said method:
 ```Python
-class meineKlasse:
+class MyClass:
 	def __init__(self, a_input, b_input):
 		self.a = a_input
 		self.b = b_input
 		self.c = None
-		d = 5 	# Kein "self." davor, also lokale Variable und kein Attribut. Der Wert existiert nur im Konstruktor
+		d = 5 	# No "self." in the left side of assignment, therefore this is a local variable and not an attribute. This value only exists in the constructor.
 
-	def berechne_c(self, faktor_von_a):
-		self.c = self.a * faktor_von_a + self.b  # Formel: c = a * faktor + b
-		self.e = 8  # Das Attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden
+	def calculate_c(self, factor_of_a):
+		self.c = self.a * factor_of_a + self.b  # Formula: c = a * factor + b
+		self.e = 8  # The attribute e can still be added outside of the constructor.
 
 
-meine_instanz = meineKlasse(1,2)
-print(meine_instanz.a)
-# 1
-print(meine_instanz.b)
-# 2
-print(meine_instanz.c)
-# None
+my_instance = MyClass(1,2)
+print(my_instance.a)
+# --> 1
+print(my_instance.b)
+# --> 2
+print(my_instance.c)
+# --> None
 
-meine_instanz.berechne_c(3)
-print(meine_instanz.c)
-# 5
+my_instance.calculate_c(3)
+print(my_instance.c)
+# --> 5
 
-print(meine_instanz.e)
-# 8
+print(my_instance.e)
+# --> 8
 
-print(meine_instanz.d)
-# AttributeError: 'meineKlasse' object has no attribute 'd'
-# --> d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor
+print(my_instance.d)
+# --> AttributeError: 'MyClass' object has no attribute 'd'
+# d is not an attribute of the class, instead it is just a local variable in the constructor.
 ```
 
-Nicht vergessen, dass vor jedem Attribut einer Instanz innerhalb einer Methode das Präfix <code>self.</code> geschrieben werden muss, ansonsten ist es ein Parameter oder eine lokale Variable.
+Do not forget, that every instance attribute or method has to be prefixed with <code>self.</code> inside of a method, otherwise it will just be a local variable.
