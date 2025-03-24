@@ -1,3 +1,5 @@
+# Anleitung
+
 Dies ist die Anleitung für das Bauen (oder Verändern) eines Jupyter-Books.
 Ich habe ausschließlich unter Linux gearbeitet und weiß dementsprechend nicht wie oder ob man überhaupt unter z.B. Windows mit Jupyter-Books arbeitet.
 Ich entschuldige mich, falls es zu Problemen führt.
@@ -9,7 +11,7 @@ Alle Pfade, welche für Nutzer individuell sind, werden mit "..." markiert. Ich 
 
 ```
 pip install -U jupyter-book
-```file:///home/edward/job/CommitFolder/Anleitung.md
+```
 
 ## Benötigte Dateien
 
@@ -59,31 +61,35 @@ wird genutzt um das Buch zu bauen.
 
 Weitere Informationen: https://jupyterbook.org/en/stable/start/build.html
 
-Konkret im Falle von ShortPythonIntro:
+Konkret im Falle von ShortPythonIntro soll sowohl die deutsche als auch die englische Version gebaut werden:
 
 ```
-jupyter-book build /home/<...>/ShortPythonIntro/
+jupyter-book build .../ShortPythonIntro/src/de
+jupyter-book build .../ShortPythonIntro/src/en
 ```
 
 Als Argument erhält der Befehl, den Ordner wo der Inhalt als auch \_toc.yml und \_config.yml Dateien enthalten sind.
 In diesem Fall als absoluter Pfad beginnend beim Root Directory.
 
-Das Resultat des Bauens, ist der \_build Ordner, welcher sich im ShortPythonIntro Ordner befindet.
+Das Resultat des Bauens, sind die \_build Ordner `.../ShortPythonIntro/src/de/_build` bzw. `.../ShortPythonIntro/src/en/_build`.
 
-Wenn man das Buch ein weiteres mal baut, werden nur die Seiten neue gebaut, wessen source dateien verändert wurden.
+Wenn man das Buch ein weiteres mal baut, werden nur die Seiten neue gebaut, wessen Quelldateien verändert wurden.
 Dies macht das Bauen zwar schneller, jedoch können dadurch Fehler entstehen:
 
 Jede Seite hat ein eigenes Inhaltsverzeichnis am linken Bildschirmrand.
-Wenn eine neue Seite hinzugefügt wurde, wird das Inhaltsverzeichnis bei Seiten wo es keine Veränderung gab, nicht neu gebaut.
+Wenn eine neue Seite hinzugefügt wurde, wird das Inhaltsverzeichnis bei Seiten wo es keine Veränderung gab, nicht neu gebaut. Gleiches gilt auch für umbenennung, etc.
 Dementsprechend ist auf diesen Seiten die neue Seite nicht im Inhaltsverzeichnis enthalten.
 
-Daher empfehle ich, vor dem pushen auf GitHub, dass man den \_build Ordner vollständig löscht und das Jupyter-Book nochmal baut. 
-Somit wird die Seite von Anfang an gebaut und solche Fehler im Inhaltsverzeichnis sind behoben.
-
+Daher empfehle ich besonders vor dem Pushen auf GitHub, die `_build` Ordner zu reinigen. Damit stellt man sicher, dass es keine Probleme mit dem Inhaltsvereichnis gibt. Fehlende Referenzen im \_toc.yml werden dann etwa mit einem Warning gekennzeichnet. 
+Das kann man wie folgt machen:
+```
+jupyter-book clean .../ShortPythonIntro/src/de --all
+jupyter-book clean .../ShortPythonIntro/src/en --all
+```
 
 ## Das gebaute Jupyter-Book lokal öffnen
 
-Um die Webseite im Localhost zu öffnen, muss man nur die "index.html" Datei im Ordner ShortPythonIntro/\_build/html im Webbrowser öffnen. So kann man gucken, ob alles so ist wie man es sich wünscht, bevor man die eigentliche GitHub Pages Seite ändert/die Änderungen nach GitHub pusht.
+Um die Webseite lokal zu öffnen, muss man nur die "index.html" Datei im Ordner .../ShortPythonIntro/src/de/\_build/html im Webbrowser öffnen. So kann man gucken, ob alles so ist wie man es sich wünscht, bevor man die eigentliche GitHub Pages Seite ändert/die Änderungen nach GitHub pusht. Gleiches gilt für die Englische Version. Da die links, welche auf die jeweils andere Sprache verweisen, direkt die gewollten Links auf GitHub Pages öffnet, werden diese lokal ggf. nicht aktuell sein. Daher sichergehen, dass diese Links auch angepasst werden wenn man z.B. Dateinamen ändert. 
 
 ## Die "&lt;!-- Google Analytics --&gt;" Kommentare entfernen
 
@@ -134,79 +140,31 @@ Damit die Änderungen auf GitHub Pages ankommen, benutzt man das Kommandozeilent
 Hier mehr Info: https://jupyterbook.org/en/stable/publish/gh-pages.html
 
 ## Repository auf GitHub pushen
-Man setzt das Working Directory als den Ordner wo README.md, Potentiell_hinzufuegbar.md, usw. enthalten sind. Also den Ordner **über** dem ShortPythonIntro Ordner.
+Änderungen an den Quelldateien sollen bitte gepusht werden. Die \_build Ordner werden vom .gitignore jeweils ignoriert und sollen nicht mitgepusht werden.
 
-Dann führt man
+## GitHub Pages aktualisieren
+Damit die Änderungen sichtbar werden, muss der `gh-pages` Branch aktualisiert werden. Dieser Branch wird automatisch als Quelle für GitHub Pages genutzt, womit das dann am Ende im Internet erreichbar ist.
 
-```
-git init
-```
+Dafür muss der Inhalt von `.../ShortPythonIntro/src/de/\_build/html` von dem **main** Branch in den Ordner `.../ShortPythonIntro/de` auf den **gh-pages** Branch kopiert werden. Das gleiche gilt für `.../ShortPythonIntro/src/en/\_build/html` von dem **main** Branch zu `.../ShortPythonIntro/en` auf dem **gh-pages** Branch.
 
-aus und fügt das Repository in Git hinzu:
+Hier die einzelnen Schritte:
 
-```
-git remote add origin https://github.com/JensLiebehenschel/ShortPythonIntro.git
+Die zwei \_build/html Ordner irgendwo außerhalb des Repositories kopieren.
 
+Branch wechseln
 ```
-Vor einigen Jahren hieß der Defaultbranch in Git "master". Nun wurde er jedoch zu "main" umgenannt.
-Wahrscheinlich benutzt das Git System im Terminal immernoch master als Defaultbranch.
-Das sollte mit diesem Befehl geändert werden können.
-```
-git config --global init.defaultBranch main
+git checkout gh-pages
 ```
 
-nun macht fügt man hinzu, welche Dateien betrachtet werden können und committed die Veränderungen. Beides ist auch in einem Befehl möglich.
+Die zwei \_build/html Ordner in `de/` bzw. `en/` auf dem gh-pages Branch kopieren.
 
+Änderungen in Git hinzufügen, committen und pushen
 ```
-git commit -am 'Commitnachricht hier'    
-```
-auf GitHub pushen:
-
-```
-git push origin main    
+git add .
+git commit -m "Commit-Nachricht hier"
+git push origin gh-pages
 ```
 
-Den oberen Link erhält man auf der GitHub Seite des Repositories, wenn man auf Code geht und den HTTPS Link kopiert
+Wenn alles geklappt hat, sollten die Veränderungen in kürze auch auf der GitHub Pages Seite sichtbar werden.
+Falls nicht, könnte es nützlich sein den Browser Cache für die Webseite zu leeren und die Seite zu aktualisieren.
 
-
-
-### ghp-import installieren
-
-```
-pip install ghp-import
-```
-
-### Den Befehl nutzen
-
-Mit dem Befehl werden die Ergebnisse auf den "gh-pages" Branch gepusht, womit GitHub Pages die aktuellste Version bekommt.
-Der gh-pages Branch wird beim aufrufen dieses Befehls überschrieben. Es sollte also nicht manuell auf dem gh-pages branch gearbeitet werden.
-
-Man muss sehr wahrscheinlich davor Git sagen, welches Repository genutzt werden soll.
-Also muss man zumindest <code>git remote add origin</code> ausführen. (Beschrieben im Kapitel darüber.)
-
-```
-ghp-import -n -p -f /home/.../ShortPythonIntro/_build/html
-```
-
-Daraufhin wird man nach GitHub Benutzername und einem Access Token gefragt.
-
-Git fragt hier zwar nach einem Passwort, jedoch darf man hier kein Passwort angeben. In dem Fall kriegt man eine Benachrichtigung:
-
-```
-remote: Support for password authentication was removed on August 13, 2021.
-remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
-```
-
-in anderen Worten: Man darf seit 2021, keine Passwörter zur Authentifizierung mehr nutzen.
-Deshalb benötigt man einen sogenannten Access Token. Falls nicht vorhanden, muss dieser auf GitHub generiert werden.
-
-Einen Token generiert man in den Einstellungen. Diese URL (https://github.com/settings/tokens) sollte die korrekte Seite in den Einstellungen öffnen. Alternativ:
-
-Oben auf das Profilbild klicken --> Settings --> Developer Settings --> Tokens (classic)
-
-Dort geht man auf "Generate new token" und gibt u.a an wie lange der Token gültig sein soll.
-
-Den generierten Token gibt man nun statt dem Passwort an, wenn man wieder <code>ghp-import</code> ausführt.
-
-Wenn alles geklappt hat, sollte die Veränderungen in kürze auch auf der GitHub Pages Seite sichtbar werden.
-Falls nicht, könnte es nützlich sein den Browser Cache für diese Webseite zu leeren und die Seite zu aktualisieren.
