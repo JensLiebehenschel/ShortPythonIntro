@@ -1,10 +1,11 @@
 # Motivation
+(Click [here](https://de.wikipedia.org/wiki/Wikipedia:Hauptseite) for the german version)
 
 ## Why Python?
 This should be an introduction into the programming language Python.
 Python is a "general-purpose programming language", which due to its properties is quite suitable for the understanding of algorithms and data structures.
 
-# Want more details? Then please continue reading!
+## Want more details? Then please continue reading!
 
 ## Why exactly Python?
 Algorithms and data structures concern themselves with solving problems and organizing data.

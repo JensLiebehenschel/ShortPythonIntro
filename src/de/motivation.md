@@ -5,7 +5,7 @@
 Dies soll eine Einführung in die Programmiersprache Python sein.
 Python ist eine "General-purpose programming language", welche sich durch einige Eigenschaften für das Verstehen von Algorithmen und Datenstrukturen eignet.
 
-# Noch mehr Details? Gerne, dann hier einfach weiterlesen!
+## Noch mehr Details? Gerne, dann hier einfach weiterlesen!
 
 ## Wieso genau Python?
 
