@@ -1,0 +1,639 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Klassen &#8212; Short Python Intro</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'klassen';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dictionaries" href="dictionaries.html" />
+    <link rel="prev" title="Fortgeschrittenere Konzepte" href="fortgeschrittene-konzepte.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Short Python Intro - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Short Python Intro - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Ziel
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamental</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="interaktivitaet.html">Interaktivität dieser Einführung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wie-nutzen-wir-Python.html">Wie nutzen wir Python?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="input-und-output.html">Input und Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="erstellen-von-kommentaren.html">Erstellen von Kommentaren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datentypen.html">Datentypen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zuweisungen.html">Zuweisungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arithmetische-operatoren.html">Arithmetische Operatoren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliotheken-und-mathematische-funktionen.html">Bibliotheken und mathematische Funktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="einrueckung-und-abfragen-von-bedingungen.html">Einrückung und Abfragen von Bedingungen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logische-ausdruecke.html">Logische Ausdrücke</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listen.html">Listen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schleifen.html">Schleifen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="funktionen.html">Funktionen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weitere-aufgaben.html">Weitere Aufgaben</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fortgeschritten</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="fortgeschrittene-konzepte.html">Fortgeschrittenere Konzepte</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Klassen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tupel.html">Tupel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mengen.html">Mengen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matrizen.html">Matrizen</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/JensLiebehenschel/ShortPythonIntro" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/JensLiebehenschel/ShortPythonIntro/issues/new?title=Issue%20on%20page%20%2Fklassen.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/klassen.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Klassen</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">Attribute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methoden-und-konstruktor">Methoden und Konstruktor</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="klassen">
+<h1>Klassen<a class="headerlink" href="#klassen" title="Link to this heading">#</a></h1>
+<p>(Klicken Sie <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/en/classes.html">hier</a> für die englische Version dieser Seite)</p>
+<p>Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.</p>
+<p>Auf Vererbung und sonstiges wird hier nicht eingegangen.
+Es geht nur darum, die Syntax von Klassenerstellung und Methoden zu verstehen,
+da dies notwendig ist, wenn man Binärbäume programmieren möchte.</p>
+<p>Zum Definieren einer Klasse wird das Keyword <code>class</code> gefolgt vom Klassennamen genutzt.
+Daraufhin kann man noch leere runde Klammern setzten und man beendet die Zeile mit einem Doppelpunkt.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MeineKlasse</span><span class="p">:</span>
+    <span class="o">&lt;</span><span class="n">Klassendefinition</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>und</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MeineKlasse</span><span class="p">():</span>
+    <span class="o">&lt;</span><span class="n">Klassendefinition</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>führen also auf das Gleiche hinaus.
+Die Klammern nach dem Klassennamen können für Vererbung genutzt werden.</p>
+<p>Nach dem Doppelpunkt folgt ein eingerückter Codeblock. Dort wird die Funktionalität der Klasse definiert.
+Hier unterscheidet man zwischen Klassenattributen und Instanzattributen.</p>
+<section id="attribute">
+<h2>Attribute<a class="headerlink" href="#attribute" title="Link to this heading">#</a></h2>
+<p>Kurzgesagt: Klassenattribute sind für alle Objekte einer Klasse gleich und können unabhängig von einem Objekt abgerufen werden.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MeineKlasse</span><span class="p">:</span>
+	<span class="n">klassen_id</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># Klassenattribut</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">MeineKlasse</span><span class="o">.</span><span class="n">klassen_id</span><span class="p">)</span>
+<span class="c1"># --&gt; 2</span>
+</pre></div>
+</div>
+<p>Viel Interessanter hier sind Instanzattribute.
+Also jene Attribute, welche sich von Instanz zu Instanz bzw. von Objekt zu Objekt unterscheiden.
+Diese werden in der Regel im Konstruktor der Klasse deklariert und initialisiert.</p>
+<p>Ein Attribut in Python muss genauso wie eine herkömmliche Variable auch, initialisiert sein.</p>
+<p>Eine Deklaration ohne Initialisierung wie</p>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>ist in Python also nicht möglich.</p>
+<p>Ist im Endeffekt auch nicht schlimm, da man jedem Wert, den man nicht initialisieren möchte, einen Nullwert geben kann.
+In Python mit dem Keyword <code>None</code>.</p>
+<p>Einer Variable mit dem Wert <code>None</code> kann im Nachhinein alles zugewiesen werden.
+Seien es Integer, Strings oder gar Instanzen einer Klasse. Dynamic Typing macht dies möglich.</p>
+</section>
+<section id="methoden-und-konstruktor">
+<h2>Methoden und Konstruktor<a class="headerlink" href="#methoden-und-konstruktor" title="Link to this heading">#</a></h2>
+<p>Methoden werden in dem eingerückten Block der Klasse mit dem Keyword <code>def</code> erstellt.
+Wie der Konstruktor auszusehen hat, ist in Python genau definiert.</p>
+<!--&#95; ist der HTML code für einen underscore-->
+<p>Im Gegensatz zu anderen Programmiersprachen, bei denen der Konstruktor den Namen der Klasse trägt, muss der Konstruktor in Python den Namen <code>__init__</code> haben. Wenn man ein Objekt dieser Klasse erstellt, wird der Konstruktor automatisch aufgerufen. Der Konstruktor kann natürlich auch Parameter erhalten. Diese können ebenfalls Defaultwerte enthalten. Es gelten die gleichen Regeln wie für normale Funktionen.</p>
+<p>Für den Konstruktor und andere Methoden gilt, dass selbst bei Methoden ohne Parameter, ein Parameter hinzuzufügen ist.
+Der erste Parameter, der an eine Methode übergeben wird, ist die Instanz der Klasse. Das passiert automatisch und man kann es nicht verhindern.</p>
+<p>Laut Konvention bezeichnet man diesen Parameter als <code>self</code>. Man könnte ihn auch anders nennen.
+Um Attribute einer Instanz zu erzeugen, muss die Instanz mit <code>self</code> oder wie auch immer man es nennen möchte, angesprochen werden.
+Um auf Attribute oder Methoden einer Instanz zuzugreifen, wird der Punktoperator genutzt.</p>
+<p>Beispiel einer Klasse mit Konstruktor:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MeineKlasse</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a_input</span><span class="p">,</span> <span class="n">b_input</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a_input</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b_input</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># None ist das Python Äquivalent zu NULL</span>
+
+<span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">MeineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Konstruktor Aufruf mit Parametern</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+<span class="c1"># --&gt; 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+<span class="c1"># --&gt; 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># --&gt; None</span>
+</pre></div>
+</div>
+<p>Nun ein Beispiel mit einem Konstruktor, einer Methode und einer lokalen Variable im Konstruktor:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MeineKlasse</span><span class="p">:</span>
+	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a_input</span><span class="p">,</span> <span class="n">b_input</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a_input</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b_input</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="kc">None</span>
+		<span class="n">d</span> <span class="o">=</span> <span class="mi">5</span> 	<span class="c1"># Kein &quot;self.&quot; davor, also lokale Variable und kein Attribut. Der Wert existiert nur im Konstruktor</span>
+
+	<span class="k">def</span> <span class="nf">berechne_c</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">faktor_von_a</span><span class="p">):</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">*</span> <span class="n">faktor_von_a</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>  <span class="c1"># Formel: c = a * faktor + b</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">e</span> <span class="o">=</span> <span class="mi">8</span>  <span class="c1"># Das Attribut e kann auch außerhalb des Konstruktors noch hinzugefügt werden</span>
+
+
+<span class="n">meine_instanz</span> <span class="o">=</span> <span class="n">MeineKlasse</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">a</span><span class="p">)</span>
+<span class="c1"># --&gt; 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">b</span><span class="p">)</span>
+<span class="c1"># --&gt; 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># --&gt; None</span>
+
+<span class="n">meine_instanz</span><span class="o">.</span><span class="n">berechne_c</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># --&gt; 5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">e</span><span class="p">)</span>
+<span class="c1"># --&gt; 8</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">meine_instanz</span><span class="o">.</span><span class="n">d</span><span class="p">)</span>
+<span class="c1"># --&gt; AttributeError: &#39;MeineKlasse&#39; object has no attribute &#39;d&#39;</span>
+<span class="c1"># d ist kein Attribut der Klasse, sondern war nur eine lokale Variable im Konstruktor</span>
+</pre></div>
+</div>
+<p>Nicht vergessen, dass vor jedem Attribut einer Instanz innerhalb einer Methode das Präfix <code>self.</code> geschrieben werden muss, ansonsten ist es eine lokale Variable.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "JensLiebehenschel/ShortPythonIntro",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="fortgeschrittene-konzepte.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Fortgeschrittenere Konzepte</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="dictionaries.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Dictionaries</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attribute">Attribute</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#methoden-und-konstruktor">Methoden und Konstruktor</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Konzept von Jens Liebehenschel, Umsetzung durch Edward Späth <br> Es wird keinerlei Haftung übernommen. / No warranty of any kind. <br> <a href="https://www.frankfurt-university.de/de/hochschule/fachbereich-2-informatik-und-ingenieurwissenschaften/kontakt/professorinnen-und-professoren-im-fachbereich-2/jens-liebehenschel/">Prof. Dr. Jens Liebehenschel</a> <br> liebehenschel@fb2.fra-uas.de <br> +49 69 1533-3948 <br> <a href="https://www.frankfurt-university.de">Frankfurt University of Applied Sciences</a> <br> <a href="https://www.frankfurt-university.de/de/hochschule/fachbereich-2-informatik-und-ingenieurwissenschaften/willkommen-am-fb-2/">Fachbereich 2: Informatik und Ingenieurwissenschaften</a> <br> <br> <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
