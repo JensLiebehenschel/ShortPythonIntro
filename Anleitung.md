@@ -99,7 +99,7 @@ Bei &lt;!-- Google Analytics --&gt; handelt es sich um einen Kommentar in HTML. 
 #!/usr/bin/bash
 
 regex="\w*\.html"
-for file in $(find /home/.../ShortPythonIntro/_build/html -type f)
+for file in $(find .../ShortPythonIntro/src/de/_build/html -type f)
 do
 	if [[ "$file" =~ "$regex" ]]; then
 		echo "$file"
@@ -107,6 +107,8 @@ do
 	fi
 done
 ```
+
+Der Pfad in der vierten Zeil sollte einmal `.../ShortPythonIntro/src/de/_build/html` und einmal `.../ShortPythonIntro/src/en/_build/html` sein damit beide Sprachen abgedeckt sind!
 
 Je nachdem, welcher Shell Interpreter genutzt wird, muss die erste Zeile gegebenenfalls durch
 
@@ -132,13 +134,6 @@ erteilen.
 
 Dieses Shell-Script entfernt automatisch den Google Analytics Kommentar in allen HTML Dateien und gibt zur Kontrolle, die Namen aller HTML Dateien in der Konsole aus.
 
-
-## Veränderungen auf der GitHub Pages sichtbar machen
-
-Damit die Änderungen auf GitHub Pages ankommen, benutzt man das Kommandozeilentool <code>ghp-import</code>
-
-Hier mehr Info: https://jupyterbook.org/en/stable/publish/gh-pages.html
-
 ## Repository auf GitHub pushen
 Änderungen an den Quelldateien sollen bitte gepusht werden. Die \_build Ordner werden vom .gitignore jeweils ignoriert und sollen nicht mitgepusht werden.
 
@@ -146,6 +141,13 @@ Hier mehr Info: https://jupyterbook.org/en/stable/publish/gh-pages.html
 Damit die Änderungen sichtbar werden, muss der `gh-pages` Branch aktualisiert werden. Dieser Branch wird automatisch als Quelle für GitHub Pages genutzt, womit das dann am Ende im Internet erreichbar ist.
 
 Dafür muss der Inhalt von `.../ShortPythonIntro/src/de/\_build/html` von dem **main** Branch in den Ordner `.../ShortPythonIntro/de` auf den **gh-pages** Branch kopiert werden. Das gleiche gilt für `.../ShortPythonIntro/src/en/\_build/html` von dem **main** Branch zu `.../ShortPythonIntro/en` auf dem **gh-pages** Branch.
+
+Zusätzlich wäre es gut einen Redirect einzurichten, da https://jensliebehenschel.github.io/ShortPythonIntro (weder .../de noch .../en) ungültig ist. Mit einem Redirect kann man sagen, dass man in dem Fall standardmäßig z.B. auf die englische Version kommt.
+
+Der Redirect wäre eine index.html auf der gleichen Eben wie die Ordner `en/` und `de/` auf dem **gh-pages** branch. Der Inhalt der HTMl Datei wäre dieser (wenn standardmäßig auf die englische Version verwiesen werden soll):
+```html
+<meta http-equiv="refresh" content="0; URL=https://jensliebehenschel.github.io/ShortPythonIntro/en/" />
+```
 
 Hier die einzelnen Schritte:
 
@@ -157,6 +159,8 @@ git checkout gh-pages
 ```
 
 Die zwei \_build/html Ordner in `de/` bzw. `en/` auf dem gh-pages Branch kopieren.
+
+Ggf. den Redirect einrichten (siehe oben)
 
 Änderungen in Git hinzufügen, committen und pushen
 ```
