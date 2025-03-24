@@ -8,7 +8,7 @@ parts:
     chapters:
     - file: interaktivitaet
     - file: motivation
-    - file: wie-nutzen-wir-Python
+    - file: wie-nutzen-wir-python
     - file: input-und-output
     - file: erstellen-von-kommentaren
     - file: datentypen
