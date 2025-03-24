@@ -91,49 +91,6 @@ jupyter-book clean .../ShortPythonIntro/src/en --all
 
 Um die Webseite lokal zu öffnen, muss man nur die "index.html" Datei im Ordner .../ShortPythonIntro/src/de/\_build/html im Webbrowser öffnen. So kann man gucken, ob alles so ist wie man es sich wünscht, bevor man die eigentliche GitHub Pages Seite ändert/die Änderungen nach GitHub pusht. Gleiches gilt für die Englische Version. Da die links, welche auf die jeweils andere Sprache verweisen, direkt die gewollten Links auf GitHub Pages öffnet, werden diese lokal ggf. nicht aktuell sein. Daher sichergehen, dass diese Links auch angepasst werden wenn man z.B. Dateinamen ändert. 
 
-## Die "&lt;!-- Google Analytics --&gt;" Kommentare entfernen
-
-Bei &lt;!-- Google Analytics --&gt; handelt es sich um einen Kommentar in HTML. Diese Zeilen haben keine Bedeutung. Diese werden lediglich generiert um den generierten Code zu strukturieren und mit diesem Kommentar hinzuweisen, ab wo der Code für Google Analytics beginnt. Google Analytics ist jedoch deaktiviert und deshalb wird kein Code dazu generiert. Der Kommentar wird leider trotzdem generiert. Um alle Kommentare zu entfernen, kann man eine neue Datei mit der Endung ".sh" erstellen und folgendes Shell-Script einfügen:
-
-```sh
-#!/usr/bin/bash
-
-regex="\w*\.html"
-for file in $(find .../ShortPythonIntro/src/de/_build/html -type f)
-do
-	if [[ "$file" =~ "$regex" ]]; then
-		echo "$file"
-		sed -i '/<!-- Google Analytics -->/d' "$file"
-	fi
-done
-```
-
-Der Pfad in der vierten Zeil sollte einmal `.../ShortPythonIntro/src/de/_build/html` und einmal `.../ShortPythonIntro/src/en/_build/html` sein damit beide Sprachen abgedeckt sind!
-
-Je nachdem, welcher Shell Interpreter genutzt wird, muss die erste Zeile gegebenenfalls durch
-
-```
-#!/usr/bin/zsh
-```
-ersetzt werden, wenn man z.B. zsh als Shell Interpreter anstelle von Bash nutzt. (Die meisten nutzen Bash)
-
-Nun führt man das Shell-Script mit 
-
-```
-./SKRIPTNAME.sh
-```
-
-aus. Eventuell muss man es erst exectuable machen. Entweder per GUI auf die Datei gehen und "ausführbar" akreuzen. 
-Alternativ kann man die Privilegien auch durch den den Befehl 
-
-```
-chmod 777 SKRIPTNAME.sh
-```
-
-erteilen.
-
-Dieses Shell-Script entfernt automatisch den Google Analytics Kommentar in allen HTML Dateien und gibt zur Kontrolle, die Namen aller HTML Dateien in der Konsole aus.
-
 ## Repository auf GitHub pushen
 Änderungen an den Quelldateien sollen bitte gepusht werden. Die \_build Ordner werden vom .gitignore jeweils ignoriert und sollen nicht mitgepusht werden.
 
