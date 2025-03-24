@@ -1,4 +1,5 @@
 # Wie nutzen wir Python?
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/how-do-we-use-python.html) für die englische Version dieser Seite)
 
 ## Not very "pythonic"
 

@@ -1,4 +1,5 @@
 # Input and output
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/input-und-output.html) for the german version of this page)
 
 ## Output
 Just like with other programming languages, the input and output using a terminal are essential. At least regarding programs in the context of simple scripts.

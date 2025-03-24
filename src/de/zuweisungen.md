@@ -1,4 +1,5 @@
 # Zuweisungen
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/assignments-in-python.html) für die englische Version dieser Seite)
 
 ## Der Zuweisungsoperator
 

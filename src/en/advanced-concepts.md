@@ -1,4 +1,5 @@
 # Advanced concepts
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/fortgeschrittene-konzepte.html) for the german version of this page)
 
 The fundamental concepts should be enough to understand most algorithms.
 

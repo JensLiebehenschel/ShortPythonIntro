@@ -1,4 +1,5 @@
 # Arithmetische Operatoren
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/arithmetic-operators.html) für die englische Version dieser Seite)
 
 In Python hat man natürlich die klassischen Grundrechenarten wie <code>+</code>, <code>-</code>, <code>*</code> und <code>/</code>.
 

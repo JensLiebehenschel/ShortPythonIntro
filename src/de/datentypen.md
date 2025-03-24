@@ -1,4 +1,5 @@
 # Datentypen
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/data-types.html) für die englische Version dieser Seite)
 
 ## Dynamic Typing
 

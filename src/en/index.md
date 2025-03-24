@@ -1,4 +1,5 @@
 # Goal
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/index.html) for the german version of this page)
 
 Initially developed for the course "algorithms and data structures" at the Frankfurt University of Applied Sciences,
 this resource aims to introduce the basics of the Python programming language or serve as a refresher of knowledge.

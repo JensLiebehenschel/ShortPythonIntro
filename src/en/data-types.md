@@ -1,6 +1,7 @@
 # Data Types
 
 ## Dynamic typing
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/datentypen.html) for the german version of this page)
 
 Python has most data types of other known programming languages, be it integers, floating points values or strings.
 The difference is, that in Python one does not typically have to concern themselves with the data type.

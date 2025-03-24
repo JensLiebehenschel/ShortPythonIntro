@@ -1,4 +1,5 @@
 # Klassen
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/classes.html) für die englische Version dieser Seite)
 
 Python als objektorientierte Programmiersprache unterstützt natürlich das Konzept von Klassen.
 

@@ -1,4 +1,5 @@
 # Tupel
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/tuples.html) für die englische Version dieser Seite)
 
 Ein Tupel in Python ist eine Datenstruktur, worin man eine Sequenz von Elementen speichern kann.
 Somit ist die Funktionalität fast identisch zu einer Liste.

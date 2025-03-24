@@ -1,4 +1,5 @@
 # Input und Output
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/input-and-output.html) für die englische Version dieser Seite)
 
 ## Ausgabe
 Wie auch in anderen Programmiersprachen, ist die Ein- und Ausgabe in einem Terminalfenster essenziell. Zumindest für die meisten einfachen Programme.

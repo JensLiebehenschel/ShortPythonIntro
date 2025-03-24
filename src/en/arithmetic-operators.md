@@ -1,4 +1,5 @@
 # Arithmetic operators
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/arithmetische-operatoren.html) for the german version of this page)
 
 Python of course offers the basic arithmetic operators such as <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code>.
 

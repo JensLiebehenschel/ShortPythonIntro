@@ -1,4 +1,5 @@
 # Ziel
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/index.html) für die englische Version dieser Seite)
 
 Initial für das Modul "Algorithmen und Datenstrukturen" an der Frankfurt University of Applied Sciences entwickelt,
 soll diese Ressource die Basics von Python näher bringen oder als Crashkurs dienen. Anstelle von Pseudocode wird oft die Programmiersprache Python verwendet. Python-Code vereint eine gute Lesbarkeit des Pseudocodes mit der Ausführbarkeit einer echten Programmiersprache.

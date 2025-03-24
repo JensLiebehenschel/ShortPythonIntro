@@ -1,4 +1,5 @@
 # Motivation
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/motivation.html) für die englische Version dieser Seite)
 
 ## Wieso Python?
 

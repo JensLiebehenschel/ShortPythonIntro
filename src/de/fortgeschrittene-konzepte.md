@@ -1,4 +1,5 @@
 # Fortgeschrittenere Konzepte
+(Klicken Sie [hier](https://jensliebehenschel.github.io/ShortPythonIntro/en/advanced-concepts.html) für die englische Version dieser Seite)
 
 Die fundamentalen Konzepte sollten ausreichen um die meisten Algorithmen nachvollziehen zu können.
 

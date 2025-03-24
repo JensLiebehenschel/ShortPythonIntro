@@ -1,5 +1,5 @@
 # Motivation
-(Click [here](https://de.wikipedia.org/wiki/Wikipedia:Hauptseite) for the german version)
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/motivation.html) for the german version of this page)
 
 ## Why Python?
 This should be an introduction into the programming language Python.

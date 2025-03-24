@@ -1,4 +1,5 @@
 # Tuples
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/tupel.html) for the german version of this page)
 
 A tuple is Python is a data structure, which can store a sequence of elements.
 Therefore, the functionality is almost identical to lists.

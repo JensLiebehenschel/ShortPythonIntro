@@ -1,4 +1,5 @@
 # Assignments in Python
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/zuweisungen.html) for the german version of this page)
 
 ## The assignment operator
 
