@@ -1,82 +1,57 @@
 # Motivation
 
-## Wieso Python?
+## Why Python?
+This should be an introduction into the programming language Python.
+Python is a "general-purpose programming language", which due to its properties is quite suitable for the understanding of algorithms and data structures.
 
-Dies soll eine Einführung in die Programmiersprache Python sein.
-Python ist eine "General-purpose programming language", welche sich durch einige Eigenschaften für das Verstehen von Algorithmen und Datenstrukturen eignet.
+# Want more details? Then please continue reading!
 
-# Noch mehr Details? Gerne, dann hier einfach weiterlesen!
+## Why exactly Python?
+Algorithms and data structures concern themselves with solving problems and organizing data.
+The solution should be usable in software development, independent of a given programming language. Therefore "pseudocode" is often used to show the steps towards solving a problem or organization of data while being programming language-agnostic.
 
-## Wieso genau Python?
+This features the disadvantage, that pseudocode cannot just be written and executed, leading to no output.
 
-Bei Algorithmen und Datenstrukturen geht es um Schritte zum Lösen von Problemen und Organisation von Daten.
-Diese Lösungen sollen allgemein in der Software-Entwicklung genutzt werden können, und zwar
-unabhängig von einer Programmiersprache.
-Daher verwendet man oft "Pseudocode", um Programmiersprachen-neutral Schritte zum Lösen eines Problems oder der Organisation von Daten zu formulieren.
+The advantage on the other hand, is that the translation from pseudocode to other programming languages is usually easier than translation from one programming language to another.
+The major advantage is, that specifics of a given programming language are irrelevant for pseudocode.
 
-Dies hat zwar den Nachteil, dass man Pseudocode nicht einfach in einen Texteditor eingeben und das Programm ausführen lassen kann, und somit auch keine Ausgabe bekommt.
+The readers most likely have at least some understanding of the C programming language.
+In C there is a concept of pointers. Though programming languages like Java or Python have no pointers, as they are abstracted away.
+Would it be a good idea for a Java developer to concern themselves with the details of pointers just to understand how a sorting algorithm in a given C source code works? The answer for sure is: No.
 
-Der Vorteil ist jedoch, dass man von diesem Punkt aus die Übersetzung in andere Programmiersprachen leichter unternehmen kann, als wenn statt Pseudocode ein Quellcode einer anderen Programmiersprache vorliegen würde.
-Der noch größere Vorteil ist, dass man sich nicht mit den Einzelheiten einer bestimmten Programmiersprache beschäftigen muss.
-
-Die Lesenden haben wahrscheinlich bereits einen Kurs in der Programmiersprache C besucht.
-Hierbei gibt es das Konzept von Pointern.
-Es gibt jedoch Programmiersprachen wie etwa Java oder auch Python, welche keine Pointer in ihrer Sprache haben.
-Wäre es nun also sinnvoll, dass sich ein Java-Entwickler mit Pointern auseinandersetzten muss um zu verstehen wie der Sortieralgorithmus in einem gegeben C-Quellcode funktioniert?
-Die Antwort ist sicherlich: Nein.
-
-Ein anderes Beispiel: Ist es für einen Algorithmus in der Regel relevant ob man Integer-Werte oder Gleitkommazahlen sortieren möchte?
-Für C-Code, absolut. Für das Verständnis der Lösungsschritte eher von geringerer Bedeutung.
-
+Another example: Is it for an algorithm relevant whether integer values or floating point values are sorted?
+For C code, absolutely. For the understanding of the sorting algorithm not so much.
 
 ## Python
-Hier kommt nun Python ins Spiel.
-Python ist nämlich die Brücke zwischen den Vorteilen von Pseudocode und den Vorteilen von bereits gegebenem Quellcode.
+Here is where Python comes in.
+Python is the bridge between the advantages of pseudocode and the advantages of real source code.
 
-Im Vergleich zu Sprachen wie C handelt es sich bei Python um eine dynamisch-typisierte Programmiersprache.
-Das bedeutet, dass der Datentyp von Variablen nicht angegeben werden muss.
-Speichert man unter einer Variable den Wert <code>5</code> ab, dann kann Python sich denken, dass es als Integer interpretiert werden soll.
-Dividiert man den Wert nun durch <code>2</code>, so interpretiert Python diese Variable mit dem Ergebnis <code>2.5</code> nun als eine Gleitkommazahl. 
-Eine Variable in C, welche zu Beginn mit 
+In contrast to languages such as C, Python is a dynamically typed programming language. This means, that data types of variables do not have to be provided.
+If one stores the value <code>5</code> in a variable, Python knows that it should be interpreted as an integer. Dividing said variable by half, Python will now interpret it as the floating point value <code>2.5</code>.
+A variable in C, which is is declared and initialized with
 ```C
 int x = 5;
 ```
-deklariert und initialisiert wurde, würde nun 
+would now result in this:
 ```C
 printf("%d", x/2==2.5);
 // --> 0 (False)
 ```
-angeben, dass <code>5</code> geteilt durch <code>2</code> nicht <code>2.5</code> ist, da der Integer-Datentyp keine Informationen über Nachkommastellen hat.
-Um sowas muss man sich in Python keine Gedanken machen.
+In this case, <code>5</code> divided by <code>2</code> would not result in <code>2.5</code>, since the integer data type does not store decimal places. In Python, this would not have been a problem.
 
-Somit kann man in Python sehr einfach sehr komplexe Strukturen erstellen. 
-Wie wäre es mit einem Array, welches innerhalb von einem Index ein Array mit 5 weiteren geschachtelten Arrays enthält. Also ein Array in einem Array, in einem Array, ...
-Nun könnte das letzte der geschachtelten Arrays eine Zeichenkette oder Zahlen enthalten. 
-In C müsste man einige Zeit überlegen wie man das machen würde.
-In Python fügt man es einfach in ein Array ein und gut ist es. 
-Python wird schon herausfinden um was es sich hier handelt.
-Die Struktur kann sogar zur Laufzeit geändert werden.
+Therefore it is very easy to create very complex structures in Python.
+How about an array, which at one index contains another array with 5 further nested arrays. Meaning an array inside an array inside an array, and so on. Now the nested arrays could either be strings or integers. In C one would have to clearly define the structure and plan it out carefully, whereas in Python one can just add the values and leave it at that. Python will figure out which type is used. This structure can then even be changed at runtime.
 
-Allgemein ist Pythons Absicht, so natürlich wie möglich zu klingen.
-Daher orientiert sich Python stark an gesprochenem Englisch.
-Beispiele, wo dies der Fall ist, werden in späteren Kapiteln erläutert.
+Generally speaking, Python's intention is to sound as natural as possible. Therefore, Python is largely inspired from spoken English. Examples for where this is the case, will be shown in figure chapters.
 
 ## Python use cases?
-Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt werden, wird Python manchmal als "Ausführbarer Pseudocode" bezeichnet.
-Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar.
-Ein Nachteil von Python im Vergleich zu C ist jedoch definitiv die Performance.
-Für manche rechenintensiven Anwendungen ist Python weniger geeignet.
-In dieser Einführung handelt es sich aber um Effizienz von Algorithmen und Datenstrukturen, also Konzepte, und nicht um die Erstellung eines hochperformaten Software-Produkts.
+Because of simplifications such as these, and many more as discussed later, Python is often referred to as "executable pseudocode". It is almost as convenient as writing pseudocode but is an entirely executable language. One disadvantage to other programming languages, such as C, is definitely the performance. For many computationally expensive tasks, Python is not quite as suitable. But for algorithms and data structures, the focus is on efficiency of the concepts, rather than creation of a high performance software product.
 
-Python ist also wunderbar, um eine Idee eines Algorithmus zu testen und dafür zu sorgen, dass dieser funktioniert. 
-Darauffolgend kann man diesen nun in eine schnellere Programmiersprache wie C umschreiben, womit man sich wiederum doch um die Details Gedanken machen muss.
-Zumindest muss man sich jetzt "nur" um die Details Gedanken machen, anstatt zu überlegen, wie der Algorithmus überhaupt funktionieren soll.
-Python ist somit ideal für das Bauen von Prototypen.
+Python is wonderful to test an algorithm and make sure that it works. Afterwards, one can rewrite it in a faster programming language usch as C. In that case one would only have to concern themselves with translation instead of the actual inner workings of the algorithm. But then one would have to pay attention to programming language specifics again.
+Nevertheless, Python is ideal for quickly building prototypes.
 
-Python ist eine sehr beliebte Programmiersprache. 
-Je nach Statistik, kann man sagen, dass Python häufig zu den Top 3 der beliebtesten Programmiersprachen der Welt gehört.
+Python is a very popular programming language. Depending on the source of the statistic, Python is usually among the top 3 of the most popular programming languages in the world.
 
-Des Weiteren ist Python die Programmiersprache für künstliche Intelligenz und für Data Science.
-Webseiten können mit Hilfe des "Django" Frameworks ebenfalls in Python programmiert werden.
+Furthermore, Python is the programming language for artificial intelligence and data science. Websites can also be programmed in Python with a web framework such as "Django".
 
-Die investierte Zeit, Python zu lernen, sollte sich also lohnen.
+The time invested to learn Python, should not be waste.

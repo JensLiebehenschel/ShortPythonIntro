@@ -1,96 +1,97 @@
-# Tupel
+# Tuples
 
-Ein Tupel in Python ist eine Datenstruktur, worin man eine Sequenz von Elementen speichern kann.
-Somit ist die Funktionalität fast identisch zu einer Liste.
+A tuple is Python is a data structure, which can store a sequence of elements.
+Therefore, the functionality is almost identical to lists.
 
 ## Syntax
-Die Syntax für Tupel ist sehr ähnlich zu Listen. Der einzige Unterschied ist, dass anstatt eckiger Klammern, runde Klammern genutzt werden. Sonst ist die Erstellung identisch.
+The syntax for tuples is very similar to lists. The only difference is, that round brackets are used instead of square brackets. Otherwise, creation is identical
 ```py
-liste = [1, 2, 3]
-tupel = (1, 2, 3)
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
 ```
 
-Das einzige was man beachten muss sind Tupel mit genau einem Element. Leere Tupel sind zwar nicht wirklich sinnvoll, was man gleich verstehen wird, aber von der Syntax her ist ein leeres Tupel einfach nur eine öffnende und schließende runde Klammer.
+The only difference is noticable for tuples with exactly one element. Empty tuples are not really a good idea, as you will soon see, but the syntax is just an opening round bracket and a closing round bracket.
 ```py
-leer = ()
+empty = ()
 ```
 
-Tupel mit genau einem Element sind etwas spezieller, denn diese benötigen unbedingt ein Komma nach dem Element. Man kann sich den Grund logisch erschließen, wenn man eine Rechnung vor Augen hat. Klammern um eine einzelne Zahl sollten keine Auswirkung auf die Rechnung haben. Wenn man jetzt aber eine Zahl in runden Klammern als ein Tupel betrachtet, würde dies bei Rechnungen zu Problemen führen, dass aus Zahlen auf einmal Tupel werden.
+Tuples with exactly one element are slightly more special, since they require a comma after the element. One can imagine the reason when thinking about calculation. Round brackets around a number should have no effect on the calculation. But if one would interpret a number encased in round brackets as a tuple, then it would lead to problems, since it would now considered a tuple instead of a number.
 ```py
 print( (5) )
-# --> Zahl 5
+# --> Number 5
 
 print( (5,) )
-# --> Tupel mit der Zahl 5
+# --> Tuple containing the number 5
 
 print( 1 + (5) )
-# --> Zahl 6
-# Sollte 6 sein anstatt 1 + Tupel mit dem Element 5
+# --> Number 6
+# Should be 6 instead of "1 + tuple containing the number 5"
 ```
 
-## Listen vs. Tupel
-Es gibt nur einen großen Unterschied zwischen Listen und Tupeln. Listen sind veränderlich (mutable) und Tupel sind unveränderlich (immutable). Das heißt, dass nach Erstellung der Liste, diese noch nachträglich verändert werden kann. Zum Beispiel kann man mit <code>liste.append(4)</code> nach der Erstellung der Liste noch den Wert <code>4</code> an das Ende der Liste einfügen. 
+## Lists vs. tuples
+There is only one fundamental difference between lists and tuples. Lists are mutable while tuples are immutable. This means, that after creating a list, it can still be modified later. For example, one can add the value <code>4</code> to the end of the list using <code>my_list.append(4)</code>.
 ```py
-liste = [1, 2, 3]
-liste.append(4)
-print(liste)
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)
 # --> [1, 2, 3, 4]
 ```
 
-Bei Tupeln ist dies nicht möglich. Sobald ein Tupelobjekt erstellt wurde, kann es nicht mehr verändert werden. 
+This is not possible with tuples. As soon as a tuple object was created, it cannot be modified anymore.
 ```py
-tupel = (1, 2, 3)
-tupel.append(4)
-print(tupel)
-# --> AttributeError: 'tuple' object has no attribute 'append'
+my_tuple = (1, 2, 3)
+my_tuple.append(4)
+print(my_tuple)
+# --> AttributeError: 'my_tuple' object has no attribute 'append'
 
-tupel[0] = 0
-# --> TypeError: 'tuple' object does not support item assignment
+my_tuple[0] = 0
+# --> TypeError: 'my_tuple' object does not support item assignment
 ```
 
-Falls man etwas ergänzen möchte, muss ein neues Tupelobjekt erstellt werden.
-Man kann z.B. mit dem <code>+</code> Operator, zwei Tupel konkatenieren und das Resultat in einem neuen Tupel speichern.
+If one wants to modify a tuple, a new tuple object has to be created. This can be done using the <code>+</code> operator for example, which can be used to concatenate two tuples and store the result in a newly created tuple.
 ```py
-tupel = (1, 2, 3)
+my_tuple = (1, 2, 3)
 
-neues_tupel = tupel + (4,)
-print(neues_tupel)
+new_tuple = my_tuple + (4,)
+print(new_tuple)
 # --> (1, 2, 3, 4)
 ```
 
-Wenn man z.B. eine Liste zu einem Tupel umwandeln will, kann man diese mit <code>tuple()</code> zu einem Tupel casten. 
-```py
-liste = [1, 2, 3]
+if one wants to convert for example a list to a tuple, this can be done using the <code>tuple()</code> function to cast it to a tuple.
 
-tupel = tuple(liste)
+```py
+my_list = [1, 2, 3]
+
+my_tuple = tuple(my_list)
+print(type(my_tuple))
+# --> <class 'tuple'>
 ```
 
-Ein möglicher Grund wieso man sowas machen wollen würde, wäre zum Beispiel um das Tupel dann als Schlüssel in einem Dictionary nutzen zu können.
-Da Tupel unveränderlich sind, ist das möglich. Da Listen jedoch nicht unveränderlich sind, wäre das mit einer Liste nicht möglich.
+One possible reason for doing this would be for example be to use the tuple as a key of a ditionary. Since tuples are immutable, they can be used as keys for dicitonaries, while listes are not immutable and therefore cannot.
 
 ```py
-liste = [1, 2, 3]
-tupel = (1, 2, 3)
+my_list = [1, 2, 3]
+my_tuple = (1, 2, 3)
 
-{liste: True}
+{my_list: True}
 # --> TypeError: unhashable type: 'list'
 
-{tupel: True}
+{my_tuple: True}
 # --> {(1, 2, 3): True}
 ```
 
-## Wo findet man Tupel sonst noch?
-In Python ist es möglich, dass eine Funktion mehrere Rückgabewerte hat. Interessant zu wissen ist, dass dies als eine Rückgabe eines Tupels umgesetzt wird.
+## Where else can you find tuples?
+In Python it is possible to have multiple return values for a function. Interesting to know, is that this is implemented by returning a tuple.
 ```py
-def beispiel():
+def example():
     return 1, True, "Ok"
 
-ergebnis = beispiel()
-print(type(ergebnis))
+result = example()
+print(type(result))
 # --> <class 'tuple'>
 
-tupel = (1, True, "Ok")
-entspricht_dem_tupel = ergebnis == tupel
-print(entspricht_dem_tupel)
+my_tuple = (1, True, "Ok")
+is_the_same_as_the_tuple = result == my_tuple
+print(is_the_same_as_the_tuple)
 # --> True
 ```

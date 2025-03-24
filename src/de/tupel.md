@@ -25,11 +25,11 @@ print( (5,) )
 
 print( 1 + (5) )
 # --> Zahl 6
-# Sollte 6 sein anstatt 1 + Tupel mit dem Element 5
+# Sollte 6 sein anstatt 1 + "Tupel mit dem Element 5"
 ```
 
 ## Listen vs. Tupel
-Es gibt nur einen großen Unterschied zwischen Listen und Tupeln. Listen sind veränderlich (mutable) und Tupel sind unveränderlich (immutable). Das heißt, dass nach Erstellung der Liste, diese noch nachträglich verändert werden kann. Zum Beispiel kann man mit <code>liste.append(4)</code> nach der Erstellung der Liste noch den Wert <code>4</code> an das Ende der Liste einfügen. 
+Es gibt nur einen fundamentalen Unterschied zwischen Listen und Tupeln. Listen sind veränderlich (mutable) und Tupel sind unveränderlich (immutable). Das heißt, dass nach Erstellung der Liste, diese noch nachträglich verändert werden kann. Zum Beispiel kann man mit <code>liste.append(4)</code> nach der Erstellung der Liste noch den Wert <code>4</code> an das Ende der Liste einfügen. 
 ```py
 liste = [1, 2, 3]
 liste.append(4)
@@ -63,6 +63,8 @@ Wenn man z.B. eine Liste zu einem Tupel umwandeln will, kann man diese mit <code
 liste = [1, 2, 3]
 
 tupel = tuple(liste)
+print(type(tupel))
+# --> <class 'tuple'>
 ```
 
 Ein möglicher Grund wieso man sowas machen wollen würde, wäre zum Beispiel um das Tupel dann als Schlüssel in einem Dictionary nutzen zu können.

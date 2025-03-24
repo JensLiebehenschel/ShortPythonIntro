@@ -19,9 +19,9 @@ Dies hat zwar den Nachteil, dass man Pseudocode nicht einfach in einen Textedito
 Der Vorteil ist jedoch, dass man von diesem Punkt aus die Übersetzung in andere Programmiersprachen leichter unternehmen kann, als wenn statt Pseudocode ein Quellcode einer anderen Programmiersprache vorliegen würde.
 Der noch größere Vorteil ist, dass man sich nicht mit den Einzelheiten einer bestimmten Programmiersprache beschäftigen muss.
 
-Die Lesenden haben wahrscheinlich bereits einen Kurs in der Programmiersprache C besucht.
+Die Lesenden haben wahrscheinlich bereits zumindest etwas Erfahrung Programmiersprache C.
 Hierbei gibt es das Konzept von Pointern.
-Es gibt jedoch Programmiersprachen wie etwa Java oder auch Python, welche keine Pointer in ihrer Sprache haben.
+Es gibt jedoch Programmiersprachen wie etwa Java oder auch Python, welche keine Pointer in ihrer Sprache haben, da diese wegabstrahiert wurden.
 Wäre es nun also sinnvoll, dass sich ein Java-Entwickler mit Pointern auseinandersetzten muss um zu verstehen wie der Sortieralgorithmus in einem gegeben C-Quellcode funktioniert?
 Die Antwort ist sicherlich: Nein.
 
@@ -66,7 +66,7 @@ Aufgrund von Vereinfachungen wie diesen und weiteren, welche später vorgestellt
 Es ist also fast so bequem wie Pseudocode, jedoch vollständig ausführbar.
 Ein Nachteil von Python im Vergleich zu C ist jedoch definitiv die Performance.
 Für manche rechenintensiven Anwendungen ist Python weniger geeignet.
-In dieser Einführung handelt es sich aber um Effizienz von Algorithmen und Datenstrukturen, also Konzepte, und nicht um die Erstellung eines hochperformaten Software-Produkts.
+Bei Algorithmen und Datenstrukturen handelt es sich aber um die Effizienz von den Konzepten, und nicht um die Erstellung eines hochperformaten Software-Produkts.
 
 Python ist also wunderbar, um eine Idee eines Algorithmus zu testen und dafür zu sorgen, dass dieser funktioniert. 
 Darauffolgend kann man diesen nun in eine schnellere Programmiersprache wie C umschreiben, womit man sich wiederum doch um die Details Gedanken machen muss.
