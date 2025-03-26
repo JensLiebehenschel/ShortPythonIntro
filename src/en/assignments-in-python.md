@@ -1,9 +1,9 @@
 # Assignments in Python
-(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/zuweisungen.html) for the german version of this page)
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/zuweisungen.html) for the German version of this page)
 
 ## The assignment operator
 
-As we have already seen, Python also uses <code>&equals;</code> as the normal assignment operator, just like most other programming languages. The basic function of said operator need no further introduction.
+As we have already seen, Python also uses <code>&equals;</code> as the normal assignment operator, just like most other programming languages. The basic function of said operator needs no further introduction.
 
 But in Python it has additional functionality.
 Normally the assignment operator has one operand on the left side and one operand on the right side,
@@ -12,7 +12,7 @@ i.e.,
 a = b
 ```
 
-But Python does not have this restriction. Simply put, there just have to be the same amount of operands on both sides. Therefore, is is possibly to perform multiple assignments in one operation. The operands on each side are separated by commas.
+But Python does not have this restriction. Simply put, there just have to be the same number of operands on both sides. Therefore, it is possible to perform multiple assignments in one operation. The operands on each side are separated by commas.
 
 Example:
 ```Python

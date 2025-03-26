@@ -1,5 +1,5 @@
 # Input and output
-(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/input-und-output.html) for the german version of this page)
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/input-und-output.html) for the German version of this page)
 
 ## Output
 Just like with other programming languages, the input and output using a terminal are essential. At least regarding programs in the context of simple scripts.
@@ -51,4 +51,4 @@ foo(x)
 
 For those, who are interested, here is the <a href="https://docs.python.org/3/library/functions.html" target="_blank">Python Referenz</a>, with information regarding built-in Python functions such as <code>input()</code>.
 
-Alternatively you can just search for it on the web with a search engine of your choice.
+Alternatively, you can just search for it on the web with a search engine of your choice.
