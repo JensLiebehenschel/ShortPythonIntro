@@ -1,7 +1,7 @@
 # Arithmetic operators
-(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/arithmetische-operatoren.html) for the german version of this page)
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/arithmetische-operatoren.html) for the German version of this page)
 
-Python of course offers the basic arithmetic operators such as <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code>.
+Python of course, offers basic arithmetic operators such as <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code>.
 
 ```Python
 x = 5+5
@@ -24,9 +24,9 @@ i = i + 1;
 ```
 In Python this is **not** possible.
 
-This not really that tragic, since incrementing a value is not done as often in Python as it is done in other programming languages. This can be seen when discussing loops later.
+This is not really that tragic, since incrementing a value is not done as often in Python as it is done in other programming languages. This can be seen when discussing loops later.
 
-As the alternative, 
+As an alternative, 
 ```Python
 i += 1 
 ```
@@ -58,7 +58,7 @@ x = x + 5
 
 There is also the relatively common modulo operator using the percentage sign (<code>%</code>).
 Reminder:
-The result of <code>a % b</code> (a modulo b bzw. a mod b) is the division remained of the division <code>a/b</code>.
+The result of <code>a % b</code> (a modulo b i.e., a mod b) is the division remained of the division <code>a/b</code>.
 ```Python
 x = 8 % 3
 print(x)
@@ -66,7 +66,7 @@ print(x)
 ```
 
 Furthermore, there is the operator <code>//</code> for integer division.
-This operation calculates the regular quotient <code>c = a/b</code>, but <code>c</code> will be rounded down to the next-lowest integer, if <code>c</code> is not an integer already. The remained will be omitted.
+This operation calculates the regular quotient <code>c = a/b</code>, but <code>c</code> will be rounded down to the next-lowest integer, if <code>c</code> is not an integer already. The remainder will be omitted.
 
 One can also rewrite
 ```Python
@@ -117,7 +117,7 @@ The addition operator for two numbers represents an addition, but what about the
 
 An arithmetic sum of two strings is most often not desired, therefore the addition operator has a different meaning for objects, which are not numbers.
 
-For the example with the two strings, the following functionality can be observed:
+For example, with the two strings, the following functionality can be observed:
 ```Python
 a = "Hello"
 b = "World!"

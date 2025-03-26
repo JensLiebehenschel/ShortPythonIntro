@@ -1,5 +1,5 @@
 # Classes
-(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/klassen.html) for the german version of this page)
+(Click [here](https://jensliebehenschel.github.io/ShortPythonIntro/de/klassen.html) for the German version of this page)
 
 Python is an object-oriented programming language, and therefore obviously has the concept of classes.
 

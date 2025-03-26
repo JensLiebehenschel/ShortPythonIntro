@@ -439,7 +439,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-indices">Negative indices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-list">Length of a list</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#append">Append</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-whether-a-list-contaisns-a-given-element">Check whether a list contaisns a given element</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-whether-a-list-contains-a-given-element">Check whether a list contains a given element</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenating-lists">Concatenating lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-elements-in-a-list">Deleting elements in a list</a></li>
@@ -457,7 +457,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lists">
 <h1>Lists<a class="headerlink" href="#lists" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/listen.html">here</a> for the german version of this page)</p>
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/listen.html">here</a> for the German version of this page)</p>
 <section id="lists-in-general">
 <h2>Lists in general<a class="headerlink" href="#lists-in-general" title="Link to this heading">#</a></h2>
 <p>A widely used data structure is the “array”. In Python there is a data structure called “list”. Conceptually, they are identical. It is a linear data structure, in which one can store data.</p>
@@ -476,7 +476,7 @@ document.write(`
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Hello World!&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>In most programming languages this would not be easily possible. This is also not due to the numbers 1 through 5 being implicitly converted to strings to have matching data types. The above list have multiple different data types. One can check this with the function <code>type()</code>, which was already discussed in the context of dynamic typing in a previous chapter.</p>
+<p>In most programming languages this would not be easily possible. This is also not due to the numbers 1 through 5 being implicitly converted to strings to have matching data types. The above list has multiple different data types. One can check this with the function <code>type()</code>, which was already discussed in the context of dynamic typing in a previous chapter.</p>
 <p>Refresher:
 The function <code>type(object)</code> returns the data type or class of the object.</p>
 <p>If we call this function for the different elements, by using the usual square brackets to denote access to a given index (starting at 0), then we can observe this:</p>
@@ -528,7 +528,7 @@ The function <code>type(object)</code> returns the data type or class of the obj
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">LIST_NAME</span> <span class="o">=</span> <span class="p">[</span><span class="n">VALUE</span><span class="p">]</span> <span class="o">*</span> <span class="n">AMOUNT_OCCURENCES</span>
 </pre></div>
 </div>
-<p>So for the above example, it would be:</p>
+<p>So, for the above example, it would be:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">10</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
@@ -540,9 +540,9 @@ The function <code>type(object)</code> returns the data type or class of the obj
 <h2>Negative indices<a class="headerlink" href="#negative-indices" title="Link to this heading">#</a></h2>
 <p>Python has a convenient shortcut for accessing the k-last element in a list (in this case the list is called “num”).</p>
 <p>The syntax is: <code>nums[-k]</code>.</p>
-<p>So with a negative index.</p>
+<p>So, with a negative index.</p>
 <p><code>nums[-1]</code> accesses the last element, <code>nums[-2]</code> accesses the one before last and so on.</p>
-<p>While programming you should pay attentation, that negative indices in Python are valid and therefore do not necessarily result in an error.</p>
+<p>While programming you should pay attention, that negative indices in Python are valid and therefore do not necessarily result in an error.</p>
 </section>
 <section id="length-of-a-list">
 <h2>Length of a list<a class="headerlink" href="#length-of-a-list" title="Link to this heading">#</a></h2>
@@ -569,15 +569,15 @@ The function <code>type(object)</code> returns the data type or class of the obj
 <span class="c1"># --&gt; 6</span>
 </pre></div>
 </div>
-<p>One can add as many entries as one wants, since the list is a dynamic data structure, in contrast to arrays in C, where a specific maximum length has to be specified.</p>
+<p>One can add as many entries as one wants, since the list is a dynamic data structure, in contrast to arrays in C, where a specific maximum length must be specified.</p>
 <p>It is also possible to create empty lists, which can then have values inserted using <code>append()</code>.</p>
 <p>An empty list is initialized as follows:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
 </section>
-<section id="check-whether-a-list-contaisns-a-given-element">
-<h2>Check whether a list contaisns a given element<a class="headerlink" href="#check-whether-a-list-contaisns-a-given-element" title="Link to this heading">#</a></h2>
+<section id="check-whether-a-list-contains-a-given-element">
+<h2>Check whether a list contains a given element<a class="headerlink" href="#check-whether-a-list-contains-a-given-element" title="Link to this heading">#</a></h2>
 <p>For this the keyword <code>in</code> can be used.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
@@ -603,8 +603,8 @@ The function <code>type(object)</code> returns the data type or class of the obj
 </section>
 <section id="slicing">
 <h2>Slicing<a class="headerlink" href="#slicing" title="Link to this heading">#</a></h2>
-<p>The concept of slicing is utilized to get adjacent sublists. For this two indices are specified.</p>
-<p>To get a subsequence depending on a condition, so called “list comprehension” is used. This is too advanced for this introduction and will not be discussed here. Those who are interested, may research that topic themselves.</p>
+<p>The concept of slicing is utilized to get adjacent sublists. For this, two indices are specified.</p>
+<p>To get a subsequence depending on a condition, so called “list comprehension” is used. This is too advanced for this introduction and will not be discussed here. Those who are interested may research that topic themselves.</p>
 <p>Back to slicing. An example application would be to get a sublist consisting of all the element after index <code>a</code>, including <code>a</code> itself, and before <code>b</code>, excluding <code>b</code> itself, or combination of that.</p>
 <p>For this, the following syntax is used:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span><span class="p">[</span><span class="n">a</span><span class="p">:</span><span class="n">b</span><span class="p">]</span>
@@ -634,7 +634,7 @@ Sublist starting at index <code>a</code>, including <code>a</code> itself:</p>
 <span class="c1"># --&gt; [3, 4, 5]</span>
 </pre></div>
 </div>
-<p><code>nums[2:]</code> is the same as <code>nums[2:len(nums)]</code>, since the length of the list is the first index, whih is not present in the list naymore. If the highest index would be <code>4</code>, then capturing the whole list means up until, excluding, <code>5</code>.</p>
+<p><code>nums[2:]</code> is the same as <code>nums[2:len(nums)]</code>, since the length of the list is the first index, which is not present in the list anymore. If the highest index would be <code>4</code>, then capturing the whole list means up until, excluding, <code>5</code>.</p>
 <p>Case C:
 Sublist starting at index <code>a</code> up until (exclusive) index <code>b</code>:</p>
 <p><code>nums[a:b]</code></p>
@@ -644,7 +644,7 @@ Sublist starting at index <code>a</code> up until (exclusive) index <code>b</cod
 <span class="c1"># --&gt; [2, 3]</span>
 </pre></div>
 </div>
-<p>Starting from index <code>1</code> up until (exklusive) index <code>3</code>.</p>
+<p>Starting from index <code>1</code> up until (exclusive) index <code>3</code>.</p>
 <p>To overwrite the original list with the sublist, the assignment operator can be used.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>   <span class="c1"># Removes the last element</span>
 <span class="n">nums</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>    <span class="c1"># Removes the first element</span>
@@ -656,11 +656,11 @@ Sublist starting at index <code>a</code> up until (exclusive) index <code>b</cod
 <h2>Deleting elements in a list<a class="headerlink" href="#deleting-elements-in-a-list" title="Link to this heading">#</a></h2>
 <p>To delete specific elements in a list, there are three options.</p>
 <p>Option 1:</p>
-<p>If the element to be deleted, is located at the start or end of the list, then it an be removed using slicing. Example for deleting the first element of a list:</p>
+<p>If the element to be deleted, is located at the start or end of the list, then it can be removed using slicing. Example for deleting the first element of a list:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 </pre></div>
 </div>
-<p>The advantage is, that you can delete multiple elements if they are at the beginning or at the end. For example, you can use <code>nums = nums[3:]</code> to delete the first three elements.</p>
+<p>The advantage is that you can delete multiple elements if they are at the beginning or at the end. For example, you can use <code>nums = nums[3:]</code> to delete the first three elements.</p>
 <p>Option 2:</p>
 <p>You can use the keyword <code>del</code> to delete a given element. The syntax is the following:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">nums</span><span class="p">[</span><span class="n">index_to_be_deleted</span><span class="p">]</span>
@@ -676,8 +676,8 @@ Sublist starting at index <code>a</code> up until (exclusive) index <code>b</cod
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h2>
 <p>You are given the lists <code>a</code>, <code>b</code>, <code>c</code> und <code>d</code>.
-Your task is to make sure, that for the call <code>print(nums)</code> the specified output appears. You are only allowed to use list slicing and concatenation.</p>
-<p>To make it more clear, here is an arbitrary example:</p>
+Your task is to make sure that for the call <code>print(nums)</code> the specified output appears. You are only allowed to use list slicing and concatenation.</p>
+<p>To make it clearer, here is an arbitrary example:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output should be: [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
@@ -816,7 +816,7 @@ One could for instance get <code>[64, 7, 4, 7]</code> using <code>d[1:2] + d[2:3
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-indices">Negative indices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-a-list">Length of a list</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#append">Append</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-whether-a-list-contaisns-a-given-element">Check whether a list contaisns a given element</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-whether-a-list-contains-a-given-element">Check whether a list contains a given element</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concatenating-lists">Concatenating lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing">Slicing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-elements-in-a-list">Deleting elements in a list</a></li>

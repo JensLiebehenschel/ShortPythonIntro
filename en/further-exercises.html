@@ -451,15 +451,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="further-exercises">
 <h1>Further Exercises<a class="headerlink" href="#further-exercises" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/weitere-aufgaben.html">here</a> for the german version of this page)</p>
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/weitere-aufgaben.html">here</a> for the German version of this page)</p>
 <section id="fizz-buzz">
 <h2>Fizz buzz<a class="headerlink" href="#fizz-buzz" title="Link to this heading">#</a></h2>
 <p>A popular exercise for beginners is the fizz buzz problem:</p>
 <ul class="simple">
 <li><p>The numbers 1 up to (including) 100 are to be printed, each in their own line.</p></li>
-<li><p>Numbers, which are divisible by 3 are to be replaced by the string <code>Fizz</code></p></li>
-<li><p>Numbers, which are divisible by 5 are to be replaced by the string <code>Buzz</code></p></li>
-<li><p>Numbers, which are divisible by both 3 and 5 are to be replaced by the string <code>FizzBuzz</code></p></li>
+<li><p>Numbers, which are divisible by 3 are to be replaced with the string <code>Fizz</code></p></li>
+<li><p>Numbers, which are divisible by 5 are to be replaced with the string <code>Buzz</code></p></li>
+<li><p>Numbers, which are divisible by both 3 and 5 are to be replaced with the string <code>FizzBuzz</code></p></li>
 </ul>
 <p>The output should look like this: (Note that the right column is just included for clarity)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Output</span>    <span class="p">(</span><span class="n">Number</span><span class="p">)</span>
@@ -512,14 +512,14 @@ document.write(`
 <p><code>range(1, 101)</code> is used, since the sequence starts at <code>1</code> and ends at <code>100</code>. Since the second parameter for <code>range()</code> is the excluded upper boundary, <code>101</code> has to be used. (<code>100</code> inclusive –&gt; <code>101</code> exclusive)</p>
 <p>Number is divisible by <code>n</code> –&gt; <code>number % n == 0</code>.</p>
 <p>I.e., there is no remained for the division <code>number / n</code>.</p>
-<p>There are many solutions for this famous problem. One could e.g., work with strings and concatenate Fizz and Buzz for cases where the number is divisible by both 3 and 5.</p>
+<p>There are many solutions for this famous problem. One could, e.g., work with strings and concatenate Fizz and Buzz for cases where the number is divisible by both 3 and 5.</p>
 </div>
 </section>
 </section>
 <section id="palindromes">
 <h2>Palindromes<a class="headerlink" href="#palindromes" title="Link to this heading">#</a></h2>
 <p>A palindrome is a word, which is read the same no matter if one reads from left to right or right to left.</p>
-<p>I.e., the word can be mirorred in the middle without change.</p>
+<p>I.e., the word can be mirrored in the middle without change.</p>
 <p>Examples: radar, kayak</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Word</span><span class="p">:</span>   <span class="n">R</span> <span class="n">A</span> <span class="n">D</span> <span class="n">A</span> <span class="n">R</span>
 <span class="n">Index</span><span class="p">:</span>  <span class="mi">0</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span>
@@ -529,7 +529,7 @@ document.write(`
 </pre></div>
 </div>
 <p>It does not matter whether you read “RADAR” from left to right or right to left, the result is the same.</p>
-<p>Your task is to write a functio, which takes a string as input and returns <code>True</code> if the provided string is a palindrome and <code>False</code> if it is not. To reduce complexity, you can assume that only lowercase letters without punctuation or spaces are provided.</p>
+<p>Your task is to write a function, which takes a string as input and returns <code>True</code> if the provided string is a palindrome and <code>False</code> if it is not. To reduce complexity, you can assume that only lowercase letters without punctuation or spaces are provided.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here you can solve the palindrome problem...</span>
@@ -539,7 +539,7 @@ document.write(`
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">Solution for palindromes</p>
-<p>Probably the easiest version is to just reverse the string and check if it still equal to the original string. To reverse the string one can create an empty string and concatenate all letters to the empty string, starting from the back. This can be done using <code>reversed(range())</code>. Since strings are immutable, strings have to be concatenated and there is no way to modify a character at a given index.</p>
+<p>Probably the easiest version is to just reverse the string and check if it is still equal to the original string. To reverse the string, one can create an empty string and concatenate all letters to the empty string, starting from the back. This can be done using <code>reversed(range())</code>. Since strings are immutable, strings must be concatenated and there is no way to modify a character at a given index.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
     <span class="n">reversed_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">))):</span>
@@ -548,12 +548,12 @@ document.write(`
 
 </pre></div>
 </div>
-<p>For another variant, the string does not have to reversed. All comparisons can be done in-place. A check is performed whether the first character is equal to the last character, then a check is performed whether the second character is equal to the character before last, and so on until one arrives in the middle. If one arrives at the middle and has not encountered a pair, that does not match up, then it is a palindrome. If a pair does not match up somewhere, then it is not a palindrome.</p>
+<p>For another variant, the string does not have to reversed. All comparisons can be done in-place. A check is performed whether the first character is equal to the last character, then a check is performed whether the second character is equal to the character before last, and so on until one arrives in the middle. If one arrives at the middle and has not encountered a pair that does not match up, then it is a palindrome. If a pair does not match up somewhere, then it is not a palindrome.</p>
 <p>Explanation:
 <code>it_is_a_palindrome</code> is initially set to <code>True</code>. The index variable will have the values in <code>range(0, len(string) // 2)</code>. With <code>len(string)</code> one can get the length of the word. <code>//</code> is the integer division operator, which rounds the result to the next-lowest integer if it is not an integer already.</p>
 <p>To access both the letter on the left side and on the right side, one can use negative indices <code>Index</code> and <code>-(Index+1)</code>. <code>-Index</code> is the same as <code>len(string) - Index</code>.</p>
 <p>The connected pairs of characters would be <code>{0, -1}, {1, -2}, {2, -3}, {3, -4}, …</code>. More generally: <code>{index, -(index+1)}</code>.</p>
-<p>If there is a spot, where the pair does not match up, it is not a palindrome.
+<p>If there is a spot where the pair does not match up, it is not a palindrome.
 <code>it_is_a_palindrome</code> will be set to <code>False</code>. Optionally to save time, the loop is cancelled using the <code>break</code> keyword, since it has already been shown that the word is not a palindrome.</p>
 <p>Finally, the function returns whether the word is a palindrome or not.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_palindrome_from_both_sides</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>

@@ -450,12 +450,12 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="functions">
 <h1>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/funktionen.html">here</a> for the german version of this page)</p>
-<p>First things first: Unlike programming languages such as Java or C, there is no dedicated main function in Python. The contents of the main function are written and executed in the global space of the file. Working with Python professionally, this not desired and is circumvented. But for this introduction, this does not matter.</p>
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/funktionen.html">here</a> for the German version of this page)</p>
+<p>First things first: Unlike programming languages such as Java or C, there is no dedicated main function in Python. The contents of the main function are written and executed in the global space of the file. When working with Python professionally, this is not desired and is circumvented. But for this introduction, this does not matter.</p>
 <section id="creation-of-a-function">
 <h2>Creation of a function<a class="headerlink" href="#creation-of-a-function" title="Link to this heading">#</a></h2>
 <p>To define a function, the keyword <code>def</code> i used.
-Afterwards, the function receives a name and the parameters are defined with round brackets.
+Afterwards, the function receives a name, and the parameters are defined with round brackets.
 The function signature is then terminated with a colon. After the colon, the code block with the contents of the function, is indented.</p>
 <p>Example:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">i_print_in_reverse</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
@@ -473,7 +473,7 @@ The function signature is then terminated with a colon. After the colon, the cod
 	<span class="o">&lt;</span><span class="n">Function</span> <span class="n">body</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>It also possible to define default values for parameters. For this, parameters are assigned values in the function signature. As soon as one default value is assigned, all parameters to the right also require default values.</p>
+<p>It is also possible to define default values for parameters. For this, parameters are assigned values in the function signature. As soon as one default value is assigned, all parameters to the right also require default values.</p>
 <p>Example:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_of_up_to_four_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span> <span class="o">+</span> <span class="n">d</span>
@@ -491,13 +491,13 @@ The function signature is then terminated with a colon. After the colon, the cod
 </section>
 <section id="return-values">
 <h2>Return values<a class="headerlink" href="#return-values" title="Link to this heading">#</a></h2>
-<p>The keyword <code>return</code> is used to specify what should be returned from a function. A unique property of Python is, that a function may have multiple return values.</p>
-<p>Assuming one wants to create a function, which takes a lowercase word as an argument and should output how many vowels and consonants are present in the string. Additionally the function should output whether there are less vowels than consonants as a boolean.</p>
-<p>Other programming languages would have to define a data structure for this return value, so that two integers and one boolean can be returned. In Python one can just specify those three values, separated by commas, as the return value.</p>
+<p>The keyword <code>return</code> is used to specify what should be returned from a function. A unique property of Python is that a function may have multiple return values.</p>
+<p>Assuming one wants to create a function, which takes a lowercase word as an argument and should output how many vowels and consonants are present in the string. Additionally, the function should output whether there are less vowels than consonants as a Boolean.</p>
+<p>Other programming languages would have to define a data structure for this return value, so that two integers and one Boolean can be returned. In Python one can just specify those three values, separated by commas, as the return value.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vowels_and_consonants</span><span class="p">(</span><span class="n">input_string</span><span class="p">):</span>
 	<span class="n">vowels_count</span> <span class="o">=</span> <span class="mi">0</span>
 	<span class="n">consonants_count</span> <span class="o">=</span> <span class="mi">0</span>
-	<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span> 	<span class="c1"># Man kann über einen String genauso iterieren wie über eine Liste</span>
+	<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">input_string</span><span class="p">:</span> 	<span class="c1"># One can iterate over strings just like with lists</span>
 		<span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">]:</span>
 			<span class="n">vowels_count</span> <span class="o">+=</span> <span class="mi">1</span>
 		<span class="k">else</span><span class="p">:</span>
@@ -519,22 +519,22 @@ Since the function returns three values and three variables are present on the l
 </section>
 <section id="recursion">
 <h2>Recursion<a class="headerlink" href="#recursion" title="Link to this heading">#</a></h2>
-<p>Recursion works in Python just like in any other programming language. A function is recursive if it calls itself. For example a recursive calculation of the n-th fibonacci number:</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib_rek</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<p>Recursion works in Python just like in any other programming language. A function is recursive if it calls itself. For example, a recursive calculation of the n-th Fibonacci number:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib_rec</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">fib_rek</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_rek</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fib_rec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_rec</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
         
         
-<span class="nb">print</span><span class="p">(</span><span class="n">fib_rek</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fib_rec</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
 <span class="c1"># --&gt; 8</span>
 </pre></div>
 </div>
 </section>
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h2>
-<p>Please create a function, which takes a positive integer as argument and returns <code>True</code> if the number is even. It should return <code>False</code> otherwise. Please test the function for a few numbers of your choosing. You do <strong>not</strong> have to make sure, that really a positive integer was input. You may assume, that only positive integers are used as input. Feel free to find multiple possible solutions.</p>
+<p>Please create a function, which takes a positive integer as argument and returns <code>True</code> if the number is even. It should return <code>False</code> otherwise. Please test the function for a few numbers of your choosing. You do <strong>not</strong> have to make sure that really a positive integer was input. You may assume that only positive integers are used as input. Feel free to find multiple possible solutions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here you can write your code...</span>
@@ -557,22 +557,22 @@ Since the function returns three values and three variables are present on the l
     <span class="k">return</span> <span class="n">value</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
-<p>An impractical recursive solution. <code>0</code> ist known as an even number and <code>1</code> is known as an odd number. If the current value is not equal to one of those two, the function calls itself recursively with the value subtracted by <code>2</code>, until the result is either <code>0</code> or <code>1</code>. The subtraction by <code>2</code> makes the value still be either also even or also odd as the number before.</p>
-<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even_rek</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+<p>An impractical recursive solution. <code>0</code> is known as an even number and <code>1</code> is known as an odd number. If the current value is not equal to one of those two, the function calls itself recursively with the value subtracted by <code>2</code>, until the result is either <code>0</code> or <code>1</code>. The subtraction by <code>2</code> makes the value still be either also even or also odd as the number before.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even_rec</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">is_even_rek</span><span class="p">(</span><span class="n">value</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">is_even_rec</span><span class="p">(</span><span class="n">value</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Idea: Whether an integer is even or odd depends on the last digit. Therefore it is possible to convert the number into a string and inspect the last digit. If the last digit is <code>0</code>, <code>2</code>, <code>4</code>, <code>6</code> or <code>8</code>, then it is even. Otherwise it is odd.</p>
+<p>Idea: Whether an integer is even or odd depends on the last digit. Therefore, it is possible to convert the number into a string and inspect the last digit. If the last digit is <code>0</code>, <code>2</code>, <code>4</code>, <code>6</code> or <code>8</code>, then it is even. Otherwise, it is odd.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even_last_digit</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>In Python it is also possible to work with individual bits. The <code>&amp;</code> operator represents a bitwise and. Since the bit sequence <code>…00001</code> is equivalent to <code>1</code>, the length of the left value is irrelevant. Everything apart from the last bit will turn to <code>0</code>, therefore only the last bit can be different from zero. For an even number, the last bit is always <code>0</code>, therefore the result would be <code>0 &amp; 1 = 0</code>. For an odd number, the last bit is always <code>1</code>, therefore the result would be <code>1 &amp; 1 = 1</code>. <code>0</code> and <code>1</code> can then be casted to booleans. <code>0</code> will become <code>False</code> and <code>1</code> will become <code>True</code>. Since the return value would be the opposite currently, the return value can just be negated with the <code>not</code> keyword.</p>
+<p>In Python it is also possible to work with individual bits. The <code>&amp;</code> operator represents a bitwise and. Since the bit sequence <code>…00001</code> is equivalent to <code>1</code>, the length of the left value is irrelevant. Everything apart from the last bit will turn to <code>0</code>, therefore only the last bit can be different from zero. For an even number, the last bit is always <code>0</code>, therefore the result would be <code>0 &amp; 1 = 0</code>. For an odd number, the last bit is always <code>1</code>, therefore the result would be <code>1 &amp; 1 = 1</code>. <code>0</code> and <code>1</code> can then be casted to Booleans. <code>0</code> will become <code>False</code> and <code>1</code> will become <code>True</code>. Since the return value would be the opposite currently, the return value can just be negated with the <code>not</code> keyword.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even_bitwise_and</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
     <span class="k">return</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="n">value</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>

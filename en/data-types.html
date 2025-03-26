@@ -403,7 +403,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-typing">Dynamic typing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#every-variable-has-to-be-initialized">Every variable has to be initialized</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#every-variable-must-be-initialized">Every variable must be initialized</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-regarding-semicolons">Note regarding semicolons</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-regarding-strings">Note regarding strings</a></li>
 </ul>
@@ -419,16 +419,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-types">
 <h1>Data Types<a class="headerlink" href="#data-types" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/datentypen.html">here</a> for the german version of this page)</p>
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/datentypen.html">here</a> for the German version of this page)</p>
 <section id="dynamic-typing">
 <h2>Dynamic typing<a class="headerlink" href="#dynamic-typing" title="Link to this heading">#</a></h2>
 <p>Python has most data types of other known programming languages, be it integers, floating points values or strings.
-The difference is, that in Python one does not typically have to concern themselves with the data type.
+The difference is that in Python one does not typically have to concern themselves with the data type.
 The reason for that is Python’s concept of “dynamic typing”.
 Here is an explanation:
 Simply put, with dynamic typing, the Python interpreter concerns himself with data types. The developer does not have to statically assign data types to variables, functions and so on.</p>
-<p>This makes it very easy to work with Python, since the author has to write less code and need not concern themselves whether e.g., a single variable will always be of one consistent data type. For example, whether a variable will always stay an integer or if there were an option, where the result may become a floating points number.
-Nevertheless, if one want a variable in a specific data type, then one can perform a type cast and explictly convert a value to a given type. This type can still change after the cast, if a new value is assigned.</p>
+<p>This makes it quite easy to work with Python, since the author has to write less code and need not concern themselves whether e.g., a single variable will always be of one consistent data type. For example, whether a variable will always stay an integer or if there is an option, where the result may become a floating points number.
+Nevertheless, if one wants a variable in a specific data type, then one can perform a type cast and explictly convert a value to a given type. This type can still change after the cast if a new value is assigned.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># The function type(x) returns the datatype of the variable x. </span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -443,8 +443,8 @@ Nevertheless, if one want a variable in a specific data type, then one can perfo
 </pre></div>
 </div>
 </section>
-<section id="every-variable-has-to-be-initialized">
-<h2>Every variable has to be initialized<a class="headerlink" href="#every-variable-has-to-be-initialized" title="Link to this heading">#</a></h2>
+<section id="every-variable-must-be-initialized">
+<h2>Every variable must be initialized<a class="headerlink" href="#every-variable-must-be-initialized" title="Link to this heading">#</a></h2>
 <p>In programming languages such as C, there is a difference between declaration and initialization of a variable.</p>
 <p>A declaration does not assign a value, it just specifies a data type and name for the variable.</p>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
@@ -460,7 +460,7 @@ Some thing like</p>
 </pre></div>
 </div>
 <p>is not possible in Python.
-But there are cases, where one wants to declare a varaible without initializing it directly. For this, the variable can be initialized with a null value. In Python this is done with the keyword <code>None</code>.
+But there are cases where one wants to declare a variable without initializing it directly. For this, the variable can be initialized with a null value. In Python this is done with the keyword <code>None</code>.
 After that, the variable can later be assigned a value of any type, when one wants to.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
@@ -478,7 +478,7 @@ After that, the variable can later be assigned a value of any type, when one wan
 </section>
 <section id="note-regarding-semicolons">
 <h2>Note regarding semicolons<a class="headerlink" href="#note-regarding-semicolons" title="Link to this heading">#</a></h2>
-<p>The attentive reader may have noticed, that none of the statements in the Python code end with a semicolon. This is not an error. Semicolons are not needed to end a statment. The only usage of semicolons is to have multiple statements in the same line.
+<p>The attentive reader may have noticed that none of the statements in the Python code end with a semicolon. This is not an error. Semicolons are not needed to end a statement. The only usage of semicolons is to have multiple statements in the same line.
 Example:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span> <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="c1"># --&gt; 5</span>
@@ -566,7 +566,7 @@ Example:</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-typing">Dynamic typing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#every-variable-has-to-be-initialized">Every variable has to be initialized</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#every-variable-must-be-initialized">Every variable must be initialized</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-regarding-semicolons">Note regarding semicolons</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-regarding-strings">Note regarding strings</a></li>
 </ul>

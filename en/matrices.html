@@ -450,15 +450,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matrices">
 <h1>Matrices<a class="headerlink" href="#matrices" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/matrizen.html">here</a> for the german version of this page)</p>
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/matrizen.html">here</a> for the German version of this page)</p>
 <p>Matrices are multi-dimensional vectors. Or the in the context of Python, multi-dimensional lists.</p>
 <p>When working with multi-dimensional data, regular multi-dimensional lists are often not sufficient. In those cases, well-known external libraries, such as <a class="reference external" href="https://numpy.org/">numpy</a> or <a class="reference external" href="https://pandas.pydata.org/">pandas</a>, are often used.</p>
-<p>Just like mentioned at the start of this introduciton, the goal is not to write good software in Python, but instead to understand the underlying concepts. Therefore instead of working external libraries, only regular multi-dimensional lists will be used.</p>
+<p>Just like mentioned at the start of this introduction, the goal is not to write good software in Python, but instead to understand the underlying concepts. Therefore, instead of working external libraries, only regular multi-dimensional lists will be used.</p>
 <section id="what-are-multi-dimensional-lists-in-python">
 <h2>What are multi-dimensional lists in Python<a class="headerlink" href="#what-are-multi-dimensional-lists-in-python" title="Link to this heading">#</a></h2>
-<p>Multi-dimensional lists in Python are relatively easy. Since lists can be nested in each other, a two-dimensional liste would just be a list of lists.
+<p>Multi-dimensional lists in Python are relatively easy. Since lists can be nested in each other, a two-dimensional list would just be a list of lists.
 A three-dimensional list would be a list of lists of lists and so on.
-For this introduction only two-dimensional lists are used, since they are by the far the most common for of the multi-dimensional lists in regard to algorithms. The concepts are similar for higher dimensions.</p>
+For this introduction only two-dimensional lists are used since they are by the far the most common form of the multi-dimensional lists in regard to algorithms. The concepts are similar for higher dimensions.</p>
 </section>
 <section id="creation-of-a-multi-dimensional-list">
 <h2>Creation of a multi-dimensional list<a class="headerlink" href="#creation-of-a-multi-dimensional-list" title="Link to this heading">#</a></h2>
@@ -472,7 +472,7 @@ For this introduction only two-dimensional lists are used, since they are by the
 <span class="c1">#      [4, 5, 6]]</span>
 </pre></div>
 </div>
-<p>Creation of a two-dimensional list can be done more elegantly with list comprehension, but this will not be discussed in this introduction. For those interested, they may reasearch the term themselves.</p>
+<p>Creation of a two-dimensional list can be done more elegantly with list comprehension, but this will not be discussed in this introduction. For those interested, they may research the term themselves.</p>
 </section>
 <section id="access">
 <h2>Access<a class="headerlink" href="#access" title="Link to this heading">#</a></h2>
@@ -487,7 +487,7 @@ For this introduction only two-dimensional lists are used, since they are by the
 <span class="c1"># --&gt; 1</span>
 </pre></div>
 </div>
-<p>The first index is the index of the row and the second index is the index of the columns. One can visualize it like this: The first index decides which of the three lists is selected. The second index then selects the actual element of one of those lists.</p>
+<p>The first index is the index of the row, and the second index is the index of the columns. One can visualize it like this: The first index decides which of the three lists is selected. The second index then selects the actual element of one of those lists.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
@@ -521,7 +521,7 @@ For this introduction only two-dimensional lists are used, since they are by the
 <section id="inserting-rows">
 <h2>Inserting rows<a class="headerlink" href="#inserting-rows" title="Link to this heading">#</a></h2>
 <p>A multi-dimensional list in Python is treated just like a regular list and does not have a special data type and no special methods.</p>
-<p>Therefore, insertion of rows and columns has to be implemented yourself. Most algorithms know beforehand how many columns and rows are necessary. One example would be the Floyd–Warshall algorithm. In a nutshell, the algorithm calculates the shortest path from every node to all others. The distance between nodes can be represented as a two-dimensional list. Here is an example with three nodes <code>A</code>, <code>B</code> and <code>C</code>.</p>
+<p>Therefore, insertion of rows and columns must be implemented by yourself. Most algorithms know beforehand how many columns and rows are necessary. One example would be the Floyd–Warshall algorithm. In a nutshell, the algorithm calculates the shortest path from every node to all others. The distance between nodes can be represented as a two-dimensional list. Here is an example with three nodes <code>A</code>, <code>B</code> and <code>C</code>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -550,12 +550,12 @@ For this introduction only two-dimensional lists are used, since they are by the
 </table>
 </div>
 <p>The table is interpreted, that e.g., row <code>A</code> and column <code>B</code> means that the path from <code>A</code> to <code>B</code> is <code>15</code> units long. Since one calculates the paths from all nodes to all others, one knows that a matrix of dimensions 3 x 3 is required.</p>
-<p>Since no additional rows or columns have to be inserted, it is not too big of a deal, that there are no special methods for that.</p>
+<p>Since no additional rows or columns must be inserted, it is not too big of a deal, that there are no special methods for that.</p>
 <p>If one wants to insert rows and columns, then one would have to think of something.</p>
 </section>
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h2>
-<p>If you want you can think about how to implement methods for insertng rows and columns respectively.</p>
+<p>If you want, you can think about how to implement methods for inserting rows and columns respectively.</p>
 <p>For simplicity, you can assume that the input is always correct. For example, when inserting a new row into a matrix with 3 columns, then the new row will also have 3 columns.
 Likewise, when inserting a new column into a matrix with 4 rows, then the new column will also have 4 rows.</p>
 <div class="cell docutils container">

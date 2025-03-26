@@ -453,15 +453,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dictionaries">
 <h1>Dictionaries<a class="headerlink" href="#dictionaries" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/dictionaries.html">here</a> for the german version of this page)</p>
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/dictionaries.html">here</a> for the German version of this page)</p>
 <section id="dictionaries-in-general">
 <h2>Dictionaries in general<a class="headerlink" href="#dictionaries-in-general" title="Link to this heading">#</a></h2>
 <p>Dictionaries, also known as hash maps, are a data structure, which can be used to store key-value pairs.
-If one wants to, one can imagine, that a list is just a dictionary, where the indices <code>0, 1, …, N</code> are the keys of the key-value pairs.</p>
+If one wants to, one can imagine that a list is just a dictionary, where the indices <code>0, 1, …, N</code> are the keys of the key-value pairs.</p>
 </section>
 <section id="keys">
 <h2>Keys<a class="headerlink" href="#keys" title="Link to this heading">#</a></h2>
-<p>In contrast to regular lists, dictionaries are not restricted to numerical indices such as <code>0, 1, …, N</code>, but instead can be of any data type, data structure or class, as long as they are immutable. Immutable means, that internal values cannot be changed without having to create a new object. Strings in Python are immutable. This fact can be confirmed like this:</p>
+<p>In contrast to regular lists, dictionaries are not restricted to numerical indices such as <code>0, 1, …, N</code>, but instead can be of any data type, data structure or class, as long as they are immutable. Immutable means that internal values cannot be changed without having to create a new object. Strings in Python are immutable. This fact can be confirmed like this:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;dictionary&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="c1"># --&gt; &quot;d&quot;</span>
@@ -470,7 +470,7 @@ If one wants to, one can imagine, that a list is just a dictionary, where the in
 <span class="c1"># --&gt; TypeError: &#39;str&#39; object does not support item assignment</span>
 </pre></div>
 </div>
-<p>Trying alter the string results in an error, that the data type <code>str</code> (string) does not allow value assignment. The reason is, that strings are implemented as being immutable.</p>
+<p>Trying to alter the string results in an error, that the data type <code>str</code> (string) does not allow value assignment. The reason is that strings are implemented as being immutable.</p>
 <p>In contrast, lists are mutable, since they can be modified directly using e.g., the <code>append()</code> method to add more elements.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
@@ -481,7 +481,7 @@ If one wants to, one can imagine, that a list is just a dictionary, where the in
 <span class="c1"># --&gt; [1, 2, 3, 4]</span>
 </pre></div>
 </div>
-<p>This way, the value of <code>my_list</code> was changed without having to assign a new object. Every object, which is defined to be immutable, implements the <code>__hash__()</code> method. If this method is not explicitly defined, it is often inherited. This method uses hashing to assign a unique identification number to an object. Strings do have this method, while lits do not.</p>
+<p>This way, the value of <code>my_list</code> was changed without having to assign a new object. Every object, which is defined to be immutable, implements the <code>__hash__()</code> method. If this method is not explicitly defined, it is often inherited. This method uses hashing to assign a unique identification number to an object. Strings do have this method, while lists do not.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s2">&quot;dictionary&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="fm">__hash__</span><span class="p">())</span>
 <span class="c1"># --&gt; 4122803001462702718</span>
@@ -492,16 +492,16 @@ If one wants to, one can imagine, that a list is just a dictionary, where the in
 <span class="c1"># The __hash__() method does not exist for lists</span>
 </pre></div>
 </div>
-<p>If one still wants to use something similar to a list, then there is the data type “Tuple”, which is an explictly immutable list. More information will be provided on the chapter regarding tuples.</p>
-<p>Furthermore, the keys have to be unique. All keys require their own hash value respectively. But keys do not have to be of the same data type, as long as the data types are immutable.</p>
+<p>If one still wants to use something like a list, then there is the data type “Tuple”, which is an explicitly immutable list. More information will be provided on the chapter regarding tuples.</p>
+<p>Furthermore, the keys must be unique. All keys require their own hash value, respectively. But keys do not have to be of the same data type, as long as the data types are immutable.</p>
 </section>
 <section id="values">
 <h2>Values<a class="headerlink" href="#values" title="Link to this heading">#</a></h2>
-<p>In contrast to keys, values do not have restrictons. The value can be of an arbitrary data type, both immutable, mutable, unique and not unique.</p>
+<p>In contrast to keys, values do not have restrictions. The value can be of an arbitrary data type, both immutable, mutable, unique and not unique.</p>
 </section>
 <section id="creation-of-a-dictionary">
 <h2>Creation of a dictionary<a class="headerlink" href="#creation-of-a-dictionary" title="Link to this heading">#</a></h2>
-<p>The Python syntax for creating a dictionary used curly braces and colons to define dictionaries. The curly braces define the object itself and the key-value pairs are defined with colons using the syntax <code>Key: Value</code>. Multiple key-value pairs are separated using commas, just like with a list. In the following example, keys and values repsectively are shown to be able to have different data types. In this example, both integers and strings respectively.</p>
+<p>The Python syntax for creating a dictionary used curly braces and colons to define dictionaries. The curly braces define the object itself, and the key-value pairs are defined with colons using the syntax <code>Key: Value</code>. Multiple key-value pairs are separated using commas, just like with a list. In the following example, keys and values respectively are shown to be able to have different data types. In this example, both integers and strings, respectively.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">digits</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;One&quot;</span><span class="p">,</span>
     <span class="s2">&quot;Two&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -511,8 +511,8 @@ If one wants to, one can imagine, that a list is just a dictionary, where the in
 <span class="c1"># --&gt; {1: &#39;One&#39;, &#39;Two&#39;: 2, 3: &#39;Three&#39;}</span>
 </pre></div>
 </div>
-<p>Dictionaries themselves are not immutable. This means, that dictionaries can be used as values in other dictionaries, but cannot themselves be used as keys in other dictionaries. Nested dictionaries are very interesting, since they can be used to represent nested objects. For those interested, they may lookup the term <a class="reference external" href="https://de.wikipedia.org/wiki/JSON">JSON</a>.</p>
-<p>After creation of a dictionary, additional entries can still be added.
+<p>Dictionaries themselves are not immutable. This means that dictionaries can be used as values in other dictionaries, but cannot themselves be used as keys in other dictionaries. Nested dictionaries are very interesting, since they can be used to represent nested objects. For those interested, they may look up the term <a class="reference external" href="https://de.wikipedia.org/wiki/JSON">JSON</a>.</p>
+<p>After the creation of a dictionary, additional entries can still be added.
 The syntax for that is <code>Dictionary_name[Key] = Value</code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">digits</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;One&quot;</span>
@@ -611,7 +611,7 @@ Either one uses the method seen above, using the index syntax, such as with list
 <section id="outputting-all-existing-keys-and-values-in-a-dictionary">
 <h2>Outputting all existing keys and values in a dictionary<a class="headerlink" href="#outputting-all-existing-keys-and-values-in-a-dictionary" title="Link to this heading">#</a></h2>
 <p>If one has a dictionary and e.g., wants to iterate over all the keys, values or key-value pairs, then the three methods <code>Dictionary_name.keys()</code>, <code>Dictionary_name.values()</code>, <code>Dictionary_name.items()</code> can be used to retrieve said information.
-The return values are similar to lists, but are technically speaking not real lists. But one can just cast to them to real lists with <code>list()</code>.</p>
+The return values are similar to lists but are technically speaking not real lists. But one can just cast them to real lists with <code>list()</code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Dictionary_name</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -637,7 +637,7 @@ The return values are similar to lists, but are technically speaking not real li
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h2>
 <p>Imagine that you have a text and want to count how often each word occurs in the text.
-To reduce the complexity, all words are writtein in lower case and are already separated into a list. Punctuation was also removed.</p>
+To reduce complexity, all words are written in lower case and are already separated into a list. Punctuation was also removed.</p>
 <p>The original text was:</p>
 <p>Cats like to play, cats sleep a lot. Dogs bark loudly, but dogs run fast. Playing is fun!</p>
 <div class="cell docutils container">
@@ -704,9 +704,9 @@ Ellipsis
 <span class="c1"># --&gt; 18</span>
 </pre></div>
 </div>
-<p>One can iterate over all words and for each word see if the word was already seen (occurence=0 if not), and then increment that amount.</p>
-<p>Since all keys are unique, the amount of keys corresponds to the amount of unique words. If a word occurs multiple times, the value of the same key will be incremented.</p>
-<p>The dictionary <code>occurences</code> counts how often a given word appears. When calculating the sum of all the values, then the result corresponds to the amount of total words.</p>
+<p>One can iterate over all words and for each word see if the word was already seen (occurences=0 if not) and then increment that amount.</p>
+<p>Since all keys are unique, the number of keys corresponds to the number of unique words. If a word occurs multiple times, the value of the same key will be incremented.</p>
+<p>The dictionary <code>occurences</code> counts how often a given word appears. When calculating the sum of all the values, then the result corresponds to the number of total words.</p>
 </div>
 </section>
 </section>

@@ -418,21 +418,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tuples">
 <h1>Tuples<a class="headerlink" href="#tuples" title="Link to this heading">#</a></h1>
-<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/tupel.html">here</a> for the german version of this page)</p>
-<p>A tuple is Python is a data structure, which can store a sequence of elements.
+<p>(Click <a class="reference external" href="https://jensliebehenschel.github.io/ShortPythonIntro/de/tupel.html">here</a> for the German version of this page)</p>
+<p>A tuple in Python is a data structure, which can store a sequence of elements.
 Therefore, the functionality is almost identical to lists.</p>
 <section id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h2>
-<p>The syntax for tuples is very similar to lists. The only difference is, that round brackets are used instead of square brackets. Otherwise, creation is identical</p>
+<p>The syntax for tuples is very similar to lists. The only difference is that round brackets are used instead of square brackets. Otherwise, creation is identical.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The only difference is noticable for tuples with exactly one element. Empty tuples are not really a good idea, as you will soon see, but the syntax is just an opening round bracket and a closing round bracket.</p>
+<p>The only difference is noticeable for tuples with exactly one element. Empty tuples are not really a good idea, as you will soon see, but the syntax is just an opening round bracket and a closing round bracket.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">empty</span> <span class="o">=</span> <span class="p">()</span>
 </pre></div>
 </div>
-<p>Tuples with exactly one element are slightly more special, since they require a comma after the element. One can imagine the reason when thinking about calculation. Round brackets around a number should have no effect on the calculation. But if one would interpret a number encased in round brackets as a tuple, then it would lead to problems, since it would now considered a tuple instead of a number.</p>
+<p>Tuples with exactly one element are slightly more special since they require a comma after the element. One can imagine the reason when thinking about calculation. Round brackets around a number should have no effect on the calculation. But if one would interpret a number encased in round brackets as a tuple, then it would lead to problems, since it would now be considered a tuple instead of a number.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
 <span class="c1"># --&gt; Number 5</span>
 
@@ -447,7 +447,7 @@ Therefore, the functionality is almost identical to lists.</p>
 </section>
 <section id="lists-vs-tuples">
 <h2>Lists vs. tuples<a class="headerlink" href="#lists-vs-tuples" title="Link to this heading">#</a></h2>
-<p>There is only one fundamental difference between lists and tuples. Lists are mutable while tuples are immutable. This means, that after creating a list, it can still be modified later. For example, one can add the value <code>4</code> to the end of the list using <code>my_list.append(4)</code>.</p>
+<p>There is only one fundamental difference between lists and tuples. Lists are mutable while tuples are immutable. This means that after creating a list, it can still be modified later. For example, one can add the value <code>4</code> to the end of the list using <code>my_list.append(4)</code>.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
@@ -464,7 +464,7 @@ Therefore, the functionality is almost identical to lists.</p>
 <span class="c1"># --&gt; TypeError: &#39;my_tuple&#39; object does not support item assignment</span>
 </pre></div>
 </div>
-<p>If one wants to modify a tuple, a new tuple object has to be created. This can be done using the <code>+</code> operator for example, which can be used to concatenate two tuples and store the result in a newly created tuple.</p>
+<p>If one wants to modify a tuple, a new tuple object must be created. This can be done using the <code>+</code> operator for example, which can be used to concatenate two tuples and store the result in a newly created tuple.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
 <span class="n">new_tuple</span> <span class="o">=</span> <span class="n">my_tuple</span> <span class="o">+</span> <span class="p">(</span><span class="mi">4</span><span class="p">,)</span>
@@ -472,7 +472,7 @@ Therefore, the functionality is almost identical to lists.</p>
 <span class="c1"># --&gt; (1, 2, 3, 4)</span>
 </pre></div>
 </div>
-<p>if one wants to convert for example a list to a tuple, this can be done using the <code>tuple()</code> function to cast it to a tuple.</p>
+<p>If one wants to convert for example a list to a tuple, this can be done using the <code>tuple()</code> function to cast it to a tuple.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
 <span class="n">my_tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
@@ -480,7 +480,7 @@ Therefore, the functionality is almost identical to lists.</p>
 <span class="c1"># --&gt; &lt;class &#39;tuple&#39;&gt;</span>
 </pre></div>
 </div>
-<p>One possible reason for doing this would be for example be to use the tuple as a key of a ditionary. Since tuples are immutable, they can be used as keys for dicitonaries, while listes are not immutable and therefore cannot.</p>
+<p>One possible reason for doing this would be, for example be to use the tuple as a key of a dictionary. Since tuples are immutable, they can be used as keys for dictionaries, while lists are not immutable and therefore cannot.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 
@@ -494,7 +494,7 @@ Therefore, the functionality is almost identical to lists.</p>
 </section>
 <section id="where-else-can-you-find-tuples">
 <h2>Where else can you find tuples?<a class="headerlink" href="#where-else-can-you-find-tuples" title="Link to this heading">#</a></h2>
-<p>In Python it is possible to have multiple return values for a function. Interesting to know, is that this is implemented by returning a tuple.</p>
+<p>In Python it is possible to have multiple return values for a function. Interesting to know is that this is implemented by returning a tuple.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">example</span><span class="p">():</span>
     <span class="k">return</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s2">&quot;Ok&quot;</span>
 
